@@ -1,0 +1,28 @@
+{
+  "version": "0.4.0",
+  "date": "2026-10-19",
+  "tested": {
+    "environment": "Desktop Chromium through browser automation, not physical iPhone",
+    "site": "https://pokesurvivor.org/play/",
+    "innerFrame": "https://pokesurvivor.com/",
+    "dom": [
+      "Korean species names in collection",
+      "Korean stats and move tooltip context",
+      "Korean Mewtwo autocomplete and original search filtering",
+      "Protected player-name markup preserved",
+      "Random startup tips and next button"
+    ],
+    "pageWorld": [
+      "measureText Mewtwo equals Korean species width after hook",
+      "measureText Psychic equals Korean move width after hook",
+      "alert/confirm wrapper installed without triggering dialogs"
+    ]
+  },
+  "notTested": [
+    "Signed iPhone Safari extension installation",
+    "Actual iPhone v0.4.0 all views",
+    "Stock Userscripts Canvas (blocked by context/CSP)",
+    "Every hidden/coop/game-over branch",
+    "Real extension-background message round trip"
+  ]
+}

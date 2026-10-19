@@ -1,0 +1,30 @@
+// Verified startup tips. No gameplay/account state is read or changed.
+(function(){
+'use strict';
+const tips=[{"id":"elite","category":"포화","title":"도망만 치며 적을 쌓아두면 더 버거워져요.","text":"적이 이미 55마리 이상이면 새 일반 적의 체력은 60%, 공격 피해는 25% 늘어요. 도망만 이어가기보다 안전한 틈에 적을 처치해 무리를 줄여 보세요."},{"id":"time-scaling","category":"난이도","title":"같은 적도 늦게 나오면 더 튼튼해져요.","text":"시간이 흐를수록 새로 나오는 일반 적은 체력과 공격 피해가 커져요. 초반에 경험치를 모아 기술을 강화하고, 진화 조건도 미리 챙겨 보세요."},{"id":"boss","category":"보스","title":"보스전에는 일반 적이 덜 나와요.","text":"보스가 살아 있으면 일반 적 생성 속도는 평소의 25%로 줄고, 한쪽에서 몰려오는 대규모 무리도 잠시 멈춰요."},{"id":"support","category":"적","title":"주변 적이 잘 안 죽는다면 지원 적을 찾아보세요.","text":"회복 적은 근처 적의 체력을 채우고, 보호막 적은 피해를 막아줘요. 무리 전체를 오래 때리기보다 지원 적을 먼저 노려보세요."},{"id":"chest","category":"탐험","title":"큰 잠긴 상자는 곁에서 기다려야 열려요.","text":"큰 상자 가까이에 3.5초 머무르면 열려요. 멀어지면 개봉 진행도가 줄어드니 주변 적을 정리한 뒤 도전해 보세요."},{"id":"spring","category":"회복","title":"샘은 최대 체력에 비례해서 회복시켜요.","text":"충전된 샘 위에 있으면 초당 최대 체력의 14%를 회복해요. 샘은 사용하면 줄어들지만 시간이 지나면 다시 차요."},{"id":"altar","category":"탐험","title":"제단 강화는 25초짜리예요.","text":"제단에 따라 피해 2배, 이동속도 45% 증가, 자석 범위 4배, 재사용 대기시간 40% 감소 중 하나를 받아요."},{"id":"rift","category":"리프트","title":"리프트에는 입장 시간과 전투 제한 시간이 있어요.","text":"열린 리프트는 45초 뒤 사라져요. 들어가면 전설과 최대 120초 싸우며, 시간 초과로 지더라도 원래 맵으로 돌아가 판이 이어져요."},{"id":"bond","category":"결속","title":"리프트 승리 보상인 결속으로 기술을 묶을 수 있어요.","text":"리프트 전설을 이기면 결속을 하나 받아요. 여러 기술을 한 슬롯에 묶어 함께 발동하며, 한 묶음은 최대 4개 기술까지 들어가요."},{"id":"legend","category":"리프트","title":"아직 못 이긴 전설이 더 잘 선택돼요.","text":"리프트의 전설 선택은 균등하지 않아요. 아직 이기지 못한 전설은 이미 이긴 전설보다 선택 가중치가 4배예요."},{"id":"mewtwo","category":"뮤츠","title":"뮤츠의 물리 기술 85%는 강화 표시가 아니에요.","text":"뮤츠의 공격은 1.31, 특수공격은 1.55예요. 물리 기술 효율은 강점인 특수공격 대비 약 85%라는 뜻이에요."},{"id":"weighted","category":"성장","title":"포켓몬의 강점 쪽 기술은 더 자주 제안돼요.","text":"레벨업에서 새 기술 후보를 고를 때, 그 포켓몬에게 효율 100%인 기술은 다른 기술보다 선택 가중치가 2배예요."},{"id":"evolve","category":"진화","title":"기술 레벨만 올린다고 바로 진화하지 않아요.","text":"진화 가능한 기술을 최대 레벨로 만들고, 그 기술에 필요한 능력 강화도 이번 판에서 한 번 이상 골라야 진화 카드 후보가 돼요."},{"id":"shiny","category":"이로치","title":"일반 적과 리프트 전설은 이로치 확률이 달라요.","text":"이로치 스프라이트가 있는 종류라면 일반 적의 이로치 확률은 1/4096, 리프트 전설은 1/512예요."},{"id":"judgment","category":"후반 스포일러","title":"30분부터는 아르세우스의 심판이 기다려요.","text":"심판 구간에서는 이동속도 130을 넘는 부분이 25%만 반영돼요. 이 보정은 30분 이전 일반 구간에는 적용되지 않아요."}];
+const css="#ps-ko-tip-panel{box-sizing:border-box;max-width:540px;margin:22px auto 0;padding:16px 18px;border:2px solid #b89442;background:rgba(14,19,30,.94);box-shadow:4px 4px 0 #05080d;text-align:left;color:#e8e6dc;cursor:default;line-height:1.55;font-family:Pixelify,system-ui,sans-serif}#ps-ko-tip-panel .ps-tip-header{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:0 0 9px}#ps-ko-tip-panel h2{font-size:18px;line-height:1.4;margin:0;color:#ffda73;font-weight:700;text-shadow:none}#ps-ko-tip-panel .ps-tip-category{font-size:12px;white-space:nowrap;color:#95cbd3}#ps-ko-tip-panel .ps-tip-title{font-size:16px;font-weight:700;line-height:1.55;margin:0 0 5px;color:#f4f1e5;letter-spacing:0;text-shadow:none}#ps-ko-tip-panel .ps-tip-text{font-size:14px;line-height:1.65;margin:0;color:#bdc6cc;letter-spacing:0;text-shadow:none}#ps-ko-tip-panel .ps-tip-footer{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:12px;font-size:11px;color:#82949e}#ps-ko-tip-panel button{font:inherit;font-size:13px;line-height:1.3;padding:8px 10px;min-height:36px;color:#ffda73;background:#26313e;border:1px solid #8a7442;border-radius:0;cursor:pointer;box-shadow:2px 2px 0 #080c12}#ps-ko-tip-panel button:focus-visible{outline:2px solid #ffda73;outline-offset:3px}@media(max-width:600px){#ps-ko-tip-panel{margin-top:14px;padding:12px;max-width:100%}#ps-ko-tip-panel h2{font-size:16px}#ps-ko-tip-panel .ps-tip-title{font-size:14px}#ps-ko-tip-panel .ps-tip-text{font-size:13px}}@media(max-height:550px){#ps-ko-tip-panel{margin-top:10px;padding:10px 12px;max-height:38vh;overflow-y:auto}#ps-ko-tip-panel .ps-tip-header{margin-bottom:4px}#ps-ko-tip-panel .ps-tip-footer{margin-top:6px}}";
+function mount(){
+ const start=document.getElementById('tap-start');
+ if(!start || document.getElementById('ps-ko-tip-panel')) return;
+ const host=start.querySelector('.boot-in'); if(!host) return;
+ if(!document.getElementById('ps-ko-tips-style')){const style=document.createElement('style');style.id='ps-ko-tips-style';style.textContent=css;(document.head||document.documentElement).appendChild(style);}
+ const panel=document.createElement('section');panel.id='ps-ko-tip-panel';panel.setAttribute('translate','no');panel.setAttribute('aria-label','소스로 확인한 게임 팁');
+ const header=document.createElement('div');header.className='ps-tip-header';
+ const heading=document.createElement('h2');heading.textContent='그거 아셨나요?';
+ const category=document.createElement('span');category.className='ps-tip-category';header.append(heading,category);
+ const content=document.createElement('div');content.setAttribute('aria-live','polite');content.setAttribute('aria-atomic','true');
+ const title=document.createElement('p');title.className='ps-tip-title';
+ const text=document.createElement('p');text.className='ps-tip-text';content.append(title,text);
+ const footer=document.createElement('div');footer.className='ps-tip-footer';
+ const note=document.createElement('span');note.textContent='2026-10-19 소스 확인 · 참고 팁';
+ const next=document.createElement('button');next.type='button';next.textContent='다음 팁';next.setAttribute('aria-label','다른 게임 팁 보기');footer.append(note,next);
+ panel.append(header,content,footer);
+ let index=Math.floor(Math.random()*tips.length);
+ function render(){const tip=tips[index];panel.dataset.tipId=tip.id;category.textContent=tip.category;title.textContent=tip.title;text.textContent=tip.text;}
+ panel.addEventListener('click',e=>e.stopPropagation());
+ next.addEventListener('click',e=>{e.preventDefault();e.stopPropagation();index=(index+1+Math.floor(Math.random()*(tips.length-1)))%tips.length;render();});
+ render();host.appendChild(panel);
+}
+mount();
+new MutationObserver(mount).observe(document.documentElement,{childList:true,subtree:true});
+})();

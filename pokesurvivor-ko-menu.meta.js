@@ -1,8 +1,8 @@
 // ==UserScript==
 // @name PokéSurvivor 한국어 메뉴 시험판
 // @namespace pokesurvivor-ko-local-test
-// @version 0.3.1
-// @description 한국어 메뉴 · 갈무리 도트 폰트 · 소스로 검증한 시작 화면 게임 팁.
+// @version 0.4.0
+// @description 포켓몬·기술·아이템·능력치·설명·UI 한국어 번역. Userscripts는 DOM 전용, Canvas는 별도 확장 필요.
 // @match https://pokesurvivor.org/*
 // @match https://www.pokesurvivor.org/*
 // @match https://pokesurvivor.com/*

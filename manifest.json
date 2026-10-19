@@ -1,0 +1,34 @@
+{
+  "manifest_version": 3,
+  "name": "PokéSurvivor 한국어 패치",
+  "version": "0.4.0",
+  "description": "한국어 이름·설명·메뉴와 페이지 컨텍스트 Canvas 번역. Safari는 변환·서명이 필요합니다.",
+  "permissions": [
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://pokesurvivor.org/*",
+    "https://www.pokesurvivor.org/*",
+    "https://pokesurvivor.com/*",
+    "https://www.pokesurvivor.com/*"
+  ],
+  "background": {
+    "service_worker": "extension-background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://pokesurvivor.org/*",
+        "https://www.pokesurvivor.org/*",
+        "https://pokesurvivor.com/*",
+        "https://www.pokesurvivor.com/*"
+      ],
+      "js": [
+        "pokesurvivor-ko-menu.user.js",
+        "extension-content.js"
+      ],
+      "all_frames": true,
+      "run_at": "document_idle"
+    }
+  ]
+}

@@ -1,0 +1,155 @@
+{
+  "schemaVersion": 1,
+  "capturedAt": "2026-10-19T01:57:52.082Z",
+  "gameSources": [
+    {
+      "url": "https://pokesurvivor.com/js/data/pokedex.js",
+      "file": "pokedex.js"
+    },
+    {
+      "url": "https://pokesurvivor.com/js/data/moves.js",
+      "file": "moves.js"
+    },
+    {
+      "url": "https://pokesurvivor.com/js/data/items.js",
+      "file": "items.js"
+    },
+    {
+      "url": "https://pokesurvivor.com/js/data/lang-en.js",
+      "file": "lang-en.js"
+    }
+  ],
+  "discoveryNote": "Requested /js/lang-en.js returned HTTP 404. Actual English bundle is /js/data/lang-en.js (HTTP 200).",
+  "upstream": {
+    "project": "PokéAPI",
+    "repository": "https://github.com/PokeAPI/pokeapi",
+    "revision": "6fd69dfe90465ba96534f6816fc817737d1f97f6",
+    "commitDate": "2026-10-17T23:15:15Z",
+    "csvBaseUrl": "https://raw.githubusercontent.com/PokeAPI/pokeapi/6fd69dfe90465ba96534f6816fc817737d1f97f6/data/v2/csv/",
+    "licenseUrl": "https://raw.githubusercontent.com/PokeAPI/pokeapi/6fd69dfe90465ba96534f6816fc817737d1f97f6/LICENSE.md",
+    "licenseFile": "PokeAPI-LICENSE.md",
+    "license": "BSD-3-Clause (project code/data source license as supplied upstream)",
+    "attribution": "Copyright (c) © 2013–2023 Paul Hallett and PokéAPI contributors. Pokémon and Pokémon character names are trademarks of Nintendo.",
+    "authorityNote": "PokéAPI is a community-maintained structured source of official localized Pokémon terminology, not a Nintendo/TPC publisher endpoint. Names are copied from Korean rows, not translated or invented. Upstream license does not imply ownership of Pokémon trademarks or a separate trademark license."
+  },
+  "languagesVerified": [
+    {
+      "id": "3",
+      "iso639": "ko",
+      "iso3166": "kr",
+      "identifier": "ko",
+      "official": "1",
+      "order": "4"
+    },
+    {
+      "id": "7",
+      "iso639": "es",
+      "iso3166": "es",
+      "identifier": "es",
+      "official": "1",
+      "order": "10"
+    },
+    {
+      "id": "9",
+      "iso639": "en",
+      "iso3166": "us",
+      "identifier": "en",
+      "official": "1",
+      "order": "7"
+    }
+  ],
+  "method": {
+    "species": "Current game national dex -> pokemon_species_names pokemon_species_id -> language 3. Spanish and English aliases retained.",
+    "baseMoves": "Current displayed Spanish and English names -> move_names; internal game identifiers are audit signals, not primary identity.",
+    "evolvedMoves": "Current EVO displayed names and game English aliases -> move_names; Swarm explicitly classified against ability_names.",
+    "items": "Current displayed Spanish and English names -> item_names.",
+    "normalization": "NFKC, lowercase, curly apostrophe to straight apostrophe, whitespace collapse. Output keys retain exact original spelling.",
+    "scope": "Only current game species, base/evolved move labels, and equipped items. No UI strings or descriptions translated. No main files or GitHub writes."
+  },
+  "files": [
+    {
+      "path": "pokedex.js",
+      "bytes": 162163,
+      "sha256": "43ec37ef3ac48452f9a72c51851a188e2375ec93cde9394b335612ad1e107369",
+      "url": "https://pokesurvivor.com/js/data/pokedex.js"
+    },
+    {
+      "path": "moves.js",
+      "bytes": 30452,
+      "sha256": "af3e678fc552c1e21f8c56b8f7003974e68581efbf0e9c2ef04aea6811f11fde",
+      "url": "https://pokesurvivor.com/js/data/moves.js"
+    },
+    {
+      "path": "items.js",
+      "bytes": 2627,
+      "sha256": "6410fdac6a421849cd4107e47bd9b068556b41caefcacd62e1043a72e394f283",
+      "url": "https://pokesurvivor.com/js/data/items.js"
+    },
+    {
+      "path": "lang-en.js",
+      "bytes": 75510,
+      "sha256": "2235dddad70139790d8ca64c40311f9876fb88c2f541767868067384dcbbb54e",
+      "url": "https://pokesurvivor.com/js/data/lang-en.js"
+    },
+    {
+      "path": "languages.csv",
+      "bytes": 291,
+      "sha256": "fbb60019a6a461783d5671a995d5f590db61792a273e90faa0ed630d102a19b8",
+      "url": "https://raw.githubusercontent.com/PokeAPI/pokeapi/6fd69dfe90465ba96534f6816fc817737d1f97f6/data/v2/csv/languages.csv"
+    },
+    {
+      "path": "pokemon_species_names.csv",
+      "bytes": 404502,
+      "sha256": "820cde17074cdb1c2b0595c997fb8f998e773bd5da3bb525dec85703c86c5fd9",
+      "url": "https://raw.githubusercontent.com/PokeAPI/pokeapi/6fd69dfe90465ba96534f6816fc817737d1f97f6/data/v2/csv/pokemon_species_names.csv"
+    },
+    {
+      "path": "pokemon_species.csv",
+      "bytes": 56884,
+      "sha256": "e66e2eeb25fd3836b0ebab6bf87bbf01960aa3c0555e2bac495fa8393c5e0c45",
+      "url": "https://raw.githubusercontent.com/PokeAPI/pokeapi/6fd69dfe90465ba96534f6816fc817737d1f97f6/data/v2/csv/pokemon_species.csv"
+    },
+    {
+      "path": "move_names.csv",
+      "bytes": 202670,
+      "sha256": "99e23ee38ea53d1473474d463b87651deac3cd4928750f8186feae66da45c147",
+      "url": "https://raw.githubusercontent.com/PokeAPI/pokeapi/6fd69dfe90465ba96534f6816fc817737d1f97f6/data/v2/csv/move_names.csv"
+    },
+    {
+      "path": "moves.csv",
+      "bytes": 42322,
+      "sha256": "8aafd37bf78f19471495c05b201545180f50f0a08a2a2a844d69f9837dd39ac9",
+      "url": "https://raw.githubusercontent.com/PokeAPI/pokeapi/6fd69dfe90465ba96534f6816fc817737d1f97f6/data/v2/csv/moves.csv"
+    },
+    {
+      "path": "item_names.csv",
+      "bytes": 498452,
+      "sha256": "c4ad0b446e395c378d8ba75d6900f051cc9ebb99431d4000adeac35f492852f0",
+      "url": "https://raw.githubusercontent.com/PokeAPI/pokeapi/6fd69dfe90465ba96534f6816fc817737d1f97f6/data/v2/csv/item_names.csv"
+    },
+    {
+      "path": "items.csv",
+      "bytes": 59564,
+      "sha256": "f08cd6dc30b447cb91cbe9232c79052e8521f32f6105bb1489b5bfabf4ca3241",
+      "url": "https://raw.githubusercontent.com/PokeAPI/pokeapi/6fd69dfe90465ba96534f6816fc817737d1f97f6/data/v2/csv/items.csv"
+    },
+    {
+      "path": "ability_names.csv",
+      "bytes": 65239,
+      "sha256": "8acb80c42210f86ae747dc3347b060d69cd2574a9dbfaf74774ae632ca6348da",
+      "url": "https://raw.githubusercontent.com/PokeAPI/pokeapi/6fd69dfe90465ba96534f6816fc817737d1f97f6/data/v2/csv/ability_names.csv"
+    },
+    {
+      "path": "abilities.csv",
+      "bytes": 7074,
+      "sha256": "74c3588ad48e08e54ff01f432899a4028c3e91508bbd53201df85e1f6b9e9ef3",
+      "url": "https://raw.githubusercontent.com/PokeAPI/pokeapi/6fd69dfe90465ba96534f6816fc817737d1f97f6/data/v2/csv/abilities.csv"
+    },
+    {
+      "path": "PokeAPI-LICENSE.md",
+      "bytes": 1621,
+      "sha256": "1c04595dc662981c20956ae4251dfa7b62b475c345eddf98bc9b904cb2373f2c",
+      "url": "https://raw.githubusercontent.com/PokeAPI/pokeapi/6fd69dfe90465ba96534f6816fc817737d1f97f6/LICENSE.md"
+    }
+  ]
+}

@@ -1,0 +1,458 @@
+[
+  {
+    "kind": "move",
+    "id": "tackle",
+    "source": "Embiste en arco a todo lo que tengas delante.",
+    "ko": "전방의 모든 적에게 부채꼴로 돌진해요."
+  },
+  {
+    "kind": "move",
+    "id": "quick-attack",
+    "source": "Cruzas como un rayo hacia el enemigo y golpeas todo el camino.",
+    "ko": "번개처럼 적에게 돌진하며 경로에 있는 모든 적을 공격해요."
+  },
+  {
+    "kind": "move",
+    "id": "swords-dance",
+    "source": "No hace daño: acumula ATAQUE (físico) mientras esté activo.",
+    "ko": "피해는 주지 않아요. 활성화된 동안 공격(물리)을 중첩해요."
+  },
+  {
+    "kind": "move",
+    "id": "nasty-plot",
+    "source": "No hace daño: acumula ATAQUE ESPECIAL mientras esté activo.",
+    "ko": "피해는 주지 않아요. 활성화된 동안 특수공격을 중첩해요."
+  },
+  {
+    "kind": "move",
+    "id": "agility",
+    "source": "No hace daño: acumula VELOCIDAD mientras esté activo.",
+    "ko": "피해는 주지 않아요. 활성화된 동안 스피드를 중첩해요."
+  },
+  {
+    "kind": "move",
+    "id": "harden",
+    "source": "No hace daño: acumula DEFENSA mientras esté activo.",
+    "ko": "피해는 주지 않아요. 활성화된 동안 방어를 중첩해요."
+  },
+  {
+    "kind": "move",
+    "id": "ember",
+    "source": "Bola de fuego al enemigo más cercano.",
+    "ko": "가장 가까운 적에게 불덩이를 날려요."
+  },
+  {
+    "kind": "move",
+    "id": "flamethrower",
+    "source": "Chorro de llamas en abanico corto que quema.",
+    "ko": "짧은 부채꼴 범위로 불꽃을 뿜어 화상 상태로 만들어요."
+  },
+  {
+    "kind": "move",
+    "id": "fire-spin",
+    "source": "Llamas que giran a tu alrededor. Defensa constante.",
+    "ko": "불꽃이 주위를 맴돌며 지속적으로 보호해요."
+  },
+  {
+    "kind": "move",
+    "id": "heat-wave",
+    "source": "Explota en llamas en todas las direcciones.",
+    "ko": "모든 방향으로 불꽃을 터뜨려요."
+  },
+  {
+    "kind": "move",
+    "id": "water-gun",
+    "source": "Chorro perforante. Fiable a cualquier distancia.",
+    "ko": "적을 관통하는 물줄기를 쏴요. 어느 거리에서나 믿음직해요."
+  },
+  {
+    "kind": "move",
+    "id": "bubble",
+    "source": "Burbujas en abanico que ralentizan a quien tocan.",
+    "ko": "부채꼴로 거품을 날려 닿은 적을 느려지게 해요."
+  },
+  {
+    "kind": "move",
+    "id": "hydro-pump",
+    "source": "Cañonazo de agua lento pero devastador.",
+    "ko": "느리지만 파괴적인 물대포를 발사해요."
+  },
+  {
+    "kind": "move",
+    "id": "aqua-ring",
+    "source": "No hace daño: acumula REGENERACIÓN de vida.",
+    "ko": "피해는 주지 않아요. 체력 재생을 중첩해요."
+  },
+  {
+    "kind": "move",
+    "id": "vine-whip",
+    "source": "Látigos de largo alcance en arco amplio.",
+    "ko": "긴 채찍을 넓은 부채꼴로 휘둘러요."
+  },
+  {
+    "kind": "move",
+    "id": "razor-leaf",
+    "source": "Dos hojas que van y vuelven cortando a la ida y a la vuelta.",
+    "ko": "나뭇잎 두 장이 날아갔다 돌아오며 양방향으로 적을 베어요."
+  },
+  {
+    "kind": "move",
+    "id": "leaf-storm",
+    "source": "Un ciclón de hojas gira amplio a tu alrededor.",
+    "ko": "잎사귀 회오리가 넓게 주위를 돌아요."
+  },
+  {
+    "kind": "move",
+    "id": "giga-drain",
+    "source": "Raíces que atrapan y machacan todo lo que tienes cerca.",
+    "ko": "뿌리로 주변의 모든 적을 붙잡아 두들겨요."
+  },
+  {
+    "kind": "move",
+    "id": "thunder-shock",
+    "source": "Descarga rapidísima que atraviesa varios enemigos.",
+    "ko": "여러 적을 관통하는 초고속 전격을 날려요."
+  },
+  {
+    "kind": "move",
+    "id": "discharge",
+    "source": "Campo eléctrico permanente alrededor de ti.",
+    "ko": "주변에 영구적으로 전기장을 펼쳐요."
+  },
+  {
+    "kind": "move",
+    "id": "thunderbolt",
+    "source": "Un rayo que salta de un enemigo a otro.",
+    "ko": "번개가 적 사이를 연쇄적으로 튕겨요."
+  },
+  {
+    "kind": "move",
+    "id": "confusion",
+    "source": "Onda que persigue sola a su objetivo.",
+    "ko": "목표를 자동으로 추적하는 파동을 날려요."
+  },
+  {
+    "kind": "move",
+    "id": "psybeam",
+    "source": "Rayo psíquico ancho y contundente.",
+    "ko": "넓고 강력한 에스퍼 광선을 쏴요."
+  },
+  {
+    "kind": "move",
+    "id": "psychic",
+    "source": "Estallido mental radial que busca enemigos.",
+    "ko": "적을 찾아가는 정신 에너지를 방사형으로 터뜨려요."
+  },
+  {
+    "kind": "move",
+    "id": "sludge",
+    "source": "Lodo tóxico que envenena al impactar.",
+    "ko": "맞은 적을 중독시키는 맹독성 오물을 날려요."
+  },
+  {
+    "kind": "move",
+    "id": "mud-shot",
+    "source": "Salpica lodo alrededor y ralentiza.",
+    "ko": "주변에 진흙을 튀겨 적을 느려지게 해요."
+  },
+  {
+    "kind": "move",
+    "id": "gust",
+    "source": "Remolinos de viento que te escoltan.",
+    "ko": "회오리바람이 곁을 지켜요."
+  },
+  {
+    "kind": "move",
+    "id": "wing-attack",
+    "source": "Barrido de alas amplio que empuja.",
+    "ko": "날개를 넓게 휘둘러 적을 밀쳐 내요."
+  },
+  {
+    "kind": "move",
+    "id": "body-slam",
+    "source": "Placaje con todo el peso: lento, corto y brutal.",
+    "ko": "온몸의 무게를 실어 몸통박치기를 해요. 느리고 사거리는 짧지만 강력해요."
+  },
+  {
+    "kind": "move",
+    "id": "hyper-voice",
+    "source": "Onda sonora que sale en todas direcciones.",
+    "ko": "모든 방향으로 음파를 퍼뜨려요."
+  },
+  {
+    "kind": "move",
+    "id": "poison-sting",
+    "source": "Aguijón rápido que envenena.",
+    "ko": "재빠른 독침으로 적을 중독시켜요."
+  },
+  {
+    "kind": "move",
+    "id": "toxic",
+    "source": "Vas dejando charcos de veneno que intoxican a quien los pisa.",
+    "ko": "밟은 적을 맹독 상태로 만드는 독 웅덩이를 남겨요."
+  },
+  {
+    "kind": "move",
+    "id": "bulldoze",
+    "source": "Sacude el suelo: daña y frena a lo cercano.",
+    "ko": "땅을 흔들어 주변의 모든 적에게 피해를 주고 느려지게 해요."
+  },
+  {
+    "kind": "move",
+    "id": "bug-bite",
+    "source": "Mordisco rápido en arco corto.",
+    "ko": "좁은 부채꼴 범위를 재빠르게 물어요."
+  },
+  {
+    "kind": "move",
+    "id": "string-shot",
+    "source": "Deja telarañas en el suelo que atrapan y frenan mucho al que las pisa.",
+    "ko": "바닥에 거미줄을 남겨 밟은 적을 붙잡고 크게 느려지게 해요."
+  },
+  {
+    "kind": "move",
+    "id": "bug-buzz",
+    "source": "Vibración constante que machaca lo cercano.",
+    "ko": "끊임없는 진동으로 주변의 모든 적을 두들겨요."
+  },
+  {
+    "kind": "move",
+    "id": "rock-throw",
+    "source": "Pedrusco pesado que empuja al enemigo.",
+    "ko": "무거운 바위로 적을 밀쳐 내요."
+  },
+  {
+    "kind": "move",
+    "id": "rock-slide",
+    "source": "Caen rocas del cielo sobre los enemigos cercanos.",
+    "ko": "주변 적 위로 하늘에서 바위가 떨어져요."
+  },
+  {
+    "kind": "move",
+    "id": "ice-beam",
+    "source": "Rayo helado que congela casi del todo.",
+    "ko": "차가운 광선으로 적을 거의 완전히 얼려요."
+  },
+  {
+    "kind": "move",
+    "id": "powder-snow",
+    "source": "Ventisca a tu alrededor que ralentiza.",
+    "ko": "주변에 눈보라를 일으켜 적을 느려지게 해요."
+  },
+  {
+    "kind": "move",
+    "id": "karate-chop",
+    "source": "Golpe seco y potente al frente.",
+    "ko": "정면에 날카롭고 강력한 일격을 가해요."
+  },
+  {
+    "kind": "move",
+    "id": "aura-sphere",
+    "source": "Esfera de energía que nunca falla.",
+    "ko": "절대 빗나가지 않는 에너지 구체를 날려요."
+  },
+  {
+    "kind": "move",
+    "id": "lick",
+    "source": "Lametazo espectral que paraliza un poco.",
+    "ko": "유령의 혀로 핥아 잠시 마비시켜요."
+  },
+  {
+    "kind": "move",
+    "id": "shadow-ball",
+    "source": "Esfera oscura que atraviesa a varios.",
+    "ko": "여러 적을 관통하는 어둠의 구체를 날려요."
+  },
+  {
+    "kind": "move",
+    "id": "dragon-rage",
+    "source": "Llamarada dracónica en línea recta.",
+    "ko": "드래곤의 불꽃을 일직선으로 뿜어요."
+  },
+  {
+    "kind": "move",
+    "id": "dragon-dance",
+    "source": "No hace daño: acumula ATAQUE (físico) más rápido que Danza Espada.",
+    "ko": "피해는 주지 않아요. 칼춤보다 빠르게 공격(물리)을 중첩해요."
+  },
+  {
+    "kind": "move",
+    "id": "fairy-wind",
+    "source": "Brisa mágica en todas direcciones.",
+    "ko": "모든 방향으로 마법의 산들바람을 일으켜요."
+  },
+  {
+    "kind": "move",
+    "id": "dazzling-gleam",
+    "source": "Destello a tu alrededor.",
+    "ko": "주변으로 빛을 번쩍여요."
+  },
+  {
+    "kind": "move",
+    "id": "metal-claw",
+    "source": "Zarpazo de acero en arco.",
+    "ko": "강철 발톱을 부채꼴로 휘둘러요."
+  },
+  {
+    "kind": "move",
+    "id": "flash-cannon",
+    "source": "Rayo de luz metálica que perfora.",
+    "ko": "금속빛 광선으로 적을 관통해요."
+  },
+  {
+    "kind": "move",
+    "id": "bite",
+    "source": "Dentellada rápida que hace retroceder.",
+    "ko": "재빠르게 물어 적을 밀쳐 내요."
+  },
+  {
+    "kind": "move",
+    "id": "dark-pulse",
+    "source": "Onda de energía oscura en todas direcciones.",
+    "ko": "모든 방향으로 어둠의 에너지 파동을 내보내요."
+  },
+  {
+    "kind": "move",
+    "id": "night-shade",
+    "source": "Una sombra te rodea y consume lo cercano.",
+    "ko": "그림자가 주위를 둘러싸 주변의 적을 집어삼켜요."
+  },
+  {
+    "kind": "move",
+    "id": "bonemerang",
+    "source": "Un hueso que va y vuelve golpeando fuerte.",
+    "ko": "뼈다귀가 날아갔다 돌아오며 강하게 공격해요."
+  },
+  {
+    "kind": "move",
+    "id": "psycho-cut",
+    "source": "Cuchillas psíquicas que vuelven a ti.",
+    "ko": "초능력 칼날이 날아갔다 자신에게 돌아와요."
+  },
+  {
+    "kind": "move",
+    "id": "spikes",
+    "source": "Siembra púas que estallan al pisarlas.",
+    "ko": "밟으면 폭발하는 압정을 뿌려요."
+  },
+  {
+    "kind": "move",
+    "id": "toxic-spikes",
+    "source": "Púas venenosas que envenenan mucho al estallar.",
+    "ko": "폭발하면 적을 맹독 상태로 만드는 독압정이에요."
+  },
+  {
+    "kind": "move",
+    "id": "hail",
+    "source": "Bolas de hielo caen sobre los enemigos y los frenan.",
+    "ko": "우박이 적 위로 떨어져 적을 느려지게 해요."
+  },
+  {
+    "kind": "move",
+    "id": "meteor-mash",
+    "source": "Dos meteoros de acero que aplastan donde caen.",
+    "ko": "강철 유성 두 개가 떨어진 곳을 짓뭉개요."
+  },
+  {
+    "kind": "move",
+    "id": "will-o-wisp",
+    "source": "Deja una llama flotante que dispara sola y quema.",
+    "ko": "공중에 떠서 자동으로 공격하고 화상 상태로 만드는 불꽃을 남겨요."
+  },
+  {
+    "kind": "move",
+    "id": "substitute",
+    "source": "Un muñeco que se queda disparando por ti.",
+    "ko": "인형이 그 자리에 남아 대신 사격해요."
+  },
+  {
+    "kind": "move",
+    "id": "aerial-ace",
+    "source": "Te lanzas en picado y cortas todo lo que cruzas.",
+    "ko": "급강하하며 경로에 있는 모든 적을 베어요."
+  },
+  {
+    "kind": "move",
+    "id": "flame-wheel",
+    "source": "Corres envuelto en fuego y dejas un rastro de llamas.",
+    "ko": "불꽃에 휩싸여 달리며 불길을 남겨요."
+  },
+  {
+    "kind": "move",
+    "id": "bubble-beam",
+    "source": "Chorro de burbujas en abanico corto que frena.",
+    "ko": "짧은 부채꼴 범위로 거품을 뿜어 적을 느려지게 해요."
+  },
+  {
+    "kind": "move",
+    "id": "hex",
+    "source": "Maldición que salta entre enemigos. Mucho más daño si están quemados, envenenados o frenados.",
+    "ko": "저주가 적 사이를 연쇄적으로 옮겨 가요. 화상, 독 또는 감속 상태인 적에게 훨씬 큰 피해를 줘요."
+  },
+  {
+    "kind": "item",
+    "id": "leftovers",
+    "source": "Recuperas un 1,5% de tu vida por segundo.",
+    "ko": "매초 체력의 1.5%를 회복해요."
+  },
+  {
+    "kind": "item",
+    "id": "choiceband",
+    "source": "+40% de daño, pero no puedes cambiar de movimiento.",
+    "ko": "피해량 +40%. 단, 기술을 바꿀 수 없어요."
+  },
+  {
+    "kind": "item",
+    "id": "quickclaw",
+    "source": "-20% de recarga en todos tus movimientos.",
+    "ko": "모든 기술의 재사용 대기시간 -20%."
+  },
+  {
+    "kind": "item",
+    "id": "focussash",
+    "source": "Un golpe que te dejaría KO te deja con 1 de vida (cada 60 s).",
+    "ko": "기절할 공격을 받아도 체력 1로 버텨요(60초마다)."
+  },
+  {
+    "kind": "item",
+    "id": "shellbell",
+    "source": "Recuperas vida con el daño que haces.",
+    "ko": "주는 피해에 따라 체력을 회복해요."
+  },
+  {
+    "kind": "item",
+    "id": "amuletcoin",
+    "source": "+50% de Pokémonedas al acabar la run.",
+    "ko": "플레이 종료 시 포켓코인 +50%."
+  },
+  {
+    "kind": "item",
+    "id": "luckyegg",
+    "source": "+30% de experiencia.",
+    "ko": "경험치 +30%."
+  },
+  {
+    "kind": "item",
+    "id": "lifeorb",
+    "source": "+30% de daño, pero cada ataque te quita un poco de vida.",
+    "ko": "피해량 +30%. 단, 공격할 때마다 체력을 조금 소모해요."
+  },
+  {
+    "kind": "item",
+    "id": "choicescarf",
+    "source": "+35% de velocidad.",
+    "ko": "스피드 +35%."
+  },
+  {
+    "kind": "item",
+    "id": "rockyhelmet",
+    "source": "Los que te golpean cuerpo a cuerpo reciben daño.",
+    "ko": "근접 공격으로 나를 때린 적이 피해를 받아요."
+  },
+  {
+    "kind": "item",
+    "id": "assaultvest",
+    "source": "+20% de reducción de daño recibido.",
+    "ko": "받는 피해 감소율 +20%."
+  }
+]

@@ -1,0 +1,16 @@
+{
+  "version": "0.4.0",
+  "translationEntries": 1443,
+  "placeholderCount": 205,
+  "emptyTranslations": 0,
+  "nameAndContextAssertions": 1297,
+  "descriptions": 76,
+  "searchSpecies": 966,
+  "syntaxFiles": 4,
+  "result": "passed",
+  "limits": [
+    "Browser/phone runtime behavior is not proven by these unit tests.",
+    "Stock iPhone Userscripts does not install the Canvas hook.",
+    "Custom Safari extension needs conversion, signing and actual-device validation."
+  ]
+}
