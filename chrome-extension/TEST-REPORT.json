@@ -1,23 +1,34 @@
 {
-  "extensionVersion": "0.1.0-test",
+  "extensionVersion": "0.1.1-test",
+  "patchVersion": "0.4.4",
   "manifestVersion": 3,
-  "dataVersion": "0.4.3",
   "minimumChrome": "111",
-  "targets": [
-    "Chrome desktop on Windows10/11",
-    "Chrome desktop on macOS"
-  ],
-  "automatedTests": {
-    "passed": 58,
-    "type": "static/Node VM boundary and packaging validation"
-  },
+  "sourceBundleSHA256": "9fba2807e4c3369aa8ec41caa809f557b0995c1255d43943dc6276d319cacb57",
+  "tierModel": "fullmax-v1",
+  "tierSourceCommit": "803125dfdf3066fe6cf65f490f1e7b577871a295",
+  "species": 966,
+  "assessedCandidates": 14,
+  "tierCalculationChecks": 8717,
+  "uiAutomatedTests": "Node executable fake DOM lifecycle/privacy/idempotence; not browser layout validation",
+  "chromeBoundaryChecks": 58,
   "userConfirmation": {
-    "confirmed": true,
-    "statement": "User said they checked directly; device/OS and Google-login scope were not specified."
+    "version": "0.1.0-test",
+    "statement": "Prior version only. User did not confirm this new version."
   },
-  "agentBrowserInstall": "Not independently confirmed in the Aside Browser profile",
+  "browserUIVerification": {
+    "passed": true,
+    "method": "DOM-only tier module executed in the official dev.html document via browser automation isolated context. Not an installed-extension end-to-end test.",
+    "checks": [
+      "Mewtwo detail shows S candidate, HP198, speed164.92, post30 speed138.73, coefficient3.94",
+      "Mewtwo search result shows S candidate badge",
+      "Unassessed cards show unassessed label",
+      "Unowned dex36 remains ??? and has no tier-detail stats",
+      "Criteria opens/closes; no duplicate panels"
+    ],
+    "accountChanges": "No purchases, upgrade changes, favorite changes, partner changes or gameplay started"
+  },
   "windowsRuntime": "Not independently tested on Windows",
   "chromeWebStore": "Not submitted",
-  "authentication": "Google/Firebase pages excluded; no credential/cookie/token or UA handling",
-  "automaticUpdates": false
+  "automaticUpdates": false,
+  "privacy": "Tier UI never reads or modifies account/save/upgrade data. No analytics/network/credential API added."
 }

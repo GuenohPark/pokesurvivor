@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "checks": 8717,
+  "species": 966,
+  "assessed": 14,
+  "reference": "Original game Player/Stats/Upgrades execution in isolated VM",
+  "limits": [
+    "Mathematical/static verification, not a game survival simulation or measured winrate.",
+    "No player save data or account state used."
+  ]
+}

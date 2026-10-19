@@ -1,13 +1,19 @@
 # PokéSurvivor 한국어 패치
 
+## 도감 풀강화 잠정 티어 추가
+
+**[도감 표시·평가 기준](docs/TIERS.md)** · **[966종 풀강화 계산표](dist/pokesurvivor-full-upgrade-stats.csv)**
+
+도감 카드에 S 후보 / A+ 후보 / 화력 특화 / 미평가 배지가 보입니다. 보유 포켓몬 상세 화면에는 풀강화 시작 HP·이동속도·30분 이후 속도·공격계수와 평가 근거가 추가됩니다. **14종만 잠정 등급을 선별했으며 미평가는 하위 등급이 아닙니다.** 계정 강화나 실제 게임 수치는 변경하지 않습니다.
+
 ## Chrome 확장 · Windows / Mac
 
-**[Chrome 확장 ZIP 다운로드](https://github.com/GuenohPark/pokesurvivor/releases/download/chrome-v0.1.0-test/pokesurvivor-ko-chrome-extension-0.1.0-test.zip)** · **[Windows/Mac 설치 안내](docs/CHROME-EXTENSION.md)** · [확장 소스](chrome-extension/)
+**[Chrome 확장 ZIP 다운로드](https://github.com/GuenohPark/pokesurvivor/releases/download/chrome-v0.1.1-test/pokesurvivor-ko-chrome-extension-0.1.1-test.zip)** · **[Windows/Mac 설치 안내](docs/CHROME-EXTENSION.md)** · [확장 소스](chrome-extension/)
 
 - Windows 10/11 및 macOS의 Chrome 111 이상용 **Manifest V3** 확장입니다. ZIP을 풀고 `chrome://extensions` → 개발자 모드 → 압축해제된 확장 프로그램 로드에서 `manifest.json`이 있는 폴더를 선택하세요.
 - 설치 후 **[공식 게임 .com 직접 열기](https://pokesurvivor.com/)** 또는 기존 게임 새로고침. `.org/play/`의 iframe이나 Google/Firebase 인증 페이지에는 적용하지 않습니다. 진행 중인 판에서 새로고침하지 마세요.
-- 확장 0.1.0-test / 한국어 데이터 0.4.3. DOM·Canvas 번역과 한국어 글꼴을 포함하며, 기존 Userscript와 중복 사용하지 마세요.
-- **사용자가 직접 확인했다고 보고했습니다.** 확인 기기/OS 및 Google 로그인 성공 범위는 별도로 제공되지 않았으며 Windows 실기기 독립 검증은 미완료입니다. 자동 검사 58개 통과와 실제 사용자 확인을 구분해 기록했습니다.
+- 확장 0.1.1-test / 한국어 패치 0.4.4. DOM·Canvas 번역과 한국어 글꼴을 포함하며, 기존 Userscript와 중복 사용하지 마세요.
+- 이전 0.1.0은 사용자가 직접 확인했다고 보고했습니다. **새 0.1.1의 도감 UI·수치 검사는 별도 기록**하며 Windows 실기기와 Google 로그인 성공을 보장하지 않습니다.
 - Chrome Web Store에는 아직 등록하지 않았습니다. 압축해제 설치판은 자동 업데이트되지 않습니다. 브라우저/계정/키보드를 별도로 재구현하지 않으며 인증 정보·쿠키·토큰을 복사하지 않습니다.
 
 ## [아이폰 자동 업데이트 설치 파일 받기](https://raw.githubusercontent.com/GuenohPark/pokesurvivor/main/dist/pokesurvivor-ko-auto.user.js)
@@ -32,7 +38,7 @@ Safari에서 코드만 보이면 링크를 길게 눌러 **링크된 파일 다�
 
 **[Firefox + Tampermonkey 시험 설치 안내](docs/FIREFOX-ANDROID.md)** · **[브라우저용 패치 파일](https://raw.githubusercontent.com/GuenohPark/pokesurvivor/main/dist/pokesurvivor-ko-browser.user.js)**
 
-실제 Firefox에서 Google 로그인과 플레이를 진행하고 확장으로 번역하는 대안입니다. Mozilla는 Firefox Android의 홈 화면 웹앱에서도 확장 사용을 안내합니다. **이 조합은 실기기 미검증이며, 기존 APK의 Google 로그인을 고친 버전은 아닙니다.** 브라우저 파일 0.1.0 / 번역 데이터 0.4.3. 기존 패치와 중복 사용하지 마세요.
+실제 Firefox에서 Google 로그인과 플레이를 진행하고 확장으로 번역하는 대안입니다. Mozilla는 Firefox Android의 홈 화면 웹앱에서도 확장 사용을 안내합니다. **이 조합은 실기기 미검증이며, 기존 APK의 Google 로그인을 고친 버전은 아닙니다.** 브라우저 파일 0.1.1 / 한국어 패치 0.4.4. 기존 패치와 중복 사용하지 마세요.
 
 ## Android 단독 APK 테스트 앱
 
@@ -58,7 +64,7 @@ Safari에서 코드만 보이면 링크를 길게 눌러 **링크된 파일 다�
 - 한글 갈무리11 도트 폰트, 한국어 도감 검색, 생존 팁 15개
 - ‘Psychic’의 타입 **에스퍼**와 기술 **사이코키네시스** 등 문맥 구분
 
-번역팩 **0.4.3** · 자동 로더 **0.1.1**. 이번 버전은 터치 기기에서 한글 글리프를 10% 줄입니다. 영문·숫자와 데스크톱 크기는 유지합니다. 아이폰 Safari Userscripts의 Canvas 진행 화면 번역을 해결한 버전은 아닙니다. 물리적 iPhone에서 새 로더·전체 흐름을 직접 검증한 상태는 아닙니다.
+번역팩 **0.4.4** · 자동 로더 **0.1.1**. 이번 버전은 도감 풀강화 잠정 티어를 추가하며, 0.4.3의 터치 기기 한글 글리프 10% 축소를 유지합니다. 영문·숫자와 데스크톱 크기는 유지합니다. 아이폰 Safari Userscripts의 Canvas 진행 화면 번역을 해결한 버전은 아닙니다. 물리적 iPhone에서 새 로더·전체 흐름을 직접 검증한 상태는 아닙니다.
 
 ## 저장소 구조
 

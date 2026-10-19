@@ -1,9 +1,9 @@
 {
   "manifest_version": 3,
   "name": "PokéSurvivor 한국어 패치 (Chrome)",
-  "version": "0.1.0",
-  "version_name": "0.1.0-test · 데이터 0.4.3",
-  "description": "공식 PokéSurvivor 게임의 DOM·Canvas 한국어 번역. Windows·Mac용 Chrome 시험판. 인증 페이지는 제외합니다.",
+  "version": "0.1.1",
+  "version_name": "0.1.1-test · 도감 티어 · 패치 0.4.4",
+  "description": "공식 PokéSurvivor DOM·Canvas 한국어 번역과 도감 풀강화 잠정 티어. Windows·Mac용 Chrome 시험판. 인증 페이지 제외.",
   "minimum_chrome_version": "111",
   "homepage_url": "https://github.com/GuenohPark/pokesurvivor",
   "icons": {

@@ -23,8 +23,9 @@ const header=`// ==UserScript==
 // ==/UserScript==
 `;
 const serialized=JSON.stringify(data);
+const tier=read('src/tier-ui.js').replace('const DATA=PSKO_TIER_DATA;', 'const DATA='+JSON.stringify(json('data/tier-ui.json'))+';');
 const search=read('src/search-korean.js').replace('SEARCH_SPECIES',JSON.stringify(json('data/search-species.json')));
-const main=header+notice+read('assets/font-install.js')+'\n(function(){\n'+factory+'\nconst DATA='+serialized+';\nconst api=createPokesurvivorKorean(DATA);globalThis.__PSKO=api;api.installDOM();document.documentElement.dataset.pskoMode="dom-only";\n})();\n'+read('src/tips-ui.js')+'\n'+search;
+const main=header+notice+read('assets/font-install.js')+'\n(function(){\n'+factory+'\nconst DATA='+serialized+';\nconst api=createPokesurvivorKorean(DATA);globalThis.__PSKO=api;api.installDOM();document.documentElement.dataset.pskoMode="dom-only";\n})();\n'+read('src/tips-ui.js')+'\n'+search+'\n'+tier;
 const page=notice+'(function(){\n'+factory+'\nconst api=createPokesurvivorKorean('+serialized+');globalThis.__PSKO_PAGE=api;api.installCanvas();\n})();\n';
 const background=notice+String.raw`'use strict';
 const ext=globalThis.browser||globalThis.chrome;
