@@ -5,7 +5,7 @@
 [설치 방법](docs/INSTALL.md) · [PWA에서 안 되는 이유와 대안](docs/PWA.md) · [게임 플레이](https://pokesurvivor.org/play/) · [게임 팁](docs/TIPS.md)
 
 **아이폰은 Safari 탭 + Userscripts로 사용하세요. 홈 화면의 독립 PWA는 지원하지 않습니다.**
-Userscripts 배포판은 메뉴·이름·설명 등 DOM 화면을 번역합니다. Canvas HUD와 게임 안 글자까지 완전 적용되는 버전은 아닙니다. [정확한 지원 범위](docs/COMPATIBILITY.md)
+Userscripts 배포판은 메뉴·이름·설명 등 DOM 화면을 번역합니다. 진행 화면의 **Swarm(기술/대량 발생), 실시간 격파 수, 포켓몬 이름은 Canvas로 그려져 현재 Userscripts에서는 번역되지 않습니다.** [정확한 지원 범위](docs/COMPATIBILITY.md)
 
 비공식 팬 패치입니다. Nintendo, GAME FREAK, PokéSurvivor 개발팀과 무관하며 게임 수치·계정 저장·랭킹·서버 요청을 바꾸지 않습니다.
 
@@ -16,7 +16,7 @@ Userscripts 배포판은 메뉴·이름·설명 등 DOM 화면을 번역합니�
 - [데스크톱 확장 실험판 ZIP](https://raw.githubusercontent.com/GuenohPark/pokesurvivor/main/dist/pokesurvivor-ko-desktop-extension.zip). iPhone 설치 파일이 아닙니다. 압축을 풀고 Chrome의 개발자 모드에서 로드합니다. [제약](docs/COMPATIBILITY.md)
 - [설치 파일 폴더 전체 보기](dist/). 개발 소스는 설치할 필요가 없습니다.
 
-Safari에서 코드만 보이면 링크를 길게 눌러 **‘링크된 파일 다운로드’**를 선택하고 Userscripts의 지정 폴더에 저장하세요. 확장자는 .user.js 그대로 유지합니다.
+Safari에서 코드만 보이면 링크를 길게 눌러 **링크된 파일 다운로드**를 선택하고 Userscripts의 지정 폴더에 저장하세요. 확장자는 .user.js 그대로 유지합니다.
 
 ## 아이폰 빠른 설치
 
@@ -36,7 +36,7 @@ Safari에서 코드만 보이면 링크를 길게 눌러 **‘링크된 파일 �
 - 한글 갈무리11 도트 폰트, 한국어 도감 검색, 생존 팁 15개
 - ‘Psychic’의 타입 **에스퍼**와 기술 **사이코키네시스** 등 문맥 구분
 
-번역팩 **0.4.2** · 자동 로더 **0.1.1**. 이번 버전은 폴더·배포 경로와 설치 안내를 정리한 버전입니다. 물리적 iPhone에서 새 로더·전체 흐름을 직접 검증한 상태는 아닙니다.
+번역팩 **0.4.3** · 자동 로더 **0.1.1**. 이번 버전은 터치 기기에서 한글 글리프를 10% 줄입니다. 영문·숫자와 데스크톱 크기는 유지합니다. Canvas 진행 화면 번역을 해결한 버전은 아닙니다. 물리적 iPhone에서 새 로더·전체 흐름을 직접 검증한 상태는 아닙니다.
 
 ## 저장소 구조
 

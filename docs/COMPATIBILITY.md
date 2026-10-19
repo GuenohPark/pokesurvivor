@@ -17,6 +17,20 @@
 - [개발자가 MAIN 실행을 별도로 검토한 이슈 #954](https://github.com/quoid/userscripts/issues/954)
 - [공식 게임의 i18n](https://pokesurvivor.com/js/core/i18n.js)
 
+## 진행 화면의 Swarm·실시간 격파 수·포켓몬 이름
+
+**[blocked] 현재 App Store Userscripts(content) 설치만으로 이 Canvas HUD를 번역하지 못합니다.** 번역 단어 누락이 아니라 게임 페이지 컨텍스트의 그리기를 가로채지 못하는 실행 환경 제한입니다. 사전에 Swarm/Enjambre → 벌레의알림, Pokémon swarm! → 포켓몬 대량 발생!, Defeated/Derrotados → 격파 수와 포켓몬 이름이 이미 포함되어 있습니다.
+
+공개 [HUD 소스](https://pokesurvivor.com/js/ui/hud.js)의 draw는 플레이어·보스 종 이름, 실시간 격파 수, 활성 기술명과 배너를 Canvas의 fillText/strokeText로 그립니다. [일시정지·결과 화면](https://pokesurvivor.com/js/ui/run-ui.js)은 DOM이어서 기술명·결과 격파 수·획득 포켓몬은 별도로 번역할 수 있지만, 일시정지 화면에 실시간 격파 수가 노출되는 것은 아닙니다.
+
+2026-10-19에 확인한 Userscripts 최신 공개 릴리스는 v4.8.6(iOS 앱 1.8.6 계열)이며 page 주입은 인라인 script를 사용합니다. 게임의 meta CSP는 이를 허용하지 않습니다. content에서 installCanvas를 호출하거나 관찰자를 더 붙이는 것으로 해결됐다고 주장하지 않습니다. 전용 Safari WebExtension의 MAIN 실행, 앱 패키징·서명·기기 설치와 검증이 필요합니다. 진행 화면까지 동작하는 iPhone 설치 파일은 아직 제공하지 않습니다.
+
+## 한글 크기 10% 축소 (0.4.3)
+
+주 포인터가 터치인 기기(pointer: coarse)에서는 갈무리의 한글 전용 font-face 두 개에 size-adjust:90%를 적용합니다. 데스크톱(pointer:fine)은 100%이며 영문·숫자·버튼 크기 자체를 줄이지 않습니다. 미디어 조건 변경과 재주입 시 중복 스타일/리스너를 방지합니다. 이 글리프 축소는 Safari/iOS 17 이상에서 지원되는 font-face size-adjust를 사용하므로 구형 Safari에서는 원래 크기로 남을 수 있습니다. [브라우저 지원](https://caniuse.com/mdn-css_at-rules_font-face_size-adjust)
+
+폰트 비율·일반/굵게·미디어 전환·재주입과 폰트 바이트 보존은 자동 테스트로 확인하며, 물리적 iPhone 검증은 아직 하지 않았습니다.
+
 ## 별도 WebExtension 소스
 
 저장소의 extension/manifest.json과 extension/extension-*.js는 별도 브라우저 확장 소스입니다. 백그라운드에서 **browser.scripting.executeScript({world:'MAIN', func, args})**를 사용합니다. 문자열 eval이나 동적 script 태그를 이용하지 않으며 사이트 CSP를 해제하지 않습니다. 숨겨진 게임 G 객체에도 접근하지 않습니다.
@@ -50,6 +64,6 @@ MAIN 쪽은 fillText·strokeText·measureText를 함께 감싸고, alert/confirm
 
 자동 로더는 content 컨텍스트에서 GM.getValue·GM.setValue·GM.xmlHttpRequest를 사용합니다. 공개 GitHub 주소의 코드만 받아 버전·식별자·문법을 확인하고 실행합니다. 앱의 업데이트 버튼과 별개로 동작하며 페이지 입력 이후 새 버전을 hot-swap하지 않습니다.
 
-Userscripts v4.8.6/iOS1.8.6의 content 주입 코드 자체가 Function을 사용하는 것을 확인했습니다: https://github.com/quoid/userscripts/blob/06900223459036d2a238d93ab1af4d9f26cadbc7/src/ext/content-scripts/entry-userscripts.js#L79-L89 . 이는 페이지 world의 CSP 차단과 구분됩니다. 자동 로더 역시 이 content 실행 경로를 사용하며 Canvas 권한이 생기는 것은 아닙니다. 물리적 iPhone에서 새 로더를 실행한 검증은 아직 하지 않았습니다. 최신 배포는 번역팩 0.4.2 / 로더 0.1.1이며 새 주소는 dist/입니다. 기존 루트 업데이트 주소 4개는 같은 파일로 유지합니다.
+Userscripts v4.8.6/iOS1.8.6의 content 주입 코드 자체가 Function을 사용하는 것을 확인했습니다: https://github.com/quoid/userscripts/blob/06900223459036d2a238d93ab1af4d9f26cadbc7/src/ext/content-scripts/entry-userscripts.js#L79-L89 . 이는 페이지 world의 CSP 차단과 구분됩니다. 자동 로더 역시 이 content 실행 경로를 사용하며 Canvas 권한이 생기는 것은 아닙니다. 물리적 iPhone에서 새 로더를 실행한 검증은 아직 하지 않았습니다. 최신 배포는 번역팩 0.4.3 / 로더 0.1.1이며 새 주소는 dist/입니다. 기존 루트 업데이트 주소 4개는 같은 파일로 유지합니다.
 
 캐시가 없을 때 확인 중 사용자가 게임을 먼저 시작하면 받은 코드는 저장만 하고 다음 새로고침 때 적용합니다. 동일 버전 재접속·오프라인·잘못된 응답·버전 불일치·사용자 입력 시점 등 13개 분기와 GM이 전역이 아닌 주입 매개변수인 경우를 Node에서 검증했습니다.
