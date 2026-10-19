@@ -2,7 +2,7 @@
 
 [스크립트 설치 / 다운로드](https://raw.githubusercontent.com/GuenohPark/pokesurvivor/main/pokesurvivor-ko-menu.user.js) · [게임 팁 15개와 근거](TIPS.md) · [변경 이력](CHANGELOG.md)
 
-공식 게임은 그대로, 메뉴는 한국어로. **pokesurvivor.org/play/**에서, 아이폰 Safari의 Userscripts 확장으로 사용하는 비공식 UI 패치입니다. 한글에는 갈무리11 도트 폰트를 적용하고, 영문에는 게임의 원래 폰트를 유지합니다. 눌러서 시작 화면에는 소스로 확인한 게임 팁이 무작위로 표시됩니다.
+공식 게임은 그대로, 메뉴는 한국어로. `pokesurvivor.org/play/`에서, 아이폰 Safari의 Userscripts 확장으로 사용하는 비공식 UI 패치입니다. 한글에는 갈무리11 도트 폰트를 적용하고, 영문에는 게임의 원래 폰트를 유지합니다. 눌러서 시작 화면에는 소스로 확인한 게임 팁이 무작위로 표시됩니다.
 
 > 현재는 **메뉴 번역 시험판**입니다. 전체 게임 번역이 아닙니다. Nintendo, GAME FREAK 또는 PokéSurvivor 개발팀과 무관합니다.
 
@@ -53,7 +53,7 @@
 
 ## 영어로 계속 나오나요?
 
-- 기본 접속 주소는 **https://pokesurvivor.org/play/**입니다. 이 페이지는 https://pokesurvivor.com/ 게임을 iframe으로 불러옵니다. **두 도메인 모두 Userscripts 접근 허용**이 필요합니다. 팝업에서 패치가 **sub**(내부 프레임)으로 표시될 수도 있습니다.
+- 기본 접속 주소는 [pokesurvivor.org/play](https://pokesurvivor.org/play/)입니다. 이 페이지는 https://pokesurvivor.com/ 게임을 iframe으로 불러옵니다. **두 도메인 모두 Userscripts 접근 허용**이 필요합니다. 팝업에서 패치가 **sub**(내부 프레임)으로 표시될 수도 있습니다.
 - Userscripts에 **Demo user script**만 보이면 한국어 패치가 인식되지 않은 것입니다. 파일이 앱의 지정 폴더에 있는지 확인하세요.
 - 팝업의 전체 주입 스위치와 한국어 패치 스위치를 켭니다.
 - iCloud 폴더라면 파일 다운로드/동기화 여부도 확인하세요.
