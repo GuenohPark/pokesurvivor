@@ -1,0 +1,47 @@
+{
+  "manifest_version": 3,
+  "name": "PokéSurvivor 한국어 패치 (Chrome)",
+  "version": "0.1.0",
+  "version_name": "0.1.0-test · 데이터 0.4.3",
+  "description": "공식 PokéSurvivor 게임의 DOM·Canvas 한국어 번역. Windows·Mac용 Chrome 시험판. 인증 페이지는 제외합니다.",
+  "minimum_chrome_version": "111",
+  "homepage_url": "https://github.com/GuenohPark/pokesurvivor",
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "action": {
+    "default_title": "PokéSurvivor 한국어 패치",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://pokesurvivor.com/*",
+        "https://www.pokesurvivor.com/*"
+      ],
+      "exclude_matches": [
+        "https://pokesurvivor.com/__/auth*",
+        "https://pokesurvivor.com/auth*",
+        "https://pokesurvivor.com/oauth*",
+        "https://www.pokesurvivor.com/__/auth*",
+        "https://www.pokesurvivor.com/auth*",
+        "https://www.pokesurvivor.com/oauth*"
+      ],
+      "js": [
+        "content-main.js"
+      ],
+      "run_at": "document_start",
+      "world": "MAIN",
+      "all_frames": false,
+      "match_about_blank": false,
+      "match_origin_as_fallback": false
+    }
+  ]
+}

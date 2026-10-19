@@ -6,8 +6,11 @@
   "scripts": {
     "build": "node scripts/build.cjs && node scripts/build-browser.cjs",
     "test": "node tests/test.cjs && node tests/test-auto-loader.cjs && node tests/test-package.cjs && node tests/test-font.cjs && node tests/test-browser.cjs",
-    "build:browser": "node scripts/build-browser.cjs"
+    "build:browser": "node scripts/build-browser.cjs",
+    "build:chrome": "node scripts/build-chrome-extension.cjs",
+    "test:chrome": "node chrome-extension/tests.cjs"
   },
   "autoLoaderVersion": "0.1.1",
-  "browserScriptVersion": "0.1.0"
+  "browserScriptVersion": "0.1.0",
+  "chromeExtensionVersion": "0.1.0"
 }

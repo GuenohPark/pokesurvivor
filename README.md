@@ -1,5 +1,15 @@
 # PokéSurvivor 한국어 패치
 
+## Chrome 확장 · Windows / Mac
+
+**[Chrome 확장 ZIP 다운로드](https://github.com/GuenohPark/pokesurvivor/releases/download/chrome-v0.1.0-test/pokesurvivor-ko-chrome-extension-0.1.0-test.zip)** · **[Windows/Mac 설치 안내](docs/CHROME-EXTENSION.md)** · [확장 소스](chrome-extension/)
+
+- Windows 10/11 및 macOS의 Chrome 111 이상용 **Manifest V3** 확장입니다. ZIP을 풀고 `chrome://extensions` → 개발자 모드 → 압축해제된 확장 프로그램 로드에서 `manifest.json`이 있는 폴더를 선택하세요.
+- 설치 후 **[공식 게임 .com 직접 열기](https://pokesurvivor.com/)** 또는 기존 게임 새로고침. `.org/play/`의 iframe이나 Google/Firebase 인증 페이지에는 적용하지 않습니다. 진행 중인 판에서 새로고침하지 마세요.
+- 확장 0.1.0-test / 한국어 데이터 0.4.3. DOM·Canvas 번역과 한국어 글꼴을 포함하며, 기존 Userscript와 중복 사용하지 마세요.
+- **사용자가 직접 확인했다고 보고했습니다.** 확인 기기/OS 및 Google 로그인 성공 범위는 별도로 제공되지 않았으며 Windows 실기기 독립 검증은 미완료입니다. 자동 검사 58개 통과와 실제 사용자 확인을 구분해 기록했습니다.
+- Chrome Web Store에는 아직 등록하지 않았습니다. 압축해제 설치판은 자동 업데이트되지 않습니다. 브라우저/계정/키보드를 별도로 재구현하지 않으며 인증 정보·쿠키·토큰을 복사하지 않습니다.
+
 ## [아이폰 자동 업데이트 설치 파일 받기](https://raw.githubusercontent.com/GuenohPark/pokesurvivor/main/dist/pokesurvivor-ko-auto.user.js)
 
 [아이폰 설치](docs/INSTALL.md) · [Android Firefox + Google 로그인 시험 경로](docs/FIREFOX-ANDROID.md) · [Android 테스트 APK](docs/ANDROID.md) · [PWA에서 안 되는 이유와 대안](docs/PWA.md) · [게임 플레이](https://pokesurvivor.org/play/) · [게임 팁](docs/TIPS.md)
@@ -13,7 +23,7 @@
 
 - **아이폰 Safari 권장: [자동 업데이트 로더](https://raw.githubusercontent.com/GuenohPark/pokesurvivor/main/dist/pokesurvivor-ko-auto.user.js)**. 이 파일 하나만 설치합니다. 접속할 때 새 번역팩을 받아 캐시합니다.
 - [수동 설치용 전체 번역팩](https://raw.githubusercontent.com/GuenohPark/pokesurvivor/main/dist/pokesurvivor-ko-menu.user.js). 자동 로더와 동시에 켜지 마세요.
-- [데스크톱 확장 실험판 ZIP](https://raw.githubusercontent.com/GuenohPark/pokesurvivor/main/dist/pokesurvivor-ko-desktop-extension.zip). iPhone 설치 파일이 아닙니다. 압축을 풀고 Chrome의 개발자 모드에서 로드합니다. [제약](docs/COMPATIBILITY.md)
+- [이전 데스크톱 확장 실험판 ZIP (보존용)](https://raw.githubusercontent.com/GuenohPark/pokesurvivor/main/dist/pokesurvivor-ko-desktop-extension.zip). iPhone 설치 파일이 아닙니다. 압축을 풀고 Chrome의 개발자 모드에서 로드합니다. [제약](docs/COMPATIBILITY.md)
 - [설치 파일 폴더 전체 보기](dist/). 개발 소스는 설치할 필요가 없습니다.
 
 Safari에서 코드만 보이면 링크를 길게 눌러 **링크된 파일 다운로드**를 선택하고 Userscripts의 지정 폴더에 저장하세요. 확장자는 .user.js 그대로 유지합니다.
@@ -54,6 +64,7 @@ Safari에서 코드만 보이면 링크를 길게 눌러 **링크된 파일 다�
 
 ```text
 dist/       내려받아 설치하는 완성 파일
+chrome-extension/  Chrome·Windows/Mac용 MV3 확장 소스
 android/    Android 테스트 앱 소스·빌드·검증 기록
 extension/  별도 브라우저 확장 소스와 필요한 리소스
 src/        번역·검색·자동 업데이트 실행 코드
@@ -72,6 +83,8 @@ licenses/   게임·폰트·명칭 데이터의 개별 라이선스
 ```sh
 npm run build
 npm test
+npm run test:chrome
+npm run build:chrome
 ```
 
 새 코드는 dist를 기준으로 배포합니다. [변경 기록](docs/CHANGELOG.md) · [출처·라이선스](docs/THIRD-PARTY-NOTICES.md) · [MIT 적용 범위](LICENSE)

@@ -1,0 +1,23 @@
+{
+  "extensionVersion": "0.1.0-test",
+  "manifestVersion": 3,
+  "dataVersion": "0.4.3",
+  "minimumChrome": "111",
+  "targets": [
+    "Chrome desktop on Windows10/11",
+    "Chrome desktop on macOS"
+  ],
+  "automatedTests": {
+    "passed": 58,
+    "type": "static/Node VM boundary and packaging validation"
+  },
+  "userConfirmation": {
+    "confirmed": true,
+    "statement": "User said they checked directly; device/OS and Google-login scope were not specified."
+  },
+  "agentBrowserInstall": "Not independently confirmed in the Aside Browser profile",
+  "windowsRuntime": "Not independently tested on Windows",
+  "chromeWebStore": "Not submitted",
+  "authentication": "Google/Firebase pages excluded; no credential/cookie/token or UA handling",
+  "automaticUpdates": false
+}
