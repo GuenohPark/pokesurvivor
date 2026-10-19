@@ -1,0 +1,10 @@
+{
+  "environment": "desktop Chromium main world, NOT Android WebView",
+  "result": {
+    "ok": true,
+    "version": "0.4.3",
+    "domVersion": "0.4.3",
+    "canvasMode": "native-main",
+    "fontScale": "100"
+  }
+}

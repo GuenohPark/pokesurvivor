@@ -1,0 +1,18 @@
+{
+  "apk": "pokesurvivor-ko-android-0.1.1-test.apk",
+  "versionCode": 2,
+  "versionName": "0.1.1-test",
+  "bytes": 824447,
+  "sha256": "e6092718a4197fb2215612f08f53462c28e42f14e5019b59c11314e98e3464d9",
+  "signature": "Verifies\nVerified using v1 scheme (JAR signing): true\nVerified using v2 scheme (APK Signature Scheme v2): true\nVerified using v3 scheme (APK Signature Scheme v3): true\nVerified using v3.1 scheme (APK Signature Scheme v3.1): false\nVerified using v4 scheme (APK Signature Scheme v4): false\nVerified for SourceStamp: false\nNumber of signers: 1\nSigner #1 certificate DN: CN=Unofficial Korean Test, O=Local Development, C=KR\nSigner #1 certificate SHA-256 digest: ac1be7bb4ce9d9999e3ec2bcf2939588edf57cb88c0e325dcd0b9260c475d287\nSigner #1 certificate SHA-1 digest: 07dd7407076d2d9fd7c91db416fb5299f7df6164\nSigner #1 certificate MD5 digest: ab37e71cdfeab724c1236268bc12379b\nSigner #1 key algorithm: RSA\nSigner #1 key size (bits): 3072\nSigner #1 public key SHA-256 digest: e474501da15cb216e395760e3349bc529264559a399718d0f3d45ec9bd5af64f\nSigner #1 public key SHA-1 digest: 746911fa850076e8999b03157d5d8af230df154c\nSigner #1 public key MD5 digest: 9b1701100a80bd8da845df67d425b80b\n",
+  "badging": "package: name='io.github.guenohpark.pokesurvivorko' versionCode='2' versionName='0.1.1-test' platformBuildVersionName='15' platformBuildVersionCode='35' compileSdkVersion='35' compileSdkVersionCodename='15'\nminSdkVersion:'23'\ntargetSdkVersion:'35'\nuses-permission: name='android.permission.INTERNET'\napplication-label:'PokeSurvivor KO · 비공식 테스트'\napplication-icon-160:'res/drawable/ic_launcher.xml'\napplication: label='PokeSurvivor KO · 비공식 테스트' icon='res/drawable/ic_launcher.xml'\nlaunchable-activity: name='io.github.guenohpark.pokesurvivorko.MainActivity'  label='' icon=''\nfeature-group: label=''\n  uses-feature: name='android.hardware.faketouch'\n  uses-implied-feature: name='android.hardware.faketouch' reason='default feature for all apps'\nmain\nsupports-screens: 'small' 'normal' 'large' 'xlarge'\nsupports-any-density: 'true'\nlocales: '--_--'\ndensities: '160'\n",
+  "alignment": "passed",
+  "originPolicyTests": 18,
+  "testSuites": [
+    "AppUpdateCheckerTest",
+    "OriginPolicyTest",
+    "PatchUpdaterTest"
+  ],
+  "runtime": "NOT YET TESTED ON ANDROID",
+  "signing": "Local test key, not an official or Play Store release."
+}

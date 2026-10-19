@@ -2,7 +2,7 @@
 
 ## [아이폰 자동 업데이트 설치 파일 받기](https://raw.githubusercontent.com/GuenohPark/pokesurvivor/main/dist/pokesurvivor-ko-auto.user.js)
 
-[설치 방법](docs/INSTALL.md) · [PWA에서 안 되는 이유와 대안](docs/PWA.md) · [게임 플레이](https://pokesurvivor.org/play/) · [게임 팁](docs/TIPS.md)
+[아이폰 설치](docs/INSTALL.md) · [Android 테스트 APK](docs/ANDROID.md) · [PWA에서 안 되는 이유와 대안](docs/PWA.md) · [게임 플레이](https://pokesurvivor.org/play/) · [게임 팁](docs/TIPS.md)
 
 **아이폰은 Safari 탭 + Userscripts로 사용하세요. 홈 화면의 독립 PWA는 지원하지 않습니다.**
 Userscripts 배포판은 메뉴·이름·설명 등 DOM 화면을 번역합니다. 진행 화면의 **Swarm(기술/대량 발생), 실시간 격파 수, 포켓몬 이름은 Canvas로 그려져 현재 Userscripts에서는 번역되지 않습니다.** [정확한 지원 범위](docs/COMPATIBILITY.md)
@@ -17,6 +17,12 @@ Userscripts 배포판은 메뉴·이름·설명 등 DOM 화면을 번역합니�
 - [설치 파일 폴더 전체 보기](dist/). 개발 소스는 설치할 필요가 없습니다.
 
 Safari에서 코드만 보이면 링크를 길게 눌러 **링크된 파일 다운로드**를 선택하고 Userscripts의 지정 폴더에 저장하세요. 확장자는 .user.js 그대로 유지합니다.
+
+## Android 테스트 앱
+
+**[APK 받기](https://raw.githubusercontent.com/GuenohPark/pokesurvivor/main/dist/pokesurvivor-ko-android-test.apk)** · [설치·자동 업데이트·제약](docs/ANDROID.md) · [소스](android/)
+
+앱 **0.1.1-test** / 내장 번역팩 **0.4.3**. 공식 게임을 직접 여는 주소창 없는 비공식 WebView 앱입니다. DOM/Canvas 번역 코드를 포함하며 번역팩은 GitHub 버전을 자동 확인합니다. APK 자체는 업데이트 확인 후 사용자가 설치합니다. **Android 실기기 플레이·로그인·기록 연동은 미검증이며 Google 팝업 로그인은 미지원입니다.**
 
 ## 아이폰 빠른 설치
 
@@ -42,6 +48,7 @@ Safari에서 코드만 보이면 링크를 길게 눌러 **링크된 파일 다�
 
 ```text
 dist/       내려받아 설치하는 완성 파일
+android/    Android 테스트 앱 소스·빌드·검증 기록
 extension/  별도 브라우저 확장 소스와 필요한 리소스
 src/        번역·검색·자동 업데이트 실행 코드
 data/       번역 사전·공식 명칭·팁 데이터

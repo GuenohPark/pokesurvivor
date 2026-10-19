@@ -12,3 +12,9 @@
 아이폰 독립 홈 화면 PWA는 지원하지 않습니다. Userscripts는 DOM 화면용이며 Canvas HUD·게임 내 글자까지 완전 번역되는 배포가 아닙니다.
 
 Safari에 코드가 표시되면 링크를 길게 눌러 ‘링크된 파일 다운로드’로 저장하고 Userscripts 폴더로 옮기세요.
+
+## Android 앱
+
+- [pokesurvivor-ko-android-test.apk](https://raw.githubusercontent.com/GuenohPark/pokesurvivor/main/dist/pokesurvivor-ko-android-test.apk): 비공식 Android 테스트 앱. [제약과 업데이트](../docs/ANDROID.md)
+- pokesurvivor-ko-android-source.zip: 개발용 소스입니다. 설치하지 않습니다.
+- pokesurvivor-ko-android.meta.properties: 앱 버전 확인용입니다. 설치하지 않습니다.

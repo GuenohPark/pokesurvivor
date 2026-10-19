@@ -1,0 +1,12 @@
+{
+  "environment": "desktop Chromium, NOT Android WebView",
+  "flow": "Real GitHub 0.4.2 baseline -> downloaded/staged 0.4.3 -> runtime ack",
+  "status": {
+    "ok": true,
+    "version": "0.4.3",
+    "domVersion": "0.4.3",
+    "canvasMode": "native-main",
+    "fontScale": "100",
+    "errorCode": ""
+  }
+}
