@@ -1,11 +1,11 @@
 {
   "name": "pokesurvivor-korean-patch",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "private": true,
   "description": "Korean localization data and browser UI patch for pokesurvivor.org/play",
   "scripts": {
-    "build": "node build.cjs",
-    "test": "node test.cjs && node test-auto-loader.cjs"
+    "build": "node scripts/build.cjs",
+    "test": "node tests/test.cjs && node tests/test-auto-loader.cjs && node tests/test-package.cjs"
   },
-  "autoLoaderVersion": "0.1.0"
+  "autoLoaderVersion": "0.1.1"
 }

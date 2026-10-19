@@ -1,4 +1,4 @@
-Scope: MIT applies to original patch/runtime/build code only. Game-derived translation data, Pokémon-name data and bundled fonts retain the separate terms listed in THIRD-PARTY-NOTICES.md.
+Scope: MIT applies to original patch/runtime/build code only. Game-derived translation data, Pokémon-name data and bundled fonts retain the separate terms listed in docs/THIRD-PARTY-NOTICES.md.
 
 MIT License
 
@@ -22,4 +22,4 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-Bundled Galmuri fonts remain under SIL Open Font License 1.1. See Galmuri-LICENSE.txt.
+Bundled Galmuri fonts remain under SIL Open Font License 1.1. See licenses/Galmuri-LICENSE.txt.

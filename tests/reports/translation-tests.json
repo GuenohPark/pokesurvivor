@@ -1,12 +1,13 @@
 {
-  "version": "0.4.1",
+  "version": "0.4.2",
   "translationEntries": 1443,
   "placeholderCount": 205,
   "emptyTranslations": 0,
   "nameAndContextAssertions": 1297,
   "descriptions": 76,
   "searchSpecies": 966,
-  "syntaxFiles": 4,
+  "syntaxFiles": 5,
+  "layoutAssertions": 31,
   "result": "passed",
   "limits": [
     "Browser/phone runtime behavior is not proven by these unit tests.",

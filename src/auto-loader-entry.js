@@ -1,7 +1,7 @@
 (async function(){
  'use strict';
  if(globalThis.__PSKO_AUTO_BOOTED)return;globalThis.__PSKO_AUTO_BOOTED=true;
- const BASE='https://raw.githubusercontent.com/GuenohPark/pokesurvivor/main/';
+ const BASE='https://raw.githubusercontent.com/GuenohPark/pokesurvivor/main/dist/';
  const CACHE='pokesurvivor-ko:bundle-cache:v1';
  let badge=null,hideTimer=null;
  const show=text=>{

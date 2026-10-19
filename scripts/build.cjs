@@ -1,9 +1,9 @@
 'use strict';
-const fs=require('fs'),path=require('path');const root=__dirname;
-const read=n=>fs.readFileSync(path.join(root,n),'utf8');const json=n=>JSON.parse(read(n));const write=(n,s)=>fs.writeFileSync(path.join(root,n),s);
-const version=json('package.json').version;const locale=json('dictionary.ko.json');const names=json('official-names.ko.json');
+const fs=require('fs'),path=require('path');const root=path.resolve(__dirname,'..');
+const read=n=>fs.readFileSync(path.join(root,n),'utf8');const json=n=>JSON.parse(read(n));const write=(n,s)=>{const file=path.join(root,n);fs.mkdirSync(path.dirname(file),{recursive:true});fs.writeFileSync(file,s);};
+const version=json('package.json').version;const locale=json('data/dictionary.ko.json');const names=json('data/official-names.ko.json');
 const data={version,capturedAt:'2026-10-19',entries:locale.entries,names:names.names,types:names.types};
-const factory=read('runtime-core.js');const notice='// Translation data: PokéSurvivor by JPTER78, PolyForm Noncommercial 1.0.0.\n// Official-name data: PokéAPI contributors, BSD-3-Clause.\n/*\n'+read('GAME-LICENSE-NONCOMMERCIAL.md').replace(/\*\//g,'* /')+'\n'+read('PokeAPI-LICENSE.md').replace(/\*\//g,'* /')+'\n*/\n';
+const factory=read('src/runtime-core.js');const notice='// Translation data: PokéSurvivor by JPTER78, PolyForm Noncommercial 1.0.0.\n// Official-name data: PokéAPI contributors, BSD-3-Clause.\n/*\n'+read('licenses/GAME-LICENSE-NONCOMMERCIAL.md').replace(/\*\//g,'* /')+'\n'+read('licenses/PokeAPI-LICENSE.md').replace(/\*\//g,'* /')+'\n*/\n';
 const header=`// ==UserScript==
 // @name PokéSurvivor 한국어 메뉴 시험판
 // @namespace pokesurvivor-ko-local-test
@@ -15,16 +15,16 @@ const header=`// ==UserScript==
 // @match https://www.pokesurvivor.com/*
 // @homepageURL https://github.com/GuenohPark/pokesurvivor
 // @supportURL https://github.com/GuenohPark/pokesurvivor/issues
-// @updateURL https://raw.githubusercontent.com/GuenohPark/pokesurvivor/main/pokesurvivor-ko-menu.meta.js
-// @downloadURL https://raw.githubusercontent.com/GuenohPark/pokesurvivor/main/pokesurvivor-ko-menu.user.js
+// @updateURL https://raw.githubusercontent.com/GuenohPark/pokesurvivor/main/dist/pokesurvivor-ko-menu.meta.js
+// @downloadURL https://raw.githubusercontent.com/GuenohPark/pokesurvivor/main/dist/pokesurvivor-ko-menu.user.js
 // @run-at document-end
 // @inject-into content
 // @grant none
 // ==/UserScript==
 `;
 const serialized=JSON.stringify(data);
-const search=read('search-korean.js').replace('SEARCH_SPECIES',JSON.stringify(json('search-species.json')));
-const main=header+notice+read('font-install.js')+'\n(function(){\n'+factory+'\nconst DATA='+serialized+';\nconst api=createPokesurvivorKorean(DATA);globalThis.__PSKO=api;api.installDOM();document.documentElement.dataset.pskoMode="dom-only";\n})();\n'+read('tips-ui.js')+'\n'+search;
+const search=read('src/search-korean.js').replace('SEARCH_SPECIES',JSON.stringify(json('data/search-species.json')));
+const main=header+notice+read('assets/font-install.js')+'\n(function(){\n'+factory+'\nconst DATA='+serialized+';\nconst api=createPokesurvivorKorean(DATA);globalThis.__PSKO=api;api.installDOM();document.documentElement.dataset.pskoMode="dom-only";\n})();\n'+read('src/tips-ui.js')+'\n'+search;
 const page=notice+'(function(){\n'+factory+'\nconst api=createPokesurvivorKorean('+serialized+');globalThis.__PSKO_PAGE=api;api.installCanvas();\n})();\n';
 const background=notice+String.raw`'use strict';
 const ext=globalThis.browser||globalThis.chrome;
@@ -40,10 +40,10 @@ ext.runtime.onMessage.addListener((message,sender,respond)=>{
  return true;
 });
 `;
-for(const [name,code] of [['pokesurvivor-ko-menu.user.js',main],['extension-main.js',page],['extension-background.js',background]]){new Function(code);write(name,code);}
-write('pokesurvivor-ko-menu.meta.js',header);
-const manifest=json('manifest.json');manifest.version=version;write('manifest.json',JSON.stringify(manifest,null,2)+'\n');
-console.log(`Built v${version}: ${data.entries.length} translation entries, ${json('search-species.json').length} species; Userscript ${Buffer.byteLength(main)} bytes.`);
+for(const [name,code] of [['dist/pokesurvivor-ko-menu.user.js',main],['extension/extension-main.js',page],['extension/extension-background.js',background]]){new Function(code);write(name,code);}
+write('dist/pokesurvivor-ko-menu.meta.js',header);
+const manifest=json('extension/manifest.json');manifest.version=version;write('extension/manifest.json',JSON.stringify(manifest,null,2)+'\n');
+console.log(`Built v${version}: ${data.entries.length} translation entries, ${json('data/search-species.json').length} species; Userscript ${Buffer.byteLength(main)} bytes.`);
 
 // Stable bootstrap: checks bundle metadata itself, independent of manager update UI.
 const loaderVersion=json('package.json').autoLoaderVersion||'0.1.0';
@@ -57,8 +57,8 @@ const loaderHeader=`// ==UserScript==
 // @match https://pokesurvivor.com/*
 // @match https://www.pokesurvivor.com/*
 // @homepageURL https://github.com/GuenohPark/pokesurvivor
-// @updateURL https://raw.githubusercontent.com/GuenohPark/pokesurvivor/main/pokesurvivor-ko-auto.meta.js
-// @downloadURL https://raw.githubusercontent.com/GuenohPark/pokesurvivor/main/pokesurvivor-ko-auto.user.js
+// @updateURL https://raw.githubusercontent.com/GuenohPark/pokesurvivor/main/dist/pokesurvivor-ko-auto.meta.js
+// @downloadURL https://raw.githubusercontent.com/GuenohPark/pokesurvivor/main/dist/pokesurvivor-ko-auto.user.js
 // @run-at document-end
 // @inject-into content
 // @grant GM.getValue
@@ -67,5 +67,12 @@ const loaderHeader=`// ==UserScript==
 // @connect raw.githubusercontent.com
 // ==/UserScript==
 `;
-const loader=loaderHeader+'\n'+read('auto-loader-core.js')+'\n'+read('auto-loader-entry.js');new Function(loader);write('pokesurvivor-ko-auto.user.js',loader);write('pokesurvivor-ko-auto.meta.js',loaderHeader);
+const loader=loaderHeader+'\n'+read('src/auto-loader-core.js')+'\n'+read('src/auto-loader-entry.js');new Function(loader);write('dist/pokesurvivor-ko-auto.user.js',loader);write('dist/pokesurvivor-ko-auto.meta.js',loaderHeader);
 console.log(`Built automatic loader v${loaderVersion}: ${Buffer.byteLength(loader)} bytes.`);
+
+// Keep installed v0.1.0 loaders and userscript managers on root URLs working.
+for(const file of ['pokesurvivor-ko-auto.user.js','pokesurvivor-ko-auto.meta.js','pokesurvivor-ko-menu.user.js','pokesurvivor-ko-menu.meta.js'])write(file,read('dist/'+file));
+// The unpacked extension must not depend on files outside its directory.
+write('extension/pokesurvivor-ko-menu.user.js',main);
+for(const file of ['GAME-LICENSE-NONCOMMERCIAL.md','Galmuri-LICENSE.txt','PokeAPI-LICENSE.md'])write('extension/licenses/'+file,read('licenses/'+file));
+require('./package-extension.cjs').packageExtension();
