@@ -1,0 +1,167 @@
+{
+  "result": "passed",
+  "coreScenarios": 13,
+  "versionAssertions": 4,
+  "gmLexicalParameterIntegration": {
+    "pageLoads": 2,
+    "metadataDownloads": 2,
+    "fullDownloads": 1,
+    "executions": 2
+  },
+  "scenarios": [
+    {
+      "name": "first download",
+      "action": "installed-new",
+      "version": "0.4.1",
+      "available": null,
+      "metaCalls": 1,
+      "bundleCalls": 1,
+      "writes": 1,
+      "executed": [
+        "0.4.1"
+      ]
+    },
+    {
+      "name": "same version uses cached code",
+      "action": "installed-cache",
+      "version": "0.4.1",
+      "available": null,
+      "metaCalls": 1,
+      "bundleCalls": 0,
+      "writes": 0,
+      "executed": [
+        "0.4.1"
+      ]
+    },
+    {
+      "name": "newer version installs before input",
+      "action": "installed-new",
+      "version": "0.4.1",
+      "available": null,
+      "metaCalls": 1,
+      "bundleCalls": 1,
+      "writes": 1,
+      "executed": [
+        "0.4.1"
+      ]
+    },
+    {
+      "name": "offline keeps cached version",
+      "action": "offline-cache",
+      "version": "0.4.0",
+      "available": null,
+      "metaCalls": 1,
+      "bundleCalls": 0,
+      "writes": 0,
+      "executed": [
+        "0.4.0"
+      ]
+    },
+    {
+      "name": "no cache and offline",
+      "action": "first-load-failed",
+      "version": null,
+      "available": null,
+      "metaCalls": 1,
+      "bundleCalls": 0,
+      "writes": 0,
+      "executed": []
+    },
+    {
+      "name": "input while checking stages update",
+      "action": "staged-update",
+      "version": "0.4.0",
+      "available": "0.4.1",
+      "metaCalls": 1,
+      "bundleCalls": 1,
+      "writes": 1,
+      "executed": [
+        "0.4.0"
+      ]
+    },
+    {
+      "name": "first download after input waits until reload",
+      "action": "staged-update",
+      "version": null,
+      "available": "0.4.1",
+      "metaCalls": 1,
+      "bundleCalls": 1,
+      "writes": 1,
+      "executed": []
+    },
+    {
+      "name": "stale CDN metadata never downgrades",
+      "action": "installed-cache",
+      "version": "0.4.1",
+      "available": null,
+      "metaCalls": 1,
+      "bundleCalls": 0,
+      "writes": 0,
+      "executed": [
+        "0.4.1"
+      ]
+    },
+    {
+      "name": "meta/code version mismatch uses cache",
+      "action": "offline-cache",
+      "version": "0.4.0",
+      "available": null,
+      "metaCalls": 1,
+      "bundleCalls": 1,
+      "writes": 0,
+      "executed": [
+        "0.4.0"
+      ]
+    },
+    {
+      "name": "HTML instead of JS is rejected",
+      "action": "offline-cache",
+      "version": "0.4.0",
+      "available": null,
+      "metaCalls": 1,
+      "bundleCalls": 1,
+      "writes": 0,
+      "executed": [
+        "0.4.0"
+      ]
+    },
+    {
+      "name": "syntax failure is rejected",
+      "action": "offline-cache",
+      "version": "0.4.0",
+      "available": null,
+      "metaCalls": 1,
+      "bundleCalls": 1,
+      "writes": 0,
+      "executed": [
+        "0.4.0"
+      ]
+    },
+    {
+      "name": "duplicate old script does not run another copy",
+      "action": "duplicate-script",
+      "version": null,
+      "available": null,
+      "metaCalls": 0,
+      "bundleCalls": 0,
+      "writes": 0,
+      "executed": []
+    },
+    {
+      "name": "cache quota error does not block current installation",
+      "action": "installed-new",
+      "version": "0.4.1",
+      "available": null,
+      "metaCalls": 1,
+      "bundleCalls": 1,
+      "writes": 0,
+      "executed": [
+        "0.4.1"
+      ]
+    }
+  ],
+  "limitations": [
+    "These are deterministic Node tests, not physical iPhone execution.",
+    "No forced page reload or hot swap occurs after user input."
+  ]
+}

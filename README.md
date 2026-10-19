@@ -1,8 +1,8 @@
 # PokéSurvivor 한국어 패치
 
-[아이폰용 스크립트 설치 / 업데이트](https://raw.githubusercontent.com/GuenohPark/pokesurvivor/main/pokesurvivor-ko-menu.user.js) · [게임 플레이](https://pokesurvivor.org/play/) · [게임 팁](TIPS.md) · [실행 제약](COMPATIBILITY.md)
+[아이폰 자동 로더 최초 설치](https://raw.githubusercontent.com/GuenohPark/pokesurvivor/main/pokesurvivor-ko-auto.user.js) · [게임 플레이](https://pokesurvivor.org/play/) · [게임 팁](TIPS.md) · [실행 제약](COMPATIBILITY.md)
 
-**v0.4.0: 메뉴 몇 개만 바꾸던 시험판에서 전체 번역 사전 기반으로 확장했습니다.** 포켓몬 이름·능력치·기술과 아이템 설명·도감·미션·설정·새소식 등을 번역합니다. 한글은 갈무리11 도트 폰트, 영문은 원래 게임 폰트를 유지합니다.
+**v0.4.1: 자동 로더를 추가했습니다. 최초 한 번 설치하면 접속할 때 GitHub 버전을 확인하고, 더 새 번역팩만 받아 적용합니다.** 포켓몬 이름·능력치·기술과 아이템 설명·도감·미션·설정·새소식 등을 번역합니다. 한글은 갈무리11 도트 폰트, 영문은 원래 게임 폰트를 유지합니다.
 
 > **중요:** 아이폰 App Store **Userscripts에서는 DOM 화면을 번역**합니다. **Canvas로 그리는 HUD·게임 내 글자·브라우저 기본 확인창까지 완전히 적용되는 상태는 아닙니다.** 번역 데이터와 별도 확장 소스는 준비했지만, iPhone Canvas 적용에는 별도 Safari 확장 변환·서명·실기기 검증이 필요합니다. [정확한 범위](COMPATIBILITY.md)를 먼저 확인해 주세요.
 >
@@ -25,22 +25,33 @@
 
 1. App Store에서 [Userscripts](https://apps.apple.com/us/app/userscripts/id1463298887)를 설치합니다.
 2. Userscripts 앱에서 스크립트 저장 폴더를 확인하거나 지정합니다.
-3. [pokesurvivor-ko-menu.user.js](https://raw.githubusercontent.com/GuenohPark/pokesurvivor/main/pokesurvivor-ko-menu.user.js)를 Safari로 열어 설치하거나, 파일로 내려받아 지정 폴더에 넣습니다. **같은 이름의 기존 파일은 교체**하고 `.txt`나 `.html`이 붙지 않게 해주세요.
+3. [pokesurvivor-ko-auto.user.js 자동 로더](https://raw.githubusercontent.com/GuenohPark/pokesurvivor/main/pokesurvivor-ko-auto.user.js)를 Safari로 열어 설치하거나, 파일로 내려받아 지정 폴더에 넣습니다. `.txt`나 `.html`이 붙지 않게 해주세요.
 4. iPhone 설정 → 앱 → Safari → 확장 프로그램에서 Userscripts를 켭니다. **pokesurvivor.org와 pokesurvivor.com 둘 다** 접근을 허용합니다. iOS 버전에 따라 설정 경로는 다를 수 있습니다.
-5. [pokesurvivor.org/play](https://pokesurvivor.org/play/)에서 Safari의 확장 메뉴 → Userscripts를 **한 번 열고**, ‘PokéSurvivor 한국어 메뉴 시험판’을 켭니다. 파일 이름/표시 이름은 기존 설치의 업데이트 호환을 위해 유지했습니다.
+5. [pokesurvivor.org/play](https://pokesurvivor.org/play/)에서 Safari의 확장 메뉴 → Userscripts를 **한 번 열고**, **‘PokéSurvivor 한국어 자동 업데이트’만 켜고, 이전 ‘PokéSurvivor 한국어 메뉴 시험판’은 끕니다.** 두 파일을 동시에 켜지 마세요.
 6. 게임 페이지를 새로고침합니다. 도감의 **뮤츠 / 특수공격 / 염동력** 표시를 확인하세요.
 
-폰트가 내장되어 별도 폰트 앱이나 폰트 서버 연결은 필요하지 않습니다. 전체 스크립트 크기는 약 1.2MB입니다.
+폰트가 내장되어 별도 폰트 앱이나 폰트 서버 연결은 필요하지 않습니다. 전체 스크립트 크기는 약 1.2MB입니다. 자동 로더 파일 자체는 약 10KB이며 번역팩은 필요할 때 별도로 받습니다.
 
 ### 왜 두 도메인 권한이 필요한가요?
 
 `.org/play/`는 바깥 페이지이고, **실제 .com 게임을 iframe으로 불러옵니다.** 따라서 `@match`와 사이트 권한 모두 두 도메인을 포함해야 합니다. Userscripts 목록에서 내부 프레임 표시인 **sub**가 붙을 수 있습니다. 게임을 다른 서버로 복제하거나 중계하지 않습니다. .org는 독립 가이드 사이트이며 게임의 공식 도메인은 .com입니다.
 
-## 온라인 업데이트
+## 온라인 업데이트: 로더가 직접 확인합니다
 
-`@version`, `@updateURL`, `@downloadURL`로 새 버전을 확인합니다. Userscripts의 업데이트 확인/알림 기능을 사용한 뒤 게임을 새로고침하세요. **게임 도중 즉시 강제로 바뀌는 방식은 아닙니다.** 확인 주기·조작은 앱 버전과 설정에 따라 달라질 수 있고 GitHub CDN 캐시 때문에 반영이 늦을 수 있습니다.
+자동 로더는 Userscripts의 업데이트 버튼에 의존하지 않습니다. 접속할 때 GitHub의 작은 번역팩 메타데이터를 읽고 버전을 숫자로 비교합니다. **더 새 버전일 때만 약 1.2MB 번역팩을 다운로드**하고, 같거나 더 오래된 버전이면 저장된 코드를 사용합니다. 예: 0.10.0은 0.9.9보다 새 버전으로 처리합니다.
 
-채팅에서 받은 초기 v0.1/v0.2에는 업데이트 주소가 없으므로 GitHub 배포본으로 **최초 한 번 교체**해야 합니다. 업데이트가 안 잡히면 최신 파일로 교체 → Userscripts 팝업 열기 → 게임 새로고침 순으로 수동 갱신할 수 있습니다.
+- 확인을 마칠 때까지 아직 화면을 누르지 않았다면 새 번역팩을 바로 적용합니다.
+- 확인 중 이미 화면을 누르거나 키를 입력했다면 저장된 버전을 사용하고, 새 버전은 **다음 새로고침 때 자동 적용**합니다. 플레이 중 코드를 교체하거나 페이지를 강제로 새로고침하지 않습니다.
+- 인터넷·GitHub 연결에 실패하면 저장된 캐시로 동작합니다. 최초 설치 때 캐시도 없고 통신도 실패하면 패치가 실행되지 않습니다.
+- 캐시는 게임 저장소가 아닌 **Userscripts의 GM 저장소**에 보관합니다. 폰트·사전·코드만 저장하고 게임 계정·비밀번호·점수는 보내지 않습니다.
+- 메타데이터와 코드 버전, 식별자, JavaScript 문법이 맞지 않으면 해당 업데이트를 실행하지 않습니다. CDN 캐시로 버전이 어긋나도 이전 버전을 유지합니다.
+- 확인·다운로드·적용 버전은 게임 오른쪽 아래 작은 상태 표시로 잠깐 보여줍니다.
+
+**최초 한 번만 자동 로더 파일을 설치**해야 합니다. 이전 v0.4.0 이하의 큰 번역팩 파일 자체는 직접 GitHub를 확인하는 로더가 아닙니다. 로더 자체 버전은 0.1.0, 현재 번역팩 버전은 0.4.1로 서로 구분합니다. 열린 탭을 계속 둔 채 수시로 검사하는 방식이 아니라, **페이지 접속/새로고침 시점**에 확인합니다.
+
+로더가 실행하는 원격 코드는 이 저장소의 고정된 GitHub 주소에서만 받습니다. 저장소에 올라온 코드를 자동으로 실행하는 기능이므로 신뢰하는 배포본만 설치하세요. iPhone 실기기 자동 실행은 아직 직접 검증하지 않았습니다. 배포 앱의 content 실행 코드와 GM API를 확인하고, 로더 분기 13가지 및 같은 버전 재접속 시 큰 파일을 다시 받지 않는 것을 테스트했습니다.
+
+수동 파일 방식도 유지합니다: [큰 번역팩 직접 설치](https://raw.githubusercontent.com/GuenohPark/pokesurvivor/main/pokesurvivor-ko-menu.user.js). 이 경우 자동 로더는 끄고 둘 중 하나만 사용하세요.
 
 ## 한국어 검색
 

@@ -44,3 +44,28 @@ for(const [name,code] of [['pokesurvivor-ko-menu.user.js',main],['extension-main
 write('pokesurvivor-ko-menu.meta.js',header);
 const manifest=json('manifest.json');manifest.version=version;write('manifest.json',JSON.stringify(manifest,null,2)+'\n');
 console.log(`Built v${version}: ${data.entries.length} translation entries, ${json('search-species.json').length} species; Userscript ${Buffer.byteLength(main)} bytes.`);
+
+// Stable bootstrap: checks bundle metadata itself, independent of manager update UI.
+const loaderVersion=json('package.json').autoLoaderVersion||'0.1.0';
+const loaderHeader=`// ==UserScript==
+// @name PokéSurvivor 한국어 자동 업데이트
+// @namespace pokesurvivor-ko-auto
+// @version ${loaderVersion}
+// @description 접속 시 GitHub 버전 확인, 새 번역팩만 다운로드, 오프라인 캐시와 플레이 중 교체 방지.
+// @match https://pokesurvivor.org/*
+// @match https://www.pokesurvivor.org/*
+// @match https://pokesurvivor.com/*
+// @match https://www.pokesurvivor.com/*
+// @homepageURL https://github.com/GuenohPark/pokesurvivor
+// @updateURL https://raw.githubusercontent.com/GuenohPark/pokesurvivor/main/pokesurvivor-ko-auto.meta.js
+// @downloadURL https://raw.githubusercontent.com/GuenohPark/pokesurvivor/main/pokesurvivor-ko-auto.user.js
+// @run-at document-end
+// @inject-into content
+// @grant GM.getValue
+// @grant GM.setValue
+// @grant GM.xmlHttpRequest
+// @connect raw.githubusercontent.com
+// ==/UserScript==
+`;
+const loader=loaderHeader+'\n'+read('auto-loader-core.js')+'\n'+read('auto-loader-entry.js');new Function(loader);write('pokesurvivor-ko-auto.user.js',loader);write('pokesurvivor-ko-auto.meta.js',loaderHeader);
+console.log(`Built automatic loader v${loaderVersion}: ${Buffer.byteLength(loader)} bytes.`);

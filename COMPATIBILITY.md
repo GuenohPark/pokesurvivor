@@ -41,3 +41,11 @@ MAIN 쪽은 fillText·strokeText·measureText를 함께 감싸고, alert/confirm
 - 회원 닉네임·사용자 입력·비밀번호·저장 데이터는 번역 대상이 아닙니다. 한국어 검색은 검색칸만 원래 게임의 영문/번호 필터로 연결합니다.
 - 숫자·피해량·아이템 효과·획득 확률은 수정하지 않습니다. 원본 숫자 표기 방식을 유지합니다.
 - 공식 업데이트로 추가된 새 문자열이나 다른 화면 구조는 추가 점검이 필요할 수 있습니다. 100% 모든 실행 분기를 시험했다는 의미가 아닙니다.
+
+## 자동 로더 (0.4.1부터)
+
+자동 로더는 content 컨텍스트에서 GM.getValue·GM.setValue·GM.xmlHttpRequest를 사용합니다. 공개 GitHub 주소의 코드만 받아 버전·식별자·문법을 확인하고 실행합니다. 앱의 업데이트 버튼과 별개로 동작하며 페이지 입력 이후 새 버전을 hot-swap하지 않습니다.
+
+Userscripts v4.8.6/iOS1.8.6의 content 주입 코드 자체가 Function을 사용하는 것을 확인했습니다: https://github.com/quoid/userscripts/blob/06900223459036d2a238d93ab1af4d9f26cadbc7/src/ext/content-scripts/entry-userscripts.js#L79-L89 . 이는 페이지 world의 CSP 차단과 구분됩니다. 자동 로더 역시 이 content 실행 경로를 사용하며 Canvas 권한이 생기는 것은 아닙니다. 물리적 iPhone에서 새 로더를 실행한 검증은 아직 하지 않았습니다.
+
+캐시가 없을 때 확인 중 사용자가 게임을 먼저 시작하면 받은 코드는 저장만 하고 다음 새로고침 때 적용합니다. 동일 버전 재접속·오프라인·잘못된 응답·버전 불일치·사용자 입력 시점 등 13개 분기와 GM이 전역이 아닌 주입 매개변수인 경우를 Node에서 검증했습니다.
