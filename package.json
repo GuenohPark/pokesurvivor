@@ -4,8 +4,10 @@
   "private": true,
   "description": "Korean localization data and browser UI patch for pokesurvivor.org/play",
   "scripts": {
-    "build": "node scripts/build.cjs",
-    "test": "node tests/test.cjs && node tests/test-auto-loader.cjs && node tests/test-package.cjs && node tests/test-font.cjs"
+    "build": "node scripts/build.cjs && node scripts/build-browser.cjs",
+    "test": "node tests/test.cjs && node tests/test-auto-loader.cjs && node tests/test-package.cjs && node tests/test-font.cjs && node tests/test-browser.cjs",
+    "build:browser": "node scripts/build-browser.cjs"
   },
-  "autoLoaderVersion": "0.1.1"
+  "autoLoaderVersion": "0.1.1",
+  "browserScriptVersion": "0.1.0"
 }

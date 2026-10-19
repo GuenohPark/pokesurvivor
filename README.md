@@ -2,23 +2,29 @@
 
 ## [아이폰 자동 업데이트 설치 파일 받기](https://raw.githubusercontent.com/GuenohPark/pokesurvivor/main/dist/pokesurvivor-ko-auto.user.js)
 
-[아이폰 설치](docs/INSTALL.md) · [Android 테스트 APK](docs/ANDROID.md) · [PWA에서 안 되는 이유와 대안](docs/PWA.md) · [게임 플레이](https://pokesurvivor.org/play/) · [게임 팁](docs/TIPS.md)
+[아이폰 설치](docs/INSTALL.md) · [Android Firefox + Google 로그인 시험 경로](docs/FIREFOX-ANDROID.md) · [Android 테스트 APK](docs/ANDROID.md) · [PWA에서 안 되는 이유와 대안](docs/PWA.md) · [게임 플레이](https://pokesurvivor.org/play/) · [게임 팁](docs/TIPS.md)
 
 **아이폰은 Safari 탭 + Userscripts로 사용하세요. 홈 화면의 독립 PWA는 지원하지 않습니다.**
-Userscripts 배포판은 메뉴·이름·설명 등 DOM 화면을 번역합니다. 진행 화면의 **Swarm(기술/대량 발생), 실시간 격파 수, 포켓몬 이름은 Canvas로 그려져 현재 Userscripts에서는 번역되지 않습니다.** [정확한 지원 범위](docs/COMPATIBILITY.md)
+아이폰 Safari의 Userscripts용 배포판은 메뉴·이름·설명 등 DOM 화면을 번역합니다. 진행 화면의 **Swarm(기술/대량 발생), 실시간 격파 수, 포켓몬 이름은 Canvas로 그려져 현재 Userscripts에서는 번역되지 않습니다.** [정확한 지원 범위](docs/COMPATIBILITY.md)
 
 비공식 팬 패치입니다. Nintendo, GAME FREAK, PokéSurvivor 개발팀과 무관하며 게임 수치·계정 저장·랭킹·서버 요청을 바꾸지 않습니다.
 
 ## 다운로드
 
-- **권장: [자동 업데이트 로더](https://raw.githubusercontent.com/GuenohPark/pokesurvivor/main/dist/pokesurvivor-ko-auto.user.js)**. 이 파일 하나만 설치합니다. 접속할 때 새 번역팩을 받아 캐시합니다.
+- **아이폰 Safari 권장: [자동 업데이트 로더](https://raw.githubusercontent.com/GuenohPark/pokesurvivor/main/dist/pokesurvivor-ko-auto.user.js)**. 이 파일 하나만 설치합니다. 접속할 때 새 번역팩을 받아 캐시합니다.
 - [수동 설치용 전체 번역팩](https://raw.githubusercontent.com/GuenohPark/pokesurvivor/main/dist/pokesurvivor-ko-menu.user.js). 자동 로더와 동시에 켜지 마세요.
 - [데스크톱 확장 실험판 ZIP](https://raw.githubusercontent.com/GuenohPark/pokesurvivor/main/dist/pokesurvivor-ko-desktop-extension.zip). iPhone 설치 파일이 아닙니다. 압축을 풀고 Chrome의 개발자 모드에서 로드합니다. [제약](docs/COMPATIBILITY.md)
 - [설치 파일 폴더 전체 보기](dist/). 개발 소스는 설치할 필요가 없습니다.
 
 Safari에서 코드만 보이면 링크를 길게 눌러 **링크된 파일 다운로드**를 선택하고 Userscripts의 지정 폴더에 저장하세요. 확장자는 .user.js 그대로 유지합니다.
 
-## Android 테스트 앱
+## Android: Google 계정으로 사용하고 싶다면
+
+**[Firefox + Tampermonkey 시험 설치 안내](docs/FIREFOX-ANDROID.md)** · **[브라우저용 패치 파일](https://raw.githubusercontent.com/GuenohPark/pokesurvivor/main/dist/pokesurvivor-ko-browser.user.js)**
+
+실제 Firefox에서 Google 로그인과 플레이를 진행하고 확장으로 번역하는 대안입니다. Mozilla는 Firefox Android의 홈 화면 웹앱에서도 확장 사용을 안내합니다. **이 조합은 실기기 미검증이며, 기존 APK의 Google 로그인을 고친 버전은 아닙니다.** 브라우저 파일 0.1.0 / 번역 데이터 0.4.3. 기존 패치와 중복 사용하지 마세요.
+
+## Android 단독 APK 테스트 앱
 
 **[APK 받기](https://raw.githubusercontent.com/GuenohPark/pokesurvivor/main/dist/pokesurvivor-ko-android-test.apk)** · [설치·자동 업데이트·제약](docs/ANDROID.md) · [소스](android/)
 
@@ -42,7 +48,7 @@ Safari에서 코드만 보이면 링크를 길게 눌러 **링크된 파일 다�
 - 한글 갈무리11 도트 폰트, 한국어 도감 검색, 생존 팁 15개
 - ‘Psychic’의 타입 **에스퍼**와 기술 **사이코키네시스** 등 문맥 구분
 
-번역팩 **0.4.3** · 자동 로더 **0.1.1**. 이번 버전은 터치 기기에서 한글 글리프를 10% 줄입니다. 영문·숫자와 데스크톱 크기는 유지합니다. Canvas 진행 화면 번역을 해결한 버전은 아닙니다. 물리적 iPhone에서 새 로더·전체 흐름을 직접 검증한 상태는 아닙니다.
+번역팩 **0.4.3** · 자동 로더 **0.1.1**. 이번 버전은 터치 기기에서 한글 글리프를 10% 줄입니다. 영문·숫자와 데스크톱 크기는 유지합니다. 아이폰 Safari Userscripts의 Canvas 진행 화면 번역을 해결한 버전은 아닙니다. 물리적 iPhone에서 새 로더·전체 흐름을 직접 검증한 상태는 아닙니다.
 
 ## 저장소 구조
 
