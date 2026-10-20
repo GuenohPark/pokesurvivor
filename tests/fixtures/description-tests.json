@@ -454,5 +454,157 @@
     "id": "assaultvest",
     "source": "+20% de reducción de daño recibido.",
     "ko": "받는 피해 감소율 +20%."
+  },
+  {
+    "id": "new-move-description-0",
+    "source": "Charges for a moment and fires a huge beam that pierces everything."
+  },
+  {
+    "id": "new-move-description-1",
+    "source": "You spin in place, hitting everything around you several times."
+  },
+  {
+    "id": "new-move-description-2",
+    "source": "You dash wrapped in flames, burning everything in your path."
+  },
+  {
+    "id": "new-move-description-3",
+    "source": "A whirlpool that drags enemies into its center and keeps damaging them."
+  },
+  {
+    "id": "new-move-description-4",
+    "source": "A seed that bounces from enemy to enemy."
+  },
+  {
+    "id": "new-move-description-5",
+    "source": "A ball of energy that chases the enemy."
+  },
+  {
+    "id": "new-move-description-6",
+    "source": "Absorbs light for a moment and releases it as a huge beam."
+  },
+  {
+    "id": "new-move-description-7",
+    "source": "A shock marked on the ground that paralyzes whoever it catches."
+  },
+  {
+    "id": "new-move-description-8",
+    "source": "An electric ball that jumps from enemy to enemy."
+  },
+  {
+    "id": "new-move-description-9",
+    "source": "A mental wave that damages and pushes away everyone near you."
+  },
+  {
+    "id": "new-move-description-10",
+    "source": "A ball of mist that chases the enemy and slows it down."
+  },
+  {
+    "id": "new-move-description-11",
+    "source": "An acid spray that jumps between enemies and poisons them."
+  },
+  {
+    "id": "new-move-description-12",
+    "source": "A sand vortex that traps and drags enemies in."
+  },
+  {
+    "id": "new-move-description-13",
+    "source": "The ground bursts in a line in front of you, wave after wave."
+  },
+  {
+    "id": "new-move-description-14",
+    "source": "A gust of wind that sweeps away everyone near you."
+  },
+  {
+    "id": "new-move-description-15",
+    "source": "Two blades of air that seek out the enemy."
+  },
+  {
+    "id": "new-move-description-16",
+    "source": "A flash that bounces between enemies."
+  },
+  {
+    "id": "new-move-description-17",
+    "source": "You dash through the enemies, hitting everyone in your path."
+  },
+  {
+    "id": "new-move-description-18",
+    "source": "Rocks fall where the ground warns, trapping whoever they catch."
+  },
+  {
+    "id": "new-move-description-19",
+    "source": "Ancient rocks that circle around you."
+  },
+  {
+    "id": "new-move-description-20",
+    "source": "A gem flash that bounces from enemy to enemy."
+  },
+  {
+    "id": "new-move-description-21",
+    "source": "Super fast shards that chase the enemy."
+  },
+  {
+    "id": "new-move-description-22",
+    "source": "A sudden chill marked on the ground that freezes whoever it catches."
+  },
+  {
+    "id": "new-move-description-23",
+    "source": "Spinning kicks that hit everything around you."
+  },
+  {
+    "id": "new-move-description-24",
+    "source": "A punch into the air that sends out a wave and pushes enemies away."
+  },
+  {
+    "id": "new-move-description-25",
+    "source": "A tremendous punch where the ground warns: it stuns whoever it catches."
+  },
+  {
+    "id": "new-move-description-26",
+    "source": "A shadow that slips along the ground to the enemy."
+  },
+  {
+    "id": "new-move-description-27",
+    "source": "A cursed wind that swirls enemies together and keeps damaging them."
+  },
+  {
+    "id": "new-move-description-28",
+    "source": "A short fan of dragon breath that slows."
+  },
+  {
+    "id": "new-move-description-29",
+    "source": "A dragon claw swipe in an arc."
+  },
+  {
+    "id": "new-move-description-30",
+    "source": "A fury of spinning blows that leaves no one standing."
+  },
+  {
+    "id": "new-move-description-31",
+    "source": "A kiss that chases the enemy and heals you a little when it hits."
+  },
+  {
+    "id": "new-move-description-32",
+    "source": "A playful but very strong attack in an arc."
+  },
+  {
+    "id": "new-move-description-33",
+    "source": "A charming cry that damages and pushes away those near you."
+  },
+  {
+    "id": "new-move-description-34",
+    "source": "A metallic flash that bounces between enemies."
+  },
+  {
+    "id": "new-move-description-35",
+    "source": "You spin like a steel ball, hitting everything around."
+  },
+  {
+    "id": "new-move-description-36",
+    "source": "A sneaky blow that seeks out the enemy."
+  },
+  {
+    "id": "new-move-description-37",
+    "source": "Spinning slashes that reach everything around you."
   }
 ]

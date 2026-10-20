@@ -12,37 +12,37 @@
     {
       "name": "first download",
       "action": "installed-new",
-      "version": "0.4.7",
+      "version": "0.4.8",
       "available": null,
       "metaCalls": 1,
       "bundleCalls": 1,
       "writes": 1,
       "executed": [
-        "0.4.7"
+        "0.4.8"
       ]
     },
     {
       "name": "same version uses cached code",
       "action": "installed-cache",
-      "version": "0.4.7",
+      "version": "0.4.8",
       "available": null,
       "metaCalls": 1,
       "bundleCalls": 0,
       "writes": 0,
       "executed": [
-        "0.4.7"
+        "0.4.8"
       ]
     },
     {
       "name": "newer version installs before input",
       "action": "installed-new",
-      "version": "0.4.7",
+      "version": "0.4.8",
       "available": null,
       "metaCalls": 1,
       "bundleCalls": 1,
       "writes": 1,
       "executed": [
-        "0.4.7"
+        "0.4.8"
       ]
     },
     {
@@ -71,7 +71,7 @@
       "name": "input while checking stages update",
       "action": "staged-update",
       "version": "0.4.0",
-      "available": "0.4.7",
+      "available": "0.4.8",
       "metaCalls": 1,
       "bundleCalls": 1,
       "writes": 1,
@@ -83,7 +83,7 @@
       "name": "first download after input waits until reload",
       "action": "staged-update",
       "version": null,
-      "available": "0.4.7",
+      "available": "0.4.8",
       "metaCalls": 1,
       "bundleCalls": 1,
       "writes": 1,
@@ -92,13 +92,13 @@
     {
       "name": "stale CDN metadata never downgrades",
       "action": "installed-cache",
-      "version": "0.4.7",
+      "version": "0.4.8",
       "available": null,
       "metaCalls": 1,
       "bundleCalls": 0,
       "writes": 0,
       "executed": [
-        "0.4.7"
+        "0.4.8"
       ]
     },
     {
@@ -150,13 +150,13 @@
     {
       "name": "cache quota error does not block current installation",
       "action": "installed-new",
-      "version": "0.4.7",
+      "version": "0.4.8",
       "available": null,
       "metaCalls": 1,
       "bundleCalls": 1,
       "writes": 0,
       "executed": [
-        "0.4.7"
+        "0.4.8"
       ]
     }
   ],

@@ -5,19 +5,19 @@ function createPokesurvivorKorean(data) {
   const exact = new Map(), lower = new Map(), patterns = [], fragments = new Map();
   const species = data.names.species, moves = {...data.names.moves, ...data.names.gameSpecificTerms}, items = data.names.items;
   const types = data.types || {};
-  function put(key, value, fragment = true) {
+  function put(key, value, fragment = true, argKinds = []) {
     if (!key || !value || typeof value !== 'string') return;
     key = normalize(key); if (!key || key === value) return;
     if (key.includes('{x}')) {
       const pieces = key.split('{x}');
       if (pieces.every(p => !/\p{L}/u.test(p))) return;
-      patterns.push({key, value, re:new RegExp('^'+pieces.map(escape).join('(.+?)')+'$', 'iu'), score:pieces.join('').length});
+      patterns.push({key, value, argKinds, re:new RegExp('^'+pieces.map(escape).join('(.+?)')+'$', 'iu'), score:pieces.join('').length});
     } else {
       exact.set(key, value); lower.set(key.toLocaleLowerCase(), value);
       if (fragment && (key.length >= 4 || /\s/.test(key))) fragments.set(key.toLocaleLowerCase(), value);
     }
   }
-  for (const e of data.entries) { put(e.es, e.ko); put(e.en, e.ko); }
+  for (const e of data.entries) { put(e.es, e.ko, true, e.argKinds); put(e.en, e.ko, true, e.argKinds); }
   for (const [k,v] of Object.entries(species)) put(k,v);
   for (const [k,v] of Object.entries(items)) put(k,v);
   // Psychic is both a type and a move. The default is the type; move contexts override it.
@@ -48,7 +48,7 @@ function createPokesurvivorKorean(data) {
     if (out===undefined) {
       for (const p of patterns) {
         const m=p.re.exec(normalized); if(!m)continue;
-        let i=1; out=p.value.replace(/\{x\}/g,()=>translate(m[i++] || '',kind,depth+1)); break;
+        let i=1; out=p.value.replace(/\{x\}/g,()=>{const index=i++;const slotKind=['general','move','type','form','save-data'].includes(p.argKinds?.[index-1])?p.argKinds[index-1]:kind;return translate(m[index] || '',slotKind,depth+1);}); break;
       }
     }
     if (out===undefined && fragRE) out=normalized.replace(fragRE,key=>kind==='type' && /^normal$/i.test(key) ? '노말' : (fragments.get(key.toLocaleLowerCase())||key));
@@ -68,7 +68,7 @@ function createPokesurvivorKorean(data) {
     if(el.closest('#set-body .set-row .grow b'))return 'save-data';
     if(el.closest('.gen-tab'))return 'general';
     if(attribute==='title' && el.closest('.move-icons,.ban-moves'))return 'move';
-    if(el.closest('#cards .nm,#bond-cards .nm,.ban-moves button,#pause-sum td:first-child'))return 'move';
+    if(el.closest('#cards .nm,#bond-cards .nm,.ban-moves button,#pause-sum td:first-child,#upg-list [data-start],#upg-list .bind-slot option'))return 'move';
     if(el.closest('#dex-detail p b.gold'))return 'move';
     return 'general';
   }

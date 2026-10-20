@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "checks": 3799,
+  "sourceCommit": "018e986f4c12f414dfa84193ee35b2959b1e325c",
+  "englishPairs": 1374,
+  "baseMoves": 103,
+  "evolvedLabels": 97,
+  "moveAndItemDescriptions": 114,
+  "upgradeStages": 412,
+  "knownOriginalLocaleIdentityConflicts": 1,
+  "scope": "Saved current source catalogue and dictionary, not a promise that every dynamically constructed game string or Safari Canvas is translated."
+}

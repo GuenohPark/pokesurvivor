@@ -1,5 +1,5 @@
 {
-  "version": "0.4.1",
+  "version": "0.4.8",
   "entries": [
     {
       "id": 0,
@@ -8270,7 +8270,8 @@
       "ko": "타입",
       "refs": [
         "dev.html:456"
-      ]
+      ],
+      "en": "Type"
     },
     {
       "id": "extra-30",
@@ -8677,136 +8678,627 @@
     },
     {
       "es": "Your best {x} rank {x}:",
-      "ko": "내 최고 순위 {x} {x}:"
+      "ko": "내 최고 순위 {x} {x}:",
+      "id": 1223
     },
     {
       "es": "You don't have a {x} record {x} yet.",
-      "ko": "아직 기록이 없어요: {x} {x}."
+      "ko": "아직 기록이 없어요: {x} {x}.",
+      "id": 1224
     },
     {
       "es": "Tienes su shiny",
       "en": "You have its shiny",
-      "ko": "이로치 보유"
+      "ko": "이로치 보유",
+      "id": 1225
     },
     {
       "es": "English",
-      "ko": "영어"
+      "ko": "영어",
+      "id": 1226
     },
     {
       "es": "Español",
-      "ko": "스페인어"
+      "ko": "스페인어",
+      "id": 1227
     },
     {
       "es": "Save",
-      "ko": "저장"
+      "ko": "저장",
+      "id": 1228
     },
     {
       "es": "Back",
-      "ko": "뒤로"
+      "ko": "뒤로",
+      "id": 1229
     },
     {
       "es": "move ·",
-      "ko": "이동 ·"
+      "ko": "이동 ·",
+      "id": 1230
     },
     {
       "es": "Daily",
-      "ko": "일간"
+      "ko": "일간",
+      "id": 1231
     },
     {
       "es": "DPS",
-      "ko": "초당 피해"
+      "ko": "초당 피해",
+      "id": 1232
     },
     {
       "es": "Sp. Atk",
-      "ko": "특수공격"
+      "ko": "특수공격",
+      "id": 1233
     },
     {
       "es": "Sp. Def",
-      "ko": "특수방어"
+      "ko": "특수방어",
+      "id": 1234
     },
     {
       "es": "Sp. Atk.",
-      "ko": "특수공격"
+      "ko": "특수공격",
+      "id": 1235
     },
     {
       "es": "Sp. Def.",
-      "ko": "특수방어"
+      "ko": "특수방어",
+      "id": 1236
     },
     {
       "es": "Home",
-      "ko": "홈"
+      "ko": "홈",
+      "id": 1237
     },
     {
       "es": "Guide",
-      "ko": "공략"
+      "ko": "공략",
+      "id": 1238
     },
     {
       "es": "Pokédex",
-      "ko": "포켓몬 도감"
+      "ko": "포켓몬 도감",
+      "id": 1239
     },
     {
       "es": "Legendaries",
-      "ko": "전설의 포켓몬"
+      "ko": "전설의 포켓몬",
+      "id": 1240
     },
     {
       "es": "Types",
-      "ko": "타입"
+      "ko": "타입",
+      "id": 1241
     },
     {
       "es": "Tier list",
-      "ko": "티어표"
+      "ko": "티어표",
+      "id": 1242
     },
     {
       "es": "Open guide menu",
-      "ko": "공략 메뉴 열기"
+      "ko": "공략 메뉴 열기",
+      "id": 1243
     },
     {
       "es": "Play free",
-      "ko": "무료 플레이"
+      "ko": "무료 플레이",
+      "id": 1244
     },
     {
       "es": "solo with {x}",
-      "ko": "{x} 솔로"
+      "ko": "{x} 솔로",
+      "id": 1245
     },
     {
       "es": "group with {x}",
-      "ko": "{x} 그룹"
+      "ko": "{x} 그룹",
+      "id": 1246
     },
     {
       "es": "en solitario con {x}",
-      "ko": "{x} 솔로"
+      "ko": "{x} 솔로",
+      "id": 1247
     },
     {
       "es": "en grupo con {x}",
-      "ko": "{x} 그룹"
+      "ko": "{x} 그룹",
+      "id": 1248
     },
     {
       "es": "of all time",
-      "ko": "역대"
+      "ko": "역대",
+      "id": 1249
     },
     {
       "es": "this week",
-      "ko": "이번 주"
+      "ko": "이번 주",
+      "id": 1250
     },
     {
       "es": "this month",
-      "ko": "이번 달"
+      "ko": "이번 달",
+      "id": 1251
     },
     {
       "es": "this year",
-      "ko": "올해"
+      "ko": "올해",
+      "id": 1252
     },
     {
       "es": "PokéSurvivor: Play the Pokemon Survivor Game Online",
-      "ko": "PokéSurvivor: 포켓몬 생존 게임 온라인 플레이"
+      "ko": "PokéSurvivor: 포켓몬 생존 게임 온라인 플레이",
+      "id": 1253
     },
     {
       "es": "PokéSurvivor – Juego Pokémon free online estilo Survivor.io",
-      "ko": "PokéSurvivor: 무료 포켓몬 생존 게임"
+      "ko": "PokéSurvivor: 무료 포켓몬 생존 게임",
+      "id": 1254
     },
     {
       "es": "Nº {x} · {x}",
-      "ko": "번호 {x} · {x}"
+      "ko": "번호 {x} · {x}",
+      "id": 1255
+    },
+    {
+      "id": 1256,
+      "es": "Se carga un momento y suelta un rayo enorme que lo atraviesa todo.",
+      "en": "Charges for a moment and fires a huge beam that pierces everything.",
+      "ko": "잠시 충전한 뒤 모든 것을 관통하는 거대한 광선을 발사해요."
+    },
+    {
+      "id": 1257,
+      "es": "Giras sobre ti mismo golpeando todo lo que te rodea varias veces.",
+      "en": "You spin in place, hitting everything around you several times.",
+      "ko": "제자리에서 회전하며 주변의 모든 적을 여러 번 공격해요."
+    },
+    {
+      "id": 1258,
+      "es": "Te lanzas envuelto en llamas y quemas todo el camino.",
+      "en": "You dash wrapped in flames, burning everything in your path.",
+      "ko": "불꽃에 휩싸여 돌진하며 지나가는 길을 모두 불태워요."
+    },
+    {
+      "id": 1259,
+      "es": "Un remolino que arrastra a los enemigos a su centro y los va dañando.",
+      "en": "A whirlpool that drags enemies into its center and keeps damaging them.",
+      "ko": "소용돌이가 적을 중심으로 끌어당기며 지속적으로 피해를 줘요."
+    },
+    {
+      "id": 1260,
+      "es": "Una semilla que rebota de enemigo en enemigo.",
+      "en": "A seed that bounces from enemy to enemy.",
+      "ko": "적 사이를 튕겨 다니는 씨앗을 날려요."
+    },
+    {
+      "id": 1261,
+      "es": "Una bola de energía que persigue al enemigo.",
+      "en": "A ball of energy that chases the enemy.",
+      "ko": "적을 추적하는 에너지 구체를 날려요."
+    },
+    {
+      "id": 1262,
+      "es": "Absorbe luz un momento y la suelta en un rayo enorme.",
+      "en": "Absorbs light for a moment and releases it as a huge beam.",
+      "ko": "잠시 빛을 흡수한 뒤 거대한 광선으로 내뿜어요."
+    },
+    {
+      "id": 1263,
+      "es": "Una descarga que avisa en el suelo y deja paralizados a los que pilla.",
+      "en": "A shock marked on the ground that paralyzes whoever it catches.",
+      "ko": "바닥에 표시된 곳에 전격을 가해 적중한 적을 마비시켜요."
+    },
+    {
+      "id": 1264,
+      "es": "Una bola eléctrica que salta de enemigo en enemigo.",
+      "en": "An electric ball that jumps from enemy to enemy.",
+      "ko": "전기 구체가 적 사이를 연쇄적으로 옮겨 가요."
+    },
+    {
+      "id": 1265,
+      "es": "Una onda mental que daña y aparta a todos los que tienes cerca.",
+      "en": "A mental wave that damages and pushes away everyone near you.",
+      "ko": "정신의 파동으로 주변의 모든 적에게 피해를 주고 밀쳐 내요."
+    },
+    {
+      "id": 1266,
+      "es": "Una bola de bruma que persigue al enemigo y le frena.",
+      "en": "A ball of mist that chases the enemy and slows it down.",
+      "ko": "안개 구체가 적을 추적하며 느려지게 해요."
+    },
+    {
+      "id": 1267,
+      "es": "Un chorro ácido que salta entre enemigos y los envenena.",
+      "en": "An acid spray that jumps between enemies and poisons them.",
+      "ko": "산성 액체가 적 사이를 연쇄적으로 옮겨 가며 중독시켜요."
+    },
+    {
+      "id": 1268,
+      "es": "Un remolino de arena que atrapa y arrastra a los enemigos.",
+      "en": "A sand vortex that traps and drags enemies in.",
+      "ko": "모래 소용돌이가 적을 가두고 끌어당겨요."
+    },
+    {
+      "id": 1269,
+      "es": "El suelo revienta en línea delante de ti, onda tras onda.",
+      "en": "The ground bursts in a line in front of you, wave after wave.",
+      "ko": "전방 일직선으로 파동이 연이어 뻗어 나가며 지면이 터져요."
+    },
+    {
+      "id": 1270,
+      "es": "Un golpe de viento que barre a todos los que tienes cerca.",
+      "en": "A gust of wind that sweeps away everyone near you.",
+      "ko": "거센 바람으로 주변의 모든 적을 쓸어내요."
+    },
+    {
+      "id": 1271,
+      "es": "Dos cuchillas de aire que buscan al enemigo.",
+      "en": "Two blades of air that seek out the enemy.",
+      "ko": "공기의 칼날 두 개가 적을 추적해요."
+    },
+    {
+      "id": 1272,
+      "es": "Un destello que rebota entre los enemigos.",
+      "en": "A flash that bounces between enemies.",
+      "ko": "섬광이 적 사이를 튕겨 다녀요."
+    },
+    {
+      "id": 1273,
+      "es": "Cruzas entre los enemigos golpeando a todos los del camino.",
+      "en": "You dash through the enemies, hitting everyone in your path.",
+      "ko": "적들 사이를 돌진하며 경로상의 모든 적을 공격해요."
+    },
+    {
+      "id": 1274,
+      "es": "Caen rocas donde avisa el suelo y dejan atrapados a los que pilla.",
+      "en": "Rocks fall where the ground warns, trapping whoever they catch.",
+      "ko": "바닥에 표시된 곳에 바위가 떨어져 적중한 적을 가둬요."
+    },
+    {
+      "id": 1275,
+      "es": "Rocas antiguas que giran a tu alrededor.",
+      "en": "Ancient rocks that circle around you.",
+      "ko": "고대의 바위들이 주변을 맴돌아요."
+    },
+    {
+      "id": 1276,
+      "es": "Un destello de gema que rebota de enemigo en enemigo.",
+      "en": "A gem flash that bounces from enemy to enemy.",
+      "ko": "보석의 섬광이 적 사이를 튕겨 다녀요."
+    },
+    {
+      "id": 1277,
+      "es": "Esquirlas rapidísimas que persiguen al enemigo.",
+      "en": "Super fast shards that chase the enemy.",
+      "ko": "매우 빠른 파편들이 적을 추적해요."
+    },
+    {
+      "id": 1278,
+      "es": "Un frío repentino que avisa en el suelo y deja congelados a los que pilla.",
+      "en": "A sudden chill marked on the ground that freezes whoever it catches.",
+      "ko": "바닥에 표시된 곳에 갑작스러운 냉기가 몰아쳐 적중한 적을 얼려요."
+    },
+    {
+      "id": 1279,
+      "es": "Patadas en giro que golpean todo lo que tienes alrededor.",
+      "en": "Spinning kicks that hit everything around you.",
+      "ko": "회전 발차기로 주변의 모든 적을 공격해요."
+    },
+    {
+      "id": 1280,
+      "es": "Un puñetazo al aire que lanza una onda y aparta a los enemigos.",
+      "en": "A punch into the air that sends out a wave and pushes enemies away.",
+      "ko": "허공에 주먹을 내질러 파동을 날리고 적을 밀쳐 내요."
+    },
+    {
+      "id": 1281,
+      "es": "Un puñetazo tremendo donde avisa el suelo: deja aturdidos a los que pilla.",
+      "en": "A tremendous punch where the ground warns: it stuns whoever it catches.",
+      "ko": "바닥에 표시된 곳에 강력한 주먹을 내리쳐 적중한 적을 기절시켜요."
+    },
+    {
+      "id": 1282,
+      "es": "Una sombra que se escurre por el suelo hasta el enemigo.",
+      "en": "A shadow that slips along the ground to the enemy.",
+      "ko": "그림자가 바닥을 타고 적에게 다가가요."
+    },
+    {
+      "id": 1283,
+      "es": "Un viento maldito que arremolina a los enemigos y los va dañando.",
+      "en": "A cursed wind that swirls enemies together and keeps damaging them.",
+      "ko": "저주받은 바람이 적을 휘감아 모으고 지속적으로 피해를 줘요."
+    },
+    {
+      "id": 1284,
+      "es": "Un aliento de dragón en abanico corto que frena.",
+      "en": "A short fan of dragon breath that slows.",
+      "ko": "용의 숨결을 짧은 부채꼴로 내뿜어 적을 느려지게 해요."
+    },
+    {
+      "id": 1285,
+      "es": "Un zarpazo de dragón en arco.",
+      "en": "A dragon claw swipe in an arc.",
+      "ko": "용의 발톱으로 부채꼴 범위를 할퀴어요."
+    },
+    {
+      "id": 1286,
+      "es": "Una furia de golpes en giro que no deja a nadie en pie.",
+      "en": "A fury of spinning blows that leaves no one standing.",
+      "ko": "거세게 회전하며 연타를 퍼부어 주변의 적을 모조리 쓰러뜨려요."
+    },
+    {
+      "id": 1287,
+      "es": "Un beso que persigue al enemigo y te cura un poco al darle.",
+      "en": "A kiss that chases the enemy and heals you a little when it hits.",
+      "ko": "입맞춤이 적을 추적하며 적중하면 체력을 조금 회복해요."
+    },
+    {
+      "id": 1288,
+      "es": "Un ataque juguetón pero muy fuerte en arco.",
+      "en": "A playful but very strong attack in an arc.",
+      "ko": "장난스럽지만 매우 강력한 공격을 부채꼴로 펼쳐요."
+    },
+    {
+      "id": 1289,
+      "es": "Un grito encantador que daña y aparta a los que tienes cerca.",
+      "en": "A charming cry that damages and pushes away those near you.",
+      "ko": "매혹적인 외침으로 주변 적에게 피해를 주고 밀쳐 내요."
+    },
+    {
+      "id": 1290,
+      "es": "Un destello metálico que rebota entre los enemigos.",
+      "en": "A metallic flash that bounces between enemies.",
+      "ko": "금속성 섬광이 적 사이를 튕겨 다녀요."
+    },
+    {
+      "id": 1291,
+      "es": "Giras como una bola de acero golpeando todo alrededor.",
+      "en": "You spin like a steel ball, hitting everything around.",
+      "ko": "강철 공처럼 회전하며 주변의 모든 적을 공격해요."
+    },
+    {
+      "id": 1292,
+      "es": "Un golpe a traición que busca al enemigo.",
+      "en": "A sneaky blow that seeks out the enemy.",
+      "ko": "기습적인 일격이 적을 추적해요."
+    },
+    {
+      "id": 1293,
+      "es": "Cortes en giro que alcanzan a todo lo que te rodea.",
+      "en": "Spinning slashes that reach everything around you.",
+      "ko": "회전하며 베어 주변의 모든 적을 공격해요."
+    },
+    {
+      "id": 1294,
+      "es": "Carga más rápido y -20% recarga",
+      "en": "Charges faster and -20% cooldown",
+      "ko": "충전 속도 증가, 재사용 대기시간 -20%"
+    },
+    {
+      "id": 1295,
+      "es": "+25% radio",
+      "en": "+25% radius",
+      "ko": "반경 +25%"
+    },
+    {
+      "id": 1296,
+      "es": "+1 vuelta",
+      "en": "+1 spin",
+      "ko": "회전 +1회"
+    },
+    {
+      "id": 1297,
+      "es": "-25% recarga y +30% daño",
+      "en": "-25% cooldown and +30% damage",
+      "ko": "재사용 대기시간 -25%, 피해량 +30%"
+    },
+    {
+      "id": 1298,
+      "es": "Atrae más fuerte y +40% daño",
+      "en": "Pulls harder and +40% damage",
+      "ko": "끌어당기는 힘 증가, 피해량 +40%"
+    },
+    {
+      "id": 1299,
+      "es": "+1 rebote",
+      "en": "+1 bounce",
+      "ko": "튕김 +1회"
+    },
+    {
+      "id": 1300,
+      "es": "+1 proyectil y +1 rebote",
+      "en": "+1 projectile and +1 bounce",
+      "ko": "발사체 +1개, 튕김 +1회"
+    },
+    {
+      "id": 1301,
+      "es": "+1 proyectil y +40% daño",
+      "en": "+1 projectile and +40% damage",
+      "ko": "발사체 +1개, 피해량 +40%"
+    },
+    {
+      "id": 1302,
+      "es": "+50% aturdimiento",
+      "en": "+50% stun",
+      "ko": "기절 시간 +50%"
+    },
+    {
+      "id": 1303,
+      "es": "+50% empuje y +40% daño",
+      "en": "+50% push and +40% damage",
+      "ko": "밀쳐내기 +50%, 피해량 +40%"
+    },
+    {
+      "id": 1304,
+      "es": "+2 ondas",
+      "en": "+2 waves",
+      "ko": "파동 +2개"
+    },
+    {
+      "id": 1305,
+      "es": "+25% tamaño",
+      "en": "+25% size",
+      "ko": "크기 +25%"
+    },
+    {
+      "id": 1306,
+      "es": "-25% recarga y +2 ondas",
+      "en": "-25% cooldown and +2 waves",
+      "ko": "재사용 대기시간 -25%, 파동 +2개"
+    },
+    {
+      "id": 1307,
+      "es": "×1,8 daño, +2 proyectiles y más grandes",
+      "en": "×1.8 damage, +2 projectiles and bigger",
+      "ko": "피해량 ×1.8, 발사체 +2개, 발사체 크기 증가"
+    },
+    {
+      "id": 1308,
+      "es": "×1,8 daño, +2 rebotes y +1 proyectil",
+      "en": "×1.8 damage, +2 bounces and +1 projectile",
+      "ko": "피해량 ×1.8, 튕김 +2회, 발사체 +1개"
+    },
+    {
+      "id": 1309,
+      "es": "×1,8 daño, rayo un 50% más grueso y carga más rápido",
+      "en": "×1.8 damage, 50% thicker beam and faster charge",
+      "ko": "피해량 ×1.8, 광선 폭 50% 증가, 충전 속도 증가"
+    },
+    {
+      "id": 1310,
+      "es": "×1,8 daño, +1 vuelta y más radio",
+      "en": "×1.8 damage, +1 spin and more radius",
+      "ko": "피해량 ×1.8, 회전 +1회, 반경 증가"
+    },
+    {
+      "id": 1311,
+      "es": "×1,8 daño, +3 ondas y ondas más grandes",
+      "en": "×1.8 damage, +3 waves and bigger waves",
+      "ko": "피해량 ×1.8, 파동 +3개, 파동 크기 증가"
+    },
+    {
+      "id": 1312,
+      "es": "×1,8 daño, más radio y atrae más fuerte",
+      "en": "×1.8 damage, more radius and stronger pull",
+      "ko": "피해량 ×1.8, 반경 증가, 끌어당기는 힘 증가"
+    },
+    {
+      "id": 1313,
+      "es": "×1,8 daño, más radio y empuja más",
+      "en": "×1.8 damage, more radius and stronger push",
+      "ko": "피해량 ×1.8, 반경 증가, 밀쳐내기 증가"
+    },
+    {
+      "id": 1314,
+      "es": "×1,8 daño, más radio y aturde más rato",
+      "en": "×1.8 damage, more radius and longer stun",
+      "ko": "피해량 ×1.8, 반경 증가, 기절 시간 증가"
+    },
+    {
+      "id": 1315,
+      "es": "Movimiento inicial",
+      "en": "Starting move",
+      "ko": "시작 기술"
+    },
+    {
+      "id": 1316,
+      "es": "Eliges con qué ataque empiezas la partida",
+      "en": "Choose which move you start the run with",
+      "ko": "게임을 시작할 때 사용할 기술을 선택해요"
+    },
+    {
+      "id": 1317,
+      "es": "Elegir: {x}",
+      "en": "Choose: {x}",
+      "ko": "선택: {x}",
+      "argKinds": [
+        "move"
+      ]
+    },
+    {
+      "id": 1318,
+      "es": "Elige con qué ataque empieza. Lo puedes cambiar cuando quieras, gratis.",
+      "en": "Choose which move it starts with. You can change it any time, for free.",
+      "ko": "시작할 때 사용할 기술을 선택하세요. 언제든 무료로 바꿀 수 있어요."
+    },
+    {
+      "id": 1319,
+      "es": "(de serie)",
+      "en": "(default)",
+      "ko": "(기본)"
+    },
+    {
+      "id": 1320,
+      "es": "{x} empezará con {x}",
+      "en": "{x} will start with {x}",
+      "ko": "{x}의 시작 기술: {x}",
+      "argKinds": [
+        "general",
+        "move"
+      ]
+    },
+    {
+      "id": 1321,
+      "es": "Monotipo: +20 % de daño con sus ataques de tipo {x}",
+      "en": "Single type: +20% damage with its {x}-type moves",
+      "ko": "단일 타입: {x}타입 기술의 피해량 +20%",
+      "argKinds": [
+        "type"
+      ]
+    },
+    {
+      "id": 1322,
+      "es": "PokéSurvivor – Juego Pokémon gratis online estilo Survivor.io",
+      "en": "PokéSurvivor – Free online Pokémon survival game (Survivor.io style)",
+      "ko": "PokéSurvivor: 무료 온라인 포켓몬 서바이벌 게임"
+    },
+    {
+      "id": 1323,
+      "es": "Tu mejor puesto: {x}",
+      "en": "Your best rank: {x}",
+      "ko": "내 최고 순위: {x}"
+    },
+    {
+      "id": 1324,
+      "es": "Aún no estás en el top 50. Tu puesto está en Histórico.",
+      "en": "You are not in the top 50 yet. Your rank is in All-time.",
+      "ko": "아직 상위 50위 안에 들지 못했어요. 내 순위는 역대 순위에서 확인할 수 있어요."
+    },
+    {
+      "id": 1325,
+      "es": "Aún no tienes marca.",
+      "en": "You do not have a record yet.",
+      "ko": "아직 기록이 없어요."
+    },
+    {
+      "id": 1326,
+      "es": "Folagor, Sekiam, PokeAlex: ¿un hueco?",
+      "en": "Folagor, Sekiam, PokeAlex: room for one more?",
+      "ko": "Folagor, Sekiam, PokeAlex: 한 자리 남았나요?"
+    },
+    {
+      "id": 1327,
+      "es": "niveles",
+      "en": "levels",
+      "ko": "단계"
+    },
+    {
+      "id": 1328,
+      "es": "{x} (compañero) · {x} niveles",
+      "ko": "{x} (파트너) · 강화 {x}단계"
+    },
+    {
+      "id": 1329,
+      "es": "{x} · {x} niveles",
+      "ko": "{x} · 강화 {x}단계"
+    },
+    {
+      "id": 1330,
+      "es": "{x} (compañero)",
+      "ko": "{x} (파트너)"
     }
-  ]
+  ],
+  "capturedAt": "2026-10-20"
 }

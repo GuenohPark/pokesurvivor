@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "capturedAt": "2026-10-19T01:57:52.082Z",
+  "capturedAt": "2026-10-20T03:47:19.623Z",
   "gameSources": [
     {
       "url": "https://pokesurvivor.com/js/data/pokedex.js",
@@ -64,7 +64,8 @@
     "evolvedMoves": "Current EVO displayed names and game English aliases -> move_names; Swarm explicitly classified against ability_names.",
     "items": "Current displayed Spanish and English names -> item_names.",
     "normalization": "NFKC, lowercase, curly apostrophe to straight apostrophe, whitespace collapse. Output keys retain exact original spelling.",
-    "scope": "Only current game species, base/evolved move labels, and equipped items. No UI strings or descriptions translated. No main files or GitHub writes."
+    "scope": "Only current game species, base/evolved move labels, and equipped items. No UI strings or descriptions translated. No main files or GitHub writes.",
+    "localeConflict": "Voltio Cruel/Wild Charge -> 와일드볼트 (move528); Volt Tackle -> 볼트태클 (move344). Original ES/EN disagree; preserve attested locale meanings without claiming one canonical game identity."
   },
   "files": [
     {
@@ -75,8 +76,8 @@
     },
     {
       "path": "moves.js",
-      "bytes": 30452,
-      "sha256": "af3e678fc552c1e21f8c56b8f7003974e68581efbf0e9c2ef04aea6811f11fde",
+      "bytes": 44859,
+      "sha256": "6c104208d723ad8b56af2eff6e4bab8a198342d8acabcbc51a33f52cc7f04ece",
       "url": "https://pokesurvivor.com/js/data/moves.js"
     },
     {
@@ -87,8 +88,8 @@
     },
     {
       "path": "lang-en.js",
-      "bytes": 75510,
-      "sha256": "2235dddad70139790d8ca64c40311f9876fb88c2f541767868067384dcbbb54e",
+      "bytes": 85068,
+      "sha256": "32677ed19adea2f6b7bf5456dd17c2f2b85552c8f6ac5b56b210cf6ffc28380a",
       "url": "https://pokesurvivor.com/js/data/lang-en.js"
     },
     {
@@ -150,6 +151,26 @@
       "bytes": 1621,
       "sha256": "1c04595dc662981c20956ae4251dfa7b62b475c345eddf98bc9b904cb2373f2c",
       "url": "https://raw.githubusercontent.com/PokeAPI/pokeapi/6fd69dfe90465ba96534f6816fc817737d1f97f6/LICENSE.md"
+    }
+  ],
+  "gameRepositoryCommit": "018e986f4c12f414dfa84193ee35b2959b1e325c",
+  "localeNameConflicts": [
+    {
+      "kind": "evolved_move",
+      "baseId": "thunder-wave",
+      "name": "Voltio Cruel",
+      "english": {
+        "name": "Volt Tackle",
+        "officialId": 344,
+        "korean": "볼트태클"
+      },
+      "spanish": {
+        "name": "Voltio Cruel",
+        "officialId": 528,
+        "english": "Wild Charge",
+        "korean": "와일드볼트"
+      },
+      "note": "Original game locales name different official moves. Translate each visible label by its attested Korean term; do not assert a shared canonical identity."
     }
   ]
 }

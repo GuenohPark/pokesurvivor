@@ -1,9 +1,9 @@
 {
-  "extensionVersion": "0.1.4-test",
-  "patchVersion": "0.4.7",
+  "extensionVersion": "0.1.5-test",
+  "patchVersion": "0.4.8",
   "manifestVersion": 3,
   "minimumChrome": "111",
-  "sourceBundleSHA256": "43e93a9807ee29fdd742dd98b2d853c64c228e03eb3a448173b13da02dfbd31e",
+  "sourceBundleSHA256": "b7bf9079ccd40ee179dfd5b487500f7b4b72d2a0ac17326334fde205eb7b8811",
   "tierModel": "fullmax-hitbox-v2",
   "tierSourceCommit": "018e986f4c12f414dfa84193ee35b2959b1e325c",
   "species": 966,
@@ -17,24 +17,17 @@
   },
   "browserUIVerification": {
     "passed": true,
-    "patchVersion": "0.4.7",
-    "mode": "Compiled Safari DOM payload manually applied to official game dev.html in Aside/Chrome; not installed-extension or physical Safari execution.",
+    "patchVersion": "0.4.8",
+    "method": "Compiled DOM payload plus final same-version translator factory/data preview on official dev.html in Aside/Chrome. Not physical Safari or installed extension E2E.",
     "observed": [
-      "Main partner Mewtwo S inline",
-      "Owned unassessed dex cards including Bulbasaur show neutral 미평가",
-      "Unknown dex card remains ??? without badge",
-      "Opening/closing dex leaves main S badge intact"
+      "New Hyper Beam/Extrasensory/Mist Ball/Rapid Spin translated in native move list",
+      "Psychic keybinding option is 사이코키네시스, not type 에스퍼",
+      "Original90 niveles selector is 강화90단계; original value150 and S option label preserved"
     ],
-    "notTested": [
-      "Physical iPhone Safari/Userscripts",
-      "Installed Chrome extension E2E",
-      "Windows runtime",
-      "Safari Canvas names"
-    ],
-    "actions": "No play/partner-change/purchase/upgrade/save/login buttons clicked during this UI check."
+    "actions": "Opened menus only; no move toggle, binding change, purchase, upgrade, partner change, save or login buttons clicked."
   },
   "windowsRuntime": "Not independently tested on Windows",
-  "chromeWebStore": "0.1.3 / patch0.4.6 remains submitted. This source/manual build0.1.4 was not submitted and prior review not cancelled.",
+  "chromeWebStore": "Last submitted0.1.3 / patch0.4.6; this manual0.1.5 build was not submitted and the previous review was not cancelled.",
   "automaticUpdates": "Only store-installed versions after approval; unpacked ZIP does not auto-update",
   "privacy": "No account/save/current-upgrade API queried or modified. Badge lookup reads only visible Pokemon labels and dedicated option/input identity; player-specific values are not used in assessment.",
   "tierGeometryChecks": 29965,
@@ -43,5 +36,17 @@
     "A+": 10,
     "OFFENSE": 1
   },
-  "sourceExecution": "16 hash-pinned original source files; restricted offline Node VM checks all966 Players and original Combat/Hazards boundaries. Not whole-run simulation."
+  "sourceExecution": "16 hash-pinned original source files; restricted offline Node VM checks all966 Players and original Combat/Hazards boundaries. Not whole-run simulation.",
+  "translationAudit": {
+    "passed": true,
+    "checks": 3799,
+    "sourceCommit": "018e986f4c12f414dfa84193ee35b2959b1e325c",
+    "englishPairs": 1374,
+    "baseMoves": 103,
+    "evolvedLabels": 97,
+    "moveAndItemDescriptions": 114,
+    "upgradeStages": 412,
+    "knownOriginalLocaleIdentityConflicts": 1,
+    "scope": "Saved current source catalogue and dictionary, not a promise that every dynamically constructed game string or Safari Canvas is translated."
+  }
 }
