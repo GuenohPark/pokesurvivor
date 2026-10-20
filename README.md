@@ -14,7 +14,7 @@
 - 설치 후 **[공식 게임 .com 직접 열기](https://pokesurvivor.com/)** 또는 기존 게임 새로고침. `.org/play/`의 iframe이나 Google/Firebase 인증 페이지에는 적용하지 않습니다. 진행 중인 판에서 새로고침하지 마세요.
 - 확장 0.1.1-test / 한국어 패치 0.4.4. DOM·Canvas 번역과 한국어 글꼴을 포함하며, 기존 Userscript와 중복 사용하지 마세요.
 - 이전 0.1.0은 사용자가 직접 확인했다고 보고했습니다. **새 0.1.1의 도감 UI·수치 검사는 별도 기록**하며 Windows 실기기와 Google 로그인 성공을 보장하지 않습니다.
-- Chrome Web Store에는 아직 등록하지 않았습니다. 압축해제 설치판은 자동 업데이트되지 않습니다. 브라우저/계정/키보드를 별도로 재구현하지 않으며 인증 정보·쿠키·토큰을 복사하지 않습니다.
+- **Chrome Web Store에 심사 제출했으며 현재 검토 대기 중입니다.** 승인 후 자동 게시를 설정했습니다. [스토어 자동 업데이트 안내](docs/CHROME-WEB-STORE.md). 기존 압축해제 설치판은 자동 업데이트되지 않으며, 게시된 스토어판으로 한 번 전환해야 합니다. 브라우저/계정/키보드를 별도로 재구현하지 않으며 인증 정보·쿠키·토큰을 복사하지 않습니다.
 
 ## [아이폰 자동 업데이트 설치 파일 받기](https://raw.githubusercontent.com/GuenohPark/pokesurvivor/main/dist/pokesurvivor-ko-auto.user.js)
 
