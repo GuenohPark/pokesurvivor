@@ -28,7 +28,7 @@
       const matches=list.filter(p=>p.ko.includes(q));results.replaceChildren();results.style.display='block';input.setAttribute('aria-expanded','true');
       const info=document.createElement('div');info.style.cssText='padding:8px;color:#b9c5d4;font-size:12px';info.textContent=matches.length?'일치 '+matches.length+'종 · 포켓몬을 선택하세요':'일치하는 포켓몬이 없어요';results.append(info);
       for(const p of matches.slice(0,30)){
-        const b=document.createElement('button');b.type='button';b.setAttribute('role','option');b.textContent=p.ko+' · No.'+p.dex;b.style.cssText='display:block;width:100%;text-align:left;padding:9px;color:#e9eef5;background:#172238;border:0;border-top:1px solid #293449;font:inherit;cursor:pointer';
+        const b=document.createElement('button');b.type='button';b.setAttribute('role','option');const name=document.createElement('span');name.className='psko-pokemon-name';name.setAttribute('data-psko-dex',String(p.dex));name.textContent=p.ko;b.append(name,document.createTextNode(' · No.'+p.dex));b.style.cssText='display:block;width:100%;text-align:left;padding:9px;color:#e9eef5;background:#172238;border:0;border-top:1px solid #293449;font:inherit;cursor:pointer';
         b.addEventListener('click',e=>{e.preventDefault();e.stopPropagation();input.value=p.ko;close();send(p.en);input.focus();});results.append(b);
       }
     });

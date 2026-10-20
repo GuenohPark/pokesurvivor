@@ -1,30 +1,42 @@
 {
-  "extensionVersion": "0.1.3-test",
-  "patchVersion": "0.4.6",
+  "extensionVersion": "0.1.4-test",
+  "patchVersion": "0.4.7",
   "manifestVersion": 3,
   "minimumChrome": "111",
-  "sourceBundleSHA256": "d68321e205b6413a37054222c539894eadac0291ce42403c801cf47d53f29ba6",
+  "sourceBundleSHA256": "43e93a9807ee29fdd742dd98b2d853c64c228e03eb3a448173b13da02dfbd31e",
   "tierModel": "fullmax-hitbox-v2",
   "tierSourceCommit": "018e986f4c12f414dfa84193ee35b2959b1e325c",
   "species": 966,
   "assessedCandidates": 14,
   "tierCalculationChecks": 34815,
-  "uiAutomatedTests": "Node executable fake-DOM badge ownership, adjacency, hidden/unrated exclusions, lifecycle/idempotence. Not installed-extension E2E.",
+  "uiAutomatedTests": "Executable fake DOM: trusted name whitelist, main partner rerenders, neutral unassessed, hidden/locked exclusions, nickname protection, native text/icons/values/options preserved, scoped observer. Not installed-extension E2E.",
   "chromeBoundaryChecks": 58,
   "userConfirmation": {
     "version": "0.1.0-test",
     "statement": "Prior version only. User did not confirm this new version."
   },
   "browserUIVerification": {
-    "passed": null,
-    "lastVerifiedVersion": "0.1.2-test",
-    "method": "Badge-only DOM/layout previously inspected on official game. This release changes bundled evaluation data; no new installed-extension or Windows E2E claimed.",
-    "accountChanges": "No game/account/save/upgrade/auth changes made for reevaluation."
+    "passed": true,
+    "patchVersion": "0.4.7",
+    "mode": "Compiled Safari DOM payload manually applied to official game dev.html in Aside/Chrome; not installed-extension or physical Safari execution.",
+    "observed": [
+      "Main partner Mewtwo S inline",
+      "Owned unassessed dex cards including Bulbasaur show neutral 미평가",
+      "Unknown dex card remains ??? without badge",
+      "Opening/closing dex leaves main S badge intact"
+    ],
+    "notTested": [
+      "Physical iPhone Safari/Userscripts",
+      "Installed Chrome extension E2E",
+      "Windows runtime",
+      "Safari Canvas names"
+    ],
+    "actions": "No play/partner-change/purchase/upgrade/save/login buttons clicked during this UI check."
   },
   "windowsRuntime": "Not independently tested on Windows",
-  "chromeWebStore": "0.1.3 reassessment package prepared; see docs/CHROME-WEB-STORE.md for actual review status",
+  "chromeWebStore": "0.1.3 / patch0.4.6 remains submitted. This source/manual build0.1.4 was not submitted and prior review not cancelled.",
   "automaticUpdates": "Only store-installed versions after approval; unpacked ZIP does not auto-update",
-  "privacy": "Tier UI never reads or modifies account/save/upgrade data. No analytics/network/credential API added.",
+  "privacy": "No account/save/current-upgrade API queried or modified. Badge lookup reads only visible Pokemon labels and dedicated option/input identity; player-specific values are not used in assessment.",
   "tierGeometryChecks": 29965,
   "gradeCounts": {
     "S": 3,
