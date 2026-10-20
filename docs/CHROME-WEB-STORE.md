@@ -1,9 +1,9 @@
 # Chrome Web Store 자동 업데이트 배포
 
-2026-10-20에 **PokéSurvivor 한국어 패치 · 도감 티어**의 이름 옆 배지형 스토어 확장 0.1.2 / 한국어 패치 0.4.5를 Chrome Web Store 심사에 제출했습니다.
+2026-10-20에 **PokéSurvivor 한국어 패치 · 도감 티어**의 피격 크기 재평가 스토어 확장 0.1.3 / 한국어 패치 0.4.6를 Chrome Web Store 심사에 제출했습니다.
 
 - 상태: **검토 대기 중**. 승인·게시 완료를 뜻하지 않습니다.
-- 기존 0.1.1 검토 요청은 취소하고, 별도 티어 메뉴·범례·상세 수치 패널을 제거한 0.1.2로 재제출했습니다. 등록 설명·스크린샷·심사 테스트 안내도 배지형으로 교체했습니다.
+- 기존 0.1.2 검토 요청은 취소하고 실제 피격 크기·탄환 기하·지형 감속을 재검토한 0.1.3으로 재제출했습니다. 이름 옆 작은 배지 UI와 미보유/미평가 보호는 유지합니다. 등록 설명에도 가정 모형과 실전 미검증 한계를 명시했습니다.
 - 심사 통과 후 **자동 게시** 옵션을 선택했습니다.
 - 항목 ID: `fkjihjjpghfopkhjfjhfpipkccmcpjnc`
 - 무료·공개, 게임 카테고리·한국어 등록정보입니다.
@@ -19,10 +19,10 @@
 
 ## 제출 패키지
 
-[스토어 제출용 전체 소스 ZIP](../dist/pokesurvivor-ko-chrome-web-store-0.1.2.zip)
+[스토어 제출용 전체 소스 ZIP](../dist/pokesurvivor-ko-chrome-web-store-0.1.3.zip)
 
-SHA-256: `f88daa40915158093102cbbb2dcac0a2de6aba5a0f4531aec83803c6b98e7a14`
+SHA-256: `acd451093012836f5e80cb1dbbe3e2bd83ed31f15a820c309b916fcfa6a0b580`
 
 동일 버전 Chrome ZIP과 실행 코드가 같은 번역/이름 옆 배지 코드를 포함합니다. `npm run build && npm run build:chrome && npm run build:store`로 네트워크 없이 재생성할 수 있습니다. 스토어용 매니페스트 설명·팝업 안내·라이선스·개인정보 안내를 포함하고, 테스트 코드와 내부 시험 보고서는 제출 패키지에서 제외했습니다. 새 특수 권한·원격 코드·서비스 워커를 추가하지 않았습니다. 원본 게임/계정/인증 처리를 재구현하지 않습니다.
 
-기존 압축해제 설치판은 [GitHub 릴리스](https://github.com/GuenohPark/pokesurvivor/releases/tag/chrome-v0.1.2-test)에 보존했습니다. 이 문서의 상태는 제출 시점 기록이며, 실제 현재 심사 상태를 확인한 것은 아닙니다.
+기존 압축해제 설치판은 [GitHub 릴리스](https://github.com/GuenohPark/pokesurvivor/releases/tag/chrome-v0.1.3-test)에 보존했습니다. 이 문서의 상태는 제출 시점 기록이며, 실제 현재 심사 상태를 확인한 것은 아닙니다.

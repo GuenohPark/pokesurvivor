@@ -1,0 +1,7 @@
+{
+  "passed": true,
+  "checks": 29965,
+  "species": 966,
+  "combat": "Original Combat.resolve and Hazards.inside/update at controlled real positions",
+  "limits": "No simulation, weighted aggregate ranking, actual hit probability, account state or DOM."
+}

@@ -1,11 +1,11 @@
 {
   "passed": true,
-  "checks": 8717,
+  "checks": 34815,
   "species": 966,
   "assessed": 14,
-  "reference": "Original game Player/Stats/Upgrades execution in isolated VM",
+  "reference": "Original game Player/Stats/Upgrades/Moves/World execution in isolated VM",
   "limits": [
-    "Mathematical/static verification, not a game survival simulation or measured winrate.",
+    "Static neutral values and linear flux proxy only, not survival simulation, actual DPS or measured winrate.",
     "No player save data or account state used."
   ]
 }

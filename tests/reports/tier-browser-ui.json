@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "extensionVersion": "0.1.3-test",
+  "patchVersion": "0.4.6",
+  "method": "New bundled content script evaluated in browser automation isolated context on official dev.html after reload. DOM-only evidence, not installed-extension, MAIN-world Canvas or Windows E2E.",
+  "checks": [
+    "Mewtwo heading keeps small S badge with new radius14.08 reevaluation title",
+    "Hidden rated dex890 card remains ??? with zero badge",
+    "No psko-tier-detail or psko-tier-legend panels"
+  ],
+  "accountChanges": "No gameplay, purchases, upgrades, favorites, partner or cloud-save changes"
+}

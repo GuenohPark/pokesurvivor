@@ -1,0 +1,23 @@
+{
+  "commit": "018e986f4c12f414dfa84193ee35b2959b1e325c",
+  "url": "https://github.com/JPTER78/pokesurvivor/tree/018e986f4c12f414dfa84193ee35b2959b1e325c",
+  "license": "PolyForm Noncommercial 1.0.0; ../../../licenses/GAME-LICENSE-NONCOMMERCIAL.md",
+  "files": {
+    "js/core/sprites.js": "5b8ac9189fcd4571ed459fdd6e0d8819425d5cdf8e59127e63e27b7042e61e36",
+    "js/data/moves.js": "6c104208d723ad8b56af2eff6e4bab8a198342d8acabcbc51a33f52cc7f04ece",
+    "js/data/pokedex.js": "43ec37ef3ac48452f9a72c51851a188e2375ec93cde9394b335612ad1e107369",
+    "js/data/sprites-meta.js": "da5b1b0f79ab7a1b39a27d344401afb169b651b3f38d531021234643651a9bdc",
+    "js/data/types.js": "2703e4c4dcccf3591a87d0e3d10316df2373042fa0e5409b3650dc7cb9eb483c",
+    "js/data/upgrades.js": "c80268a3ea6bae5aac09c742787692cbcbe5006347c3d5070db1244d4ba1226f",
+    "js/entities/enemy.js": "6188d9fd6c268f1fc04ea5aad9797b3ced776337d9b79a42b3e783ecba7715fc",
+    "js/entities/player.js": "665c51f2a8f6bb097b05c2a7be368adcd95e153417a092db70c114c995bb13c1",
+    "js/entities/projectile.js": "422e2000902942393819cb0cb65828d064078cf01dbb5ccd6ae15ef513a7e879",
+    "js/systems/combat.js": "2e2316917c8e911d885dd47bb4b20be69ee99a411b00687a5f8a066eb56fe34b",
+    "js/systems/hazards.js": "9bb5315c450989995617f3193e2f5287474c5f3c14d9d8852471849bae5de19b",
+    "js/systems/judgment.js": "03bdcd7f89e6d3e9bb14bfa125825ff6fcde04ae7e881552480da9ddb5c447f1",
+    "js/systems/stats.js": "d9c8248f847a195ecc5da368a7984f0e42f2f0033e93f5b3f6f60c44186bed4b",
+    "js/systems/weather.js": "3eabce86c211030c50ea1977a3f3b2fcac538184e31354379af383c9f37dec10",
+    "js/world/tiles.js": "d0117658a3da9384c6866d84cd7e7777562d756c7762e2c09d5c63c917d35cb5",
+    "js/world/world.js": "6be04594a131583f41d94a20848f8cc33182ec682486098de55fbde368d10d7f"
+  }
+}
