@@ -1,15 +1,15 @@
 {
-  "extensionVersion": "0.1.1-test",
-  "patchVersion": "0.4.4",
+  "extensionVersion": "0.1.2-test",
+  "patchVersion": "0.4.5",
   "manifestVersion": 3,
   "minimumChrome": "111",
-  "sourceBundleSHA256": "9fba2807e4c3369aa8ec41caa809f557b0995c1255d43943dc6276d319cacb57",
+  "sourceBundleSHA256": "7c11ea808f8d53d07245b3b6a7202a2ad3911fdc5e38ebfb8f3676d95ba9757a",
   "tierModel": "fullmax-v1",
   "tierSourceCommit": "803125dfdf3066fe6cf65f490f1e7b577871a295",
   "species": 966,
   "assessedCandidates": 14,
   "tierCalculationChecks": 8717,
-  "uiAutomatedTests": "Node executable fake DOM lifecycle/privacy/idempotence; not browser layout validation",
+  "uiAutomatedTests": "Node executable fake-DOM badge ownership, adjacency, hidden/unrated exclusions, lifecycle/idempotence. Not installed-extension E2E.",
   "chromeBoundaryChecks": 58,
   "userConfirmation": {
     "version": "0.1.0-test",
@@ -17,18 +17,18 @@
   },
   "browserUIVerification": {
     "passed": true,
-    "method": "DOM-only tier module executed in the official dev.html document via browser automation isolated context. Not an installed-extension end-to-end test.",
+    "method": "Bundled code evaluated in browser automation isolated context on official dev.html document. DOM UI/layout only, not installed-extension E2E or MAIN-world Canvas validation.",
     "checks": [
-      "Mewtwo detail shows S candidate, HP198, speed164.92, post30 speed138.73, coefficient3.94",
-      "Mewtwo search result shows S candidate badge",
-      "Unassessed cards show unassessed label",
-      "Unowned dex36 remains ??? and has no tier-detail stats",
-      "Criteria opens/closes; no duplicate panels"
+      "Mewtwo small S badge beside native h3, x gap4px and baseline aligned",
+      "Mewtwo search card small S badge beside name",
+      "No tier panels or legends; style sentinel count1",
+      "Unowned rated dex493 remains ???, no card/detail badge",
+      "Unassessed owned dex001 remains without badge"
     ],
-    "accountChanges": "No purchases, upgrade changes, favorite changes, partner changes or gameplay started"
+    "accountChanges": "No purchases, upgrades, partner/favorite changes, cloud-save, authentication, or gameplay started"
   },
   "windowsRuntime": "Not independently tested on Windows",
-  "chromeWebStore": "Not submitted",
-  "automaticUpdates": false,
+  "chromeWebStore": "Badge-only 0.1.2 package prepared; see docs/CHROME-WEB-STORE.md for actual submission status",
+  "automaticUpdates": "Only store-installed versions after approval; unpacked ZIP does not auto-update",
   "privacy": "Tier UI never reads or modifies account/save/upgrade data. No analytics/network/credential API added."
 }

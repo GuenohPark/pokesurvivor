@@ -3,8 +3,10 @@
 // Node built-ins only; Windows/macOS/Linux. No native zip executable needed.
 const fs=require('fs'),path=require('path'),crypto=require('crypto'),zlib=require('zlib');
 const root=path.resolve(__dirname,'..'),ext=path.join(root,'chrome-extension'),dist=path.join(root,'dist');
+const {extensionLicense}=require('./package-extension.cjs');
+fs.writeFileSync(path.join(ext,'LICENSE'),extensionLicense(fs.readFileSync(path.join(root,'LICENSE'),'utf8')));
 const raw=fs.readFileSync(path.join(dist,'pokesurvivor-ko-browser.user.js'),'utf8');
-if(crypto.createHash('sha256').update(raw).digest('hex')!=='9fba2807e4c3369aa8ec41caa809f557b0995c1255d43943dc6276d319cacb57')throw Error('Review and update the pinned source hash before changing translation data');
+if(crypto.createHash('sha256').update(raw).digest('hex')!=='7c11ea808f8d53d07245b3b6a7202a2ad3911fdc5e38ebfb8f3676d95ba9757a')throw Error('Review and update the pinned source hash before changing translation data');
 const file=path.join(ext,'content-main.js'),old=fs.readFileSync(file,'utf8'),a='// PSKO_BUNDLED_SOURCE_BEGIN\n',b='\n// PSKO_BUNDLED_SOURCE_END',i=old.indexOf(a),j=old.lastIndexOf(b);if(i<0||j<i)throw Error('Bundle boundary missing');fs.writeFileSync(file,old.substring(0,i+a.length)+raw+old.substring(j));
 const table=Array.from({length:256},(_,n)=>{for(let k=0;k<8;k++)n=n&1?0xedb88320^(n>>>1):n>>>1;return n>>>0;});function crc(buf){let n=0xffffffff;for(const x of buf)n=table[(n^x)&255]^(n>>>8);return(n^0xffffffff)>>>0;}
 function walk(d,p=''){return fs.readdirSync(d,{withFileTypes:true}).sort((a,b)=>a.name.localeCompare(b.name,'en')).flatMap(e=>e.isDirectory()?walk(path.join(d,e.name),p+e.name+'/'):[p+e.name]);}

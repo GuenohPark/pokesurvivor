@@ -1,0 +1,21 @@
+'use strict';
+// Build only from the already-verified local Chrome extension. No remote code.
+const fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypto'),assert=require('node:assert/strict');
+const {createZip}=require('./package-extension.cjs');
+const root=path.resolve(__dirname,'..'),ext=path.join(root,'chrome-extension'),dist=path.join(root,'dist');
+const pkg=JSON.parse(fs.readFileSync(path.join(root,'package.json'),'utf8'));
+const manifest=JSON.parse(fs.readFileSync(path.join(ext,'manifest.json'),'utf8'));
+assert.equal(manifest.version,pkg.chromeExtensionVersion);
+assert.equal(manifest.manifest_version,3);
+for(const key of ['permissions','host_permissions','background','update_url','key']) assert.equal(manifest[key],undefined);
+manifest.name='PokéSurvivor 한국어 패치 · 도감 티어';
+manifest.version_name=manifest.version+' · 한국어 패치 '+pkg.version;
+manifest.description='PokéSurvivor 공식 게임의 한국어 번역과 도감 이름 옆 작은 잠정 티어 배지를 더하는 비공식 비상업 팬 확장입니다.';
+const files=['content-main.js','popup.css','icons/icon16.png','icons/icon32.png','icons/icon48.png','icons/icon128.png','THIRD-PARTY-NOTICES.md','licenses/GAME-LICENSE-NONCOMMERCIAL.md','licenses/Galmuri-LICENSE.txt','licenses/PokeAPI-LICENSE.md'];
+const entries=files.map(name=>({name,data:fs.readFileSync(path.join(ext,name))}));
+let popup=fs.readFileSync(path.join(ext,'popup.html'),'utf8').replace('Chrome 시험판 '+manifest.version,'Chrome Web Store '+manifest.version).replace('압축해제 설치판은 자동 업데이트되지 않습니다.','스토어 설치판은 Chrome이 자동 업데이트합니다. 기존 압축해제 설치판은 스토어판으로 한 번 설치 전환해야 합니다.');
+assert(!/<script|\son\w+\s*=/i.test(popup));
+entries.push({name:'manifest.json',data:JSON.stringify(manifest,null,2)+'\n'},{name:'popup.html',data:popup},{name:'LICENSE',data:fs.readFileSync(path.join(ext,'LICENSE'))},{name:'PRIVACY.md',data:fs.readFileSync(path.join(root,'docs/PRIVACY.md'))},{name:'README.md',data:'# PokéSurvivor 한국어 패치 · 도감 티어\n\nChrome Web Store 제출 패키지 '+manifest.version+' / 한국어 패치 '+pkg.version+'.\n\n공식 게임 https://pokesurvivor.com/ 에서 메뉴·DOM·Canvas를 번역하고 보유 포켓몬 이름 옆에만 작은 잠정 티어 배지를 표시합니다. 별도 티어 메뉴나 수치 패널은 없습니다. 미평가·미보유에는 배지를 붙이지 않습니다. 게임 계정과 수치를 바꾸지 않습니다.\n\n소스·평가 기준: https://github.com/GuenohPark/pokesurvivor\n개인정보: PRIVACY.md. 제3자 라이선스: THIRD-PARTY-NOTICES.md 및 licenses/.\n\n스토어에서 설치한 확장은 Chrome의 공식 업데이트 절차로 갱신됩니다. 압축해제 설치판은 자동 전환되지 않습니다. 새 버전은 열린 게임을 새로고침한 뒤 적용됩니다. 진행 중인 판은 먼저 마치세요.\n'});
+const zip=createZip(entries),name='pokesurvivor-ko-chrome-web-store-'+manifest.version+'.zip',hash=crypto.createHash('sha256').update(zip).digest('hex');
+fs.mkdirSync(dist,{recursive:true});fs.writeFileSync(path.join(dist,name),zip);fs.writeFileSync(path.join(dist,name.replace('.zip','.sha256')),hash+'  '+name+'\n');
+console.log(JSON.stringify({file:name,files:entries.length,bytes:zip.length,sha256:hash}));
