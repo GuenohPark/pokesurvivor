@@ -61,7 +61,7 @@ function packageExtension(root=ROOT){
  const write=(file,data)=>fs.writeFileSync(path.join(root,file),data);
  const readme=path.join(root,'extension/README.md');
  if(!fs.existsSync(readme)){
-  try{fs.writeFileSync(readme,'# PokéSurvivor Korean desktop extension\n\nExtract this ZIP and load the enclosed `extension` directory as an unpacked extension in desktop Chromium (Developer mode, Load unpacked). Open https://pokesurvivor.org/play/ and refresh.\n\nThis is not an iPhone installer. Safari requires conversion, signing, and device validation. Do not enable another Korean patch at the same time.\n\nSee [LICENSE](LICENSE) and [third-party notices](THIRD-PARTY-NOTICES.md).\n',{flag:'wx'});}catch(error){if(error.code!=='EEXIST')throw error;}
+  try{fs.writeFileSync(readme,'# PokéSurvivor Korean desktop extension\n\nExtract this ZIP and load the enclosed `extension` directory as an unpacked extension in desktop Chromium (Developer mode, Load unpacked). Open https://pokesurvivor.com/ and refresh.\n\nThis is not an iPhone installer. Safari requires conversion, signing, and device validation. Do not enable another Korean patch at the same time.\n\nSee [LICENSE](LICENSE) and [third-party notices](THIRD-PARTY-NOTICES.md).\n',{flag:'wx'});}catch(error){if(error.code!=='EEXIST')throw error;}
  }
  write('extension/LICENSE',extensionLicense(read('LICENSE')));
  write('extension/THIRD-PARTY-NOTICES.md',extensionNotices(read('docs/THIRD-PARTY-NOTICES.md')));

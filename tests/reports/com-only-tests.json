@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "checks": 79,
+  "onlyHosts": [
+    "pokesurvivor.com",
+    "www.pokesurvivor.com"
+  ],
+  "topLevelOnly": true,
+  "orgNoDOMOrGMOrCacheOrDownloads": true,
+  "authenticationExcluded": true,
+  "limits": "VM/static boundary checks, not Safari permission-manager or physical-device E2E."
+}

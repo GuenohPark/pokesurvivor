@@ -33,10 +33,10 @@ async function scenario(name,options,expect){
  // Integration: GM is a lexical injected parameter, not globalThis.GM.
  const entry=fs.readFileSync(root+'/src/auto-loader-entry.js','utf8');let store=null,fullDownloads=0,metadataDownloads=0;
  for(let run=0;run<2;run++){
-  const globals={},document={documentElement:{dataset:{}}};
+  const globals={},document={documentElement:{dataset:{}},body:{appendChild(){}},createElement(){return{setAttribute(){},style:{}}}};
   const gm={getValue:async()=>store,setValue:async(k,v)=>{store=v;},xmlHttpRequest:d=>{assert(d.url.startsWith('https://raw.githubusercontent.com/GuenohPark/pokesurvivor/main/dist/pokesurvivor-ko-menu.'),'loader requests must target main/dist');const isMeta=d.url.includes('.meta.js');if(isMeta)metadataDownloads++;else fullDownloads++;return Promise.resolve({status:200,responseText:bundle(version,'globalThis.__PSKO_AUTO_TEST_EXECUTIONS=(globalThis.__PSKO_AUTO_TEST_EXECUTIONS||0)+1;')});}};
-  const launch=new Function('GM','globalThis','document','location','addEventListener','removeEventListener','setTimeout','clearTimeout','console',core+'\n'+entry);
-  launch(gm,globals,document,{hostname:'pokesurvivor.org'},()=>{},()=>{},setTimeout,clearTimeout,console);
+  const launch=new Function('URL','GM','globalThis','document','location','addEventListener','removeEventListener','setTimeout','clearTimeout','console',core+'\n'+entry);
+  launch(URL,gm,globals,document,new URL('https://pokesurvivor.com/'),()=>{},()=>{},setTimeout,clearTimeout,console);
   for(let i=0;i<100&&!['installed-new','installed-cache'].includes(globals.__PSKO_AUTO_STATUS?.action);i++)await new Promise(r=>setTimeout(r,2));
   assert(['installed-new','installed-cache'].includes(globals.__PSKO_AUTO_STATUS?.action));
  }

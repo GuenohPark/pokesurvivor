@@ -48,13 +48,13 @@ MAIN 쪽은 fillText·strokeText·measureText를 함께 감싸고, alert/confirm
 
 ### iPhone 설치
 
-**ZIP이나 manifest 파일을 iPhone에서 여는 것만으로는 설치되지 않습니다.** Safari Web Extension을 앱으로 패키징하고 서명하여 기기에 설치하거나 TestFlight/App Store로 배포해야 합니다. Xcode 또는 Apple의 Safari Web Extension Packager/App Store Connect 경로를 사용할 수 있습니다. 이 저장소에는 서명된 iOS 앱이 없습니다. [Apple의 패키징 안내](https://developer.apple.com/videos/play/wwdc2026/216/)를 참고하세요. 필요한 호스트 권한은 pokesurvivor.org와 pokesurvivor.com이며 실제 지원 iOS·Safari 버전과 권한 처리는 기기에서 검증해야 합니다.
+**ZIP이나 manifest 파일을 iPhone에서 여는 것만으로는 설치되지 않습니다.** Safari Web Extension을 앱으로 패키징하고 서명하여 기기에 설치하거나 TestFlight/App Store로 배포해야 합니다. Xcode 또는 Apple의 Safari Web Extension Packager/App Store Connect 경로를 사용할 수 있습니다. 이 저장소에는 서명된 iOS 앱이 없습니다. [Apple의 패키징 안내](https://developer.apple.com/videos/play/wwdc2026/216/)를 참고하세요. 필요한 호스트 권한은 pokesurvivor.com만이며 실제 지원 iOS·Safari 버전과 권한 처리는 기기에서 검증해야 합니다.
 
 다른 해결책은 공식 개발팀이 한국어 사전을 게임에 포함하거나 의도적인 번역 확장 API를 제공하는 것입니다. 현재 저장소는 그 승인을 받았다고 주장하지 않습니다.
 
 ## 기타 범위
 
-- .org/play는 .com 게임을 iframe으로 불러옵니다. 두 사이트 권한이 필요합니다.
+- .org 및 www.org는 제외되며, .org에서 .com을 iframe/sub로 실행하는 방식도 지원하지 않습니다. .com을 일반 탭에서 직접 여세요.
 - .org 공략 기사의 전문 번역은 게임 한글화 범위에 포함하지 않습니다.
 - 회원 닉네임·사용자 입력·비밀번호·저장 데이터는 번역 대상이 아닙니다. 한국어 검색은 검색칸만 원래 게임의 영문/번호 필터로 연결합니다.
 - 숫자·피해량·아이템 효과·획득 확률은 수정하지 않습니다. 원본 숫자 표기 방식을 유지합니다.
@@ -64,6 +64,6 @@ MAIN 쪽은 fillText·strokeText·measureText를 함께 감싸고, alert/confirm
 
 자동 로더는 content 컨텍스트에서 GM.getValue·GM.setValue·GM.xmlHttpRequest를 사용합니다. 공개 GitHub 주소의 코드만 받아 버전·식별자·문법을 확인하고 실행합니다. 앱의 업데이트 버튼과 별개로 동작하며 페이지 입력 이후 새 버전을 hot-swap하지 않습니다.
 
-Userscripts v4.8.6/iOS1.8.6의 content 주입 코드 자체가 Function을 사용하는 것을 확인했습니다: https://github.com/quoid/userscripts/blob/06900223459036d2a238d93ab1af4d9f26cadbc7/src/ext/content-scripts/entry-userscripts.js#L79-L89 . 이는 페이지 world의 CSP 차단과 구분됩니다. 자동 로더 역시 이 content 실행 경로를 사용하며 Canvas 권한이 생기는 것은 아닙니다. 물리적 iPhone에서 새 로더를 실행한 검증은 아직 하지 않았습니다. 최신 배포는 번역팩 0.4.3 / 로더 0.1.1이며 새 주소는 dist/입니다. 기존 루트 업데이트 주소 4개는 같은 파일로 유지합니다.
+Userscripts v4.8.6/iOS1.8.6의 content 주입 코드 자체가 Function을 사용하는 것을 확인했습니다: https://github.com/quoid/userscripts/blob/06900223459036d2a238d93ab1af4d9f26cadbc7/src/ext/content-scripts/entry-userscripts.js#L79-L89 . 이는 페이지 world의 CSP 차단과 구분됩니다. 자동 로더 역시 이 content 실행 경로를 사용하며 Canvas 권한이 생기는 것은 아닙니다. 물리적 iPhone에서 새 로더를 실행한 검증은 아직 하지 않았습니다. 현재 배포는 번역팩 0.4.10 / 로더 0.1.2이며 새 주소는 dist/입니다. 기존 루트 업데이트 주소 4개는 같은 파일로 유지합니다.
 
 캐시가 없을 때 확인 중 사용자가 게임을 먼저 시작하면 받은 코드는 저장만 하고 다음 새로고침 때 적용합니다. 동일 버전 재접속·오프라인·잘못된 응답·버전 불일치·사용자 입력 시점 등 13개 분기와 GM이 전역이 아닌 주입 매개변수인 경우를 Node에서 검증했습니다.

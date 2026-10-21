@@ -1,11 +1,11 @@
 {
   "name": "pokesurvivor-korean-patch",
-  "version": "0.4.9",
+  "version": "0.4.10",
   "private": true,
-  "description": "Korean localization data and browser UI patch for pokesurvivor.org/play",
+  "description": "Korean localization for https://pokesurvivor.com/ direct tabs only",
   "scripts": {
     "build": "node scripts/import-tier-model.cjs && node scripts/build-tier-data.cjs && node scripts/build-move-data.cjs && node scripts/build.cjs && node scripts/build-browser.cjs",
-    "test": "node tests/test.cjs && node tests/test-auto-loader.cjs && node tests/test-package.cjs && node tests/test-font.cjs && node tests/test-browser.cjs && node tests/test-tier-data.cjs && node tests/test-tier-geometry.cjs && node tests/test-tier-ui.cjs && node tests/test-current-translations.cjs && node tests/test-move-data.cjs && node tests/test-move-tier-ui.cjs",
+    "test": "node tests/test.cjs && node tests/test-auto-loader.cjs && node tests/test-package.cjs && node tests/test-font.cjs && node tests/test-browser.cjs && node tests/test-tier-data.cjs && node tests/test-tier-geometry.cjs && node tests/test-tier-ui.cjs && node tests/test-current-translations.cjs && node tests/test-move-data.cjs && node tests/test-move-tier-ui.cjs && node tests/test-com-only.cjs",
     "build:browser": "node scripts/build-browser.cjs",
     "build:chrome": "node scripts/build-chrome-extension.cjs",
     "test:chrome": "node chrome-extension/tests.cjs",
@@ -14,7 +14,7 @@
     "build:store": "node scripts/build-chrome-store.cjs",
     "audit:live": "node scripts/audit-live-translations.cjs"
   },
-  "autoLoaderVersion": "0.1.1",
-  "browserScriptVersion": "0.1.6",
-  "chromeExtensionVersion": "0.1.6"
+  "autoLoaderVersion": "0.1.2",
+  "browserScriptVersion": "0.1.7",
+  "chromeExtensionVersion": "0.1.7"
 }

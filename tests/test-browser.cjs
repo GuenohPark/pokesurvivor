@@ -10,7 +10,7 @@ check(!meta.includes('@match https://accounts.google.com'),'Never inject into Go
 check(!meta.includes('firebaseapp.com'),'Never inject into Firebase auth helpers');
 check(script.includes('const canvas=api.installCanvas()'),'Canvas entry enabled');
 check(!/signInWith(Popup|Redirect|Credential)|getRedirectResult|setUserAgentString/.test(script),'Do not replace authentication or spoof UA');
-for(const href of ['https://accounts.google.com/','https://example.firebaseapp.com/__/auth/handler','http://pokesurvivor.com/','https://pokesurvivor.com.evil.example/','https://pokesurvivor.com:444/','https://user:pass@pokesurvivor.com/']){
+for(const href of ['https://pokesurvivor.org/','https://www.pokesurvivor.org/play/','https://accounts.google.com/','https://example.firebaseapp.com/__/auth/handler','http://pokesurvivor.com/','https://pokesurvivor.com.evil.example/','https://pokesurvivor.com:444/','https://user:pass@pokesurvivor.com/']){
  vm.runInNewContext(script,{URL,location:{href}},{timeout:1000});check(true,'Untrusted origin rejected without touching DOM');
 }
 let observed=false;vm.runInNewContext(script,{URL,location:{href:'https://pokesurvivor.com/'},document:{documentElement:null},MutationObserver:class{observe(target,opts){observed=opts.childList===true;}}},{timeout:1000});check(observed,'Wait safely for HTML root at document-start');

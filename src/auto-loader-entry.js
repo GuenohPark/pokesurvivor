@@ -1,5 +1,9 @@
 (async function(){
  'use strict';
+ const here=new URL(location.href);
+if(here.protocol!=='https:' || here.username || here.password || (here.port && here.port!=='443') || !['pokesurvivor.com','www.pokesurvivor.com'].includes(here.hostname) || !['/','/index.html','/dev.html'].includes(here.pathname) || /(?:auth|login|sign.?in|token|callback|password|session|(?:[?&#]|^)code(?:=|%3d))/i.test(here.search+here.hash)) return;
+if(typeof window!=='undefined' && window.top!==window.self) return;
+
  if(globalThis.__PSKO_AUTO_BOOTED)return;globalThis.__PSKO_AUTO_BOOTED=true;
  const BASE='https://raw.githubusercontent.com/GuenohPark/pokesurvivor/main/dist/';
  const CACHE='pokesurvivor-ko:bundle-cache:v1';

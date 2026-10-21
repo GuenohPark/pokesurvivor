@@ -14,7 +14,7 @@ Apple은 Safari 확장을 iOS Safari와 macOS Safari에서 지원하며 **Mac �
 
 **iOS 26 이상에서 지원되는 방법:**
 
-1. 기존 PWA는 일단 그대로 둡니다. Safari에서 [pokesurvivor.org/play/](https://pokesurvivor.org/play/)를 직접 엽니다.
+1. 기존 PWA는 일단 그대로 둡니다. Safari에서 [pokesurvivor.com](https://pokesurvivor.com/)를 직접 엽니다.
 2. 공유 → **홈 화면에 추가**를 선택합니다.
 3. **‘웹앱으로 열기’(Open as Web App)를 끕니다.**
 4. ‘PokéSurvivor 한국어 Safari’처럼 구분되는 이름으로 추가합니다.

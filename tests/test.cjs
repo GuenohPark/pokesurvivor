@@ -12,7 +12,7 @@ for(const [name,kind,ko] of [['Psychic','general','에스퍼'],['Psychic','move'
 const descriptions=JSON.parse(read('tests/fixtures/description-tests.json'));for(const r of descriptions){const result=api.translate(r.source);assert.notStrictEqual(result,r.source,'untranslated description: '+r.id);assert(/[가-힣]/.test(result));}
 const search=JSON.parse(read('data/search-species.json'));assert.strictEqual(search.length,966);assert.strictEqual(new Set(search.map(p=>p.dex)).size,966);assert(search.every(p=>p.en&&p.ko));
 for(const file of ['dist/pokesurvivor-ko-menu.user.js','extension/extension-main.js','extension/extension-background.js','extension/extension-content.js','dist/pokesurvivor-ko-auto.user.js'])new Function(read(file));
-const meta=read('dist/pokesurvivor-ko-menu.meta.js');assert(meta.includes('@version '+version));assert(meta.includes('@match https://pokesurvivor.org/*'));assert(meta.includes('@match https://pokesurvivor.com/*'));assert(meta.includes('@inject-into content'));
+const meta=read('dist/pokesurvivor-ko-menu.meta.js');assert(meta.includes('@version '+version));assert(!meta.includes('pokesurvivor.org'));assert(meta.includes('@noframes'));assert(meta.includes('@match https://pokesurvivor.com/*'));assert(meta.includes('@inject-into content'));
 
 // Relocation invariants: legacy URLs, dist metadata, and a self-contained extension.
 let layoutAssertions=0;const layout=(condition,message)=>{assert(condition,message);layoutAssertions++;};

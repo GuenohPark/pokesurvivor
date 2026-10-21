@@ -18,12 +18,11 @@ const header = `// ==UserScript==
 // @description 실제 브라우저 페이지에서 DOM·Canvas 한국어 번역. Firefox Android + Tampermonkey용 실기기 미검증 시험판.
 // @match https://pokesurvivor.com/*
 // @match https://www.pokesurvivor.com/*
-// @match https://pokesurvivor.org/*
-// @match https://www.pokesurvivor.org/*
 // @homepageURL https://github.com/GuenohPark/pokesurvivor
 // @supportURL https://github.com/GuenohPark/pokesurvivor/issues
 // @updateURL https://raw.githubusercontent.com/GuenohPark/pokesurvivor/main/dist/pokesurvivor-ko-browser.meta.js
 // @downloadURL https://raw.githubusercontent.com/GuenohPark/pokesurvivor/main/dist/pokesurvivor-ko-browser.user.js
+// @noframes
 // @run-at document-start
 // @sandbox raw
 // @inject-into page
@@ -34,7 +33,9 @@ const wrapper = String.raw`
 (function(){
 'use strict';
 const here=new URL(location.href);
-if(here.protocol!=='https:' || here.username || here.password || (here.port && here.port!=='443') || !['pokesurvivor.com','www.pokesurvivor.com','pokesurvivor.org','www.pokesurvivor.org'].includes(here.hostname)) return;
+if(here.protocol!=='https:' || here.username || here.password || (here.port && here.port!=='443') || !['pokesurvivor.com','www.pokesurvivor.com'].includes(here.hostname)) return;
+if(!['/','/index.html','/dev.html'].includes(here.pathname) || /(?:auth|login|sign.?in|token|callback|password|session|(?:[?&#]|^)code(?:=|%3d))/i.test(here.search+here.hash))return;
+if(typeof window!=='undefined' && window.top!==window.self)return;
 if(globalThis.__PSKO_BROWSER_VERSION==='${version}') return;
 function start(){
 ${body}

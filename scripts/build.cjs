@@ -9,14 +9,13 @@ const header=`// ==UserScript==
 // @namespace pokesurvivor-ko-local-test
 // @version ${version}
 // @description 포켓몬·기술·아이템·능력치·설명·UI 한국어 번역. Userscripts는 DOM 전용, Canvas는 별도 확장 필요.
-// @match https://pokesurvivor.org/*
-// @match https://www.pokesurvivor.org/*
 // @match https://pokesurvivor.com/*
 // @match https://www.pokesurvivor.com/*
 // @homepageURL https://github.com/GuenohPark/pokesurvivor
 // @supportURL https://github.com/GuenohPark/pokesurvivor/issues
 // @updateURL https://raw.githubusercontent.com/GuenohPark/pokesurvivor/main/dist/pokesurvivor-ko-menu.meta.js
 // @downloadURL https://raw.githubusercontent.com/GuenohPark/pokesurvivor/main/dist/pokesurvivor-ko-menu.user.js
+// @noframes
 // @run-at document-end
 // @inject-into content
 // @grant none
@@ -26,8 +25,9 @@ const serialized=JSON.stringify(data);
 const tier=read('src/tier-ui.js').replace('const DATA=PSKO_TIER_DATA;', 'const DATA='+JSON.stringify(json('data/tier-ui.json'))+';');
 const moveTier=read('src/move-tier-ui.js').replace('const DATA=PSKO_MOVE_DATA;', 'const DATA='+JSON.stringify(json('data/move-ui.json'))+';');
 const search=read('src/search-korean.js').replace('SEARCH_SPECIES',JSON.stringify(json('data/search-species.json')));
-const main=header+notice+read('assets/font-install.js')+'\n(function(){\n'+factory+'\nconst DATA='+serialized+';\nconst api=createPokesurvivorKorean(DATA);globalThis.__PSKO=api;api.installDOM();document.documentElement.dataset.pskoMode="dom-only";\n})();\n'+read('src/tips-ui.js')+'\n'+search+'\n'+tier+'\n'+moveTier;
-const page=notice+'(function(){\n'+factory+'\nconst api=createPokesurvivorKorean('+serialized+');globalThis.__PSKO_PAGE=api;api.installCanvas();\n})();\n';
+const boundaryOpen='(function(){\n\'use strict\';\n'+"const here=new URL(location.href);\nif(here.protocol!=='https:' || here.username || here.password || (here.port && here.port!=='443') || !['pokesurvivor.com','www.pokesurvivor.com'].includes(here.hostname) || !['/','/index.html','/dev.html'].includes(here.pathname) || /(?:auth|login|sign.?in|token|callback|password|session|(?:[?&#]|^)code(?:=|%3d))/i.test(here.search+here.hash)) return;\nif(typeof window!=='undefined' && window.top!==window.self) return;\n";
+const main=header+boundaryOpen+notice+read('assets/font-install.js')+'\n(function(){\n'+factory+'\nconst DATA='+serialized+';\nconst api=createPokesurvivorKorean(DATA);globalThis.__PSKO=api;api.installDOM();document.documentElement.dataset.pskoMode="dom-only";\n})();\n'+read('src/tips-ui.js')+'\n'+search+'\n'+tier+'\n'+moveTier+'\n})();\n';
+const page=notice+boundaryOpen+factory+'\nconst api=createPokesurvivorKorean('+serialized+');globalThis.__PSKO_PAGE=api;api.installCanvas();\n})();\n';
 const background=notice+String.raw`'use strict';
 const ext=globalThis.browser||globalThis.chrome;
 const DATA=${serialized};
@@ -36,7 +36,7 @@ ${factory}
 const api=createPokesurvivorKorean(data);globalThis.__PSKO_PAGE=api;return api.installCanvas();
 };
 ext.runtime.onMessage.addListener((message,sender,respond)=>{
- if(message?.type!=='PSKO_INSTALL_MAIN'||!sender.tab?.id||!/^https:\/\/(www\.)?pokesurvivor\.(com|org)\//i.test(sender.url||''))return false;
+ if((sender.frameId||0)!==0 || message?.type!=='PSKO_INSTALL_MAIN'||!sender.tab?.id||!/^https:\/\/(www\.)?pokesurvivor\.com\//i.test(sender.url||''))return false;
  ext.scripting.executeScript({target:{tabId:sender.tab.id,frameIds:[sender.frameId||0]},world:'MAIN',func:installNative,args:[DATA]})
  .then(result=>respond({ok:!!result?.[0]?.result?.ok})).catch(error=>respond({ok:false,error:String(error.message||error)}));
  return true;
@@ -54,13 +54,12 @@ const loaderHeader=`// ==UserScript==
 // @namespace pokesurvivor-ko-auto
 // @version ${loaderVersion}
 // @description 접속 시 GitHub 버전 확인, 새 번역팩만 다운로드, 오프라인 캐시와 플레이 중 교체 방지.
-// @match https://pokesurvivor.org/*
-// @match https://www.pokesurvivor.org/*
 // @match https://pokesurvivor.com/*
 // @match https://www.pokesurvivor.com/*
 // @homepageURL https://github.com/GuenohPark/pokesurvivor
 // @updateURL https://raw.githubusercontent.com/GuenohPark/pokesurvivor/main/dist/pokesurvivor-ko-auto.meta.js
 // @downloadURL https://raw.githubusercontent.com/GuenohPark/pokesurvivor/main/dist/pokesurvivor-ko-auto.user.js
+// @noframes
 // @run-at document-end
 // @inject-into content
 // @grant GM.getValue
