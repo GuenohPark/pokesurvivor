@@ -55,7 +55,7 @@ Safari에서 코드만 보이면 링크를 길게 눌러 **링크된 파일 다�
 3. iPhone의 Safari 확장 설정에서 Userscripts를 켜고 **pokesurvivor.com만** 접근을 허용합니다.
 4. [게임](https://pokesurvivor.com/)을 **일반 Safari 탭**으로 열어 확장 메뉴의 Userscripts를 한 번 확인하고 새로고침합니다.
 
-.org 및 www.org는 제외됩니다. .com을 일반 Safari 탭에서 직접 여세요. 기존 로더 0.1.1의 .org 권한은 끄고 새 0.1.2만 켜세요. [상세 설치·업데이트·문제 해결](docs/INSTALL.md)
+.org 및 `www.pokesurvivor.org`는 제외됩니다. .com을 일반 Safari 탭에서 직접 여세요. 기존 로더 0.1.1의 .org 권한은 끄고 새 0.1.2만 켜세요. [상세 설치·업데이트·문제 해결](docs/INSTALL.md)
 
 **홈 화면 아이콘으로 열고 싶다면:** iOS 26 이상에서 ‘홈 화면에 추가’할 때 **‘웹앱으로 열기’를 끄고** Safari 바로가기로 추가하세요. 독립 PWA에 Userscripts를 적용하는 방식은 아닙니다. 기존 PWA는 저장 데이터가 다를 수 있으니 삭제하지 말고 먼저 보관하세요. [PWA 안내](docs/PWA.md)
 

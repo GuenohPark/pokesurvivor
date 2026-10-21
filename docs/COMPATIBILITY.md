@@ -54,7 +54,7 @@ MAIN 쪽은 fillText·strokeText·measureText를 함께 감싸고, alert/confirm
 
 ## 기타 범위
 
-- .org 및 www.org는 제외되며, .org에서 .com을 iframe/sub로 실행하는 방식도 지원하지 않습니다. .com을 일반 탭에서 직접 여세요.
+- .org 및 `www.pokesurvivor.org`는 제외되며, .org에서 .com을 iframe/sub로 실행하는 방식도 지원하지 않습니다. .com을 일반 탭에서 직접 여세요.
 - .org 공략 기사의 전문 번역은 게임 한글화 범위에 포함하지 않습니다.
 - 회원 닉네임·사용자 입력·비밀번호·저장 데이터는 번역 대상이 아닙니다. 한국어 검색은 검색칸만 원래 게임의 영문/번호 필터로 연결합니다.
 - 숫자·피해량·아이템 효과·획득 확률은 수정하지 않습니다. 원본 숫자 표기 방식을 유지합니다.

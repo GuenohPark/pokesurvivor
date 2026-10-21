@@ -14,7 +14,7 @@
 6. [게임](https://pokesurvivor.com/)을 일반 Safari 탭에서 엽니다. Safari 확장 메뉴 → Userscripts를 한 번 열어 **‘PokéSurvivor 한국어 자동 업데이트’만** 켭니다. 이전 메뉴 시험판·전체 번역팩은 끕니다.
 7. 페이지를 새로고침하고 도감의 **뮤츠 / 특수공격 / 염동력** 표시를 확인합니다.
 
-.org 및 www.org는 제외됩니다. .org iframe/sub 실행은 지원하지 않으므로 .com을 일반 Safari 탭에서 직접 여세요. 기존 로더의 .org 권한을 끄고 새 로더 0.1.2만 켜세요.
+.org 및 `www.pokesurvivor.org`는 제외됩니다. .org iframe/sub 실행은 지원하지 않으므로 .com을 일반 Safari 탭에서 직접 여세요. 기존 로더의 .org 권한을 끄고 새 로더 0.1.2만 켜세요.
 
 ## 현재 Safari 패치
 
