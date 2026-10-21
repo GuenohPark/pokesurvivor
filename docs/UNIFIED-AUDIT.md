@@ -49,3 +49,10 @@ Native renderer를 보존하고 Proxy context alpha에 smoothstep 거리 감쇠�
 - 지문 대조에서 생성된 `tests/fixtures/tier-player-reference.json`이 게시 허용 목록에서 빠진 것을 찾아 추가했습니다. 임의 tests/소스 경로는 여전히 자동 stage하지 않습니다.
 - 동일 공개 입력으로 Userscript/메타데이터를 재생성하면 공개 바이트와 일치합니다. 별도 ARM/Node 환경의 능력치 자료 재생성은 일부 EHP 값에 1e-12 미만의 부동소수점 꼬리 차이가 있을 수 있습니다. 평가 등급은 바뀌지 않으며, 게시 지문은 CI 생성본을 기준으로 검증합니다.
 - 통합 런타임 10그룹, 설치 페이지 14그룹, Chrome 58검사 및 기존 회귀 검사 통과. 직접 게임 DOM smoke와 설치 페이지 360/768/1440px 폭 점검은 관리자 설치 E2E·물리적 실기기 검증을 대체하지 않습니다.
+
+
+## 보상 페이드 0.5.2 공개 검증 · 2026-10-21
+
+기능 소스 커밋 `2b3f39f8a614be31eff3d27f06b4573aafb6d513`, 생성물 커밋 `8083da97bd819b6e1b59a9bbcbe1b24738907ab3`. [Build and publish 성공](https://github.com/GuenohPark/pokesurvivor/actions/runs/39585521322), [설치 페이지 배포 성공](https://github.com/GuenohPark/pokesurvivor/actions/runs/39585580333)을 확인했습니다. 공통0.5.2·browser/Chrome0.1.10·아이폰 로더0.1.2입니다.
+
+페이드 Node31그룹, 로컬 Chromium 원본 렌더러/합성 좌표29검사, 기존 전체 회귀·Chrome58검사를 통과했습니다. 가까운 대상4종 영역만 바뀌고 비대상 영역은 원본과 픽셀 동일했습니다. [전용 범위와 검사 보고서](PICKUP-FADE.md). 실제 게임 플레이·설치 관리자·물리 기기·로그인·클라우드 저장 검증은 하지 않았습니다. 아이폰 무료 Userscripts의 Canvas 제약은 그대로입니다.
