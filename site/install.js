@@ -4,6 +4,8 @@
   var PLATFORMS = ['pc', 'android', 'iphone'];
   var INSTALL_URL = 'https://raw.githubusercontent.com/GuenohPark/pokesurvivor/main/dist/pokesurvivor.user.js';
 
+  var IPHONE_INSTALL_URL = 'https://raw.githubusercontent.com/GuenohPark/pokesurvivor/main/dist/pokesurvivor-ko-auto.user.js';
+
   // Advisory only. This does not inspect installed extensions or modify the UA.
   function detectPlatform(nav) {
     nav = nav || {};
@@ -31,6 +33,8 @@
     var panels = Array.from(doc.querySelectorAll('[data-platform-panel]'));
     var tablist = doc.querySelector('.platform-tabs');
     var advisory = doc.getElementById('device-advisory');
+    var installLink = doc.getElementById('primary-install');
+    var installLabel = doc.getElementById('primary-install-label');
     if (tabs.length !== 3 || panels.length !== 3 || !tablist || !advisory) return null;
     var selected = detectPlatform(nav);
     var labels = { pc: 'PC', android: 'Android', iphone: 'iPhone / iPad' };
@@ -50,8 +54,13 @@
         panel.setAttribute('aria-labelledby', 'tab-' + key);
         panel.setAttribute('tabindex', '0');
       });
+      var iphone = value === 'iphone';
+      if (installLink && installLabel) {
+        installLink.setAttribute('href', iphone ? IPHONE_INSTALL_URL : INSTALL_URL);
+        installLabel.textContent = iphone ? '아이폰 Userscripts 자동 로더 받기' : 'PC·Android 통합 스크립트 설치';
+      }
       advisory.textContent = manual
-        ? labels[value] + ' 안내를 직접 선택했습니다. 설치 파일은 모든 기기에서 같습니다.'
+        ? labels[value] + ' 안내를 직접 선택했습니다. ' + (iphone ? 'Safari + 무료 Userscripts용 자동 로더를 사용하세요.' : 'Tampermonkey용 통합 스크립트를 사용하세요.')
         : '브라우저 정보에 따른 추천: ' + labels[value] + '. 실제 사용할 기기는 아래에서 직접 바꿀 수 있습니다. 확장 설치 여부는 확인하지 않습니다.';
       return true;
     }
@@ -78,7 +87,7 @@
   }
 
   if (typeof module === 'object' && module.exports) {
-    module.exports = { detectPlatform: detectPlatform, isSafeUrl: isSafeUrl, init: init, INSTALL_URL: INSTALL_URL };
+    module.exports = { detectPlatform: detectPlatform, isSafeUrl: isSafeUrl, init: init, INSTALL_URL: INSTALL_URL, IPHONE_INSTALL_URL: IPHONE_INSTALL_URL };
   }
   if (typeof document !== 'undefined') {
     init(document, typeof navigator !== 'undefined' ? navigator : {});

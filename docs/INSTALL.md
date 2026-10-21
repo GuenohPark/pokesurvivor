@@ -1,20 +1,26 @@
 # 설치와 업데이트
 
-## 통합 Tampermonkey판 (0.5.0)
+## 기기별 기본 권장 경로
+
+- **iPhone/iPad: Safari + 무료 Userscripts + [자동 로더](https://raw.githubusercontent.com/GuenohPark/pokesurvivor/main/dist/pokesurvivor-ko-auto.user.js)**. 유료 iPhone Tampermonkey는 필요하지 않습니다. 아래 아이폰 설치 순서를 따르세요.
+- **PC·Android Firefox: Tampermonkey + 통합 스크립트**.
+- 두 경로는 공통 번역팩을 재사용하지만 설치 파일은 다릅니다. 아이폰 Userscripts는 DOM 전용이며 전투 Canvas HUD는 번역되지 않습니다.
+
+## PC·Android Tampermonkey판 (0.5.0)
 
 [공개 설치 페이지](https://guenohpark.github.io/pokesurvivor/) · [통합 설치 파일](https://raw.githubusercontent.com/GuenohPark/pokesurvivor/main/dist/pokesurvivor.user.js) · [Tampermonkey](https://www.tampermonkey.net/) · [상세 호환성](COMPATIBILITY.md)
 
-PC Chrome/Edge/Firefox, Android Firefox, iPhone Safari에서 Tampermonkey를 설치한 뒤 위 Raw 파일을 열어 스크립트를 추가하세요. 관리자의 업데이트 설정을 통해 새 버전을 확인할 수 있지만 즉시 적용되는 것은 아닙니다. iOS의 백그라운드 정지나 사이트 권한에 따라 확인이 늦어질 수 있으며, 진행 중인 판에서 업데이트를 적용하려 새로고침하지 마세요.
+PC Chrome/Edge/Firefox와 Android Firefox에서 Tampermonkey를 설치한 뒤 위 Raw 파일을 열어 스크립트를 추가하세요. 관리자의 업데이트 설정을 통해 새 버전을 확인할 수 있지만 즉시 적용되는 것은 아닙니다. iOS의 백그라운드 정지나 사이트 권한에 따라 확인이 늦어질 수 있으며, 진행 중인 판에서 업데이트를 적용하려 새로고침하지 마세요.
 
 통합판은 공식 pokesurvivor.com/www.pokesurvivor.com 최상위 탭만 대상으로 합니다. .org, 로그인/인증 화면, iframe은 지원하지 않습니다. 기존 Userscripts/다른 패치 스크립트와 사용자 Chrome 확장을 먼저 끄고 통합판만 켜세요. Chrome 확장·Store·APK 대안은 별도로 남아 있습니다. 기존 게임 저장, 계정 또는 APK를 삭제하지 마세요. 설치한 관리자/브라우저 조합이 맞는지 확인해야 하며 iOS에서는 관리자를 사이트가 확실하게 감지할 수 없습니다.
 
-## 기존 iPhone Userscripts 설치와 업데이트
+## 아이폰 권장 · Safari + 무료 Userscripts 설치와 업데이트
 
 [설치 파일 받기](https://raw.githubusercontent.com/GuenohPark/pokesurvivor/main/dist/pokesurvivor-ko-auto.user.js) · [처음 화면](../README.md) · [PWA 안내](PWA.md)
 
 ## 설치 파일은 하나만
 
-레거시 Userscripts 자동 로더 설치 시에만 **pokesurvivor-ko-auto.user.js**를 사용합니다. 통합 Tampermonkey판은 위 통합 설치 파일을 사용하세요. dist의 meta.js나 개발 소스는 설치하지 않습니다. 전체 번역팩은 로더가 필요할 때 GitHub에서 내려받아 보관합니다.
+아이폰의 기본 권장 Userscripts 설치에는 **pokesurvivor-ko-auto.user.js**를 사용합니다. PC·Android Tampermonkey판은 위 통합 설치 파일을 사용하세요. dist의 meta.js나 개발 소스는 설치하지 않습니다. 전체 번역팩은 로더가 필요할 때 GitHub에서 내려받아 보관합니다.
 
 1. App Store에서 [Userscripts](https://apps.apple.com/app/userscripts/id1463298887)를 설치합니다.
 2. Userscripts 앱에서 스크립트 저장 폴더를 확인하거나 지정합니다.
@@ -28,7 +34,7 @@ PC Chrome/Edge/Firefox, Android Firefox, iPhone Safari에서 Tampermonkey를 설
 
 ## 현재 Safari 패치
 
-- **공통 DOM·메뉴 런타임 0.5.0 / 기존 자동 로더 0.1.2 (레거시)**입니다. 로더 번호와 실제 번역팩 번호는 다릅니다.
+- **공통 DOM·메뉴 런타임 0.5.0 / 아이폰 Userscripts 자동 로더 0.1.2**입니다. 로더 번호와 실제 번역팩 번호는 다릅니다.
 - 메인 파트너·도감 등 글자로 표시되는 이름 옆에 등급 또는 `미평가`를 표시합니다. 미보유 `???`는 그대로 숨깁니다.
 - 기존 자동 로더 0.1.1은 교체하고, 게임을 마친 뒤 Safari에서 새로고침해 `한국어 v0.5.0`을 확인하세요. `준비됨`이면 한 번 더 새로고침할 때 적용됩니다.
 - 같은 Safari 탭을 오래 열어 두거나 뒤로가기로 복원한 것만으로는 새 버전 확인이 다시 실행되지 않을 수 있습니다.

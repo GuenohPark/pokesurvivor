@@ -1,5 +1,9 @@
 # 통합 배포판 감사
 
+## 현재 기기별 기본 안내
+
+사용자 요청에 따라 아이폰은 **Safari + 무료 Userscripts + 자동 로더 0.1.2**를 기본 권장합니다. PC·Android는 Tampermonkey 통합판을 유지합니다. 설치 페이지는 아이폰 선택 시 앱 안내와 주 설치 링크를 Userscripts용으로 전환하며, JavaScript가 꺼져 있어도 아이폰 전용 다운로드 링크를 제공합니다. Userscripts는 DOM 전용이며 전투 Canvas·독립 PWA·실기기 전체 흐름 제한은 그대로입니다. 아래 공통 Tampermonkey 구현 기록이 아이폰 유료 앱 설치 권장을 뜻하지 않습니다.
+
 ## 범위와 구조
 
 공통 Tampermonkey userscript는 PC Chrome/Edge/Firefox, Android Firefox, iPhone Safari를 대상으로 합니다. document-start 부트스트랩이 한 번 초기화하며 공통 DOM 마커와 기능 등록부를 사용합니다. URL 1초 polling, popstate/hashchange/pageshow, body/root observer로 화면 변경을 감지하고 history API는 monkeypatch하지 않습니다. 기존 번역/핵심, 글꼴, 검색, 팁, 포켓몬 티어, 기술 티어 기능을 재사용합니다.
@@ -13,7 +17,7 @@
 ## 호환성·안전 경계
 
 - 공식 .com 최상위 페이지 전용이며 .org, 인증 페이지, iframe은 제외합니다.
-- 통합판 사용 전 기존 패치 스크립트와 사용자 Chrome 확장을 끕니다. 레거시 자동 로더 0.1.2는 DOM 전용입니다. Chrome/browser 수동판 0.1.8, Store 0.1.3, APK 앱 버전은 별도 대안으로 유지합니다. 저장/계정 또는 APK를 삭제하지 않습니다.
+- 통합판 사용 전 기존 패치 스크립트와 사용자 Chrome 확장을 끕니다. 아이폰 기본 권장 자동 로더 0.1.2는 DOM 전용입니다. Chrome/browser 수동판 0.1.8, Store 0.1.3, APK 앱 버전은 별도 대안으로 유지합니다. 저장/계정 또는 APK를 삭제하지 않습니다.
 - Canvas/dialog 래핑은 활성 게임 경로에서만 실행하며 원래 호출과 반환을 보존합니다. 페이지 컨텍스트 실행만으로 게임 Canvas 접근을 입증하지 않습니다.
 - 게임 데이터·서버 요청·계정 저장·랭킹·세이브를 변경하지 않습니다. iOS 15 호환성을 위해 RegExp lookbehind를 피합니다.
 

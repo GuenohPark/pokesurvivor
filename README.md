@@ -1,10 +1,10 @@
 # PokéSurvivor 한국어 패치
 
-## 통합 Tampermonkey 설치판 · 0.5.0
+## 기기별 권장 설치 · 공통 번역팩 0.5.0
 
-**[공개 설치 페이지](https://guenohpark.github.io/pokesurvivor/)** · **[통합 설치 파일](https://raw.githubusercontent.com/GuenohPark/pokesurvivor/main/dist/pokesurvivor.user.js)** · [설치 안내](docs/INSTALL.md) · [호환성·검증 범위](docs/COMPATIBILITY.md) · [통합 감사](docs/UNIFIED-AUDIT.md)
+**[공개 설치 페이지](https://guenohpark.github.io/pokesurvivor/)** · **[아이폰 Userscripts 자동 로더](https://raw.githubusercontent.com/GuenohPark/pokesurvivor/main/dist/pokesurvivor-ko-auto.user.js)** · **[PC·Android 통합 설치 파일](https://raw.githubusercontent.com/GuenohPark/pokesurvivor/main/dist/pokesurvivor.user.js)** · [설치 안내](docs/INSTALL.md) · [호환성·검증 범위](docs/COMPATIBILITY.md) · [통합 감사](docs/UNIFIED-AUDIT.md)
 
-PC Chrome/Edge/Firefox, Android Firefox, iPhone Safari의 Tampermonkey 공통 userscript입니다. 기존 번역·검색·폰트·팁·포켓몬/기술 추천 기능을 재사용합니다. 공식 .com 최상위 페이지 전용이며 .org, 로그인/인증 페이지, iframe은 지원하지 않습니다. 설치 전 기존 패치 스크립트와 사용자 Chrome 확장을 끄세요. Chrome 확장·스토어판·Android APK는 별도 대안으로 보존됩니다. 기존 저장/계정 또는 APK를 삭제하지 마세요. iOS의 업데이트 확인은 지연될 수 있고 현재 판에 즉시 적용되지 않습니다. 실제 물리 iPhone/Android 및 Tampermonkey 실기기 전체 흐름은 아직 검증되지 않았습니다.
+**iPhone/iPad 기본 권장은 Safari + 무료 [Userscripts](https://apps.apple.com/app/userscripts/id1463298887) + 자동 로더 0.1.2입니다. 유료 iPhone Tampermonkey는 필요하지 않습니다.** PC Chrome/Edge/Firefox와 Android Firefox는 Tampermonkey 통합판을 사용합니다. 아이폰 Userscripts 경로는 DOM 번역용이며 전투 Canvas HUD는 번역되지 않습니다. 기존 번역·검색·폰트·팁·포켓몬/기술 추천 기능을 재사용합니다. 공식 .com 최상위 페이지 전용이며 .org, 로그인/인증 페이지, iframe은 지원하지 않습니다. 설치 전 기존 패치 스크립트와 사용자 Chrome 확장을 끄세요. Chrome 확장·스토어판·Android APK는 별도 대안으로 보존됩니다. 기존 저장/계정 또는 APK를 삭제하지 마세요. iOS의 업데이트 확인은 지연될 수 있고 현재 판에 즉시 적용되지 않습니다. 실제 물리 iPhone/Android 및 Tampermonkey 실기기 전체 흐름은 아직 검증되지 않았습니다.
 
 ## 포켓몬별 기술 추천 배지 · 공통 런타임 0.5.0
 
@@ -12,11 +12,11 @@ PC Chrome/Edge/Firefox, Android Firefox, iPhone Safari의 Tampermonkey 공통 us
 
 메인 파트너·도감 등 글자로 보이는 포켓몬 이름 옆에 **S / A+ / 화력 / 미평가**를 작게 표시합니다. 별도 티어 메뉴·안내 영역·추가 상세 수치 패널은 없습니다. 피격 크기를 반영해 S 후보를 **뮤츠·게을킹·전수목**으로 재선별했습니다. [재평가 기준과 한계](docs/TIER-REEVALUATION.md). 14종만 잠정 평가했으며 미평가 포켓몬도 `미평가`라고 명시하고, 미보유 도감의 `???`는 그대로 숨깁니다. 등급은 풀강화 기준의 비공식 잠정 분석이며, 계정 강화나 실제 게임 수치는 변경하지 않습니다.
 
-기술 이름 옆에 `다A·보S · 특수적합`처럼 다수전/보스전 잠정 추천과 해당 포켓몬의 물리·특수 적합도를 작게 표시합니다. 단일 타입의 동일 타입 직접 공격 +20%는 설명에 구분합니다. 메뉴의 기본 기술만 대상이며 런중 진화·전투 Canvas 표시는 제외합니다. 기존 Userscripts 자동 로더를 계속 쓰는 경우에만 0.1.1을 0.1.2로 교체하세요. 새 통합판과는 동시에 켜지 마세요. [범위·검증·아르세우스 FAQ](docs/MOVE-BADGES.md).
+기술 이름 옆에 `다A·보S · 특수적합`처럼 다수전/보스전 잠정 추천과 해당 포켓몬의 물리·특수 적합도를 작게 표시합니다. 단일 타입의 동일 타입 직접 공격 +20%는 설명에 구분합니다. 메뉴의 기본 기술만 대상이며 런중 진화·전투 Canvas 표시는 제외합니다. 아이폰 Userscripts의 이전 자동 로더 0.1.1은 0.1.2로 교체하세요. 새 통합판과는 동시에 켜지 마세요. [범위·검증·아르세우스 FAQ](docs/MOVE-BADGES.md).
 
 ## 기존 배포 경로 · 통합판과 동시 사용 금지
 
-아래 Chrome 확장·Userscripts 로더·APK는 기존 사용자를 위한 별도 대안입니다. 새 Tampermonkey 설치는 맨 위 공개 설치 페이지를 따르세요.
+아래 Chrome 확장·APK는 별도 대안입니다. 아이폰은 Safari + 무료 Userscripts가 기본 권장 경로이며, 기기별 설치는 맨 위 공개 설치 페이지를 따르세요.
 
 ## Chrome 확장 · Windows / Mac
 
@@ -28,18 +28,18 @@ PC Chrome/Edge/Firefox, Android Firefox, iPhone Safari의 Tampermonkey 공통 us
 - 이전 0.1.0은 사용자가 직접 확인했다고 보고했습니다. **새 0.1.8의 이름 배지·수치 검사는 별도 기록**하며 Windows 실기기와 Google 로그인 성공을 보장하지 않습니다.
 - **스토어 제출본은 0.1.3 / 패치 0.4.6입니다.** 공통 패치 0.5.0·GitHub 수동 설치판 0.1.8와 구분하세요. 기존 스토어 제출·게시 설정은 이번 작업에서 변경하지 않았습니다. 현재 심사 결과는 별도 확인 대상입니다. [스토어 자동 업데이트 안내](docs/CHROME-WEB-STORE.md). 기존 압축해제 설치판은 자동 업데이트되지 않으며, 게시된 스토어판으로 한 번 전환해야 합니다. 브라우저/계정/키보드를 별도로 재구현하지 않으며 인증 정보·쿠키·토큰을 복사하지 않습니다.
 
-## [기존 Userscripts 전용 자동 로더](https://raw.githubusercontent.com/GuenohPark/pokesurvivor/main/dist/pokesurvivor-ko-auto.user.js)
+## [아이폰 권장 · 무료 Userscripts 자동 로더](https://raw.githubusercontent.com/GuenohPark/pokesurvivor/main/dist/pokesurvivor-ko-auto.user.js)
 
 [아이폰 설치](docs/INSTALL.md) · [Android Firefox + Google 로그인 시험 경로](docs/FIREFOX-ANDROID.md) · [Android 테스트 APK](docs/ANDROID.md) · [PWA에서 안 되는 이유와 대안](docs/PWA.md) · [게임 플레이](https://pokesurvivor.com/) · [게임 팁](docs/TIPS.md)
 
-**아래는 기존 Userscripts 사용자를 위한 대안입니다. 새 설치에는 위 Tampermonkey 통합 안내를 우선 확인하세요. 둘을 함께 켜지 마세요. 홈 화면의 독립 PWA는 지원하지 않습니다.**
+**아이폰 새 설치는 Safari + 무료 Userscripts + 자동 로더를 권장합니다. Tampermonkey 통합판과 동시에 켜지 마세요. 홈 화면의 독립 PWA는 지원하지 않습니다.**
 아이폰 Safari의 Userscripts용 배포판은 메뉴·이름·설명 등 DOM 화면을 번역합니다. 진행 화면의 **Swarm(기술/대량 발생), 실시간 격파 수, 포켓몬 이름은 Canvas로 그려져 현재 Userscripts에서는 번역되지 않습니다.** [정확한 지원 범위](docs/COMPATIBILITY.md)
 
 비공식 팬 패치입니다. Nintendo, GAME FREAK, PokéSurvivor 개발팀과 무관하며 게임 수치·계정 저장·랭킹·서버 요청을 바꾸지 않습니다.
 
-## 기존 Userscripts·확장 다운로드
+## 아이폰 Userscripts·별도 확장 다운로드
 
-- **기존 Userscripts 사용자용: [자동 업데이트 로더](https://raw.githubusercontent.com/GuenohPark/pokesurvivor/main/dist/pokesurvivor-ko-auto.user.js)**. 이 파일 하나만 설치합니다. 접속할 때 새 번역팩을 받아 캐시합니다.
+- **아이폰 Safari 권장: [자동 업데이트 로더](https://raw.githubusercontent.com/GuenohPark/pokesurvivor/main/dist/pokesurvivor-ko-auto.user.js)**. 이 파일 하나만 설치합니다. 접속할 때 새 번역팩을 받아 캐시합니다.
 - [수동 설치용 전체 번역팩](https://raw.githubusercontent.com/GuenohPark/pokesurvivor/main/dist/pokesurvivor-ko-menu.user.js). 자동 로더와 동시에 켜지 마세요.
 - [이전 데스크톱 확장 실험판 ZIP (보존용)](https://raw.githubusercontent.com/GuenohPark/pokesurvivor/main/dist/pokesurvivor-ko-desktop-extension.zip). iPhone 설치 파일이 아닙니다. 압축을 풀고 Chrome의 개발자 모드에서 로드합니다. [제약](docs/COMPATIBILITY.md)
 - [설치 파일 폴더 전체 보기](dist/). 개발 소스는 설치할 필요가 없습니다.
@@ -58,7 +58,7 @@ Safari에서 코드만 보이면 링크를 길게 눌러 **링크된 파일 다�
 
 앱 **0.1.1-test** / 내장 번역팩 **0.4.3**. 공식 게임을 직접 여는 주소창 없는 비공식 WebView 앱입니다. DOM/Canvas 번역 코드를 포함하며 번역팩은 GitHub 버전을 자동 확인합니다. APK 자체는 업데이트 확인 후 사용자가 설치합니다. **Android 실기기 플레이·로그인·기록 연동은 미검증이며 Google 팝업 로그인은 미지원입니다.**
 
-## 기존 Userscripts 빠른 설치
+## 아이폰 무료 Userscripts 빠른 설치
 
 1. App Store의 [Userscripts](https://apps.apple.com/app/userscripts/id1463298887)를 설치하고 앱에서 스크립트 저장 폴더를 확인합니다.
 2. 위 **자동 업데이트 로더 한 개**를 그 폴더에 넣습니다. 이전 메뉴 패치나 전체 번역팩은 끕니다.
@@ -76,7 +76,7 @@ Safari에서 코드만 보이면 링크를 길게 눌러 **링크된 파일 다�
 - 한글 갈무리11 도트 폰트, 한국어 도감 검색, 생존 팁 15개
 - ‘Psychic’의 타입 **에스퍼**와 기술 **사이코키네시스** 등 문맥 구분
 
-공통 DOM·메뉴 런타임 **0.5.0** · 기존 자동 로더 **0.1.2** (레거시 전용). 이번 버전은 공통 번들·중복 실행 방지·매니저 자동 업데이트 메타데이터·설치 페이지·CI 배포를 추가합니다. 기존 포켓몬 재평가·번역·기술 추천·종별 적합도 배지를 유지하며, 0.4.3의 터치 기기 한글 글리프 10% 축소를 유지합니다. 영문·숫자와 데스크톱 크기는 유지합니다. 아이폰 Safari Userscripts의 Canvas 진행 화면 번역을 해결한 버전은 아닙니다. 물리적 iPhone에서 새 로더·전체 흐름을 직접 검증한 상태는 아닙니다.
+공통 DOM·메뉴 런타임 **0.5.0** · 아이폰 Userscripts 자동 로더 **0.1.2**. 이번 버전은 공통 번들·중복 실행 방지·매니저 자동 업데이트 메타데이터·설치 페이지·CI 배포를 추가합니다. 기존 포켓몬 재평가·번역·기술 추천·종별 적합도 배지를 유지하며, 0.4.3의 터치 기기 한글 글리프 10% 축소를 유지합니다. 영문·숫자와 데스크톱 크기는 유지합니다. 아이폰 Safari Userscripts의 Canvas 진행 화면 번역을 해결한 버전은 아닙니다. 물리적 iPhone에서 새 로더·전체 흐름을 직접 검증한 상태는 아닙니다.
 
 ## 저장소 구조
 

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="PokéSurvivor 한국어 패치 {{PSKO_VERSION}}. PC, Android, iPhone에서 같은 통합 스크립트로 시작하세요.">
+  <meta name="description" content="PokéSurvivor 한국어 패치 {{PSKO_VERSION}}. PC·Android는 Tampermonkey, iPhone은 Safari + 무료 Userscripts로 설치하세요.">
   <meta name="theme-color" content="#f7f8f4">
   <title>PokéSurvivor 한국어 패치 · 설치</title>
   <link rel="canonical" href="https://guenohpark.github.io/pokesurvivor/">
@@ -21,20 +21,20 @@
     <section class="hero" aria-labelledby="page-title">
       <p class="eyebrow">비공식 팬 패치 <span class="version">v{{PSKO_VERSION}}</span></p>
       <h1 id="page-title">익숙한 한국어로,<br>다음 생존을 시작하세요.</h1>
-      <p class="lead">PC도, 휴대폰도 같은 파일 하나.<br class="mobile-break"> Tampermonkey에 통합 스크립트를 설치하세요.</p>
+      <p class="lead">PC·Android는 Tampermonkey,<br class="mobile-break"> 아이폰은 Safari + 무료 Userscripts로 시작하세요.</p>
       <div class="hero-actions">
-        <a class="button primary" href="https://raw.githubusercontent.com/GuenohPark/pokesurvivor/main/dist/pokesurvivor.user.js" target="_blank" rel="noopener noreferrer">통합 스크립트 설치 <span aria-hidden="true">→</span></a>
+        <a id="primary-install" class="button primary" href="https://raw.githubusercontent.com/GuenohPark/pokesurvivor/main/dist/pokesurvivor.user.js" target="_blank" rel="noopener noreferrer"><span id="primary-install-label">PC·Android 통합 스크립트 설치</span> <span aria-hidden="true">→</span></a>
         <a class="button secondary" href="#install">기기별 설치 안내 <span aria-hidden="true">↓</span></a>
       </div>
-      <p class="small hero-note">먼저 스크립트 관리자를 설치한 뒤 위 링크를 여세요. 확장 앱은 구매가 필요할 수 있습니다.</p>
+      <p class="small hero-note">아이폰은 <a href="https://raw.githubusercontent.com/GuenohPark/pokesurvivor/main/dist/pokesurvivor-ko-auto.user.js" target="_blank" rel="noopener noreferrer">Userscripts용 자동 로더 받기 →</a>를 사용하세요. iPhone용 유료 Tampermonkey는 필요하지 않습니다.</p>
       <div class="summary" aria-label="적용 범위 요약">
-        <span>하나의 통합 번들</span><span>공식 .com 직접 접속</span><span>로그인·저장 방식 변경 없음</span>
+        <span>기기별 무료 설치 안내</span><span>공식 .com 직접 접속</span><span>로그인·저장 방식 변경 없음</span>
       </div>
     </section>
 
     <section id="install" class="install-card" aria-labelledby="install-title">
       <div class="section-heading"><div><p class="eyebrow">QUICK START</p><h2 id="install-title">내 기기에 설치하기</h2></div><span class="step-count" aria-hidden="true">01 / 03</span></div>
-      <p id="device-advisory" class="advisory" role="status" aria-live="polite">아래에서 사용할 기기의 안내를 확인하세요. 모든 기기에서 설치 파일은 같습니다.</p>
+      <p id="device-advisory" class="advisory" role="status" aria-live="polite">아래에서 사용할 기기를 선택하세요. PC·Android는 통합판, 아이폰은 무료 Userscripts용 자동 로더를 사용합니다.</p>
       <div class="platform-tabs" role="tablist" aria-label="설치할 기기" hidden>
         <button id="tab-pc" type="button" role="tab" aria-controls="panel-pc" aria-selected="true" tabindex="0" data-platform-tab="pc">PC</button>
         <button id="tab-android" type="button" role="tab" aria-controls="panel-android" aria-selected="false" tabindex="-1" data-platform-tab="android">Android</button>
@@ -45,7 +45,7 @@
         <h3 id="heading-pc">PC · Chrome / Edge / Firefox</h3>
         <ol class="steps">
           <li><div><strong>Tampermonkey를 설치하세요.</strong><p><a href="https://www.tampermonkey.net/" target="_blank" rel="noopener noreferrer">공식 Tampermonkey 사이트 →</a>에서 현재 브라우저에 맞는 확장을 선택하세요. 브라우저나 확장 설정에 따라 ‘사용자 스크립트 허용’ 등의 별도 설정이 필요할 수 있습니다.</p></div></li>
-          <li><div><strong>통합 스크립트 하나만 추가하세요.</strong><p>위의 ‘통합 스크립트 설치’를 누르고 Tampermonkey 설치 화면에서 내용을 확인한 뒤 설치하세요.</p></div></li>
+          <li><div><strong>통합 스크립트 하나만 추가하세요.</strong><p>위의 ‘PC·Android 통합 스크립트 설치’를 누르고 Tampermonkey 설치 화면에서 내용을 확인한 뒤 설치하세요.</p></div></li>
           <li><div><strong>공식 게임을 직접 여세요.</strong><p><a href="https://pokesurvivor.com/" target="_blank" rel="noopener noreferrer">pokesurvivor.com 열기 →</a>. 기존 게임 탭은 진행 중인 판을 마친 뒤 새로고침하세요.</p></div></li>
         </ol>
       </section>
@@ -58,28 +58,29 @@
         </ol>
       </section>
       <section id="panel-iphone" class="platform-panel" data-platform-panel="iphone" aria-labelledby="heading-iphone">
-        <h3 id="heading-iphone">iPhone / iPad · 일반 Safari 탭</h3>
+        <h3 id="heading-iphone">iPhone / iPad · Safari + 무료 Userscripts</h3>
         <ol class="steps">
-          <li><div><strong>Safari용 Tampermonkey를 설치하세요.</strong><p><a href="https://apps.apple.com/app/tampermonkey/id6738342400" target="_blank" rel="noopener noreferrer">공식 App Store 앱 →</a>은 iOS 15 이상 Safari를 지원합니다. 구매가 필요할 수 있으며 현재 가격과 기기 호환성을 스토어에서 확인하세요.</p></div></li>
-          <li><div><strong>확장과 사이트 접근 권한을 켜세요.</strong><p>iPhone / iPad 설정의 Safari → 확장 프로그램에서 Tampermonkey를 활성화하세요. <code>pokesurvivor.com</code> 사이트 접근을 허용하고, Safari에서 위 통합 스크립트 설치를 확인하세요. 설정 경로는 OS 버전에 따라 다를 수 있습니다.</p></div></li>
-          <li><div><strong>홈 화면 웹앱 대신 Safari 탭을 사용하세요.</strong><p><a href="https://pokesurvivor.com/" target="_blank" rel="noopener noreferrer">공식 .com 게임 열기 →</a>를 일반 Safari 탭에서 여세요. 독립 PWA에서의 확장 작동은 보장하지 않습니다. 실제 iOS 기기에서 통합 번들 전체 흐름은 아직 미검증입니다.</p></div></li>
+          <li><div><strong>무료 Userscripts 앱을 설치하세요.</strong><p><a href="https://apps.apple.com/app/userscripts/id1463298887" target="_blank" rel="noopener noreferrer">App Store의 Userscripts →</a>를 설치하고 앱에서 스크립트 저장 폴더를 확인하거나 지정하세요.</p></div></li>
+          <li><div><strong>Userscripts용 자동 로더 하나만 저장하세요.</strong><p><a href="https://raw.githubusercontent.com/GuenohPark/pokesurvivor/main/dist/pokesurvivor-ko-auto.user.js" target="_blank" rel="noopener noreferrer">아이폰 자동 로더 받기 →</a>를 길게 눌러 링크된 파일을 다운로드하고 Userscripts의 지정 폴더에 넣으세요. 파일명은 <code>pokesurvivor-ko-auto.user.js</code> 그대로 유지하고 .txt를 붙이지 마세요. PC·Android 통합 파일이 아닌 이 자동 로더를 사용합니다.</p></div></li>
+          <li><div><strong>Safari 확장을 켜고 .com만 허용하세요.</strong><p>설정 → Safari → 확장 프로그램에서 Userscripts를 켜고 <code>pokesurvivor.com</code>만 허용하세요. 설정 경로는 OS 버전에 따라 다를 수 있습니다. <a href="https://pokesurvivor.com/" target="_blank" rel="noopener noreferrer">공식 .com 게임 열기 →</a>를 일반 Safari 탭에서 열어 Userscripts 메뉴의 자동 로더만 켜세요. 기존 .org 권한은 끄고 진행 중인 판을 마친 뒤 새로고침하세요.</p></div></li>
         </ol>
+        <p class="small">아이폰 Userscripts는 메뉴·도감·기술명 등 DOM 번역용입니다. 전투 Canvas HUD는 번역되지 않으며 독립 PWA는 지원하지 않습니다. 새 로더의 실제 iPhone 전체 흐름은 미검증입니다.</p>
       </section>
-      <p class="notice"><strong>기존 패치는 먼저 꺼주세요.</strong> 이전 패치, 자동 로더, 커스텀 확장과 함께 사용하면 중복 실행될 수 있습니다. 새 통합 스크립트 하나만 켜세요.</p>
+      <p class="notice"><strong>기기에 맞는 패치 하나만 켜세요.</strong> PC·Android는 통합 스크립트, 아이폰은 Userscripts 자동 로더만 켜세요. 이전 패치·전체 번역팩·커스텀 확장과 동시에 사용하지 마세요.</p>
     </section>
 
     <section class="details-grid" aria-label="설치 전 알아둘 내용">
-      <article class="detail-card"><p class="eyebrow">UPDATES</p><h2>설치 후에는 관리자에서 갱신</h2><p>처음에는 관리자와 스크립트를 각각 설치해야 합니다. 이후 업데이트는 Tampermonkey의 업데이트 확인 주기와 설정을 따르며 즉시 적용되지 않습니다.</p><p>iOS의 백그라운드 중단, 추가 승인이나 권한 설정 때문에 지연될 수 있습니다. 필요하면 관리자의 업데이트 확인을 사용하고, 진행 중인 판을 마친 뒤 새로고침하세요.</p></article>
-      <article class="detail-card"><p class="eyebrow">SCOPE &amp; LIMITS</p><h2>번역 범위는 솔직하게</h2><p>DOM 번역과 함께 Canvas 번역을 페이지 실행 영역(page world)에서 시도합니다. CSP, 대체 실행 경로(fallback), 격리된 실행 영역 때문에 Canvas 적용은 보장되지 않으며, 특히 실제 iOS는 미검증입니다.</p><p>공식 <code>pokesurvivor.com</code>의 최상위 페이지 전용입니다. <code>.org</code>, iframe, 인증 페이지는 제외하며 로그인·저장 로직은 수정하지 않습니다.</p></article>
+      <article class="detail-card"><p class="eyebrow">UPDATES</p><h2>설치 후에는 관리자에서 갱신</h2><p>처음에는 관리자와 스크립트를 각각 설치해야 합니다. PC·Android 통합판은 Tampermonkey의 업데이트 주기와 설정을 따릅니다. 아이폰 자동 로더는 접속 시 번역팩을 확인하고 캐시하며, 사용자가 입력한 뒤 찾은 업데이트는 다음 새로고침 때 적용합니다.</p><p>iOS의 백그라운드 중단, 추가 승인이나 권한 설정 때문에 지연될 수 있습니다. 같은 Safari 탭을 오래 열어 둔 것만으로 새 버전이 확인되지는 않을 수 있습니다. 진행 중인 판을 마친 뒤 새로고침하세요.</p></article>
+      <article class="detail-card"><p class="eyebrow">SCOPE &amp; LIMITS</p><h2>번역 범위는 솔직하게</h2><p>PC·Android 통합판은 DOM과 Canvas 번역을 페이지 실행 영역(page world)에서 시도하지만 CSP·대체 실행 경로(fallback)에 따라 달라집니다. 아이폰 무료 Userscripts 경로는 DOM 전용이며 전투 Canvas HUD는 번역되지 않습니다.</p><p>공식 <code>pokesurvivor.com</code>의 최상위 페이지 전용입니다. <code>.org</code>, iframe, 인증 페이지는 제외하며 로그인·저장 로직은 수정하지 않습니다.</p></article>
     </section>
 
     <section class="faq" aria-labelledby="faq-title">
       <h2 id="faq-title">막혔을 때 확인하기</h2>
-      <details><summary>설치 링크를 눌렀는데 코드만 보여요.</summary><p>관리자가 해당 브라우저에 설치되고 활성화되어 있는지 확인하세요. 파일을 저장했다면 Tampermonkey의 가져오기 기능으로 <code>.user.js</code> 파일을 추가할 수 있습니다. 이 페이지는 Tampermonkey 설치 여부를 감지하지 않습니다.</p></details>
-      <details><summary>기기 추천이 맞지 않아요.</summary><p>기기 표시는 브라우저가 제공한 UA·플랫폼·터치 정보에 따른 참고용입니다. UA를 변경하거나 위장하지 않습니다. 위 PC / Android / iPhone 탭에서 직접 바꿀 수 있으며, 설치 파일은 동일합니다.</p></details>
+      <details><summary>설치 링크를 눌렀는데 코드만 보여요.</summary><p>아이폰은 자동 로더 링크를 길게 눌러 다운로드한 뒤 Userscripts의 지정 폴더에 저장하세요. PC·Android는 Tampermonkey의 가져오기로 통합 <code>.user.js</code> 파일을 추가할 수 있습니다. 이 페이지는 Userscripts 또는 Tampermonkey 설치 여부를 감지하지 않습니다.</p></details>
+      <details><summary>기기 추천이 맞지 않아요.</summary><p>기기 표시는 브라우저가 제공한 UA·플랫폼·터치 정보에 따른 참고용입니다. UA를 변경하거나 위장하지 않습니다. 위 PC / Android / iPhone 탭에서 직접 바꿀 수 있으며, 아이폰 탭에서는 Userscripts 자동 로더, PC·Android 탭에서는 Tampermonkey 통합 파일로 설치 버튼이 바뀝니다. JavaScript가 꺼져 있어도 아이폰 전용 링크를 직접 사용할 수 있습니다.</p></details>
       <details><summary>다른 설치 방식도 남아 있나요?</summary><p>기존 배포물은 삭제하지 않습니다. <a href="https://github.com/GuenohPark/pokesurvivor/blob/main/README.md#chrome-확장--windows--mac" target="_blank" rel="noopener noreferrer">Chrome ZIP·수동 설치 안내 →</a>와 <a href="https://github.com/GuenohPark/pokesurvivor/blob/main/README.md#android-단독-apk-테스트-앱" target="_blank" rel="noopener noreferrer">Android APK·제약 안내 →</a>를 확인하세요. 이들은 별도 배포물이며 통합 스크립트와 동시에 켜지 마세요.</p></details>
     </section>
-    <p class="technical small">통합 번들 {{PSKO_VERSION}} · <code>@grant none</code> · <code>@sandbox raw</code> · <code>document-start</code> · .com 최상위 페이지 전용</p>
+    <p class="technical small">공통 번역팩 {{PSKO_VERSION}} · 아이폰 Userscripts 자동 로더 {{PSKO_LOADER_VERSION}} (DOM 전용) · PC·Android 통합판: <code>@grant none</code> · <code>@sandbox raw</code> · <code>document-start</code> · .com 최상위 페이지 전용</p>
   </main>
   <footer class="wrap site-footer"><p>비공식 팬 프로젝트. Nintendo, GAME FREAK 및 게임 개발팀과 무관합니다.</p><p>이 안내 페이지는 외부 JavaScript·폰트·분석 도구·쿠키를 사용하지 않으며, fetch로 코드를 주입하지 않습니다.</p><a href="https://github.com/GuenohPark/pokesurvivor/blob/main/README.md" target="_blank" rel="noopener noreferrer">전체 README →</a></footer>
 </body>
