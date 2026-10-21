@@ -4,7 +4,7 @@
 
 **아이폰은 Safari + 무료 [Userscripts](https://apps.apple.com/app/userscripts/id1463298887) + [자동 로더](https://raw.githubusercontent.com/GuenohPark/pokesurvivor/main/dist/pokesurvivor-ko-auto.user.js)가 기본 권장입니다.** 유료 iPhone Tampermonkey는 필요하지 않습니다. Userscripts는 DOM 번역용이며 전투 Canvas HUD는 지원하지 않습니다. PC·Android Firefox는 Tampermonkey 통합판을 사용합니다.
 
-## PC·Android 통합 Tampermonkey판 0.5.0
+## PC·Android 통합 Tampermonkey판 0.5.1
 
 [설치 파일](https://raw.githubusercontent.com/GuenohPark/pokesurvivor/main/dist/pokesurvivor.user.js) · [설치 안내](INSTALL.md) · [감사 기록](UNIFIED-AUDIT.md)
 
@@ -12,7 +12,7 @@
 
 대상은 pokesurvivor.com 및 www.pokesurvivor.com의 최상위 페이지뿐입니다. .org, 인증 화면, iframe/subframe은 제외합니다. 관리자 감지는 iOS에서 신뢰성 있게 할 수 없으므로 안내는 사용자 에이전트 기반 권고일 뿐입니다. Canvas/dialog 훅은 활성 게임 경로에서만 작동하며 원래 호출/반환을 보존하도록 설계했지만, page context에서 실행된다는 사실만으로 실제 게임 Canvas에 도달했다고 입증되지는 않습니다.
 
-통합판을 켜기 전에 이전 패치 스크립트와 사용자 Chrome 확장을 끄세요. 기존 Chrome 수동판 0.1.8, 스토어판 0.1.3, APK 버전은 별도 대안으로 유지하며 기존 저장·계정·APK 삭제는 필요하지 않습니다. 실제 iPhone/Android와 각 Tampermonkey 조합, 로그인 및 클라우드 저장 흐름은 미검증입니다. [유지보수](MAINTENANCE.md)
+통합판을 켜기 전에 이전 패치 스크립트와 사용자 Chrome 확장을 끄세요. 기존 Chrome 수동판 0.1.9, 스토어판 0.1.3, APK 버전은 별도 대안으로 유지하며 기존 저장·계정·APK 삭제는 필요하지 않습니다. 실제 iPhone/Android와 각 Tampermonkey 조합, 로그인 및 클라우드 저장 흐름은 미검증입니다. [유지보수](MAINTENANCE.md)
 
 
 [설치 안내](INSTALL.md) · [홈 화면 PWA 안내](PWA.md)
@@ -79,6 +79,6 @@ MAIN 쪽은 fillText·strokeText·measureText를 함께 감싸고, alert/confirm
 
 자동 로더는 content 컨텍스트에서 GM.getValue·GM.setValue·GM.xmlHttpRequest를 사용합니다. 공개 GitHub 주소의 코드만 받아 버전·식별자·문법을 확인하고 실행합니다. 앱의 업데이트 버튼과 별개로 동작하며 페이지 입력 이후 새 버전을 hot-swap하지 않습니다.
 
-Userscripts v4.8.6/iOS1.8.6의 content 주입 코드 자체가 Function을 사용하는 것을 확인했습니다: https://github.com/quoid/userscripts/blob/06900223459036d2a238d93ab1af4d9f26cadbc7/src/ext/content-scripts/entry-userscripts.js#L79-L89 . 이는 페이지 world의 CSP 차단과 구분됩니다. 자동 로더 역시 이 content 실행 경로를 사용하며 Canvas 권한이 생기는 것은 아닙니다. 물리적 iPhone에서 새 로더를 실행한 검증은 아직 하지 않았습니다. 현재 배포는 공통 번역팩 0.5.0 / 아이폰 자동 로더 0.1.2이며 새 주소는 dist/입니다. 기존 루트 업데이트 주소 4개는 같은 파일로 유지합니다.
+Userscripts v4.8.6/iOS1.8.6의 content 주입 코드 자체가 Function을 사용하는 것을 확인했습니다: https://github.com/quoid/userscripts/blob/06900223459036d2a238d93ab1af4d9f26cadbc7/src/ext/content-scripts/entry-userscripts.js#L79-L89 . 이는 페이지 world의 CSP 차단과 구분됩니다. 자동 로더 역시 이 content 실행 경로를 사용하며 Canvas 권한이 생기는 것은 아닙니다. 물리적 iPhone에서 새 로더를 실행한 검증은 아직 하지 않았습니다. 현재 배포는 공통 번역팩 0.5.1 / 아이폰 자동 로더 0.1.2이며 새 주소는 dist/입니다. 기존 루트 업데이트 주소 4개는 같은 파일로 유지합니다.
 
 캐시가 없을 때 확인 중 사용자가 게임을 먼저 시작하면 받은 코드는 저장만 하고 다음 새로고침 때 적용합니다. 동일 버전 재접속·오프라인·잘못된 응답·버전 불일치·사용자 입력 시점 등 13개 분기와 GM이 전역이 아닌 주입 매개변수인 경우를 Node에서 검증했습니다.

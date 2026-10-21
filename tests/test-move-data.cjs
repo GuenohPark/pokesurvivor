@@ -6,4 +6,16 @@ assert.equal(Object.keys(data.moves).length,103);assert.equal(Object.keys(data.s
 // Latest Judgment remains a separate, untargetable Arceus object, not a damageable Enemy.
 const judgment=fs.readFileSync(path.join(root,'tests/fixtures/move-context-current/js/systems/judgment.js'),'utf8');assert(judgment.includes('p.dex !== ARCEUS'));assert(judgment.includes('pl.invuln = 0;'));assert(judgment.includes('pl.hurt(pl.maxHp * touchPct(), null, true)'));assert(judgment.includes('AT = 30 * 60'));assert(!/A\.hp\s*=|A\.hurt\s*\(/.test(judgment));
 for(const f of ['data/sprites-meta','systems/gacha'])new vm.Script(fs.readFileSync(path.join(root,'tests/fixtures/move-context-current/js',f+'.js'),'utf8')).runInContext(source.context,{timeout:1500});assert.equal(source.run('G.Gacha.pool(5,4).some(p=>p.dex===493)'),true);
-const report={passed:true,checks,arceusSinnoh5StarEligible:true,noGachaPullExecuted:true,species:966,moves:103,support:6,contextSourceCommit:data.contextSourceCommit,roleReviewCommit:data.sourceCommit,reference:'Original current Stats.fit and Player.atkFor for every static species/move pair, no player/account/save data.',limits:'UI badges keep provisional neutral role grades; fit/mono bonus separate, no species-specific winrate/DPS claim.'};fs.writeFileSync(path.join(root,'tests/reports/move-data-tests.json'),JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report));
+const runLookup=utils.createRunLookup(data);let evoChecks=0;
+assert.equal(Object.keys(data.evolutions).length,97);
+for(const [id,evo] of Object.entries(data.evolutions)){
+ const base=data.moves[id];assert.equal(evo.baseId,id);assert.equal(evo.stage,'evolved');
+ for(const key of ['wave','boss','type','cat','kind'])assert.equal(evo[key],base[key]);
+ for(const from of base.aliases)for(const to of evo.aliases){if(runLookup(from,'new')===base){assert.equal(runLookup(from+' → '+to,'evo'),evo);evoChecks++;}}
+}
+assert.equal(runLookup('철제광선','up'),null);assert.equal(runLookup('폭풍','bond'),null);
+assert.equal(runLookup('러스터캐논 → 철제광선','evo').baseId,'flash-cannon');
+assert.equal(runLookup('미러샷 → 철제광선','evo').baseId,'mirror-shot');
+for(const key of ['wave','boss']){assert.match(data.roleIcons[key],/^data:image\/svg\+xml;charset=utf-8,/);const svg=decodeURIComponent(data.roleIcons[key].split(',')[1]);assert(!/<script|on\w+=|href=|url\(/i.test(svg));assert(svg.includes('shape-rendering="crispEdges"'));}
+assert.equal(data.roleIconSource.sha256,source.meta.files['js/ui/icons.js']);
+const report={evoChecks,evolvedPaths:97,pinnedLocalRoleIcons:true,passed:true,checks,arceusSinnoh5StarEligible:true,noGachaPullExecuted:true,species:966,moves:103,support:6,contextSourceCommit:data.contextSourceCommit,roleReviewCommit:data.sourceCommit,reference:'Original current Stats.fit and Player.atkFor for every static species/move pair, no player/account/save data.',limits:'UI badges keep provisional neutral role grades; fit/mono bonus separate, no species-specific winrate/DPS claim.'};fs.writeFileSync(path.join(root,'tests/reports/move-data-tests.json'),JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report));
