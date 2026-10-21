@@ -1,13 +1,14 @@
 {
-  "version": "0.5.1",
-  "browserVersion": "0.1.9",
-  "chromeVersion": "0.1.9",
+  "version": "0.5.2",
+  "browserVersion": "0.1.10",
+  "chromeVersion": "0.1.10",
   "inputs": {
-    "package.json": "31600c7fd773d8b26fc32981fe6c393f81d14d15607b9fb4b451a65cf758e459",
+    "package.json": "ddc1d5c462616dced4d4704f9a76250eb3713fdf2db77fc36c26ef3c97cc8d5e",
     "src/auto-loader-core.js": "bb3d4b6919971ded29539ede5531454527cb67eb2ed56118eb26d1f11cdef082",
     "src/auto-loader-entry.js": "100403d2eefd7f640844a62d106e7c86654def147cbdc0137ec9a3865753b2f6",
-    "src/bootstrap.js": "5d7971620d957550a01626da41bb44b0628e33b498aa8e7b9f59b6ed2ffaaa93",
+    "src/bootstrap.js": "79314a6f737f928fec6069d44231e9220719cb106f81cfb788203b5388e5265b",
     "src/move-tier-ui.js": "42c9198f06738d3c3b78983fec846d01ae104edd1bf5c5828c489aa818cb0446",
+    "src/pickup-fade-ui.js": "f2ad0f9467570f398ec32f271929c99deebe8e3b4a8d4975d8ceb52098953ecb",
     "src/runtime-core.js": "61a3ea7f783d273b87ecbeb9a903fcd34759a43fc03b273a5fd0f634d1737fa6",
     "src/search-korean.js": "83100c4637b6c0627d892f1eb82500fa2394e0b14239d355890abc8f008432a6",
     "src/tier-ui.js": "576346935b4c12a9025de086cf534d0b2c41d43512a311ea85d2bc05bbeb693d",
@@ -31,9 +32,9 @@
     "scripts/build-move-data.cjs": "fc728e3e9fc9c84e361e82935d3790134d40aabf78685a56b8339c6eb19bcf5a",
     "scripts/build-site.cjs": "c45ecc3ef683c8d98b3d3efe37e96b1674c0e82fdfdee3e1b62e8171e7b03a4d",
     "scripts/build-tier-data.cjs": "92d3ee57d74a63a17cae82cacb8648df06fa7e8b1d72ce77f38f684041c2830f",
-    "scripts/build-unified.cjs": "49e9f78a88f696b4212204850ab3fda237cfb059677e664193b5606438f28839",
-    "scripts/build.cjs": "2551fd270f0ff1548d23139c7c4cab3d65df1d9b66bdc8504f44df6193bb5890",
-    "scripts/bundle-common.cjs": "1b8a7411c01e450c3850698bb83e89638c534adaf029194fb3aa37be9156d87b",
+    "scripts/build-unified.cjs": "f436a36d82f58ab701b16879e3b5b310a5d51bd39cc6097cb552a72ca1010118",
+    "scripts/build.cjs": "11f0296a99eda4d7744c4cd81a40f20f21d7c3cb465347978173fa1b1bff664d",
+    "scripts/bundle-common.cjs": "f1d3d43f88a571fab26a822d4dfa56f995520af0a10da8d79c6d7ba1b6be6dfc",
     "scripts/import-tier-model.cjs": "144b0525d94cc374140bb8aa03dc588a63954fd0ab350b8f74bb4064981b25f2",
     "scripts/package-extension.cjs": "40461284342c481323776a16ecd223a8518940dd80154412b66f2c8e909769c8",
     "scripts/prepare-release.cjs": "68b2e9e8f505525286654d7a9fca748a3c4de9010b144fdea3a59a991e0827bd",
@@ -71,14 +72,18 @@
     "tests/fixtures/move-context-current/js/ui/menu.js": "83d7aba9ae266b0f064d8012462140e7343902e7787e960e99911775f7681387",
     "tests/fixtures/move-context-current/js/ui/run-ui.js": "fada834f6247b40abe1bc10909ca8d3fc179cce32d925b73887a63fb36c572a0",
     "tests/fixtures/move-context-current/SOURCE.json": "121a70e0e1b8ff1d0bfbe6764316e11c4148f0893fc436fa61a52c09c1a79a79",
+    "tests/fixtures/pickup-current/icons.js": "e52ecda71acd1f5bc4988c47956b36f9ebcf8f55560e5f44e584194910f2c0ec",
+    "tests/fixtures/pickup-current/pickup.js": "9b481659231b30d3c4127655635a94317c53ffcbacc077ad41f87e1e71dacf93",
+    "tests/fixtures/pickup-current/SOURCE.json": "fb90990f4e59777f3eaa52cd6e5257ea6935c742aa5217bf186eb202e8204eb1",
     "tests/fixtures/tier-player-reference.json": "ebbfb9b92bc39a50097f242923a1732f2271c22ed77d3c11dc0669c25d5bb6dc"
   },
   "bundles": {
-    "dist/pokesurvivor.user.js": "b09e6767a94b74b11ddb55adacb042855c179ce458d2a509bf032a16ac3bee90",
-    "dist/pokesurvivor.meta.js": "ed8c78da4ba99c995b457254f5409b1ef3656eaaac044281cc4857fb6f6c9889",
-    "dist/pokesurvivor-ko-menu.user.js": "2878a57cfec5e6e89df4ee08575d0897ca0cfbff68bc3c4edb4be28c3a4be081",
-    "dist/pokesurvivor-ko-browser.user.js": "59cd72e293f48457575383c4c1615ab57256d515d42816334783beccd2d3b30e"
+    "dist/pokesurvivor.user.js": "b0953ee39d466a4a1dc3d602498380e2337954553710d13ec674c5f7ba31de36",
+    "dist/pokesurvivor.meta.js": "b4a3486dc492c01cef0c0ca4fca9b72695dfbd5bea5f8c33b6182727654e865d",
+    "dist/pokesurvivor-ko-menu.user.js": "721669fb525bf0f65a953463bf6559647e1efb0ba61e636fe34b9bedca286579",
+    "dist/pokesurvivor-ko-browser.user.js": "9d4d957a9e59706bc9f1e0350830a476b4c49e82ad3dd70514c7d96852f177d1"
   },
   "permissions": "@grant none; no runtime download, no remote JS, no account/storage/cookie APIs",
-  "canvas": "Hook registration in current realm only, actual page-world installation is not proven by the marker."
+  "canvas": "Hook registration in current realm only, actual page-world installation is not proven by the marker.",
+  "pickupFade": "Shared optional native-render adapter; requires page-visible pickup renderer. First draw verifies callback order; only pulled xp/xpBig/coin/heal fade. iPhone free Userscripts unsupported; no account/progression/collection mutations."
 }
