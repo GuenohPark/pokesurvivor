@@ -193,14 +193,14 @@ test('local assets only, no remote code, tracking, storage or installed checks',
   assert.doesNotMatch(html, /Tampermonkey가 설치되어 있습니다|설치 확인 완료|설치가 감지/);
 });
 test('scope, honest limitations and accessibility remain explicit', () => {
-  for (const text of ['0.5.0', '@grant none', '@sandbox raw', 'document-start', 'CSP', 'fallback', '미검증', 'iOS 15', '일반 Safari 탭', 'PWA', '자동 로더', '백그라운드 중단', '판을 마친 뒤', '로그인·저장', 'iframe', '인증 페이지']) assert.ok(html.includes(text), text);
+  for (const text of [JSON.parse(fs.readFileSync(path.join(root,'package.json'),'utf8')).version, '@grant none', '@sandbox raw', 'document-start', 'CSP', 'fallback', '미검증', 'iOS 15', '일반 Safari 탭', 'PWA', '자동 로더', '백그라운드 중단', '판을 마친 뒤', '로그인·저장', 'iframe', '인증 페이지']) assert.ok(html.includes(text), text);
   assert.match(html, /aria-live="polite"/);
   assert.match(html, /role="tablist"/);
   assert.match(css, /:focus-visible/);
   assert.match(css, /prefers-reduced-motion/);
   assert.match(css, /@media\s*\(max-width: 767px\)/);
   assert.doesNotMatch(html + css + source, /—|\p{Extended_Pictographic}/u);
-  assert.equal(fs.statSync(path.join(root, 'site/.nojekyll')).size, 0);
+  assert.ok(fs.statSync(path.join(root, 'site/.nojekyll')).isFile(), 'The marker must exist; its content is irrelevant to Pages');
 });
 test('Pages uses trusted successful main runs and least-privilege deployment', () => {
   assert.match(workflow, /^name: Deploy installation page/m);
