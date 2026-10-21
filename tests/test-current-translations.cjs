@@ -9,6 +9,10 @@ for(const e of locale.entries){assert(e.id!=null);if(e.argKinds){assert.equal(e.
 let checks=0;const changed=(s,kind='general')=>{assert.equal(typeof s,'string');const result=api.translate(s,kind);assert.notEqual(result,s,'untranslated: '+s);assert(/[가-힣]/.test(result)||result==='PC','no Korean: '+s);checks++;return result;};
 for(const[es,en]of Object.entries(fixture.english))for(const s of [es,en])if(s!=='Google')changed(s);
 assert.equal(api.translate('Google'),'Google','brand remains literal');
+// Text-only wording change: preserve native locale keys and the original action.
+const quitEntry=locale.entries.find(e=>e.id===383);
+assert.deepEqual([quitEntry.es,quitEntry.en,quitEntry.ko],['Abandonar run','Quit run','도망치다']);
+for(const text of ['Abandonar run','Quit run','도망치다']){assert.equal(api.translate(text),'도망치다');checks++;}
 for(const move of fixture.moves){for(const s of [move.name,move.english])changed(s,'move');changed(move.desc);for(const s of move.upgrades)changed(s);if(move.evolution){changed(move.evolution.name,'move');changed(fixture.english[move.evolution.name],'move');changed(move.evolution.text);}}
 for(const item of fixture.items){changed(item.name);changed(item.desc);}
 for(const[input,expected]of [['Hyper Beam','파괴광선'],['Energy Ball','에너지볼'],['Night Slash','깜짝베기'],['Voltio Cruel','와일드볼트'],['Volt Tackle','볼트태클'],['Swarm','벌레의알림'],['Psychic + Hyper Beam','사이코키네시스 + 파괴광선']]){assert.equal(api.translate(input,'move'),expected);checks++;}

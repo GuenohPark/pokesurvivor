@@ -1,9 +1,9 @@
 {
   "result": "passed",
   "assertions": 21,
-  "browserScriptVersion": "0.1.11",
-  "translationVersion": "0.5.3",
-  "bytes": 2197454,
+  "browserScriptVersion": "0.1.12",
+  "translationVersion": "0.5.4",
+  "bytes": 2197453,
   "limits": [
     "Unit tests are not Android/Firefox runtime or Google login verification.",
     "Actual MAIN-world installation must be verified in the browser; isolated/content-world execution is insufficient."

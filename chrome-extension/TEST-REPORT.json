@@ -1,6 +1,6 @@
 {
-  "extensionVersion": "0.1.11-test",
-  "patchVersion": "0.5.3",
+  "extensionVersion": "0.1.12-test",
+  "patchVersion": "0.5.4",
   "manifestVersion": 3,
   "sourceIdentity": "Current generated source byte-compared with dist/pokesurvivor-ko-browser.user.js and dist/pokesurvivor-build.json, no hardcoded stale digest.",
   "staticChromeBoundaryChecks": 58,

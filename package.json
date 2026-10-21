@@ -1,6 +1,6 @@
 {
   "name": "pokesurvivor-korean-patch",
-  "version": "0.5.3",
+  "version": "0.5.4",
   "private": true,
   "description": "Korean localization for https://pokesurvivor.com/ direct tabs only",
   "scripts": {
@@ -19,6 +19,6 @@
     "test:release": "node tests/test-release.cjs"
   },
   "autoLoaderVersion": "0.1.2",
-  "browserScriptVersion": "0.1.11",
-  "chromeExtensionVersion": "0.1.11"
+  "browserScriptVersion": "0.1.12",
+  "chromeExtensionVersion": "0.1.12"
 }
