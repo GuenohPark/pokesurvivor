@@ -1,9 +1,9 @@
 {
-  "version": "0.5.3",
-  "browserVersion": "0.1.11",
-  "chromeVersion": "0.1.11",
+  "version": "0.5.4",
+  "browserVersion": "0.1.12",
+  "chromeVersion": "0.1.12",
   "inputs": {
-    "package.json": "8acf7f80dc5f3a254fcb31b3449a623cfd6a232438592aea6b6d843788b50381",
+    "package.json": "ee5289a53127171fab7335587d10475d53244cfe77370beee36f46eb5503e3c5",
     "src/altar-label-ui.js": "db529a672accb938bc2b8a6b6677f17f95290acccb6c4fec7a702ebd299b5f07",
     "src/auto-loader-core.js": "bb3d4b6919971ded29539ede5531454527cb67eb2ed56118eb26d1f11cdef082",
     "src/auto-loader-entry.js": "100403d2eefd7f640844a62d106e7c86654def147cbdc0137ec9a3865753b2f6",
@@ -14,7 +14,7 @@
     "src/search-korean.js": "83100c4637b6c0627d892f1eb82500fa2394e0b14239d355890abc8f008432a6",
     "src/tier-ui.js": "576346935b4c12a9025de086cf534d0b2c41d43512a311ea85d2bc05bbeb693d",
     "src/tips-ui.js": "ad0893d26c978b510b373cf15a09d01c7d6a7360f2a3f5404067dbd136895ef2",
-    "data/dictionary.ko.json": "b3ab817a7b92ece4df2628aa7c551162b208794b1d6a70721977fffa986863c3",
+    "data/dictionary.ko.json": "bd5d5bd913035b2859fe3972923ad172ba50f550a0e7cd52011d6428a0cb53e6",
     "data/move-ratings.json": "b5560b5a321741160804727a3c795286fa547114d7e8da96f4e14804414e4f43",
     "data/move-ui.json": "a92dad8fd4227dcde119bb2195bb69532c720c4b38ac70aa74f47483850f30f7",
     "data/name-coverage.json": "31830a0390d5984e2c948a83bc82bf068631032581eff465fe40a4adebd327a7",
@@ -82,10 +82,10 @@
     "tests/fixtures/tier-player-reference.json": "ebbfb9b92bc39a50097f242923a1732f2271c22ed77d3c11dc0669c25d5bb6dc"
   },
   "bundles": {
-    "dist/pokesurvivor.user.js": "348056c9c95cd3eeb1778e5ea949870a2a06e95c3d1132b80b3dfad18d2e5888",
-    "dist/pokesurvivor.meta.js": "c7c854d62cc66d1fe7ac1921ef70390dbb0c650914d622683a5af36eaa96262f",
-    "dist/pokesurvivor-ko-menu.user.js": "5c858f0de420ec22db63bbb23e26cf8b076f939446902aabcf99340328ccdf77",
-    "dist/pokesurvivor-ko-browser.user.js": "5089c6005a9092b63b2326ba0a0783b4ee0ccdb0d8712f8c7824e136c3380572"
+    "dist/pokesurvivor.user.js": "d0167af95a92f82a9ccef60182d8b2a80ec000781f01e6437583366f0ae3c6e7",
+    "dist/pokesurvivor.meta.js": "5d8aaffa4af0dd7c04b0248bdbab76416c6b93d0e0a9b5640ece9458a033462a",
+    "dist/pokesurvivor-ko-menu.user.js": "16c7493208d172b92d4d7dfb1ef3a53e908b8531fa3db6f70a83d11c8cbc54e6",
+    "dist/pokesurvivor-ko-browser.user.js": "ff6764586a4489717b2e8dfd4702c763600e1e24a6721ea00657bfec537e9ceb"
   },
   "permissions": "@grant none; no runtime download, no remote JS, no account/storage/cookie APIs",
   "canvas": "Hook registration in current realm only, actual page-world installation is not proven by the marker.",
