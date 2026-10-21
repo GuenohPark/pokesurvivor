@@ -1,0 +1,1038 @@
+{
+  "version": "move-recommendation-v1",
+  "sourceCommit": "018e986f4c12f414dfa84193ee35b2959b1e325c",
+  "conditions": "게임 내 타입별·Lv.5 기준, 다수전/타격 가능한 보스전의 소스 기반 잠정 추천. 일반 구간0–30분 중심. 승률·실측DPS·전체 전투 시뮬레이션이 아님. 포켓몬 고유 물리/특수 계수·타입상성·날씨·급소·아이템·유대 조합 효과를 동일/중립으로 두고 역할을 비교. 기술 자체 공격 방식·중독·회복·제어는 고려. 같은 타입 안의 추천이지 모든 타입을 섞은 전투력 등급이 아님.",
+  "grading": "Editorial provisional role recommendations. Pokemon fit is shown separately; no automatic grade promotion/demotion or weighted score.",
+  "ratings": {
+    "tackle": {
+      "id": "tackle",
+      "wave": "B",
+      "boss": "B",
+      "condition": "",
+      "note": "",
+      "why": "Lv.5에서는 넓은 각도로 반복 타격. 짧은 사거리라 이동·접촉 위험을 감수해야 함.",
+      "evoWave": "B",
+      "evoBoss": "B"
+    },
+    "quick-attack": {
+      "id": "quick-attack",
+      "wave": "A",
+      "boss": "A",
+      "condition": "",
+      "note": "",
+      "why": "경로상 적을 한 번씩 타격하고 0.3초 무적. 벽·표적 조건·조준 방향에 따라 달라지며 연속 무적을 보장하지 않음.",
+      "evoWave": "A",
+      "evoBoss": "A"
+    },
+    "swords-dance": {
+      "id": "swords-dance",
+      "wave": "지원S",
+      "boss": "지원S",
+      "condition": "",
+      "note": "물리 공격 지원 우선. 용의춤과 같은 patk 스택을 공유하므로 별도 배율로 합산하지 않음.",
+      "why": "직접 피해 없음. 스택을 쌓은 뒤 공격 전환 또는 유대 운용. 한 타이머가 끝나면 해당 스탯 스택이 함께 사라짐.",
+      "evoWave": "해당 없음",
+      "evoBoss": "해당 없음"
+    },
+    "nasty-plot": {
+      "id": "nasty-plot",
+      "wave": "지원S",
+      "boss": "지원S",
+      "condition": "",
+      "note": "특수 공격 지원 우선. 게임 내 분류는 노말이라 모든 포켓몬의 공통 풀에 포함됨.",
+      "why": "직접 피해 없음. 스택을 쌓은 뒤 공격 전환 또는 유대 운용. 한 타이머가 끝나면 해당 스탯 스택이 함께 사라짐.",
+      "evoWave": "해당 없음",
+      "evoBoss": "해당 없음"
+    },
+    "agility": {
+      "id": "agility",
+      "wave": "지원S",
+      "boss": "지원S",
+      "condition": "",
+      "note": "이동·회피 지원. 30분 이후에는130 초과 속도의25%만 반영되는 소프트캡 때문에 효율이 줄어듦.",
+      "why": "직접 피해 없음. 스택을 쌓은 뒤 공격 전환 또는 유대 운용. 한 타이머가 끝나면 해당 스탯 스택이 함께 사라짐.",
+      "evoWave": "해당 없음",
+      "evoBoss": "해당 없음"
+    },
+    "harden": {
+      "id": "harden",
+      "wave": "지원S",
+      "boss": "지원S",
+      "condition": "",
+      "note": "일반 피해 생존 지원. 전체 피해 감소80% 상한이 있고 아르세우스의 순수 피해는 막지 못함.",
+      "why": "직접 피해 없음. 스택을 쌓은 뒤 공격 전환 또는 유대 운용. 한 타이머가 끝나면 해당 스탯 스택이 함께 사라짐.",
+      "evoWave": "해당 없음",
+      "evoBoss": "해당 없음"
+    },
+    "ember": {
+      "id": "ember",
+      "wave": "A",
+      "boss": "A",
+      "condition": "",
+      "note": "",
+      "why": "사거리·관통 활용. 발사체마다 같은 적은 한 번만 타격; 여러 발 전부 명중은 보장하지 않음.",
+      "evoWave": "A",
+      "evoBoss": "A"
+    },
+    "flamethrower": {
+      "id": "flamethrower",
+      "wave": "S",
+      "boss": "A",
+      "condition": "",
+      "note": "다수전 S는 전방에 밀집한 적을 부채꼴 관통탄으로 처리하는 조건. 근접 대형 보스에서 산탄 집중은 가능하나 전탄 명중을 전제로 하지 않음.",
+      "why": "근거리·넓은 표적 또는 밀집 전방에 유리. 모든 탄이 한 적에게 맞는다는 가정은 제외.",
+      "evoWave": "S",
+      "evoBoss": "A"
+    },
+    "fire-spin": {
+      "id": "fire-spin",
+      "wave": "A",
+      "boss": "A",
+      "condition": "",
+      "note": "",
+      "why": "각 오브가 원형 궤도에서 접촉할 때 타격. 오브별 재적중 간격은 원본cd이며 영구 쿨타임 배율이 직접 적용되지 않음. 슬롯 전환 시 오브가 제거됨.",
+      "evoWave": "A",
+      "evoBoss": "A"
+    },
+    "heat-wave": {
+      "id": "heat-wave",
+      "wave": "S",
+      "boss": "B",
+      "condition": "",
+      "note": "다수전 S는 사방의 적에게 화상·관통 탄막을 나누는 역할. 단일 보스 딜에서는 count배 계산을 하지 않음.",
+      "why": "사방의 다수 적 커버가 장점. 탄 수가 한 보스에게 모두 들어가는 구조가 아님.",
+      "evoWave": "S",
+      "evoBoss": "B"
+    },
+    "water-gun": {
+      "id": "water-gun",
+      "wave": "A",
+      "boss": "S",
+      "condition": "",
+      "note": "물 타입 보스전의 빠른 직선 관통 후보. 실제 명중 수·표적 이동·경로에 따라 하이드로펌프 등과 선택이 달라짐.",
+      "why": "사거리·관통 활용. 발사체마다 같은 적은 한 번만 타격; 여러 발 전부 명중은 보장하지 않음.",
+      "evoWave": "A",
+      "evoBoss": "S"
+    },
+    "bubble": {
+      "id": "bubble",
+      "wave": "S",
+      "boss": "B",
+      "condition": "",
+      "note": "다수전 S는 방사형 탄막·둔화 커버 기준. 진화 파도타기도 원래 방사형.",
+      "why": "사방의 다수 적 커버가 장점. 탄 수가 한 보스에게 모두 들어가는 구조가 아님.",
+      "evoWave": "S",
+      "evoBoss": "B"
+    },
+    "hydro-pump": {
+      "id": "hydro-pump",
+      "wave": "S",
+      "boss": "A",
+      "condition": "",
+      "note": "물 타입의 긴 직선 다수전 우선 후보. 하이드로캐논도 원래 광선형.",
+      "why": "직선상의 여러 적을 한 번씩 타격. 벽에 막히며 count를 단일 보스 타수로 곱하지 않음.",
+      "evoWave": "S",
+      "evoBoss": "A"
+    },
+    "aqua-ring": {
+      "id": "aqua-ring",
+      "wave": "지원S",
+      "boss": "지원S",
+      "condition": "",
+      "note": "최대6스택의 시간제 고정 HP/초 회복. 체력 비례 회복이나 즉시 완전 회복이 아님.",
+      "why": "직접 피해 없음. 스택을 쌓은 뒤 공격 전환 또는 유대 운용. 한 타이머가 끝나면 해당 스탯 스택이 함께 사라짐.",
+      "evoWave": "해당 없음",
+      "evoBoss": "해당 없음"
+    },
+    "vine-whip": {
+      "id": "vine-whip",
+      "wave": "A",
+      "boss": "A",
+      "condition": "",
+      "note": "",
+      "why": "Lv.5에서는 넓은 각도로 반복 타격. 짧은 사거리라 이동·접촉 위험을 감수해야 함.",
+      "evoWave": "A",
+      "evoBoss": "A"
+    },
+    "razor-leaf": {
+      "id": "razor-leaf",
+      "wave": "A",
+      "boss": "A",
+      "condition": "",
+      "note": "",
+      "why": "왕복 경로로 다수 적을 공격. 왕복·다발 전부 명중을 보장하지 않으며 벽과 이동 경로 영향을 받음.",
+      "evoWave": "A",
+      "evoBoss": "A"
+    },
+    "leaf-storm": {
+      "id": "leaf-storm",
+      "wave": "A",
+      "boss": "A",
+      "condition": "",
+      "note": "내부 ID는 leaf-storm이지만 현재 표시명은 꽃보라. 공전형이며 칼날 직선 기술로 평가하지 않음.",
+      "why": "각 오브가 원형 궤도에서 접촉할 때 타격. 오브별 재적중 간격은 원본cd이며 영구 쿨타임 배율이 직접 적용되지 않음. 슬롯 전환 시 오브가 제거됨.",
+      "evoWave": "A",
+      "evoBoss": "A"
+    },
+    "giga-drain": {
+      "id": "giga-drain",
+      "wave": "A",
+      "boss": "A",
+      "condition": "",
+      "note": "이전 내부 ID와 달리 현재 표시명은 풀묶기. 회복·흡인·속박 효과가 있는 것으로 간주하지 않음.",
+      "why": "주변 모든 적에 반복 판정. 설치형이 아니므로 다른 슬롯으로 바꾸면 새 타격이 멈춤.",
+      "evoWave": "A",
+      "evoBoss": "A"
+    },
+    "thunder-shock": {
+      "id": "thunder-shock",
+      "wave": "A",
+      "boss": "S",
+      "condition": "",
+      "note": "",
+      "why": "사거리·관통 활용. 발사체마다 같은 적은 한 번만 타격; 여러 발 전부 명중은 보장하지 않음.",
+      "evoWave": "A",
+      "evoBoss": "S"
+    },
+    "discharge": {
+      "id": "discharge",
+      "wave": "A",
+      "boss": "A",
+      "condition": "",
+      "note": "",
+      "why": "주변 모든 적에 반복 판정. 설치형이 아니므로 다른 슬롯으로 바꾸면 새 타격이 멈춤.",
+      "evoWave": "A",
+      "evoBoss": "A"
+    },
+    "thunderbolt": {
+      "id": "thunderbolt",
+      "wave": "S",
+      "boss": "B",
+      "condition": "",
+      "note": "",
+      "why": "서로 다른 적에게 연결되고 다음 타격마다 ×0.85 감쇠. 적 하나에게 count회 반복하는 공격이 아님.",
+      "evoWave": "S",
+      "evoBoss": "B"
+    },
+    "confusion": {
+      "id": "confusion",
+      "wave": "A",
+      "boss": "S",
+      "condition": "",
+      "note": "특수 보스전 유도·관통 후보. 미스트볼보다 좁은 발사각과 서로 다른 수치가 있어 단일 확정 순위를 두지 않음.",
+      "why": "사거리·관통 활용. 발사체마다 같은 적은 한 번만 타격; 여러 발 전부 명중은 보장하지 않음.",
+      "evoWave": "A",
+      "evoBoss": "S"
+    },
+    "psybeam": {
+      "id": "psybeam",
+      "wave": "S",
+      "boss": "A",
+      "condition": "",
+      "note": "",
+      "why": "직선상의 여러 적을 한 번씩 타격. 벽에 막히며 count를 단일 보스 타수로 곱하지 않음.",
+      "evoWave": "S",
+      "evoBoss": "A"
+    },
+    "psychic": {
+      "id": "psychic",
+      "wave": "S",
+      "boss": "B",
+      "condition": "",
+      "note": "다수전 S는 사방 탄막과 약한 유도로 적을 커버하는 역할. 이름이 대표 기술이라는 이유로 보스 딜 최상위를 가정하지 않음.",
+      "why": "사방의 다수 적 커버가 장점. 탄 수가 한 보스에게 모두 들어가는 구조가 아님.",
+      "evoWave": "S",
+      "evoBoss": "B"
+    },
+    "sludge": {
+      "id": "sludge",
+      "wave": "A",
+      "boss": "S",
+      "condition": "",
+      "note": "직접 피해와 원거리 중독을 함께 사용. 보스전은 다발 전부 명중보다 중독 유지 가치까지 평가.",
+      "why": "사거리·관통 활용. 발사체마다 같은 적은 한 번만 타격; 여러 발 전부 명중은 보장하지 않음.",
+      "evoWave": "A",
+      "evoBoss": "S"
+    },
+    "mud-shot": {
+      "id": "mud-shot",
+      "wave": "A",
+      "boss": "B",
+      "condition": "",
+      "note": "",
+      "why": "사방의 다수 적 커버가 장점. 탄 수가 한 보스에게 모두 들어가는 구조가 아님.",
+      "evoWave": "A",
+      "evoBoss": "B"
+    },
+    "gust": {
+      "id": "gust",
+      "wave": "A",
+      "boss": "A",
+      "condition": "",
+      "note": "진화 폭풍은 이 경로에서는 공전형. 날려버리기계 폭풍의 넉백파와 별도 경로.",
+      "why": "각 오브가 원형 궤도에서 접촉할 때 타격. 오브별 재적중 간격은 원본cd이며 영구 쿨타임 배율이 직접 적용되지 않음. 슬롯 전환 시 오브가 제거됨.",
+      "evoWave": "A",
+      "evoBoss": "A"
+    },
+    "wing-attack": {
+      "id": "wing-attack",
+      "wave": "A",
+      "boss": "A",
+      "condition": "",
+      "note": "",
+      "why": "Lv.5에서는 넓은 각도로 반복 타격. 짧은 사거리라 이동·접촉 위험을 감수해야 함.",
+      "evoWave": "A",
+      "evoBoss": "A"
+    },
+    "body-slam": {
+      "id": "body-slam",
+      "wave": "A",
+      "boss": "A",
+      "condition": "",
+      "note": "",
+      "why": "Lv.5에서는 넓은 각도로 반복 타격. 짧은 사거리라 이동·접촉 위험을 감수해야 함.",
+      "evoWave": "A",
+      "evoBoss": "A"
+    },
+    "hyper-voice": {
+      "id": "hyper-voice",
+      "wave": "S",
+      "boss": "B",
+      "condition": "",
+      "note": "",
+      "why": "사방의 다수 적 커버가 장점. 탄 수가 한 보스에게 모두 들어가는 구조가 아님.",
+      "evoWave": "S",
+      "evoBoss": "B"
+    },
+    "poison-sting": {
+      "id": "poison-sting",
+      "wave": "B",
+      "boss": "S",
+      "condition": "",
+      "note": "다수전 우선순위는 낮지만 빠른 원거리 중독 중첩으로 고체력 보스전 S 후보. 중독은 모든 중독원 합쳐8중첩·4초 갱신이며60000 초과 HP에서는 비례 피해 기준이 완화됨.",
+      "why": "사거리·관통 활용. 발사체마다 같은 적은 한 번만 타격; 여러 발 전부 명중은 보장하지 않음.",
+      "evoWave": "B",
+      "evoBoss": "S"
+    },
+    "toxic": {
+      "id": "toxic",
+      "wave": "S",
+      "boss": "A",
+      "condition": "장판 경로로 적 유도",
+      "note": "적을 장판 경로로 유도할 수 있는 다수전 S 후보. 제자리 연속 설치만으로 최대 효율을 내지 못함.",
+      "why": "이동하면서 적을 유도할 때 유효. 가까운 중복 설치 억제와 플레이어당18개 공유 상한이 있음.",
+      "evoWave": "S",
+      "evoBoss": "A"
+    },
+    "bulldoze": {
+      "id": "bulldoze",
+      "wave": "S",
+      "boss": "A",
+      "condition": "",
+      "note": "물리 주변 공격·둔화로 근거리 무리 정리에 우선 고려. 큰 반경만으로 접촉·탄막 안전을 보장하지 않음.",
+      "why": "주변 모든 적에 반복 판정. 설치형이 아니므로 다른 슬롯으로 바꾸면 새 타격이 멈춤.",
+      "evoWave": "S",
+      "evoBoss": "A"
+    },
+    "bug-bite": {
+      "id": "bug-bite",
+      "wave": "A",
+      "boss": "A",
+      "condition": "",
+      "note": "",
+      "why": "Lv.5에서는 넓은 각도로 반복 타격. 짧은 사거리라 이동·접촉 위험을 감수해야 함.",
+      "evoWave": "A",
+      "evoBoss": "A"
+    },
+    "string-shot": {
+      "id": "string-shot",
+      "wave": "A",
+      "boss": "B",
+      "condition": "",
+      "note": "",
+      "why": "지나오는 적을 유도해야 함. 준비 시간·작은 발동 반경이 있고 만료 시 반위력 폭발.",
+      "evoWave": "A",
+      "evoBoss": "B"
+    },
+    "bug-buzz": {
+      "id": "bug-buzz",
+      "wave": "A",
+      "boss": "A",
+      "condition": "",
+      "note": "",
+      "why": "주변 모든 적에 반복 판정. 설치형이 아니므로 다른 슬롯으로 바꾸면 새 타격이 멈춤.",
+      "evoWave": "A",
+      "evoBoss": "A"
+    },
+    "rock-throw": {
+      "id": "rock-throw",
+      "wave": "A",
+      "boss": "S",
+      "condition": "",
+      "note": "",
+      "why": "사거리·관통 활용. 발사체마다 같은 적은 한 번만 타격; 여러 발 전부 명중은 보장하지 않음.",
+      "evoWave": "A",
+      "evoBoss": "S"
+    },
+    "rock-slide": {
+      "id": "rock-slide",
+      "wave": "S",
+      "boss": "A",
+      "condition": "",
+      "note": "다수전 S는 지연 낙하 범위 활용. 표적 이동·낙하 분산 때문에 보스전은 별도 대안.",
+      "why": "여러 표적의 시전 당시 위치로 떨어짐. 한 보스에게 모든 낙하물이 집중되지는 않음.",
+      "evoWave": "S",
+      "evoBoss": "A"
+    },
+    "ice-beam": {
+      "id": "ice-beam",
+      "wave": "S",
+      "boss": "S",
+      "condition": "",
+      "note": "직선 다중 타격과 강한 둔화를 함께 사용. 진화 눈보라도 이 경로에서는 광선형 그대로.",
+      "why": "직선상의 여러 적을 한 번씩 타격. 벽에 막히며 count를 단일 보스 타수로 곱하지 않음.",
+      "evoWave": "S",
+      "evoBoss": "S"
+    },
+    "powder-snow": {
+      "id": "powder-snow",
+      "wave": "A",
+      "boss": "A",
+      "condition": "",
+      "note": "",
+      "why": "주변 모든 적에 반복 판정. 설치형이 아니므로 다른 슬롯으로 바꾸면 새 타격이 멈춤.",
+      "evoWave": "A",
+      "evoBoss": "A"
+    },
+    "karate-chop": {
+      "id": "karate-chop",
+      "wave": "A",
+      "boss": "A",
+      "condition": "",
+      "note": "빠른 물리 근접 반복의 유력 대안. 보스는 넉백에 면역이므로 일반 적 제어와 구분.",
+      "why": "Lv.5에서는 넓은 각도로 반복 타격. 짧은 사거리라 이동·접촉 위험을 감수해야 함.",
+      "evoWave": "A",
+      "evoBoss": "A"
+    },
+    "aura-sphere": {
+      "id": "aura-sphere",
+      "wave": "S",
+      "boss": "S",
+      "condition": "",
+      "note": "",
+      "why": "사거리·관통 활용. 발사체마다 같은 적은 한 번만 타격; 여러 발 전부 명중은 보장하지 않음.",
+      "evoWave": "S",
+      "evoBoss": "S"
+    },
+    "lick": {
+      "id": "lick",
+      "wave": "B",
+      "boss": "B",
+      "condition": "",
+      "note": "",
+      "why": "Lv.5에서는 넓은 각도로 반복 타격. 짧은 사거리라 이동·접촉 위험을 감수해야 함.",
+      "evoWave": "B",
+      "evoBoss": "B"
+    },
+    "shadow-ball": {
+      "id": "shadow-ball",
+      "wave": "S",
+      "boss": "S",
+      "condition": "",
+      "note": "특수 계수가 강한 고스트 포켓몬의 우선 후보. 진화 고스트다이브도 투사체이며 무적 효과가 추가되지 않음.",
+      "why": "사거리·관통 활용. 발사체마다 같은 적은 한 번만 타격; 여러 발 전부 명중은 보장하지 않음.",
+      "evoWave": "S",
+      "evoBoss": "S"
+    },
+    "dragon-rage": {
+      "id": "dragon-rage",
+      "wave": "S",
+      "boss": "S",
+      "condition": "",
+      "note": "",
+      "why": "직선상의 여러 적을 한 번씩 타격. 벽에 막히며 count를 단일 보스 타수로 곱하지 않음.",
+      "evoWave": "S",
+      "evoBoss": "S"
+    },
+    "dragon-dance": {
+      "id": "dragon-dance",
+      "wave": "지원A",
+      "boss": "지원A",
+      "condition": "",
+      "note": "이 게임에서는 물리 공격만 증가하며 속도 증가는 없음. 칼춤과 patk 스택을 공유하고 만렙 스택당 수치는 칼춤보다 낮음.",
+      "why": "직접 피해 없음. 스택을 쌓은 뒤 공격 전환 또는 유대 운용. 한 타이머가 끝나면 해당 스탯 스택이 함께 사라짐.",
+      "evoWave": "해당 없음",
+      "evoBoss": "해당 없음"
+    },
+    "fairy-wind": {
+      "id": "fairy-wind",
+      "wave": "S",
+      "boss": "B",
+      "condition": "",
+      "note": "사방을 덮는 다수전 우선 후보. 문포스 진화도 방사형이며 보스에게 탄 수 전부가 집중되지 않음.",
+      "why": "사방의 다수 적 커버가 장점. 탄 수가 한 보스에게 모두 들어가는 구조가 아님.",
+      "evoWave": "S",
+      "evoBoss": "B"
+    },
+    "dazzling-gleam": {
+      "id": "dazzling-gleam",
+      "wave": "A",
+      "boss": "A",
+      "condition": "",
+      "note": "",
+      "why": "주변 모든 적에 반복 판정. 설치형이 아니므로 다른 슬롯으로 바꾸면 새 타격이 멈춤.",
+      "evoWave": "A",
+      "evoBoss": "A"
+    },
+    "metal-claw": {
+      "id": "metal-claw",
+      "wave": "A",
+      "boss": "A",
+      "condition": "",
+      "note": "",
+      "why": "Lv.5에서는 넓은 각도로 반복 타격. 짧은 사거리라 이동·접촉 위험을 감수해야 함.",
+      "evoWave": "A",
+      "evoBoss": "A"
+    },
+    "flash-cannon": {
+      "id": "flash-cannon",
+      "wave": "S",
+      "boss": "S",
+      "condition": "",
+      "note": "진화 철제광선은 이 경로에서는 즉발 직선 광선. 미러샷에서 진화하는 동명 기술과 별도 경로.",
+      "why": "직선상의 여러 적을 한 번씩 타격. 벽에 막히며 count를 단일 보스 타수로 곱하지 않음.",
+      "evoWave": "S",
+      "evoBoss": "S"
+    },
+    "bite": {
+      "id": "bite",
+      "wave": "A",
+      "boss": "A",
+      "condition": "",
+      "note": "",
+      "why": "Lv.5에서는 넓은 각도로 반복 타격. 짧은 사거리라 이동·접촉 위험을 감수해야 함.",
+      "evoWave": "A",
+      "evoBoss": "A"
+    },
+    "dark-pulse": {
+      "id": "dark-pulse",
+      "wave": "S",
+      "boss": "B",
+      "condition": "",
+      "note": "다수전 S는 방사형 관통 탄막 역할. 보스 하나에게24발이 모두 맞는 것으로 계산하지 않음.",
+      "why": "사방의 다수 적 커버가 장점. 탄 수가 한 보스에게 모두 들어가는 구조가 아님.",
+      "evoWave": "S",
+      "evoBoss": "B"
+    },
+    "night-shade": {
+      "id": "night-shade",
+      "wave": "A",
+      "boss": "A",
+      "condition": "",
+      "note": "게임 내 분류는 악. 진화 악몽도 주변 원형 공격이며 본가식 고정 피해·수면 효과를 가정하지 않음.",
+      "why": "주변 모든 적에 반복 판정. 설치형이 아니므로 다른 슬롯으로 바꾸면 새 타격이 멈춤.",
+      "evoWave": "A",
+      "evoBoss": "A"
+    },
+    "bonemerang": {
+      "id": "bonemerang",
+      "wave": "A",
+      "boss": "S",
+      "condition": "",
+      "note": "",
+      "why": "왕복 경로로 다수 적을 공격. 왕복·다발 전부 명중을 보장하지 않으며 벽과 이동 경로 영향을 받음.",
+      "evoWave": "A",
+      "evoBoss": "S"
+    },
+    "psycho-cut": {
+      "id": "psycho-cut",
+      "wave": "A",
+      "boss": "A",
+      "condition": "",
+      "note": "에스퍼 그룹의 물리 공격. 특수형 포켓몬에서 이름만 보고 우선하지 않음.",
+      "why": "왕복 경로로 다수 적을 공격. 왕복·다발 전부 명중을 보장하지 않으며 벽과 이동 경로 영향을 받음.",
+      "evoWave": "A",
+      "evoBoss": "A"
+    },
+    "spikes": {
+      "id": "spikes",
+      "wave": "A",
+      "boss": "A",
+      "condition": "",
+      "note": "진화 땅가르기도 설치 지뢰. 일격 필살로 해석하지 않음.",
+      "why": "지나오는 적을 유도해야 함. 준비 시간·작은 발동 반경이 있고 만료 시 반위력 폭발.",
+      "evoWave": "A",
+      "evoBoss": "A"
+    },
+    "toxic-spikes": {
+      "id": "toxic-spikes",
+      "wave": "A",
+      "boss": "A",
+      "condition": "",
+      "note": "",
+      "why": "지나오는 적을 유도해야 함. 준비 시간·작은 발동 반경이 있고 만료 시 반위력 폭발.",
+      "evoWave": "A",
+      "evoBoss": "A"
+    },
+    "hail": {
+      "id": "hail",
+      "wave": "S",
+      "boss": "B",
+      "condition": "",
+      "note": "다수 적에게 낙하·둔화를 분산. 고립 보스에게 모든 낙하가 집중되는 것은 아님.",
+      "why": "여러 표적의 시전 당시 위치로 떨어짐. 한 보스에게 모든 낙하물이 집중되지는 않음.",
+      "evoWave": "S",
+      "evoBoss": "B"
+    },
+    "meteor-mash": {
+      "id": "meteor-mash",
+      "wave": "S",
+      "boss": "A",
+      "condition": "",
+      "note": "다수전 S는 낙하 범위가 여러 적에 겹치는 상황. 보스 하나에게 count개가 모두 떨어지는 것으로 평가하지 않음.",
+      "why": "여러 표적의 시전 당시 위치로 떨어짐. 한 보스에게 모든 낙하물이 집중되지는 않음.",
+      "evoWave": "S",
+      "evoBoss": "A"
+    },
+    "will-o-wisp": {
+      "id": "will-o-wisp",
+      "wave": "A",
+      "boss": "S",
+      "condition": "",
+      "note": "특수 포탑의 지속 표적 사격·화상 유지. 대타출동과 설치 상한을 공유하므로 둘의 최대 포탑 수를 합산하지 않음.",
+      "why": "발사 후 슬롯을 바꿔도 잔존. count는 한 번에 발사 수가 아니라 새로 시전한 기술이 적용하는 플레이어 포탑 상한이며 다른 포탑 기술과 공유.",
+      "evoWave": "A",
+      "evoBoss": "S"
+    },
+    "substitute": {
+      "id": "substitute",
+      "wave": "A",
+      "boss": "S",
+      "condition": "",
+      "note": "공통 노말 풀의 물리 포탑. 진화 그림자분신도 포탑이며 회피율·도발·피해 흡수 효과로 평가하지 않음. 도깨비불과 포탑 상한 공유.",
+      "why": "발사 후 슬롯을 바꿔도 잔존. count는 한 번에 발사 수가 아니라 새로 시전한 기술이 적용하는 플레이어 포탑 상한이며 다른 포탑 기술과 공유.",
+      "evoWave": "A",
+      "evoBoss": "S"
+    },
+    "aerial-ace": {
+      "id": "aerial-ace",
+      "wave": "A",
+      "boss": "S",
+      "condition": "돌진·회피 운용",
+      "note": "보스전 S는 물리 돌진의 회피 가치까지 포함한 조건부 추천. 자동 돌진 방향과 벽 때문에 안전을 보장하지 않음.",
+      "why": "경로상 적을 한 번씩 타격하고 0.3초 무적. 벽·표적 조건·조준 방향에 따라 달라지며 연속 무적을 보장하지 않음.",
+      "evoWave": "A",
+      "evoBoss": "S"
+    },
+    "flame-wheel": {
+      "id": "flame-wheel",
+      "wave": "A",
+      "boss": "B",
+      "condition": "",
+      "note": "",
+      "why": "이동하면서 적을 유도할 때 유효. 가까운 중복 설치 억제와 플레이어당18개 공유 상한이 있음.",
+      "evoWave": "A",
+      "evoBoss": "B"
+    },
+    "bubble-beam": {
+      "id": "bubble-beam",
+      "wave": "A",
+      "boss": "A",
+      "condition": "",
+      "note": "",
+      "why": "근거리·넓은 표적 또는 밀집 전방에 유리. 모든 탄이 한 적에게 맞는다는 가정은 제외.",
+      "evoWave": "A",
+      "evoBoss": "A"
+    },
+    "hex": {
+      "id": "hex",
+      "wave": "S",
+      "boss": "A",
+      "condition": "화상·중독·둔화 유지",
+      "note": "다수전 S는 화상·중독·둔화를 유지할 때의 조건부 추천. 그런 표적에 ×1.7이며, 흡인만으로는 이 조건을 충족하지 않음.",
+      "why": "서로 다른 적에게 연결되고 다음 타격마다 ×0.85 감쇠. 적 하나에게 count회 반복하는 공격이 아님.",
+      "evoWave": "S",
+      "evoBoss": "A"
+    },
+    "hyper-beam": {
+      "id": "hyper-beam",
+      "wave": "S",
+      "boss": "A",
+      "condition": "",
+      "note": "넓고 긴 직선 정리에 우선 고려. 충전은 초기 지연이며 느린 단일 주기라 보스 집중 공격은 포탑 등과 구분.",
+      "why": "사거리와 직선 관통이 장점. 지연 후 현재 위치·방향에서 한 번 발사하며 쿨타임에 충전 시간을 단순 합산하지 않음.",
+      "evoWave": "S",
+      "evoBoss": "A"
+    },
+    "rapid-spin": {
+      "id": "rapid-spin",
+      "wave": "A",
+      "boss": "A",
+      "condition": "",
+      "note": "",
+      "why": "0.13초 간격 원형 타격으로 같은 적을 재타격 가능. 사거리 안에 유지해야 하며 일반 적은 타격으로 밀려날 수 있음.",
+      "evoWave": "A",
+      "evoBoss": "A"
+    },
+    "flame-charge": {
+      "id": "flame-charge",
+      "wave": "A",
+      "boss": "A",
+      "condition": "",
+      "note": "",
+      "why": "경로상 적을 한 번씩 타격하고 0.3초 무적. 벽·표적 조건·조준 방향에 따라 달라지며 연속 무적을 보장하지 않음.",
+      "evoWave": "A",
+      "evoBoss": "A"
+    },
+    "whirlpool": {
+      "id": "whirlpool",
+      "wave": "A",
+      "boss": "B",
+      "condition": "",
+      "note": "",
+      "why": "잔존 장판으로 무리를 모음. 모든 흡인 기술 합쳐 플레이어당2개 상한이며 보스 흡인은25% 강도.",
+      "evoWave": "A",
+      "evoBoss": "B"
+    },
+    "seed-bomb": {
+      "id": "seed-bomb",
+      "wave": "S",
+      "boss": "B",
+      "condition": "",
+      "note": "다수전 S는 여러 적 사이 반사 경로 기준. 진화 우드해머도 물리 반사탄이며 근접 타격으로 바뀌지 않음.",
+      "why": "주변의 아직 맞지 않은 적에게 반사. 고립된 보스 하나에게 반사 횟수를 모두 쓸 수 없음.",
+      "evoWave": "S",
+      "evoBoss": "B"
+    },
+    "energy-ball": {
+      "id": "energy-ball",
+      "wave": "A",
+      "boss": "S",
+      "condition": "",
+      "note": "보스 추적용 특수 유도탄. 진화명이 기가드레인이어도 drain 속성이 생기지 않아 회복 기술이 아님.",
+      "why": "유도로 표적 유지에 유리하나 명중 보장은 아님. 벽과 투사체 수명·이미 맞은 적을 다시 좇는 한계가 있음.",
+      "evoWave": "A",
+      "evoBoss": "S"
+    },
+    "solar-beam": {
+      "id": "solar-beam",
+      "wave": "S",
+      "boss": "A",
+      "condition": "",
+      "note": "풀 타입의 긴 직선 정리 후보. 솔라블레이드로 진화해도 특수 충전 광선이며 물리 근접기로 바뀌지 않음.",
+      "why": "사거리와 직선 관통이 장점. 지연 후 현재 위치·방향에서 한 번 발사하며 쿨타임에 충전 시간을 단순 합산하지 않음.",
+      "evoWave": "S",
+      "evoBoss": "A"
+    },
+    "thunder-wave": {
+      "id": "thunder-wave",
+      "wave": "A",
+      "boss": "A",
+      "condition": "",
+      "note": "",
+      "why": "기절로 공간을 벌 수 있으나 예고 후 표적 위치를 공격. 보스 기절 지속은35%로 줄어듦.",
+      "evoWave": "A",
+      "evoBoss": "A"
+    },
+    "electro-ball": {
+      "id": "electro-ball",
+      "wave": "S",
+      "boss": "B",
+      "condition": "",
+      "note": "",
+      "why": "주변의 아직 맞지 않은 적에게 반사. 고립된 보스 하나에게 반사 횟수를 모두 쓸 수 없음.",
+      "evoWave": "S",
+      "evoBoss": "B"
+    },
+    "extrasensory": {
+      "id": "extrasensory",
+      "wave": "A",
+      "boss": "B",
+      "condition": "",
+      "note": "",
+      "why": "일반 적을 밀어 공간을 확보. 보스는 넉백 면역이라 주된 효용이 약해짐.",
+      "evoWave": "A",
+      "evoBoss": "B"
+    },
+    "mist-ball": {
+      "id": "mist-ball",
+      "wave": "A",
+      "boss": "S",
+      "condition": "",
+      "note": "에스퍼 보스전의 특수 유도·둔화 우선 후보. 염동력도 접근 경로·관통 조건에 따라 유력 대안.",
+      "why": "유도로 표적 유지에 유리하나 명중 보장은 아님. 벽과 투사체 수명·이미 맞은 적을 다시 좇는 한계가 있음.",
+      "evoWave": "A",
+      "evoBoss": "S"
+    },
+    "acid-spray": {
+      "id": "acid-spray",
+      "wave": "S",
+      "boss": "A",
+      "condition": "",
+      "note": "반사로 여러 적에게 중독을 퍼뜨리는 다수전 S 후보. 고립 보스에서는 반사 이점이 사라지지만 중독 유지용으로 사용 가능.",
+      "why": "주변의 아직 맞지 않은 적에게 반사. 고립된 보스 하나에게 반사 횟수를 모두 쓸 수 없음.",
+      "evoWave": "S",
+      "evoBoss": "A"
+    },
+    "sand-tomb": {
+      "id": "sand-tomb",
+      "wave": "A",
+      "boss": "B",
+      "condition": "",
+      "note": "",
+      "why": "잔존 장판으로 무리를 모음. 모든 흡인 기술 합쳐 플레이어당2개 상한이며 보스 흡인은25% 강도.",
+      "evoWave": "A",
+      "evoBoss": "B"
+    },
+    "magnitude": {
+      "id": "magnitude",
+      "wave": "S",
+      "boss": "A",
+      "condition": "",
+      "note": "전진 폭발이 겹치는 경로 정리에 우선 고려. 보스에게10/13회 확정 적중으로 계산하지 않음.",
+      "why": "34거리씩 전진하는 폭발의 겹침을 활용. count가 한 적에게 보장되는 타수는 아님.",
+      "evoWave": "S",
+      "evoBoss": "A"
+    },
+    "whirlwind": {
+      "id": "whirlwind",
+      "wave": "A",
+      "boss": "B",
+      "condition": "",
+      "note": "진화 폭풍도 넉백파이며 보스는 밀리지 않음. 바람일으키기계 공전형 폭풍과 다름.",
+      "why": "일반 적을 밀어 공간을 확보. 보스는 넉백 면역이라 주된 효용이 약해짐.",
+      "evoWave": "A",
+      "evoBoss": "B"
+    },
+    "air-slash": {
+      "id": "air-slash",
+      "wave": "S",
+      "boss": "S",
+      "condition": "",
+      "note": "",
+      "why": "유도로 표적 유지에 유리하나 명중 보장은 아님. 벽과 투사체 수명·이미 맞은 적을 다시 좇는 한계가 있음.",
+      "evoWave": "S",
+      "evoBoss": "S"
+    },
+    "signal-beam": {
+      "id": "signal-beam",
+      "wave": "S",
+      "boss": "B",
+      "condition": "",
+      "note": "다수전 S는 서로 다른 적이 반사 거리 안에 있을 때. 진화 메가혼도 특수 반사탄.",
+      "why": "주변의 아직 맞지 않은 적에게 반사. 고립된 보스 하나에게 반사 횟수를 모두 쓸 수 없음.",
+      "evoWave": "S",
+      "evoBoss": "B"
+    },
+    "u-turn": {
+      "id": "u-turn",
+      "wave": "A",
+      "boss": "S",
+      "condition": "돌진·회피 운용",
+      "note": "보스전 S는 물리 돌진·회피 운용 기준. 진화명이 흡혈이어도 회복 속성은 추가되지 않음.",
+      "why": "경로상 적을 한 번씩 타격하고 0.3초 무적. 벽·표적 조건·조준 방향에 따라 달라지며 연속 무적을 보장하지 않음.",
+      "evoWave": "A",
+      "evoBoss": "S"
+    },
+    "rock-tomb": {
+      "id": "rock-tomb",
+      "wave": "A",
+      "boss": "A",
+      "condition": "",
+      "note": "",
+      "why": "기절로 공간을 벌 수 있으나 예고 후 표적 위치를 공격. 보스 기절 지속은35%로 줄어듦.",
+      "evoWave": "A",
+      "evoBoss": "A"
+    },
+    "ancient-power": {
+      "id": "ancient-power",
+      "wave": "A",
+      "boss": "A",
+      "condition": "",
+      "note": "",
+      "why": "각 오브가 원형 궤도에서 접촉할 때 타격. 오브별 재적중 간격은 원본cd이며 영구 쿨타임 배율이 직접 적용되지 않음. 슬롯 전환 시 오브가 제거됨.",
+      "evoWave": "A",
+      "evoBoss": "A"
+    },
+    "power-gem": {
+      "id": "power-gem",
+      "wave": "S",
+      "boss": "B",
+      "condition": "",
+      "note": "",
+      "why": "주변의 아직 맞지 않은 적에게 반사. 고립된 보스 하나에게 반사 횟수를 모두 쓸 수 없음.",
+      "evoWave": "S",
+      "evoBoss": "B"
+    },
+    "ice-shard": {
+      "id": "ice-shard",
+      "wave": "A",
+      "boss": "S",
+      "condition": "",
+      "note": "물리 보스 추적용 빠른 유도탄. 특수공격 위주 포켓몬에서는 냉동빔 등과 실제 계수 비교 필요.",
+      "why": "유도로 표적 유지에 유리하나 명중 보장은 아님. 벽과 투사체 수명·이미 맞은 적을 다시 좇는 한계가 있음.",
+      "evoWave": "A",
+      "evoBoss": "S"
+    },
+    "freeze-dry": {
+      "id": "freeze-dry",
+      "wave": "A",
+      "boss": "A",
+      "condition": "",
+      "note": "진화 절대영도도 지연 광역 기절. 일격 필살이 아니며 보스 기절 시간은 줄어듦.",
+      "why": "기절로 공간을 벌 수 있으나 예고 후 표적 위치를 공격. 보스 기절 지속은35%로 줄어듦.",
+      "evoWave": "A",
+      "evoBoss": "A"
+    },
+    "rolling-kick": {
+      "id": "rolling-kick",
+      "wave": "A",
+      "boss": "A",
+      "condition": "",
+      "note": "",
+      "why": "0.13초 간격 원형 타격으로 같은 적을 재타격 가능. 사거리 안에 유지해야 하며 일반 적은 타격으로 밀려날 수 있음.",
+      "evoWave": "A",
+      "evoBoss": "A"
+    },
+    "vacuum-wave": {
+      "id": "vacuum-wave",
+      "wave": "S",
+      "boss": "B",
+      "condition": "일반 적 밀쳐내기 활용",
+      "note": "다수전 S는 주변 일반 적을 밀어내는 역할. 진화 그로우펀치도 특수 넉백파이며 본가식 공격 상승을 가정하지 않음.",
+      "why": "일반 적을 밀어 공간을 확보. 보스는 넉백 면역이라 주된 효용이 약해짐.",
+      "evoWave": "S",
+      "evoBoss": "B"
+    },
+    "dynamic-punch": {
+      "id": "dynamic-punch",
+      "wave": "A",
+      "boss": "A",
+      "condition": "",
+      "note": "",
+      "why": "기절로 공간을 벌 수 있으나 예고 후 표적 위치를 공격. 보스 기절 지속은35%로 줄어듦.",
+      "evoWave": "A",
+      "evoBoss": "A"
+    },
+    "shadow-sneak": {
+      "id": "shadow-sneak",
+      "wave": "A",
+      "boss": "S",
+      "condition": "",
+      "note": "물리 계수가 강한 고스트 포켓몬의 보스 추적 우선 후보. 특수형에서는 섀도볼과 선택이 달라질 수 있음.",
+      "why": "유도로 표적 유지에 유리하나 명중 보장은 아님. 벽과 투사체 수명·이미 맞은 적을 다시 좇는 한계가 있음.",
+      "evoWave": "A",
+      "evoBoss": "S"
+    },
+    "ominous-wind": {
+      "id": "ominous-wind",
+      "wave": "A",
+      "boss": "B",
+      "condition": "",
+      "note": "",
+      "why": "잔존 장판으로 무리를 모음. 모든 흡인 기술 합쳐 플레이어당2개 상한이며 보스 흡인은25% 강도.",
+      "evoWave": "A",
+      "evoBoss": "B"
+    },
+    "dragon-breath": {
+      "id": "dragon-breath",
+      "wave": "S",
+      "boss": "A",
+      "condition": "",
+      "note": "",
+      "why": "근거리·넓은 표적 또는 밀집 전방에 유리. 모든 탄이 한 적에게 맞는다는 가정은 제외.",
+      "evoWave": "S",
+      "evoBoss": "A"
+    },
+    "dragon-claw": {
+      "id": "dragon-claw",
+      "wave": "A",
+      "boss": "S",
+      "condition": "",
+      "note": "드래곤 물리 보스전 우선 후보. 진화 드래곤다이브도 원래 근접 공격이며 돌진 무적을 새로 얻지 않음.",
+      "why": "Lv.5에서는 넓은 각도로 반복 타격. 짧은 사거리라 이동·접촉 위험을 감수해야 함.",
+      "evoWave": "A",
+      "evoBoss": "S"
+    },
+    "outrage": {
+      "id": "outrage",
+      "wave": "A",
+      "boss": "S",
+      "condition": "근거리 반복 접촉 유지",
+      "note": "보스전 S는 물리 회전을 사거리 안에서 유지하는 조건. 진화 드래곤애로도 회전 공격.",
+      "why": "0.13초 간격 원형 타격으로 같은 적을 재타격 가능. 사거리 안에 유지해야 하며 일반 적은 타격으로 밀려날 수 있음.",
+      "evoWave": "A",
+      "evoBoss": "S"
+    },
+    "draining-kiss": {
+      "id": "draining-kiss",
+      "wave": "A",
+      "boss": "S",
+      "condition": "",
+      "note": "특수 유도 공격에 적중당 고정1 회복. 진화 달빛도 같은 유도 공격·고정 회복이며 큰 즉시 회복 기술이 아님.",
+      "why": "유도로 표적 유지에 유리하나 명중 보장은 아님. 벽과 투사체 수명·이미 맞은 적을 다시 좇는 한계가 있음.",
+      "evoWave": "A",
+      "evoBoss": "S"
+    },
+    "play-rough": {
+      "id": "play-rough",
+      "wave": "A",
+      "boss": "S",
+      "condition": "",
+      "note": "페어리 물리 보스전 우선 후보. Lv.5 근거리 넓은 각도 공격이라 접근 위험은 남음.",
+      "why": "Lv.5에서는 넓은 각도로 반복 타격. 짧은 사거리라 이동·접촉 위험을 감수해야 함.",
+      "evoWave": "A",
+      "evoBoss": "S"
+    },
+    "disarming-voice": {
+      "id": "disarming-voice",
+      "wave": "S",
+      "boss": "B",
+      "condition": "일반 적 밀쳐내기 활용",
+      "note": "다수전 S는 일반 적 밀쳐내기로 공간을 버는 역할. 보스에게는 넉백 효용이 없음.",
+      "why": "일반 적을 밀어 공간을 확보. 보스는 넉백 면역이라 주된 효용이 약해짐.",
+      "evoWave": "S",
+      "evoBoss": "B"
+    },
+    "mirror-shot": {
+      "id": "mirror-shot",
+      "wave": "S",
+      "boss": "B",
+      "condition": "",
+      "note": "진화 철제광선은 이 경로에서는 반사 발사체. 러스터캐논계와 같은 이름이어도 판정이 다름.",
+      "why": "주변의 아직 맞지 않은 적에게 반사. 고립된 보스 하나에게 반사 횟수를 모두 쓸 수 없음.",
+      "evoWave": "S",
+      "evoBoss": "B"
+    },
+    "gyro-ball": {
+      "id": "gyro-ball",
+      "wave": "A",
+      "boss": "S",
+      "condition": "근거리 반복 접촉 유지",
+      "note": "보스전 S는 물리 회전의 반복 접촉 조건. 속도 차이·몸무게로 위력이 바뀌는 본가 공식을 적용하지 않음.",
+      "why": "0.13초 간격 원형 타격으로 같은 적을 재타격 가능. 사거리 안에 유지해야 하며 일반 적은 타격으로 밀려날 수 있음.",
+      "evoWave": "A",
+      "evoBoss": "S"
+    },
+    "sucker-punch": {
+      "id": "sucker-punch",
+      "wave": "A",
+      "boss": "S",
+      "condition": "",
+      "note": "악 타입 물리 보스 추적 후보. 이름만으로 선공·상대 공격 반응 조건을 가정하지 않음.",
+      "why": "유도로 표적 유지에 유리하나 명중 보장은 아님. 벽과 투사체 수명·이미 맞은 적을 다시 좇는 한계가 있음.",
+      "evoWave": "A",
+      "evoBoss": "S"
+    },
+    "night-slash": {
+      "id": "night-slash",
+      "wave": "A",
+      "boss": "S",
+      "condition": "근거리 반복 접촉 유지",
+      "note": "보스전 S는 물리 회전의 반복 접촉 조건. DD래리어트도 같은 회전 공격.",
+      "why": "0.13초 간격 원형 타격으로 같은 적을 재타격 가능. 사거리 안에 유지해야 하며 일반 적은 타격으로 밀려날 수 있음.",
+      "evoWave": "A",
+      "evoBoss": "S"
+    }
+  }
+}

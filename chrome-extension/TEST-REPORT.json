@@ -1,9 +1,9 @@
 {
-  "extensionVersion": "0.1.5-test",
-  "patchVersion": "0.4.8",
+  "extensionVersion": "0.1.6-test",
+  "patchVersion": "0.4.9",
   "manifestVersion": 3,
   "minimumChrome": "111",
-  "sourceBundleSHA256": "b7bf9079ccd40ee179dfd5b487500f7b4b72d2a0ac17326334fde205eb7b8811",
+  "sourceBundleSHA256": "f5f04a5acd373fea7cd00f5ce86d2d03df51fc06bdbbb914055eb1a3bdcc9bec",
   "tierModel": "fullmax-hitbox-v2",
   "tierSourceCommit": "018e986f4c12f414dfa84193ee35b2959b1e325c",
   "species": 966,
@@ -17,7 +17,7 @@
   },
   "browserUIVerification": {
     "passed": true,
-    "patchVersion": "0.4.8",
+    "patchVersion": "0.4.9",
     "method": "Compiled DOM payload plus final same-version translator factory/data preview on official dev.html in Aside/Chrome. Not physical Safari or installed extension E2E.",
     "observed": [
       "New Hyper Beam/Extrasensory/Mist Ball/Rapid Spin translated in native move list",
@@ -27,7 +27,7 @@
     "actions": "Opened menus only; no move toggle, binding change, purchase, upgrade, partner change, save or login buttons clicked."
   },
   "windowsRuntime": "Not independently tested on Windows",
-  "chromeWebStore": "Last submitted0.1.3 / patch0.4.6; this manual0.1.5 build was not submitted and the previous review was not cancelled.",
+  "chromeWebStore": "Last submitted0.1.3 / patch0.4.6; this manual0.1.6 build was not submitted and the previous review was not cancelled.",
   "automaticUpdates": "Only store-installed versions after approval; unpacked ZIP does not auto-update",
   "privacy": "No account/save/current-upgrade API queried or modified. Badge lookup reads only visible Pokemon labels and dedicated option/input identity; player-specific values are not used in assessment.",
   "tierGeometryChecks": 29965,
@@ -48,5 +48,16 @@
     "upgradeStages": 412,
     "knownOriginalLocaleIdentityConflicts": 1,
     "scope": "Saved current source catalogue and dictionary, not a promise that every dynamically constructed game string or Safari Canvas is translated."
+  },
+  "moveBadgeValidation": {
+    "checks": 397992,
+    "species": 966,
+    "moves": 103,
+    "contextSourceCommit": "3c9641c9e782cf74afbde490f39cd60adf59e32b",
+    "browserPreview": "Current game DOM only: Mewtwo/Ursaluna context switch, role grades retained and option values/selections preserved.",
+    "physicalSafariVerified": false,
+    "installedChromeEndToEndVerified": false,
+    "combatCanvasBadges": false,
+    "storeSubmissionChanged": false
   }
 }

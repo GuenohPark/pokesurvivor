@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "checks": 397992,
+  "arceusSinnoh5StarEligible": true,
+  "noGachaPullExecuted": true,
+  "species": 966,
+  "moves": 103,
+  "support": 6,
+  "contextSourceCommit": "3c9641c9e782cf74afbde490f39cd60adf59e32b",
+  "roleReviewCommit": "018e986f4c12f414dfa84193ee35b2959b1e325c",
+  "reference": "Original current Stats.fit and Player.atkFor for every static species/move pair, no player/account/save data.",
+  "limits": "UI badges keep provisional neutral role grades; fit/mono bonus separate, no species-specific winrate/DPS claim."
+}

@@ -1,0 +1,15 @@
+{
+  "commit": "3c9641c9e782cf74afbde490f39cd60adf59e32b",
+  "roleReviewCommit": "018e986f4c12f414dfa84193ee35b2959b1e325c",
+  "license": "PolyForm Noncommercial1.0.0; ../../../licenses/GAME-LICENSE-NONCOMMERCIAL.md",
+  "files": {
+    "js/data/moves.js": "150a2f5d2b3ca259317fffb650dde4d5043d6a2eb0c0a84fd4fe5ac98ae4b935",
+    "js/data/pokedex.js": "43ec37ef3ac48452f9a72c51851a188e2375ec93cde9394b335612ad1e107369",
+    "js/data/sprites-meta.js": "da5b1b0f79ab7a1b39a27d344401afb169b651b3f38d531021234643651a9bdc",
+    "js/systems/stats.js": "d9c8248f847a195ecc5da368a7984f0e42f2f0033e93f5b3f6f60c44186bed4b",
+    "js/entities/player.js": "40631f8d7308ab9cd074ccec8078d0572bd9e4563743235d4ca47e22a554f47b",
+    "js/systems/judgment.js": "03bdcd7f89e6d3e9bb14bfa125825ff6fcde04ae7e881552480da9ddb5c447f1",
+    "js/ui/menu.js": "83d7aba9ae266b0f064d8012462140e7343902e7787e960e99911775f7681387",
+    "js/systems/gacha.js": "957b89be9521070c366e1ae21c6bdcf5f96899e5ea0c71cafd712289d11eea15"
+  }
+}
