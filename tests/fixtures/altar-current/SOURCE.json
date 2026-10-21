@@ -1,0 +1,37 @@
+{
+  "repository": "https://github.com/JPTER78/pokesurvivor",
+  "commit": "3c9641c9e782cf74afbde490f39cd60adf59e32b",
+  "license": "PolyForm Noncommercial 1.0.0",
+  "licenseUrl": "https://polyformproject.org/licenses/noncommercial/1.0.0/",
+  "licenseNotice": "Required Notice: Copyright 2026 JPTER78 (https://github.com/JPTER78/pokesurvivor)",
+  "localLicense": "../../../licenses/GAME-LICENSE-NONCOMMERCIAL.md",
+  "provenance": "Copied byte-for-byte from local pokesurvivor/js/world, independently compared equal against raw.githubusercontent.com at pinned commit. Synthetic VM renderer tests only; no game run, account, save, or player data.",
+  "files": {
+    "world.js": {
+      "upstream": "js/world/world.js",
+      "sha256": "6be04594a131583f41d94a20848f8cc33182ec682486098de55fbde368d10d7f",
+      "url": "https://github.com/JPTER78/pokesurvivor/blob/3c9641c9e782cf74afbde490f39cd60adf59e32b/js/world/world.js"
+    },
+    "tiles.js": {
+      "upstream": "js/world/tiles.js",
+      "sha256": "d0117658a3da9384c6866d84cd7e7777562d756c7762e2c09d5c63c917d35cb5",
+      "url": "https://github.com/JPTER78/pokesurvivor/blob/3c9641c9e782cf74afbde490f39cd60adf59e32b/js/world/tiles.js"
+    }
+  },
+  "publishedSourceVerification": {
+    "observedAt": "2026-10-21T10:57:44.651Z",
+    "method": "Source text fetched without opening or running the game; both buffers compared byte-for-byte.",
+    "files": {
+      "world.js": {
+        "url": "https://pokesurvivor.com/js/world/world.js",
+        "byteIdentical": true,
+        "sha256": "6be04594a131583f41d94a20848f8cc33182ec682486098de55fbde368d10d7f"
+      },
+      "tiles.js": {
+        "url": "https://pokesurvivor.com/js/world/tiles.js",
+        "byteIdentical": true,
+        "sha256": "d0117658a3da9384c6866d84cd7e7777562d756c7762e2c09d5c63c917d35cb5"
+      }
+    }
+  }
+}

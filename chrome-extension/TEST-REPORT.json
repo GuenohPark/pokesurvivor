@@ -1,10 +1,10 @@
 {
-  "extensionVersion": "0.1.10-test",
-  "patchVersion": "0.5.2",
+  "extensionVersion": "0.1.11-test",
+  "patchVersion": "0.5.3",
   "manifestVersion": 3,
   "sourceIdentity": "Current generated source byte-compared with dist/pokesurvivor-ko-browser.user.js and dist/pokesurvivor-build.json, no hardcoded stale digest.",
   "staticChromeBoundaryChecks": 58,
-  "sharedRuntime": "src/bootstrap.js + scripts/bundle-common.cjs + src/runtime-core.js + src/pickup-fade-ui.js",
+  "sharedRuntime": "src/bootstrap.js + scripts/bundle-common.cjs + src/runtime-core.js + src/pickup-fade-ui.js + src/altar-label-ui.js",
   "dataRegression": "Existing translation, tier math/geometry, move fit, hidden/name/input and font suites retained.",
   "physicalDevices": {
     "windows": false,
@@ -21,5 +21,13 @@
     "dataBoundary": "Transient render x/y, kind, pulled; local avatar x/y only. No account, progression, save or collection mutation.",
     "browserChecks": 29,
     "sourceSha256": "f2ad0f9467570f398ec32f271929c99deebe8e3b4a8d4975d8ceb52098953ecb"
+  },
+  "altarLabels": {
+    "nodeChecks": 29,
+    "scope": "Native world renderer with synthetic props, no gameplay/account/save actions.",
+    "physicalDevices": false,
+    "browserChecks": 286,
+    "syntheticCases": 40,
+    "sourceSha256": "db529a672accb938bc2b8a6b6677f17f95290acccb6c4fec7a702ebd299b5f07"
   }
 }

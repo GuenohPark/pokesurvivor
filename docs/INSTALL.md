@@ -6,7 +6,7 @@
 - **PC·Android Firefox: Tampermonkey + 통합 스크립트**.
 - 두 경로는 공통 번역팩을 재사용하지만 설치 파일은 다릅니다. 아이폰 Userscripts는 DOM 전용이며 전투 Canvas HUD는 번역되지 않습니다.
 
-## PC·Android Tampermonkey판 (0.5.2)
+## PC·Android Tampermonkey판 (0.5.3)
 
 [공개 설치 페이지](https://guenohpark.github.io/pokesurvivor/) · [통합 설치 파일](https://raw.githubusercontent.com/GuenohPark/pokesurvivor/main/dist/pokesurvivor.user.js) · [Tampermonkey](https://www.tampermonkey.net/) · [상세 호환성](COMPATIBILITY.md)
 
@@ -34,9 +34,9 @@ PC Chrome/Edge/Firefox와 Android Firefox에서 Tampermonkey를 설치한 뒤 �
 
 ## 현재 Safari 패치
 
-- **공통 DOM·메뉴 런타임 0.5.2 / 아이폰 Userscripts 자동 로더 0.1.2**입니다. 로더 번호와 실제 번역팩 번호는 다릅니다.
+- **공통 DOM·메뉴 런타임 0.5.3 / 아이폰 Userscripts 자동 로더 0.1.2**입니다. 로더 번호와 실제 번역팩 번호는 다릅니다.
 - 메인 파트너·도감 등 글자로 표시되는 이름 옆에 등급 또는 `미평가`를 표시합니다. 미보유 `???`는 그대로 숨깁니다.
-- 기존 자동 로더 0.1.1은 교체하고, 게임을 마친 뒤 Safari에서 새로고침해 `한국어 v0.5.2`을 확인하세요. `준비됨`이면 한 번 더 새로고침할 때 적용됩니다.
+- 기존 자동 로더 0.1.1은 교체하고, 게임을 마친 뒤 Safari에서 새로고침해 `한국어 v0.5.3`을 확인하세요. `준비됨`이면 한 번 더 새로고침할 때 적용됩니다.
 - 같은 Safari 탭을 오래 열어 두거나 뒤로가기로 복원한 것만으로는 새 버전 확인이 다시 실행되지 않을 수 있습니다.
 - 게임 중 레벨업·진화·유대 선택창과 일시정지의 DOM 기술 목록에도 추천 배지가 표시됩니다. 포켓볼 묶음은 다수전, 왕관은 보스전입니다. 전투 중 Canvas 이름/스킬 칸은 여전히 DOM 배지 지원 범위가 아닙니다. [범위와 한계](TIERS.md).
 

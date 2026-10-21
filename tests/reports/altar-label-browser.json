@@ -1,0 +1,4338 @@
+{
+  "createdAt": "2026-10-21T11:05:48.445Z",
+  "scope": "offline original native renderer, synthetic altar props only; no world generation/gameplay/account/save",
+  "sources": {
+    "world": {
+      "path": "tests/fixtures/altar-current/world.js",
+      "bytes": 26283,
+      "sha256": "6be04594a131583f41d94a20848f8cc33182ec682486098de55fbde368d10d7f"
+    },
+    "tiles": {
+      "path": "tests/fixtures/altar-current/tiles.js",
+      "bytes": 34069,
+      "sha256": "d0117658a3da9384c6866d84cd7e7777562d756c7762e2c09d5c63c917d35cb5"
+    },
+    "module": {
+      "path": "src/altar-label-ui.js",
+      "bytes": 5327,
+      "sha256": "db529a672accb938bc2b8a6b6677f17f95290acccb6c4fec7a702ebd299b5f07"
+    },
+    "font": {
+      "path": "assets/font-install.js",
+      "bytes": 901428,
+      "sha256": "1685d1aa36a9312d2b8decf108e42389abad142aee960ec3d8a12bdfe3332fa2"
+    }
+  },
+  "font": {
+    "loaded": 1,
+    "status": "loaded",
+    "check": true,
+    "metrics": {
+      "분노": {
+        "width": 18,
+        "ascent": 8.25,
+        "descent": 0
+      },
+      "질주": {
+        "width": 18,
+        "ascent": 8.25,
+        "descent": 0
+      },
+      "자석": {
+        "width": 18,
+        "ascent": 8.25,
+        "descent": 0
+      },
+      "신속함": {
+        "width": 27,
+        "ascent": 8.25,
+        "descent": 0
+      },
+      "사용함": {
+        "width": 27,
+        "ascent": 8.25,
+        "descent": 0
+      }
+    }
+  },
+  "nativeScale": {
+    "PX": 2,
+    "canvasCSSScale": 1,
+    "art": [
+      18,
+      27
+    ],
+    "screen": [
+      36,
+      54
+    ],
+    "fontPx": 9,
+    "maxWidth": 30,
+    "labelOffsetY": -3,
+    "zoom": 4,
+    "zoomMethod": "nearest-neighbor crop from actual native board"
+  },
+  "checks": [
+    {
+      "name": "actual embedded Korean bold face loaded",
+      "pass": true,
+      "detail": [
+        {
+          "family": "Pixelify",
+          "status": "loaded",
+          "weight": "551 900",
+          "unicodeRange": "U+1100-11FF, U+3130-318F, U+A960-A97F, U+AC00-D7AF, U+D7B0-D7FF"
+        }
+      ]
+    },
+    {
+      "name": "font readiness for all labels",
+      "pass": true
+    },
+    {
+      "name": "font uses embedded data and no external URL",
+      "pass": true
+    },
+    {
+      "name": "adapter registered without live game",
+      "pass": true
+    },
+    {
+      "name": "biome0/0/false native image geometry unchanged",
+      "pass": true,
+      "detail": {
+        "baseline": [
+          {
+            "source": [
+              18,
+              27
+            ],
+            "args": [
+              42,
+              38,
+              36,
+              54
+            ]
+          }
+        ],
+        "labeled": [
+          {
+            "source": [
+              18,
+              27
+            ],
+            "args": [
+              42,
+              38,
+              36,
+              54
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "biome0/0/false prop JSON unchanged",
+      "pass": true
+    },
+    {
+      "name": "biome0/0/false native resulting Canvas state unchanged",
+      "pass": true
+    },
+    {
+      "name": "biome0/0/false return unchanged",
+      "pass": true
+    },
+    {
+      "name": "biome0/0/false label pixels present",
+      "pass": true
+    },
+    {
+      "name": "biome0/0/false changes confined to lower stone step",
+      "pass": true,
+      "detail": {
+        "count": 171,
+        "outsideLowerStone": 0,
+        "bounds": {
+          "minX": 49,
+          "minY": 80,
+          "maxX": 69,
+          "maxY": 89
+        },
+        "allowed": {
+          "left": 44,
+          "rightExclusive": 76,
+          "top": 80,
+          "bottomExclusive": 90
+        }
+      }
+    },
+    {
+      "name": "biome0/0/false isolated label restores complete tested context",
+      "pass": true
+    },
+    {
+      "name": "biome0/1/false native image geometry unchanged",
+      "pass": true,
+      "detail": {
+        "baseline": [
+          {
+            "source": [
+              18,
+              27
+            ],
+            "args": [
+              42,
+              38,
+              36,
+              54
+            ]
+          }
+        ],
+        "labeled": [
+          {
+            "source": [
+              18,
+              27
+            ],
+            "args": [
+              42,
+              38,
+              36,
+              54
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "biome0/1/false prop JSON unchanged",
+      "pass": true
+    },
+    {
+      "name": "biome0/1/false native resulting Canvas state unchanged",
+      "pass": true
+    },
+    {
+      "name": "biome0/1/false return unchanged",
+      "pass": true
+    },
+    {
+      "name": "biome0/1/false label pixels present",
+      "pass": true
+    },
+    {
+      "name": "biome0/1/false changes confined to lower stone step",
+      "pass": true,
+      "detail": {
+        "count": 190,
+        "outsideLowerStone": 0,
+        "bounds": {
+          "minX": 49,
+          "minY": 80,
+          "maxX": 69,
+          "maxY": 89
+        },
+        "allowed": {
+          "left": 44,
+          "rightExclusive": 76,
+          "top": 80,
+          "bottomExclusive": 90
+        }
+      }
+    },
+    {
+      "name": "biome0/1/false isolated label restores complete tested context",
+      "pass": true
+    },
+    {
+      "name": "biome0/2/false native image geometry unchanged",
+      "pass": true,
+      "detail": {
+        "baseline": [
+          {
+            "source": [
+              18,
+              27
+            ],
+            "args": [
+              42,
+              38,
+              36,
+              54
+            ]
+          }
+        ],
+        "labeled": [
+          {
+            "source": [
+              18,
+              27
+            ],
+            "args": [
+              42,
+              38,
+              36,
+              54
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "biome0/2/false prop JSON unchanged",
+      "pass": true
+    },
+    {
+      "name": "biome0/2/false native resulting Canvas state unchanged",
+      "pass": true
+    },
+    {
+      "name": "biome0/2/false return unchanged",
+      "pass": true
+    },
+    {
+      "name": "biome0/2/false label pixels present",
+      "pass": true
+    },
+    {
+      "name": "biome0/2/false changes confined to lower stone step",
+      "pass": true,
+      "detail": {
+        "count": 181,
+        "outsideLowerStone": 0,
+        "bounds": {
+          "minX": 49,
+          "minY": 80,
+          "maxX": 68,
+          "maxY": 89
+        },
+        "allowed": {
+          "left": 44,
+          "rightExclusive": 76,
+          "top": 80,
+          "bottomExclusive": 90
+        }
+      }
+    },
+    {
+      "name": "biome0/2/false isolated label restores complete tested context",
+      "pass": true
+    },
+    {
+      "name": "biome0/3/false native image geometry unchanged",
+      "pass": true,
+      "detail": {
+        "baseline": [
+          {
+            "source": [
+              18,
+              27
+            ],
+            "args": [
+              42,
+              38,
+              36,
+              54
+            ]
+          }
+        ],
+        "labeled": [
+          {
+            "source": [
+              18,
+              27
+            ],
+            "args": [
+              42,
+              38,
+              36,
+              54
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "biome0/3/false prop JSON unchanged",
+      "pass": true
+    },
+    {
+      "name": "biome0/3/false native resulting Canvas state unchanged",
+      "pass": true
+    },
+    {
+      "name": "biome0/3/false return unchanged",
+      "pass": true
+    },
+    {
+      "name": "biome0/3/false label pixels present",
+      "pass": true
+    },
+    {
+      "name": "biome0/3/false changes confined to lower stone step",
+      "pass": true,
+      "detail": {
+        "count": 268,
+        "outsideLowerStone": 0,
+        "bounds": {
+          "minX": 45,
+          "minY": 80,
+          "maxX": 73,
+          "maxY": 89
+        },
+        "allowed": {
+          "left": 44,
+          "rightExclusive": 76,
+          "top": 80,
+          "bottomExclusive": 90
+        }
+      }
+    },
+    {
+      "name": "biome0/3/false isolated label restores complete tested context",
+      "pass": true
+    },
+    {
+      "name": "biome0/0/true native image geometry unchanged",
+      "pass": true,
+      "detail": {
+        "baseline": [
+          {
+            "source": [
+              18,
+              27
+            ],
+            "args": [
+              42,
+              38,
+              36,
+              54
+            ]
+          }
+        ],
+        "labeled": [
+          {
+            "source": [
+              18,
+              27
+            ],
+            "args": [
+              42,
+              38,
+              36,
+              54
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "biome0/0/true prop JSON unchanged",
+      "pass": true
+    },
+    {
+      "name": "biome0/0/true native resulting Canvas state unchanged",
+      "pass": true
+    },
+    {
+      "name": "biome0/0/true return unchanged",
+      "pass": true
+    },
+    {
+      "name": "biome0/0/true label pixels present",
+      "pass": true
+    },
+    {
+      "name": "biome0/0/true changes confined to lower stone step",
+      "pass": true,
+      "detail": {
+        "count": 276,
+        "outsideLowerStone": 0,
+        "bounds": {
+          "minX": 45,
+          "minY": 80,
+          "maxX": 73,
+          "maxY": 89
+        },
+        "allowed": {
+          "left": 44,
+          "rightExclusive": 76,
+          "top": 80,
+          "bottomExclusive": 90
+        }
+      }
+    },
+    {
+      "name": "biome0/0/true isolated label restores complete tested context",
+      "pass": true
+    },
+    {
+      "name": "biome0/1/true native image geometry unchanged",
+      "pass": true,
+      "detail": {
+        "baseline": [
+          {
+            "source": [
+              18,
+              27
+            ],
+            "args": [
+              42,
+              38,
+              36,
+              54
+            ]
+          }
+        ],
+        "labeled": [
+          {
+            "source": [
+              18,
+              27
+            ],
+            "args": [
+              42,
+              38,
+              36,
+              54
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "biome0/1/true prop JSON unchanged",
+      "pass": true
+    },
+    {
+      "name": "biome0/1/true native resulting Canvas state unchanged",
+      "pass": true
+    },
+    {
+      "name": "biome0/1/true return unchanged",
+      "pass": true
+    },
+    {
+      "name": "biome0/1/true label pixels present",
+      "pass": true
+    },
+    {
+      "name": "biome0/1/true changes confined to lower stone step",
+      "pass": true,
+      "detail": {
+        "count": 276,
+        "outsideLowerStone": 0,
+        "bounds": {
+          "minX": 45,
+          "minY": 80,
+          "maxX": 73,
+          "maxY": 89
+        },
+        "allowed": {
+          "left": 44,
+          "rightExclusive": 76,
+          "top": 80,
+          "bottomExclusive": 90
+        }
+      }
+    },
+    {
+      "name": "biome0/1/true isolated label restores complete tested context",
+      "pass": true
+    },
+    {
+      "name": "biome0/2/true native image geometry unchanged",
+      "pass": true,
+      "detail": {
+        "baseline": [
+          {
+            "source": [
+              18,
+              27
+            ],
+            "args": [
+              42,
+              38,
+              36,
+              54
+            ]
+          }
+        ],
+        "labeled": [
+          {
+            "source": [
+              18,
+              27
+            ],
+            "args": [
+              42,
+              38,
+              36,
+              54
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "biome0/2/true prop JSON unchanged",
+      "pass": true
+    },
+    {
+      "name": "biome0/2/true native resulting Canvas state unchanged",
+      "pass": true
+    },
+    {
+      "name": "biome0/2/true return unchanged",
+      "pass": true
+    },
+    {
+      "name": "biome0/2/true label pixels present",
+      "pass": true
+    },
+    {
+      "name": "biome0/2/true changes confined to lower stone step",
+      "pass": true,
+      "detail": {
+        "count": 276,
+        "outsideLowerStone": 0,
+        "bounds": {
+          "minX": 45,
+          "minY": 80,
+          "maxX": 73,
+          "maxY": 89
+        },
+        "allowed": {
+          "left": 44,
+          "rightExclusive": 76,
+          "top": 80,
+          "bottomExclusive": 90
+        }
+      }
+    },
+    {
+      "name": "biome0/2/true isolated label restores complete tested context",
+      "pass": true
+    },
+    {
+      "name": "biome0/3/true native image geometry unchanged",
+      "pass": true,
+      "detail": {
+        "baseline": [
+          {
+            "source": [
+              18,
+              27
+            ],
+            "args": [
+              42,
+              38,
+              36,
+              54
+            ]
+          }
+        ],
+        "labeled": [
+          {
+            "source": [
+              18,
+              27
+            ],
+            "args": [
+              42,
+              38,
+              36,
+              54
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "biome0/3/true prop JSON unchanged",
+      "pass": true
+    },
+    {
+      "name": "biome0/3/true native resulting Canvas state unchanged",
+      "pass": true
+    },
+    {
+      "name": "biome0/3/true return unchanged",
+      "pass": true
+    },
+    {
+      "name": "biome0/3/true label pixels present",
+      "pass": true
+    },
+    {
+      "name": "biome0/3/true changes confined to lower stone step",
+      "pass": true,
+      "detail": {
+        "count": 276,
+        "outsideLowerStone": 0,
+        "bounds": {
+          "minX": 45,
+          "minY": 80,
+          "maxX": 73,
+          "maxY": 89
+        },
+        "allowed": {
+          "left": 44,
+          "rightExclusive": 76,
+          "top": 80,
+          "bottomExclusive": 90
+        }
+      }
+    },
+    {
+      "name": "biome0/3/true isolated label restores complete tested context",
+      "pass": true
+    },
+    {
+      "name": "biome1/0/false native image geometry unchanged",
+      "pass": true,
+      "detail": {
+        "baseline": [
+          {
+            "source": [
+              18,
+              27
+            ],
+            "args": [
+              42,
+              38,
+              36,
+              54
+            ]
+          }
+        ],
+        "labeled": [
+          {
+            "source": [
+              18,
+              27
+            ],
+            "args": [
+              42,
+              38,
+              36,
+              54
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "biome1/0/false prop JSON unchanged",
+      "pass": true
+    },
+    {
+      "name": "biome1/0/false native resulting Canvas state unchanged",
+      "pass": true
+    },
+    {
+      "name": "biome1/0/false return unchanged",
+      "pass": true
+    },
+    {
+      "name": "biome1/0/false label pixels present",
+      "pass": true
+    },
+    {
+      "name": "biome1/0/false changes confined to lower stone step",
+      "pass": true,
+      "detail": {
+        "count": 171,
+        "outsideLowerStone": 0,
+        "bounds": {
+          "minX": 49,
+          "minY": 80,
+          "maxX": 69,
+          "maxY": 89
+        },
+        "allowed": {
+          "left": 44,
+          "rightExclusive": 76,
+          "top": 80,
+          "bottomExclusive": 90
+        }
+      }
+    },
+    {
+      "name": "biome1/0/false isolated label restores complete tested context",
+      "pass": true
+    },
+    {
+      "name": "biome1/1/false native image geometry unchanged",
+      "pass": true,
+      "detail": {
+        "baseline": [
+          {
+            "source": [
+              18,
+              27
+            ],
+            "args": [
+              42,
+              38,
+              36,
+              54
+            ]
+          }
+        ],
+        "labeled": [
+          {
+            "source": [
+              18,
+              27
+            ],
+            "args": [
+              42,
+              38,
+              36,
+              54
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "biome1/1/false prop JSON unchanged",
+      "pass": true
+    },
+    {
+      "name": "biome1/1/false native resulting Canvas state unchanged",
+      "pass": true
+    },
+    {
+      "name": "biome1/1/false return unchanged",
+      "pass": true
+    },
+    {
+      "name": "biome1/1/false label pixels present",
+      "pass": true
+    },
+    {
+      "name": "biome1/1/false changes confined to lower stone step",
+      "pass": true,
+      "detail": {
+        "count": 190,
+        "outsideLowerStone": 0,
+        "bounds": {
+          "minX": 49,
+          "minY": 80,
+          "maxX": 69,
+          "maxY": 89
+        },
+        "allowed": {
+          "left": 44,
+          "rightExclusive": 76,
+          "top": 80,
+          "bottomExclusive": 90
+        }
+      }
+    },
+    {
+      "name": "biome1/1/false isolated label restores complete tested context",
+      "pass": true
+    },
+    {
+      "name": "biome1/2/false native image geometry unchanged",
+      "pass": true,
+      "detail": {
+        "baseline": [
+          {
+            "source": [
+              18,
+              27
+            ],
+            "args": [
+              42,
+              38,
+              36,
+              54
+            ]
+          }
+        ],
+        "labeled": [
+          {
+            "source": [
+              18,
+              27
+            ],
+            "args": [
+              42,
+              38,
+              36,
+              54
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "biome1/2/false prop JSON unchanged",
+      "pass": true
+    },
+    {
+      "name": "biome1/2/false native resulting Canvas state unchanged",
+      "pass": true
+    },
+    {
+      "name": "biome1/2/false return unchanged",
+      "pass": true
+    },
+    {
+      "name": "biome1/2/false label pixels present",
+      "pass": true
+    },
+    {
+      "name": "biome1/2/false changes confined to lower stone step",
+      "pass": true,
+      "detail": {
+        "count": 181,
+        "outsideLowerStone": 0,
+        "bounds": {
+          "minX": 49,
+          "minY": 80,
+          "maxX": 68,
+          "maxY": 89
+        },
+        "allowed": {
+          "left": 44,
+          "rightExclusive": 76,
+          "top": 80,
+          "bottomExclusive": 90
+        }
+      }
+    },
+    {
+      "name": "biome1/2/false isolated label restores complete tested context",
+      "pass": true
+    },
+    {
+      "name": "biome1/3/false native image geometry unchanged",
+      "pass": true,
+      "detail": {
+        "baseline": [
+          {
+            "source": [
+              18,
+              27
+            ],
+            "args": [
+              42,
+              38,
+              36,
+              54
+            ]
+          }
+        ],
+        "labeled": [
+          {
+            "source": [
+              18,
+              27
+            ],
+            "args": [
+              42,
+              38,
+              36,
+              54
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "biome1/3/false prop JSON unchanged",
+      "pass": true
+    },
+    {
+      "name": "biome1/3/false native resulting Canvas state unchanged",
+      "pass": true
+    },
+    {
+      "name": "biome1/3/false return unchanged",
+      "pass": true
+    },
+    {
+      "name": "biome1/3/false label pixels present",
+      "pass": true
+    },
+    {
+      "name": "biome1/3/false changes confined to lower stone step",
+      "pass": true,
+      "detail": {
+        "count": 268,
+        "outsideLowerStone": 0,
+        "bounds": {
+          "minX": 45,
+          "minY": 80,
+          "maxX": 73,
+          "maxY": 89
+        },
+        "allowed": {
+          "left": 44,
+          "rightExclusive": 76,
+          "top": 80,
+          "bottomExclusive": 90
+        }
+      }
+    },
+    {
+      "name": "biome1/3/false isolated label restores complete tested context",
+      "pass": true
+    },
+    {
+      "name": "biome1/0/true native image geometry unchanged",
+      "pass": true,
+      "detail": {
+        "baseline": [
+          {
+            "source": [
+              18,
+              27
+            ],
+            "args": [
+              42,
+              38,
+              36,
+              54
+            ]
+          }
+        ],
+        "labeled": [
+          {
+            "source": [
+              18,
+              27
+            ],
+            "args": [
+              42,
+              38,
+              36,
+              54
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "biome1/0/true prop JSON unchanged",
+      "pass": true
+    },
+    {
+      "name": "biome1/0/true native resulting Canvas state unchanged",
+      "pass": true
+    },
+    {
+      "name": "biome1/0/true return unchanged",
+      "pass": true
+    },
+    {
+      "name": "biome1/0/true label pixels present",
+      "pass": true
+    },
+    {
+      "name": "biome1/0/true changes confined to lower stone step",
+      "pass": true,
+      "detail": {
+        "count": 276,
+        "outsideLowerStone": 0,
+        "bounds": {
+          "minX": 45,
+          "minY": 80,
+          "maxX": 73,
+          "maxY": 89
+        },
+        "allowed": {
+          "left": 44,
+          "rightExclusive": 76,
+          "top": 80,
+          "bottomExclusive": 90
+        }
+      }
+    },
+    {
+      "name": "biome1/0/true isolated label restores complete tested context",
+      "pass": true
+    },
+    {
+      "name": "biome1/1/true native image geometry unchanged",
+      "pass": true,
+      "detail": {
+        "baseline": [
+          {
+            "source": [
+              18,
+              27
+            ],
+            "args": [
+              42,
+              38,
+              36,
+              54
+            ]
+          }
+        ],
+        "labeled": [
+          {
+            "source": [
+              18,
+              27
+            ],
+            "args": [
+              42,
+              38,
+              36,
+              54
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "biome1/1/true prop JSON unchanged",
+      "pass": true
+    },
+    {
+      "name": "biome1/1/true native resulting Canvas state unchanged",
+      "pass": true
+    },
+    {
+      "name": "biome1/1/true return unchanged",
+      "pass": true
+    },
+    {
+      "name": "biome1/1/true label pixels present",
+      "pass": true
+    },
+    {
+      "name": "biome1/1/true changes confined to lower stone step",
+      "pass": true,
+      "detail": {
+        "count": 276,
+        "outsideLowerStone": 0,
+        "bounds": {
+          "minX": 45,
+          "minY": 80,
+          "maxX": 73,
+          "maxY": 89
+        },
+        "allowed": {
+          "left": 44,
+          "rightExclusive": 76,
+          "top": 80,
+          "bottomExclusive": 90
+        }
+      }
+    },
+    {
+      "name": "biome1/1/true isolated label restores complete tested context",
+      "pass": true
+    },
+    {
+      "name": "biome1/2/true native image geometry unchanged",
+      "pass": true,
+      "detail": {
+        "baseline": [
+          {
+            "source": [
+              18,
+              27
+            ],
+            "args": [
+              42,
+              38,
+              36,
+              54
+            ]
+          }
+        ],
+        "labeled": [
+          {
+            "source": [
+              18,
+              27
+            ],
+            "args": [
+              42,
+              38,
+              36,
+              54
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "biome1/2/true prop JSON unchanged",
+      "pass": true
+    },
+    {
+      "name": "biome1/2/true native resulting Canvas state unchanged",
+      "pass": true
+    },
+    {
+      "name": "biome1/2/true return unchanged",
+      "pass": true
+    },
+    {
+      "name": "biome1/2/true label pixels present",
+      "pass": true
+    },
+    {
+      "name": "biome1/2/true changes confined to lower stone step",
+      "pass": true,
+      "detail": {
+        "count": 276,
+        "outsideLowerStone": 0,
+        "bounds": {
+          "minX": 45,
+          "minY": 80,
+          "maxX": 73,
+          "maxY": 89
+        },
+        "allowed": {
+          "left": 44,
+          "rightExclusive": 76,
+          "top": 80,
+          "bottomExclusive": 90
+        }
+      }
+    },
+    {
+      "name": "biome1/2/true isolated label restores complete tested context",
+      "pass": true
+    },
+    {
+      "name": "biome1/3/true native image geometry unchanged",
+      "pass": true,
+      "detail": {
+        "baseline": [
+          {
+            "source": [
+              18,
+              27
+            ],
+            "args": [
+              42,
+              38,
+              36,
+              54
+            ]
+          }
+        ],
+        "labeled": [
+          {
+            "source": [
+              18,
+              27
+            ],
+            "args": [
+              42,
+              38,
+              36,
+              54
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "biome1/3/true prop JSON unchanged",
+      "pass": true
+    },
+    {
+      "name": "biome1/3/true native resulting Canvas state unchanged",
+      "pass": true
+    },
+    {
+      "name": "biome1/3/true return unchanged",
+      "pass": true
+    },
+    {
+      "name": "biome1/3/true label pixels present",
+      "pass": true
+    },
+    {
+      "name": "biome1/3/true changes confined to lower stone step",
+      "pass": true,
+      "detail": {
+        "count": 276,
+        "outsideLowerStone": 0,
+        "bounds": {
+          "minX": 45,
+          "minY": 80,
+          "maxX": 73,
+          "maxY": 89
+        },
+        "allowed": {
+          "left": 44,
+          "rightExclusive": 76,
+          "top": 80,
+          "bottomExclusive": 90
+        }
+      }
+    },
+    {
+      "name": "biome1/3/true isolated label restores complete tested context",
+      "pass": true
+    },
+    {
+      "name": "biome2/0/false native image geometry unchanged",
+      "pass": true,
+      "detail": {
+        "baseline": [
+          {
+            "source": [
+              18,
+              27
+            ],
+            "args": [
+              42,
+              38,
+              36,
+              54
+            ]
+          }
+        ],
+        "labeled": [
+          {
+            "source": [
+              18,
+              27
+            ],
+            "args": [
+              42,
+              38,
+              36,
+              54
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "biome2/0/false prop JSON unchanged",
+      "pass": true
+    },
+    {
+      "name": "biome2/0/false native resulting Canvas state unchanged",
+      "pass": true
+    },
+    {
+      "name": "biome2/0/false return unchanged",
+      "pass": true
+    },
+    {
+      "name": "biome2/0/false label pixels present",
+      "pass": true
+    },
+    {
+      "name": "biome2/0/false changes confined to lower stone step",
+      "pass": true,
+      "detail": {
+        "count": 170,
+        "outsideLowerStone": 0,
+        "bounds": {
+          "minX": 49,
+          "minY": 80,
+          "maxX": 69,
+          "maxY": 89
+        },
+        "allowed": {
+          "left": 44,
+          "rightExclusive": 76,
+          "top": 80,
+          "bottomExclusive": 90
+        }
+      }
+    },
+    {
+      "name": "biome2/0/false isolated label restores complete tested context",
+      "pass": true
+    },
+    {
+      "name": "biome2/1/false native image geometry unchanged",
+      "pass": true,
+      "detail": {
+        "baseline": [
+          {
+            "source": [
+              18,
+              27
+            ],
+            "args": [
+              42,
+              38,
+              36,
+              54
+            ]
+          }
+        ],
+        "labeled": [
+          {
+            "source": [
+              18,
+              27
+            ],
+            "args": [
+              42,
+              38,
+              36,
+              54
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "biome2/1/false prop JSON unchanged",
+      "pass": true
+    },
+    {
+      "name": "biome2/1/false native resulting Canvas state unchanged",
+      "pass": true
+    },
+    {
+      "name": "biome2/1/false return unchanged",
+      "pass": true
+    },
+    {
+      "name": "biome2/1/false label pixels present",
+      "pass": true
+    },
+    {
+      "name": "biome2/1/false changes confined to lower stone step",
+      "pass": true,
+      "detail": {
+        "count": 189,
+        "outsideLowerStone": 0,
+        "bounds": {
+          "minX": 49,
+          "minY": 80,
+          "maxX": 69,
+          "maxY": 89
+        },
+        "allowed": {
+          "left": 44,
+          "rightExclusive": 76,
+          "top": 80,
+          "bottomExclusive": 90
+        }
+      }
+    },
+    {
+      "name": "biome2/1/false isolated label restores complete tested context",
+      "pass": true
+    },
+    {
+      "name": "biome2/2/false native image geometry unchanged",
+      "pass": true,
+      "detail": {
+        "baseline": [
+          {
+            "source": [
+              18,
+              27
+            ],
+            "args": [
+              42,
+              38,
+              36,
+              54
+            ]
+          }
+        ],
+        "labeled": [
+          {
+            "source": [
+              18,
+              27
+            ],
+            "args": [
+              42,
+              38,
+              36,
+              54
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "biome2/2/false prop JSON unchanged",
+      "pass": true
+    },
+    {
+      "name": "biome2/2/false native resulting Canvas state unchanged",
+      "pass": true
+    },
+    {
+      "name": "biome2/2/false return unchanged",
+      "pass": true
+    },
+    {
+      "name": "biome2/2/false label pixels present",
+      "pass": true
+    },
+    {
+      "name": "biome2/2/false changes confined to lower stone step",
+      "pass": true,
+      "detail": {
+        "count": 180,
+        "outsideLowerStone": 0,
+        "bounds": {
+          "minX": 49,
+          "minY": 80,
+          "maxX": 68,
+          "maxY": 89
+        },
+        "allowed": {
+          "left": 44,
+          "rightExclusive": 76,
+          "top": 80,
+          "bottomExclusive": 90
+        }
+      }
+    },
+    {
+      "name": "biome2/2/false isolated label restores complete tested context",
+      "pass": true
+    },
+    {
+      "name": "biome2/3/false native image geometry unchanged",
+      "pass": true,
+      "detail": {
+        "baseline": [
+          {
+            "source": [
+              18,
+              27
+            ],
+            "args": [
+              42,
+              38,
+              36,
+              54
+            ]
+          }
+        ],
+        "labeled": [
+          {
+            "source": [
+              18,
+              27
+            ],
+            "args": [
+              42,
+              38,
+              36,
+              54
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "biome2/3/false prop JSON unchanged",
+      "pass": true
+    },
+    {
+      "name": "biome2/3/false native resulting Canvas state unchanged",
+      "pass": true
+    },
+    {
+      "name": "biome2/3/false return unchanged",
+      "pass": true
+    },
+    {
+      "name": "biome2/3/false label pixels present",
+      "pass": true
+    },
+    {
+      "name": "biome2/3/false changes confined to lower stone step",
+      "pass": true,
+      "detail": {
+        "count": 268,
+        "outsideLowerStone": 0,
+        "bounds": {
+          "minX": 45,
+          "minY": 80,
+          "maxX": 73,
+          "maxY": 89
+        },
+        "allowed": {
+          "left": 44,
+          "rightExclusive": 76,
+          "top": 80,
+          "bottomExclusive": 90
+        }
+      }
+    },
+    {
+      "name": "biome2/3/false isolated label restores complete tested context",
+      "pass": true
+    },
+    {
+      "name": "biome2/0/true native image geometry unchanged",
+      "pass": true,
+      "detail": {
+        "baseline": [
+          {
+            "source": [
+              18,
+              27
+            ],
+            "args": [
+              42,
+              38,
+              36,
+              54
+            ]
+          }
+        ],
+        "labeled": [
+          {
+            "source": [
+              18,
+              27
+            ],
+            "args": [
+              42,
+              38,
+              36,
+              54
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "biome2/0/true prop JSON unchanged",
+      "pass": true
+    },
+    {
+      "name": "biome2/0/true native resulting Canvas state unchanged",
+      "pass": true
+    },
+    {
+      "name": "biome2/0/true return unchanged",
+      "pass": true
+    },
+    {
+      "name": "biome2/0/true label pixels present",
+      "pass": true
+    },
+    {
+      "name": "biome2/0/true changes confined to lower stone step",
+      "pass": true,
+      "detail": {
+        "count": 276,
+        "outsideLowerStone": 0,
+        "bounds": {
+          "minX": 45,
+          "minY": 80,
+          "maxX": 73,
+          "maxY": 89
+        },
+        "allowed": {
+          "left": 44,
+          "rightExclusive": 76,
+          "top": 80,
+          "bottomExclusive": 90
+        }
+      }
+    },
+    {
+      "name": "biome2/0/true isolated label restores complete tested context",
+      "pass": true
+    },
+    {
+      "name": "biome2/1/true native image geometry unchanged",
+      "pass": true,
+      "detail": {
+        "baseline": [
+          {
+            "source": [
+              18,
+              27
+            ],
+            "args": [
+              42,
+              38,
+              36,
+              54
+            ]
+          }
+        ],
+        "labeled": [
+          {
+            "source": [
+              18,
+              27
+            ],
+            "args": [
+              42,
+              38,
+              36,
+              54
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "biome2/1/true prop JSON unchanged",
+      "pass": true
+    },
+    {
+      "name": "biome2/1/true native resulting Canvas state unchanged",
+      "pass": true
+    },
+    {
+      "name": "biome2/1/true return unchanged",
+      "pass": true
+    },
+    {
+      "name": "biome2/1/true label pixels present",
+      "pass": true
+    },
+    {
+      "name": "biome2/1/true changes confined to lower stone step",
+      "pass": true,
+      "detail": {
+        "count": 276,
+        "outsideLowerStone": 0,
+        "bounds": {
+          "minX": 45,
+          "minY": 80,
+          "maxX": 73,
+          "maxY": 89
+        },
+        "allowed": {
+          "left": 44,
+          "rightExclusive": 76,
+          "top": 80,
+          "bottomExclusive": 90
+        }
+      }
+    },
+    {
+      "name": "biome2/1/true isolated label restores complete tested context",
+      "pass": true
+    },
+    {
+      "name": "biome2/2/true native image geometry unchanged",
+      "pass": true,
+      "detail": {
+        "baseline": [
+          {
+            "source": [
+              18,
+              27
+            ],
+            "args": [
+              42,
+              38,
+              36,
+              54
+            ]
+          }
+        ],
+        "labeled": [
+          {
+            "source": [
+              18,
+              27
+            ],
+            "args": [
+              42,
+              38,
+              36,
+              54
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "biome2/2/true prop JSON unchanged",
+      "pass": true
+    },
+    {
+      "name": "biome2/2/true native resulting Canvas state unchanged",
+      "pass": true
+    },
+    {
+      "name": "biome2/2/true return unchanged",
+      "pass": true
+    },
+    {
+      "name": "biome2/2/true label pixels present",
+      "pass": true
+    },
+    {
+      "name": "biome2/2/true changes confined to lower stone step",
+      "pass": true,
+      "detail": {
+        "count": 276,
+        "outsideLowerStone": 0,
+        "bounds": {
+          "minX": 45,
+          "minY": 80,
+          "maxX": 73,
+          "maxY": 89
+        },
+        "allowed": {
+          "left": 44,
+          "rightExclusive": 76,
+          "top": 80,
+          "bottomExclusive": 90
+        }
+      }
+    },
+    {
+      "name": "biome2/2/true isolated label restores complete tested context",
+      "pass": true
+    },
+    {
+      "name": "biome2/3/true native image geometry unchanged",
+      "pass": true,
+      "detail": {
+        "baseline": [
+          {
+            "source": [
+              18,
+              27
+            ],
+            "args": [
+              42,
+              38,
+              36,
+              54
+            ]
+          }
+        ],
+        "labeled": [
+          {
+            "source": [
+              18,
+              27
+            ],
+            "args": [
+              42,
+              38,
+              36,
+              54
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "biome2/3/true prop JSON unchanged",
+      "pass": true
+    },
+    {
+      "name": "biome2/3/true native resulting Canvas state unchanged",
+      "pass": true
+    },
+    {
+      "name": "biome2/3/true return unchanged",
+      "pass": true
+    },
+    {
+      "name": "biome2/3/true label pixels present",
+      "pass": true
+    },
+    {
+      "name": "biome2/3/true changes confined to lower stone step",
+      "pass": true,
+      "detail": {
+        "count": 276,
+        "outsideLowerStone": 0,
+        "bounds": {
+          "minX": 45,
+          "minY": 80,
+          "maxX": 73,
+          "maxY": 89
+        },
+        "allowed": {
+          "left": 44,
+          "rightExclusive": 76,
+          "top": 80,
+          "bottomExclusive": 90
+        }
+      }
+    },
+    {
+      "name": "biome2/3/true isolated label restores complete tested context",
+      "pass": true
+    },
+    {
+      "name": "fade0to1/0/false native image geometry unchanged",
+      "pass": true,
+      "detail": {
+        "baseline": [
+          {
+            "source": [
+              18,
+              27
+            ],
+            "args": [
+              42,
+              38,
+              36,
+              54
+            ]
+          },
+          {
+            "source": [
+              18,
+              27
+            ],
+            "args": [
+              42,
+              38,
+              36,
+              54
+            ]
+          }
+        ],
+        "labeled": [
+          {
+            "source": [
+              18,
+              27
+            ],
+            "args": [
+              42,
+              38,
+              36,
+              54
+            ]
+          },
+          {
+            "source": [
+              18,
+              27
+            ],
+            "args": [
+              42,
+              38,
+              36,
+              54
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "fade0to1/0/false prop JSON unchanged",
+      "pass": true
+    },
+    {
+      "name": "fade0to1/0/false native resulting Canvas state unchanged",
+      "pass": true
+    },
+    {
+      "name": "fade0to1/0/false return unchanged",
+      "pass": true
+    },
+    {
+      "name": "fade0to1/0/false label pixels present",
+      "pass": true
+    },
+    {
+      "name": "fade0to1/0/false changes confined to lower stone step",
+      "pass": true,
+      "detail": {
+        "count": 171,
+        "outsideLowerStone": 0,
+        "bounds": {
+          "minX": 49,
+          "minY": 80,
+          "maxX": 69,
+          "maxY": 89
+        },
+        "allowed": {
+          "left": 44,
+          "rightExclusive": 76,
+          "top": 80,
+          "bottomExclusive": 90
+        }
+      }
+    },
+    {
+      "name": "fade0to1/0/false isolated label restores complete tested context",
+      "pass": true
+    },
+    {
+      "name": "fade0to1/1/false native image geometry unchanged",
+      "pass": true,
+      "detail": {
+        "baseline": [
+          {
+            "source": [
+              18,
+              27
+            ],
+            "args": [
+              42,
+              38,
+              36,
+              54
+            ]
+          },
+          {
+            "source": [
+              18,
+              27
+            ],
+            "args": [
+              42,
+              38,
+              36,
+              54
+            ]
+          }
+        ],
+        "labeled": [
+          {
+            "source": [
+              18,
+              27
+            ],
+            "args": [
+              42,
+              38,
+              36,
+              54
+            ]
+          },
+          {
+            "source": [
+              18,
+              27
+            ],
+            "args": [
+              42,
+              38,
+              36,
+              54
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "fade0to1/1/false prop JSON unchanged",
+      "pass": true
+    },
+    {
+      "name": "fade0to1/1/false native resulting Canvas state unchanged",
+      "pass": true
+    },
+    {
+      "name": "fade0to1/1/false return unchanged",
+      "pass": true
+    },
+    {
+      "name": "fade0to1/1/false label pixels present",
+      "pass": true
+    },
+    {
+      "name": "fade0to1/1/false changes confined to lower stone step",
+      "pass": true,
+      "detail": {
+        "count": 190,
+        "outsideLowerStone": 0,
+        "bounds": {
+          "minX": 49,
+          "minY": 80,
+          "maxX": 69,
+          "maxY": 89
+        },
+        "allowed": {
+          "left": 44,
+          "rightExclusive": 76,
+          "top": 80,
+          "bottomExclusive": 90
+        }
+      }
+    },
+    {
+      "name": "fade0to1/1/false isolated label restores complete tested context",
+      "pass": true
+    },
+    {
+      "name": "fade0to1/2/false native image geometry unchanged",
+      "pass": true,
+      "detail": {
+        "baseline": [
+          {
+            "source": [
+              18,
+              27
+            ],
+            "args": [
+              42,
+              38,
+              36,
+              54
+            ]
+          },
+          {
+            "source": [
+              18,
+              27
+            ],
+            "args": [
+              42,
+              38,
+              36,
+              54
+            ]
+          }
+        ],
+        "labeled": [
+          {
+            "source": [
+              18,
+              27
+            ],
+            "args": [
+              42,
+              38,
+              36,
+              54
+            ]
+          },
+          {
+            "source": [
+              18,
+              27
+            ],
+            "args": [
+              42,
+              38,
+              36,
+              54
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "fade0to1/2/false prop JSON unchanged",
+      "pass": true
+    },
+    {
+      "name": "fade0to1/2/false native resulting Canvas state unchanged",
+      "pass": true
+    },
+    {
+      "name": "fade0to1/2/false return unchanged",
+      "pass": true
+    },
+    {
+      "name": "fade0to1/2/false label pixels present",
+      "pass": true
+    },
+    {
+      "name": "fade0to1/2/false changes confined to lower stone step",
+      "pass": true,
+      "detail": {
+        "count": 181,
+        "outsideLowerStone": 0,
+        "bounds": {
+          "minX": 49,
+          "minY": 80,
+          "maxX": 68,
+          "maxY": 89
+        },
+        "allowed": {
+          "left": 44,
+          "rightExclusive": 76,
+          "top": 80,
+          "bottomExclusive": 90
+        }
+      }
+    },
+    {
+      "name": "fade0to1/2/false isolated label restores complete tested context",
+      "pass": true
+    },
+    {
+      "name": "fade0to1/3/false native image geometry unchanged",
+      "pass": true,
+      "detail": {
+        "baseline": [
+          {
+            "source": [
+              18,
+              27
+            ],
+            "args": [
+              42,
+              38,
+              36,
+              54
+            ]
+          },
+          {
+            "source": [
+              18,
+              27
+            ],
+            "args": [
+              42,
+              38,
+              36,
+              54
+            ]
+          }
+        ],
+        "labeled": [
+          {
+            "source": [
+              18,
+              27
+            ],
+            "args": [
+              42,
+              38,
+              36,
+              54
+            ]
+          },
+          {
+            "source": [
+              18,
+              27
+            ],
+            "args": [
+              42,
+              38,
+              36,
+              54
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "fade0to1/3/false prop JSON unchanged",
+      "pass": true
+    },
+    {
+      "name": "fade0to1/3/false native resulting Canvas state unchanged",
+      "pass": true
+    },
+    {
+      "name": "fade0to1/3/false return unchanged",
+      "pass": true
+    },
+    {
+      "name": "fade0to1/3/false label pixels present",
+      "pass": true
+    },
+    {
+      "name": "fade0to1/3/false changes confined to lower stone step",
+      "pass": true,
+      "detail": {
+        "count": 268,
+        "outsideLowerStone": 0,
+        "bounds": {
+          "minX": 45,
+          "minY": 80,
+          "maxX": 73,
+          "maxY": 89
+        },
+        "allowed": {
+          "left": 44,
+          "rightExclusive": 76,
+          "top": 80,
+          "bottomExclusive": 90
+        }
+      }
+    },
+    {
+      "name": "fade0to1/3/false isolated label restores complete tested context",
+      "pass": true
+    },
+    {
+      "name": "fade0to1/0/true native image geometry unchanged",
+      "pass": true,
+      "detail": {
+        "baseline": [
+          {
+            "source": [
+              18,
+              27
+            ],
+            "args": [
+              42,
+              38,
+              36,
+              54
+            ]
+          },
+          {
+            "source": [
+              18,
+              27
+            ],
+            "args": [
+              42,
+              38,
+              36,
+              54
+            ]
+          }
+        ],
+        "labeled": [
+          {
+            "source": [
+              18,
+              27
+            ],
+            "args": [
+              42,
+              38,
+              36,
+              54
+            ]
+          },
+          {
+            "source": [
+              18,
+              27
+            ],
+            "args": [
+              42,
+              38,
+              36,
+              54
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "fade0to1/0/true prop JSON unchanged",
+      "pass": true
+    },
+    {
+      "name": "fade0to1/0/true native resulting Canvas state unchanged",
+      "pass": true
+    },
+    {
+      "name": "fade0to1/0/true return unchanged",
+      "pass": true
+    },
+    {
+      "name": "fade0to1/0/true label pixels present",
+      "pass": true
+    },
+    {
+      "name": "fade0to1/0/true changes confined to lower stone step",
+      "pass": true,
+      "detail": {
+        "count": 276,
+        "outsideLowerStone": 0,
+        "bounds": {
+          "minX": 45,
+          "minY": 80,
+          "maxX": 73,
+          "maxY": 89
+        },
+        "allowed": {
+          "left": 44,
+          "rightExclusive": 76,
+          "top": 80,
+          "bottomExclusive": 90
+        }
+      }
+    },
+    {
+      "name": "fade0to1/0/true isolated label restores complete tested context",
+      "pass": true
+    },
+    {
+      "name": "fade0to1/1/true native image geometry unchanged",
+      "pass": true,
+      "detail": {
+        "baseline": [
+          {
+            "source": [
+              18,
+              27
+            ],
+            "args": [
+              42,
+              38,
+              36,
+              54
+            ]
+          },
+          {
+            "source": [
+              18,
+              27
+            ],
+            "args": [
+              42,
+              38,
+              36,
+              54
+            ]
+          }
+        ],
+        "labeled": [
+          {
+            "source": [
+              18,
+              27
+            ],
+            "args": [
+              42,
+              38,
+              36,
+              54
+            ]
+          },
+          {
+            "source": [
+              18,
+              27
+            ],
+            "args": [
+              42,
+              38,
+              36,
+              54
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "fade0to1/1/true prop JSON unchanged",
+      "pass": true
+    },
+    {
+      "name": "fade0to1/1/true native resulting Canvas state unchanged",
+      "pass": true
+    },
+    {
+      "name": "fade0to1/1/true return unchanged",
+      "pass": true
+    },
+    {
+      "name": "fade0to1/1/true label pixels present",
+      "pass": true
+    },
+    {
+      "name": "fade0to1/1/true changes confined to lower stone step",
+      "pass": true,
+      "detail": {
+        "count": 276,
+        "outsideLowerStone": 0,
+        "bounds": {
+          "minX": 45,
+          "minY": 80,
+          "maxX": 73,
+          "maxY": 89
+        },
+        "allowed": {
+          "left": 44,
+          "rightExclusive": 76,
+          "top": 80,
+          "bottomExclusive": 90
+        }
+      }
+    },
+    {
+      "name": "fade0to1/1/true isolated label restores complete tested context",
+      "pass": true
+    },
+    {
+      "name": "fade0to1/2/true native image geometry unchanged",
+      "pass": true,
+      "detail": {
+        "baseline": [
+          {
+            "source": [
+              18,
+              27
+            ],
+            "args": [
+              42,
+              38,
+              36,
+              54
+            ]
+          },
+          {
+            "source": [
+              18,
+              27
+            ],
+            "args": [
+              42,
+              38,
+              36,
+              54
+            ]
+          }
+        ],
+        "labeled": [
+          {
+            "source": [
+              18,
+              27
+            ],
+            "args": [
+              42,
+              38,
+              36,
+              54
+            ]
+          },
+          {
+            "source": [
+              18,
+              27
+            ],
+            "args": [
+              42,
+              38,
+              36,
+              54
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "fade0to1/2/true prop JSON unchanged",
+      "pass": true
+    },
+    {
+      "name": "fade0to1/2/true native resulting Canvas state unchanged",
+      "pass": true
+    },
+    {
+      "name": "fade0to1/2/true return unchanged",
+      "pass": true
+    },
+    {
+      "name": "fade0to1/2/true label pixels present",
+      "pass": true
+    },
+    {
+      "name": "fade0to1/2/true changes confined to lower stone step",
+      "pass": true,
+      "detail": {
+        "count": 276,
+        "outsideLowerStone": 0,
+        "bounds": {
+          "minX": 45,
+          "minY": 80,
+          "maxX": 73,
+          "maxY": 89
+        },
+        "allowed": {
+          "left": 44,
+          "rightExclusive": 76,
+          "top": 80,
+          "bottomExclusive": 90
+        }
+      }
+    },
+    {
+      "name": "fade0to1/2/true isolated label restores complete tested context",
+      "pass": true
+    },
+    {
+      "name": "fade0to1/3/true native image geometry unchanged",
+      "pass": true,
+      "detail": {
+        "baseline": [
+          {
+            "source": [
+              18,
+              27
+            ],
+            "args": [
+              42,
+              38,
+              36,
+              54
+            ]
+          },
+          {
+            "source": [
+              18,
+              27
+            ],
+            "args": [
+              42,
+              38,
+              36,
+              54
+            ]
+          }
+        ],
+        "labeled": [
+          {
+            "source": [
+              18,
+              27
+            ],
+            "args": [
+              42,
+              38,
+              36,
+              54
+            ]
+          },
+          {
+            "source": [
+              18,
+              27
+            ],
+            "args": [
+              42,
+              38,
+              36,
+              54
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "fade0to1/3/true prop JSON unchanged",
+      "pass": true
+    },
+    {
+      "name": "fade0to1/3/true native resulting Canvas state unchanged",
+      "pass": true
+    },
+    {
+      "name": "fade0to1/3/true return unchanged",
+      "pass": true
+    },
+    {
+      "name": "fade0to1/3/true label pixels present",
+      "pass": true
+    },
+    {
+      "name": "fade0to1/3/true changes confined to lower stone step",
+      "pass": true,
+      "detail": {
+        "count": 276,
+        "outsideLowerStone": 0,
+        "bounds": {
+          "minX": 45,
+          "minY": 80,
+          "maxX": 73,
+          "maxY": 89
+        },
+        "allowed": {
+          "left": 44,
+          "rightExclusive": 76,
+          "top": 80,
+          "bottomExclusive": 90
+        }
+      }
+    },
+    {
+      "name": "fade0to1/3/true isolated label restores complete tested context",
+      "pass": true
+    },
+    {
+      "name": "fade1to2/0/false native image geometry unchanged",
+      "pass": true,
+      "detail": {
+        "baseline": [
+          {
+            "source": [
+              18,
+              27
+            ],
+            "args": [
+              42,
+              38,
+              36,
+              54
+            ]
+          },
+          {
+            "source": [
+              18,
+              27
+            ],
+            "args": [
+              42,
+              38,
+              36,
+              54
+            ]
+          }
+        ],
+        "labeled": [
+          {
+            "source": [
+              18,
+              27
+            ],
+            "args": [
+              42,
+              38,
+              36,
+              54
+            ]
+          },
+          {
+            "source": [
+              18,
+              27
+            ],
+            "args": [
+              42,
+              38,
+              36,
+              54
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "fade1to2/0/false prop JSON unchanged",
+      "pass": true
+    },
+    {
+      "name": "fade1to2/0/false native resulting Canvas state unchanged",
+      "pass": true
+    },
+    {
+      "name": "fade1to2/0/false return unchanged",
+      "pass": true
+    },
+    {
+      "name": "fade1to2/0/false label pixels present",
+      "pass": true
+    },
+    {
+      "name": "fade1to2/0/false changes confined to lower stone step",
+      "pass": true,
+      "detail": {
+        "count": 171,
+        "outsideLowerStone": 0,
+        "bounds": {
+          "minX": 49,
+          "minY": 80,
+          "maxX": 69,
+          "maxY": 89
+        },
+        "allowed": {
+          "left": 44,
+          "rightExclusive": 76,
+          "top": 80,
+          "bottomExclusive": 90
+        }
+      }
+    },
+    {
+      "name": "fade1to2/0/false isolated label restores complete tested context",
+      "pass": true
+    },
+    {
+      "name": "fade1to2/1/false native image geometry unchanged",
+      "pass": true,
+      "detail": {
+        "baseline": [
+          {
+            "source": [
+              18,
+              27
+            ],
+            "args": [
+              42,
+              38,
+              36,
+              54
+            ]
+          },
+          {
+            "source": [
+              18,
+              27
+            ],
+            "args": [
+              42,
+              38,
+              36,
+              54
+            ]
+          }
+        ],
+        "labeled": [
+          {
+            "source": [
+              18,
+              27
+            ],
+            "args": [
+              42,
+              38,
+              36,
+              54
+            ]
+          },
+          {
+            "source": [
+              18,
+              27
+            ],
+            "args": [
+              42,
+              38,
+              36,
+              54
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "fade1to2/1/false prop JSON unchanged",
+      "pass": true
+    },
+    {
+      "name": "fade1to2/1/false native resulting Canvas state unchanged",
+      "pass": true
+    },
+    {
+      "name": "fade1to2/1/false return unchanged",
+      "pass": true
+    },
+    {
+      "name": "fade1to2/1/false label pixels present",
+      "pass": true
+    },
+    {
+      "name": "fade1to2/1/false changes confined to lower stone step",
+      "pass": true,
+      "detail": {
+        "count": 190,
+        "outsideLowerStone": 0,
+        "bounds": {
+          "minX": 49,
+          "minY": 80,
+          "maxX": 69,
+          "maxY": 89
+        },
+        "allowed": {
+          "left": 44,
+          "rightExclusive": 76,
+          "top": 80,
+          "bottomExclusive": 90
+        }
+      }
+    },
+    {
+      "name": "fade1to2/1/false isolated label restores complete tested context",
+      "pass": true
+    },
+    {
+      "name": "fade1to2/2/false native image geometry unchanged",
+      "pass": true,
+      "detail": {
+        "baseline": [
+          {
+            "source": [
+              18,
+              27
+            ],
+            "args": [
+              42,
+              38,
+              36,
+              54
+            ]
+          },
+          {
+            "source": [
+              18,
+              27
+            ],
+            "args": [
+              42,
+              38,
+              36,
+              54
+            ]
+          }
+        ],
+        "labeled": [
+          {
+            "source": [
+              18,
+              27
+            ],
+            "args": [
+              42,
+              38,
+              36,
+              54
+            ]
+          },
+          {
+            "source": [
+              18,
+              27
+            ],
+            "args": [
+              42,
+              38,
+              36,
+              54
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "fade1to2/2/false prop JSON unchanged",
+      "pass": true
+    },
+    {
+      "name": "fade1to2/2/false native resulting Canvas state unchanged",
+      "pass": true
+    },
+    {
+      "name": "fade1to2/2/false return unchanged",
+      "pass": true
+    },
+    {
+      "name": "fade1to2/2/false label pixels present",
+      "pass": true
+    },
+    {
+      "name": "fade1to2/2/false changes confined to lower stone step",
+      "pass": true,
+      "detail": {
+        "count": 181,
+        "outsideLowerStone": 0,
+        "bounds": {
+          "minX": 49,
+          "minY": 80,
+          "maxX": 68,
+          "maxY": 89
+        },
+        "allowed": {
+          "left": 44,
+          "rightExclusive": 76,
+          "top": 80,
+          "bottomExclusive": 90
+        }
+      }
+    },
+    {
+      "name": "fade1to2/2/false isolated label restores complete tested context",
+      "pass": true
+    },
+    {
+      "name": "fade1to2/3/false native image geometry unchanged",
+      "pass": true,
+      "detail": {
+        "baseline": [
+          {
+            "source": [
+              18,
+              27
+            ],
+            "args": [
+              42,
+              38,
+              36,
+              54
+            ]
+          },
+          {
+            "source": [
+              18,
+              27
+            ],
+            "args": [
+              42,
+              38,
+              36,
+              54
+            ]
+          }
+        ],
+        "labeled": [
+          {
+            "source": [
+              18,
+              27
+            ],
+            "args": [
+              42,
+              38,
+              36,
+              54
+            ]
+          },
+          {
+            "source": [
+              18,
+              27
+            ],
+            "args": [
+              42,
+              38,
+              36,
+              54
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "fade1to2/3/false prop JSON unchanged",
+      "pass": true
+    },
+    {
+      "name": "fade1to2/3/false native resulting Canvas state unchanged",
+      "pass": true
+    },
+    {
+      "name": "fade1to2/3/false return unchanged",
+      "pass": true
+    },
+    {
+      "name": "fade1to2/3/false label pixels present",
+      "pass": true
+    },
+    {
+      "name": "fade1to2/3/false changes confined to lower stone step",
+      "pass": true,
+      "detail": {
+        "count": 268,
+        "outsideLowerStone": 0,
+        "bounds": {
+          "minX": 45,
+          "minY": 80,
+          "maxX": 73,
+          "maxY": 89
+        },
+        "allowed": {
+          "left": 44,
+          "rightExclusive": 76,
+          "top": 80,
+          "bottomExclusive": 90
+        }
+      }
+    },
+    {
+      "name": "fade1to2/3/false isolated label restores complete tested context",
+      "pass": true
+    },
+    {
+      "name": "fade1to2/0/true native image geometry unchanged",
+      "pass": true,
+      "detail": {
+        "baseline": [
+          {
+            "source": [
+              18,
+              27
+            ],
+            "args": [
+              42,
+              38,
+              36,
+              54
+            ]
+          },
+          {
+            "source": [
+              18,
+              27
+            ],
+            "args": [
+              42,
+              38,
+              36,
+              54
+            ]
+          }
+        ],
+        "labeled": [
+          {
+            "source": [
+              18,
+              27
+            ],
+            "args": [
+              42,
+              38,
+              36,
+              54
+            ]
+          },
+          {
+            "source": [
+              18,
+              27
+            ],
+            "args": [
+              42,
+              38,
+              36,
+              54
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "fade1to2/0/true prop JSON unchanged",
+      "pass": true
+    },
+    {
+      "name": "fade1to2/0/true native resulting Canvas state unchanged",
+      "pass": true
+    },
+    {
+      "name": "fade1to2/0/true return unchanged",
+      "pass": true
+    },
+    {
+      "name": "fade1to2/0/true label pixels present",
+      "pass": true
+    },
+    {
+      "name": "fade1to2/0/true changes confined to lower stone step",
+      "pass": true,
+      "detail": {
+        "count": 276,
+        "outsideLowerStone": 0,
+        "bounds": {
+          "minX": 45,
+          "minY": 80,
+          "maxX": 73,
+          "maxY": 89
+        },
+        "allowed": {
+          "left": 44,
+          "rightExclusive": 76,
+          "top": 80,
+          "bottomExclusive": 90
+        }
+      }
+    },
+    {
+      "name": "fade1to2/0/true isolated label restores complete tested context",
+      "pass": true
+    },
+    {
+      "name": "fade1to2/1/true native image geometry unchanged",
+      "pass": true,
+      "detail": {
+        "baseline": [
+          {
+            "source": [
+              18,
+              27
+            ],
+            "args": [
+              42,
+              38,
+              36,
+              54
+            ]
+          },
+          {
+            "source": [
+              18,
+              27
+            ],
+            "args": [
+              42,
+              38,
+              36,
+              54
+            ]
+          }
+        ],
+        "labeled": [
+          {
+            "source": [
+              18,
+              27
+            ],
+            "args": [
+              42,
+              38,
+              36,
+              54
+            ]
+          },
+          {
+            "source": [
+              18,
+              27
+            ],
+            "args": [
+              42,
+              38,
+              36,
+              54
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "fade1to2/1/true prop JSON unchanged",
+      "pass": true
+    },
+    {
+      "name": "fade1to2/1/true native resulting Canvas state unchanged",
+      "pass": true
+    },
+    {
+      "name": "fade1to2/1/true return unchanged",
+      "pass": true
+    },
+    {
+      "name": "fade1to2/1/true label pixels present",
+      "pass": true
+    },
+    {
+      "name": "fade1to2/1/true changes confined to lower stone step",
+      "pass": true,
+      "detail": {
+        "count": 276,
+        "outsideLowerStone": 0,
+        "bounds": {
+          "minX": 45,
+          "minY": 80,
+          "maxX": 73,
+          "maxY": 89
+        },
+        "allowed": {
+          "left": 44,
+          "rightExclusive": 76,
+          "top": 80,
+          "bottomExclusive": 90
+        }
+      }
+    },
+    {
+      "name": "fade1to2/1/true isolated label restores complete tested context",
+      "pass": true
+    },
+    {
+      "name": "fade1to2/2/true native image geometry unchanged",
+      "pass": true,
+      "detail": {
+        "baseline": [
+          {
+            "source": [
+              18,
+              27
+            ],
+            "args": [
+              42,
+              38,
+              36,
+              54
+            ]
+          },
+          {
+            "source": [
+              18,
+              27
+            ],
+            "args": [
+              42,
+              38,
+              36,
+              54
+            ]
+          }
+        ],
+        "labeled": [
+          {
+            "source": [
+              18,
+              27
+            ],
+            "args": [
+              42,
+              38,
+              36,
+              54
+            ]
+          },
+          {
+            "source": [
+              18,
+              27
+            ],
+            "args": [
+              42,
+              38,
+              36,
+              54
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "fade1to2/2/true prop JSON unchanged",
+      "pass": true
+    },
+    {
+      "name": "fade1to2/2/true native resulting Canvas state unchanged",
+      "pass": true
+    },
+    {
+      "name": "fade1to2/2/true return unchanged",
+      "pass": true
+    },
+    {
+      "name": "fade1to2/2/true label pixels present",
+      "pass": true
+    },
+    {
+      "name": "fade1to2/2/true changes confined to lower stone step",
+      "pass": true,
+      "detail": {
+        "count": 276,
+        "outsideLowerStone": 0,
+        "bounds": {
+          "minX": 45,
+          "minY": 80,
+          "maxX": 73,
+          "maxY": 89
+        },
+        "allowed": {
+          "left": 44,
+          "rightExclusive": 76,
+          "top": 80,
+          "bottomExclusive": 90
+        }
+      }
+    },
+    {
+      "name": "fade1to2/2/true isolated label restores complete tested context",
+      "pass": true
+    },
+    {
+      "name": "fade1to2/3/true native image geometry unchanged",
+      "pass": true,
+      "detail": {
+        "baseline": [
+          {
+            "source": [
+              18,
+              27
+            ],
+            "args": [
+              42,
+              38,
+              36,
+              54
+            ]
+          },
+          {
+            "source": [
+              18,
+              27
+            ],
+            "args": [
+              42,
+              38,
+              36,
+              54
+            ]
+          }
+        ],
+        "labeled": [
+          {
+            "source": [
+              18,
+              27
+            ],
+            "args": [
+              42,
+              38,
+              36,
+              54
+            ]
+          },
+          {
+            "source": [
+              18,
+              27
+            ],
+            "args": [
+              42,
+              38,
+              36,
+              54
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "fade1to2/3/true prop JSON unchanged",
+      "pass": true
+    },
+    {
+      "name": "fade1to2/3/true native resulting Canvas state unchanged",
+      "pass": true
+    },
+    {
+      "name": "fade1to2/3/true return unchanged",
+      "pass": true
+    },
+    {
+      "name": "fade1to2/3/true label pixels present",
+      "pass": true
+    },
+    {
+      "name": "fade1to2/3/true changes confined to lower stone step",
+      "pass": true,
+      "detail": {
+        "count": 276,
+        "outsideLowerStone": 0,
+        "bounds": {
+          "minX": 45,
+          "minY": 80,
+          "maxX": 73,
+          "maxY": 89
+        },
+        "allowed": {
+          "left": 44,
+          "rightExclusive": 76,
+          "top": 80,
+          "bottomExclusive": 90
+        }
+      }
+    },
+    {
+      "name": "fade1to2/3/true isolated label restores complete tested context",
+      "pass": true
+    },
+    {
+      "name": "native board one canvas pixel per CSS pixel",
+      "pass": true,
+      "detail": {
+        "css": [
+          960,
+          240
+        ],
+        "backing": [
+          960,
+          240
+        ],
+        "devicePixelRatio": 2,
+        "worldPX": 2,
+        "altarArt": [
+          18,
+          27
+        ],
+        "nativeAltarScreen": [
+          36,
+          54
+        ],
+        "textPx": 9,
+        "textMaxWidth": 30,
+        "textY": "p.y - 3"
+      }
+    },
+    {
+      "name": "adapter active",
+      "pass": true
+    }
+  ],
+  "cases": [
+    {
+      "scenario": "biome0",
+      "kind": 0,
+      "used": false,
+      "label": "분노",
+      "count": 171,
+      "outsideLowerStone": 0,
+      "bounds": {
+        "minX": 49,
+        "minY": 80,
+        "maxX": 69,
+        "maxY": 89
+      },
+      "allowed": {
+        "left": 44,
+        "rightExclusive": 76,
+        "top": 80,
+        "bottomExclusive": 90
+      }
+    },
+    {
+      "scenario": "biome0",
+      "kind": 1,
+      "used": false,
+      "label": "질주",
+      "count": 190,
+      "outsideLowerStone": 0,
+      "bounds": {
+        "minX": 49,
+        "minY": 80,
+        "maxX": 69,
+        "maxY": 89
+      },
+      "allowed": {
+        "left": 44,
+        "rightExclusive": 76,
+        "top": 80,
+        "bottomExclusive": 90
+      }
+    },
+    {
+      "scenario": "biome0",
+      "kind": 2,
+      "used": false,
+      "label": "자석",
+      "count": 181,
+      "outsideLowerStone": 0,
+      "bounds": {
+        "minX": 49,
+        "minY": 80,
+        "maxX": 68,
+        "maxY": 89
+      },
+      "allowed": {
+        "left": 44,
+        "rightExclusive": 76,
+        "top": 80,
+        "bottomExclusive": 90
+      }
+    },
+    {
+      "scenario": "biome0",
+      "kind": 3,
+      "used": false,
+      "label": "신속함",
+      "count": 268,
+      "outsideLowerStone": 0,
+      "bounds": {
+        "minX": 45,
+        "minY": 80,
+        "maxX": 73,
+        "maxY": 89
+      },
+      "allowed": {
+        "left": 44,
+        "rightExclusive": 76,
+        "top": 80,
+        "bottomExclusive": 90
+      }
+    },
+    {
+      "scenario": "biome0",
+      "kind": 0,
+      "used": true,
+      "label": "사용함",
+      "count": 276,
+      "outsideLowerStone": 0,
+      "bounds": {
+        "minX": 45,
+        "minY": 80,
+        "maxX": 73,
+        "maxY": 89
+      },
+      "allowed": {
+        "left": 44,
+        "rightExclusive": 76,
+        "top": 80,
+        "bottomExclusive": 90
+      }
+    },
+    {
+      "scenario": "biome0",
+      "kind": 1,
+      "used": true,
+      "label": "사용함",
+      "count": 276,
+      "outsideLowerStone": 0,
+      "bounds": {
+        "minX": 45,
+        "minY": 80,
+        "maxX": 73,
+        "maxY": 89
+      },
+      "allowed": {
+        "left": 44,
+        "rightExclusive": 76,
+        "top": 80,
+        "bottomExclusive": 90
+      }
+    },
+    {
+      "scenario": "biome0",
+      "kind": 2,
+      "used": true,
+      "label": "사용함",
+      "count": 276,
+      "outsideLowerStone": 0,
+      "bounds": {
+        "minX": 45,
+        "minY": 80,
+        "maxX": 73,
+        "maxY": 89
+      },
+      "allowed": {
+        "left": 44,
+        "rightExclusive": 76,
+        "top": 80,
+        "bottomExclusive": 90
+      }
+    },
+    {
+      "scenario": "biome0",
+      "kind": 3,
+      "used": true,
+      "label": "사용함",
+      "count": 276,
+      "outsideLowerStone": 0,
+      "bounds": {
+        "minX": 45,
+        "minY": 80,
+        "maxX": 73,
+        "maxY": 89
+      },
+      "allowed": {
+        "left": 44,
+        "rightExclusive": 76,
+        "top": 80,
+        "bottomExclusive": 90
+      }
+    },
+    {
+      "scenario": "biome1",
+      "kind": 0,
+      "used": false,
+      "label": "분노",
+      "count": 171,
+      "outsideLowerStone": 0,
+      "bounds": {
+        "minX": 49,
+        "minY": 80,
+        "maxX": 69,
+        "maxY": 89
+      },
+      "allowed": {
+        "left": 44,
+        "rightExclusive": 76,
+        "top": 80,
+        "bottomExclusive": 90
+      }
+    },
+    {
+      "scenario": "biome1",
+      "kind": 1,
+      "used": false,
+      "label": "질주",
+      "count": 190,
+      "outsideLowerStone": 0,
+      "bounds": {
+        "minX": 49,
+        "minY": 80,
+        "maxX": 69,
+        "maxY": 89
+      },
+      "allowed": {
+        "left": 44,
+        "rightExclusive": 76,
+        "top": 80,
+        "bottomExclusive": 90
+      }
+    },
+    {
+      "scenario": "biome1",
+      "kind": 2,
+      "used": false,
+      "label": "자석",
+      "count": 181,
+      "outsideLowerStone": 0,
+      "bounds": {
+        "minX": 49,
+        "minY": 80,
+        "maxX": 68,
+        "maxY": 89
+      },
+      "allowed": {
+        "left": 44,
+        "rightExclusive": 76,
+        "top": 80,
+        "bottomExclusive": 90
+      }
+    },
+    {
+      "scenario": "biome1",
+      "kind": 3,
+      "used": false,
+      "label": "신속함",
+      "count": 268,
+      "outsideLowerStone": 0,
+      "bounds": {
+        "minX": 45,
+        "minY": 80,
+        "maxX": 73,
+        "maxY": 89
+      },
+      "allowed": {
+        "left": 44,
+        "rightExclusive": 76,
+        "top": 80,
+        "bottomExclusive": 90
+      }
+    },
+    {
+      "scenario": "biome1",
+      "kind": 0,
+      "used": true,
+      "label": "사용함",
+      "count": 276,
+      "outsideLowerStone": 0,
+      "bounds": {
+        "minX": 45,
+        "minY": 80,
+        "maxX": 73,
+        "maxY": 89
+      },
+      "allowed": {
+        "left": 44,
+        "rightExclusive": 76,
+        "top": 80,
+        "bottomExclusive": 90
+      }
+    },
+    {
+      "scenario": "biome1",
+      "kind": 1,
+      "used": true,
+      "label": "사용함",
+      "count": 276,
+      "outsideLowerStone": 0,
+      "bounds": {
+        "minX": 45,
+        "minY": 80,
+        "maxX": 73,
+        "maxY": 89
+      },
+      "allowed": {
+        "left": 44,
+        "rightExclusive": 76,
+        "top": 80,
+        "bottomExclusive": 90
+      }
+    },
+    {
+      "scenario": "biome1",
+      "kind": 2,
+      "used": true,
+      "label": "사용함",
+      "count": 276,
+      "outsideLowerStone": 0,
+      "bounds": {
+        "minX": 45,
+        "minY": 80,
+        "maxX": 73,
+        "maxY": 89
+      },
+      "allowed": {
+        "left": 44,
+        "rightExclusive": 76,
+        "top": 80,
+        "bottomExclusive": 90
+      }
+    },
+    {
+      "scenario": "biome1",
+      "kind": 3,
+      "used": true,
+      "label": "사용함",
+      "count": 276,
+      "outsideLowerStone": 0,
+      "bounds": {
+        "minX": 45,
+        "minY": 80,
+        "maxX": 73,
+        "maxY": 89
+      },
+      "allowed": {
+        "left": 44,
+        "rightExclusive": 76,
+        "top": 80,
+        "bottomExclusive": 90
+      }
+    },
+    {
+      "scenario": "biome2",
+      "kind": 0,
+      "used": false,
+      "label": "분노",
+      "count": 170,
+      "outsideLowerStone": 0,
+      "bounds": {
+        "minX": 49,
+        "minY": 80,
+        "maxX": 69,
+        "maxY": 89
+      },
+      "allowed": {
+        "left": 44,
+        "rightExclusive": 76,
+        "top": 80,
+        "bottomExclusive": 90
+      }
+    },
+    {
+      "scenario": "biome2",
+      "kind": 1,
+      "used": false,
+      "label": "질주",
+      "count": 189,
+      "outsideLowerStone": 0,
+      "bounds": {
+        "minX": 49,
+        "minY": 80,
+        "maxX": 69,
+        "maxY": 89
+      },
+      "allowed": {
+        "left": 44,
+        "rightExclusive": 76,
+        "top": 80,
+        "bottomExclusive": 90
+      }
+    },
+    {
+      "scenario": "biome2",
+      "kind": 2,
+      "used": false,
+      "label": "자석",
+      "count": 180,
+      "outsideLowerStone": 0,
+      "bounds": {
+        "minX": 49,
+        "minY": 80,
+        "maxX": 68,
+        "maxY": 89
+      },
+      "allowed": {
+        "left": 44,
+        "rightExclusive": 76,
+        "top": 80,
+        "bottomExclusive": 90
+      }
+    },
+    {
+      "scenario": "biome2",
+      "kind": 3,
+      "used": false,
+      "label": "신속함",
+      "count": 268,
+      "outsideLowerStone": 0,
+      "bounds": {
+        "minX": 45,
+        "minY": 80,
+        "maxX": 73,
+        "maxY": 89
+      },
+      "allowed": {
+        "left": 44,
+        "rightExclusive": 76,
+        "top": 80,
+        "bottomExclusive": 90
+      }
+    },
+    {
+      "scenario": "biome2",
+      "kind": 0,
+      "used": true,
+      "label": "사용함",
+      "count": 276,
+      "outsideLowerStone": 0,
+      "bounds": {
+        "minX": 45,
+        "minY": 80,
+        "maxX": 73,
+        "maxY": 89
+      },
+      "allowed": {
+        "left": 44,
+        "rightExclusive": 76,
+        "top": 80,
+        "bottomExclusive": 90
+      }
+    },
+    {
+      "scenario": "biome2",
+      "kind": 1,
+      "used": true,
+      "label": "사용함",
+      "count": 276,
+      "outsideLowerStone": 0,
+      "bounds": {
+        "minX": 45,
+        "minY": 80,
+        "maxX": 73,
+        "maxY": 89
+      },
+      "allowed": {
+        "left": 44,
+        "rightExclusive": 76,
+        "top": 80,
+        "bottomExclusive": 90
+      }
+    },
+    {
+      "scenario": "biome2",
+      "kind": 2,
+      "used": true,
+      "label": "사용함",
+      "count": 276,
+      "outsideLowerStone": 0,
+      "bounds": {
+        "minX": 45,
+        "minY": 80,
+        "maxX": 73,
+        "maxY": 89
+      },
+      "allowed": {
+        "left": 44,
+        "rightExclusive": 76,
+        "top": 80,
+        "bottomExclusive": 90
+      }
+    },
+    {
+      "scenario": "biome2",
+      "kind": 3,
+      "used": true,
+      "label": "사용함",
+      "count": 276,
+      "outsideLowerStone": 0,
+      "bounds": {
+        "minX": 45,
+        "minY": 80,
+        "maxX": 73,
+        "maxY": 89
+      },
+      "allowed": {
+        "left": 44,
+        "rightExclusive": 76,
+        "top": 80,
+        "bottomExclusive": 90
+      }
+    },
+    {
+      "scenario": "fade0to1",
+      "kind": 0,
+      "used": false,
+      "label": "분노",
+      "count": 171,
+      "outsideLowerStone": 0,
+      "bounds": {
+        "minX": 49,
+        "minY": 80,
+        "maxX": 69,
+        "maxY": 89
+      },
+      "allowed": {
+        "left": 44,
+        "rightExclusive": 76,
+        "top": 80,
+        "bottomExclusive": 90
+      }
+    },
+    {
+      "scenario": "fade0to1",
+      "kind": 1,
+      "used": false,
+      "label": "질주",
+      "count": 190,
+      "outsideLowerStone": 0,
+      "bounds": {
+        "minX": 49,
+        "minY": 80,
+        "maxX": 69,
+        "maxY": 89
+      },
+      "allowed": {
+        "left": 44,
+        "rightExclusive": 76,
+        "top": 80,
+        "bottomExclusive": 90
+      }
+    },
+    {
+      "scenario": "fade0to1",
+      "kind": 2,
+      "used": false,
+      "label": "자석",
+      "count": 181,
+      "outsideLowerStone": 0,
+      "bounds": {
+        "minX": 49,
+        "minY": 80,
+        "maxX": 68,
+        "maxY": 89
+      },
+      "allowed": {
+        "left": 44,
+        "rightExclusive": 76,
+        "top": 80,
+        "bottomExclusive": 90
+      }
+    },
+    {
+      "scenario": "fade0to1",
+      "kind": 3,
+      "used": false,
+      "label": "신속함",
+      "count": 268,
+      "outsideLowerStone": 0,
+      "bounds": {
+        "minX": 45,
+        "minY": 80,
+        "maxX": 73,
+        "maxY": 89
+      },
+      "allowed": {
+        "left": 44,
+        "rightExclusive": 76,
+        "top": 80,
+        "bottomExclusive": 90
+      }
+    },
+    {
+      "scenario": "fade0to1",
+      "kind": 0,
+      "used": true,
+      "label": "사용함",
+      "count": 276,
+      "outsideLowerStone": 0,
+      "bounds": {
+        "minX": 45,
+        "minY": 80,
+        "maxX": 73,
+        "maxY": 89
+      },
+      "allowed": {
+        "left": 44,
+        "rightExclusive": 76,
+        "top": 80,
+        "bottomExclusive": 90
+      }
+    },
+    {
+      "scenario": "fade0to1",
+      "kind": 1,
+      "used": true,
+      "label": "사용함",
+      "count": 276,
+      "outsideLowerStone": 0,
+      "bounds": {
+        "minX": 45,
+        "minY": 80,
+        "maxX": 73,
+        "maxY": 89
+      },
+      "allowed": {
+        "left": 44,
+        "rightExclusive": 76,
+        "top": 80,
+        "bottomExclusive": 90
+      }
+    },
+    {
+      "scenario": "fade0to1",
+      "kind": 2,
+      "used": true,
+      "label": "사용함",
+      "count": 276,
+      "outsideLowerStone": 0,
+      "bounds": {
+        "minX": 45,
+        "minY": 80,
+        "maxX": 73,
+        "maxY": 89
+      },
+      "allowed": {
+        "left": 44,
+        "rightExclusive": 76,
+        "top": 80,
+        "bottomExclusive": 90
+      }
+    },
+    {
+      "scenario": "fade0to1",
+      "kind": 3,
+      "used": true,
+      "label": "사용함",
+      "count": 276,
+      "outsideLowerStone": 0,
+      "bounds": {
+        "minX": 45,
+        "minY": 80,
+        "maxX": 73,
+        "maxY": 89
+      },
+      "allowed": {
+        "left": 44,
+        "rightExclusive": 76,
+        "top": 80,
+        "bottomExclusive": 90
+      }
+    },
+    {
+      "scenario": "fade1to2",
+      "kind": 0,
+      "used": false,
+      "label": "분노",
+      "count": 171,
+      "outsideLowerStone": 0,
+      "bounds": {
+        "minX": 49,
+        "minY": 80,
+        "maxX": 69,
+        "maxY": 89
+      },
+      "allowed": {
+        "left": 44,
+        "rightExclusive": 76,
+        "top": 80,
+        "bottomExclusive": 90
+      }
+    },
+    {
+      "scenario": "fade1to2",
+      "kind": 1,
+      "used": false,
+      "label": "질주",
+      "count": 190,
+      "outsideLowerStone": 0,
+      "bounds": {
+        "minX": 49,
+        "minY": 80,
+        "maxX": 69,
+        "maxY": 89
+      },
+      "allowed": {
+        "left": 44,
+        "rightExclusive": 76,
+        "top": 80,
+        "bottomExclusive": 90
+      }
+    },
+    {
+      "scenario": "fade1to2",
+      "kind": 2,
+      "used": false,
+      "label": "자석",
+      "count": 181,
+      "outsideLowerStone": 0,
+      "bounds": {
+        "minX": 49,
+        "minY": 80,
+        "maxX": 68,
+        "maxY": 89
+      },
+      "allowed": {
+        "left": 44,
+        "rightExclusive": 76,
+        "top": 80,
+        "bottomExclusive": 90
+      }
+    },
+    {
+      "scenario": "fade1to2",
+      "kind": 3,
+      "used": false,
+      "label": "신속함",
+      "count": 268,
+      "outsideLowerStone": 0,
+      "bounds": {
+        "minX": 45,
+        "minY": 80,
+        "maxX": 73,
+        "maxY": 89
+      },
+      "allowed": {
+        "left": 44,
+        "rightExclusive": 76,
+        "top": 80,
+        "bottomExclusive": 90
+      }
+    },
+    {
+      "scenario": "fade1to2",
+      "kind": 0,
+      "used": true,
+      "label": "사용함",
+      "count": 276,
+      "outsideLowerStone": 0,
+      "bounds": {
+        "minX": 45,
+        "minY": 80,
+        "maxX": 73,
+        "maxY": 89
+      },
+      "allowed": {
+        "left": 44,
+        "rightExclusive": 76,
+        "top": 80,
+        "bottomExclusive": 90
+      }
+    },
+    {
+      "scenario": "fade1to2",
+      "kind": 1,
+      "used": true,
+      "label": "사용함",
+      "count": 276,
+      "outsideLowerStone": 0,
+      "bounds": {
+        "minX": 45,
+        "minY": 80,
+        "maxX": 73,
+        "maxY": 89
+      },
+      "allowed": {
+        "left": 44,
+        "rightExclusive": 76,
+        "top": 80,
+        "bottomExclusive": 90
+      }
+    },
+    {
+      "scenario": "fade1to2",
+      "kind": 2,
+      "used": true,
+      "label": "사용함",
+      "count": 276,
+      "outsideLowerStone": 0,
+      "bounds": {
+        "minX": 45,
+        "minY": 80,
+        "maxX": 73,
+        "maxY": 89
+      },
+      "allowed": {
+        "left": 44,
+        "rightExclusive": 76,
+        "top": 80,
+        "bottomExclusive": 90
+      }
+    },
+    {
+      "scenario": "fade1to2",
+      "kind": 3,
+      "used": true,
+      "label": "사용함",
+      "count": 276,
+      "outsideLowerStone": 0,
+      "bounds": {
+        "minX": 45,
+        "minY": 80,
+        "maxX": 73,
+        "maxY": 89
+      },
+      "allowed": {
+        "left": 44,
+        "rightExclusive": 76,
+        "top": 80,
+        "bottomExclusive": 90
+      }
+    }
+  ],
+  "totals": {
+    "checks": 286,
+    "passed": 286,
+    "failed": 0,
+    "cases": 40
+  },
+  "allchecks": true,
+  "readability": {
+    "pendingVisualJudgment": false,
+    "native1x": "Used 사용함 is visibly brighter and more readable than previous dim 0.65-alpha version at actual 960x240 native bitmap size. All Korean labels remain small at 9px but distinguishable. No size or y correction needed.",
+    "activeLabels": "small but distinguishable",
+    "usedLabel": "improved: readable at native 1x, still intrinsically small 9px text",
+    "changeConfirmed": "Used fill #e0ded8; extra used alpha multiplier removed, preserving native caller alpha for every label.",
+    "containment": "PASS all40 synthetic cases; all changed pixels within bottom stone step",
+    "sizeOrYCorrectionNeeded": false,
+    "scopeCaveat": "Synthetic offline Canvas proof only, not a claim of live gameplay/device accessibility."
+  },
+  "sourceIntegrity": {
+    "world": true,
+    "tiles": true,
+    "module": true,
+    "font": true
+  },
+  "safety": {
+    "liveGameAccess": false,
+    "gameplayStarted": false,
+    "worldGenerationCalled": false,
+    "gameCollectionsPopulated": false,
+    "accountOrSaveAccess": false,
+    "repositoryEdits": false,
+    "onlySyntheticProps": true,
+    "localServerBind": "127.0.0.1",
+    "localPort": 65044,
+    "csp": "default-src 'self'; font-src data:; connect-src 'self'"
+  },
+  "proofs": [
+    {
+      "name": "proof.png",
+      "format": "PNG",
+      "bytes": 138751,
+      "sha256": "5dad3d65f8d138985e61e25166538c25dab40a64d89914bdc72fecb31d9766eb"
+    },
+    {
+      "name": "native-scale.png",
+      "format": "PNG",
+      "bytes": 18009,
+      "sha256": "e39960f6e55f05fbc2018dfdad18aea3b9e6e628d7c693f17818e282b5488f9a"
+    },
+    {
+      "name": "zoom-4x.png",
+      "format": "PNG",
+      "bytes": 99081,
+      "sha256": "2c53420f8ef5a7dbadb2fa8751cc6d60dd360d764376cf265a8835adc0370f88"
+    }
+  ],
+  "cleanup": {
+    "ownBrowserTabClosed": true,
+    "localServerStopped": true,
+    "existingGameAndGithubTabsTouched": false
+  }
+}

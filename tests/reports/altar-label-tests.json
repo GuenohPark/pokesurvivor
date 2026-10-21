@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "checks": 29,
+  "passedCount": 29,
+  "failedCount": 0,
+  "scope": "Source-only offline VM with genuine pinned world.js and full tiles.js fixture, synthetic props and canvas. No browser, accounts, game/player/save/stat reads, installation or deployment.",
+  "sourceCommit": "3c9641c9e782cf74afbde490f39cd60adf59e32b",
+  "failures": []
+}

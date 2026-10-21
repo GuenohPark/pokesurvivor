@@ -18,7 +18,7 @@ Native renderer를 보존하고 Proxy context alpha에 smoothstep 거리 감쇠�
 
 공통 Tampermonkey userscript는 PC Chrome/Edge/Firefox, Android Firefox, iPhone Safari를 대상으로 합니다. document-start 부트스트랩이 한 번 초기화하며 공통 DOM 마커와 기능 등록부를 사용합니다. URL 1초 polling, popstate/hashchange/pageshow, body/root observer로 화면 변경을 감지하고 history API는 monkeypatch하지 않습니다. 기존 번역/핵심, 글꼴, 검색, 팁, 포켓몬 티어, 기술 티어 기능을 재사용합니다.
 
-메타데이터는 package 기반 버전(0.5.2), `@grant none`, `@sandbox raw`, `@run-at document-start`, 최상위 프레임 전용, 공식 .com 호스트만을 사용합니다. 산출물은 자체 완결형이며 원격 실행 JS, GM 의존성, 자체 업데이트 로직이 없습니다. Raw 업데이트 링크는 관리자 확인/설정을 위한 것이며 즉시 교체하지 않습니다. iOS 백그라운드 정지나 권한에 따라 확인이 늦을 수 있으므로 실행 중인 판에서 교체하지 않습니다.
+메타데이터는 package 기반 버전(0.5.3), `@grant none`, `@sandbox raw`, `@run-at document-start`, 최상위 프레임 전용, 공식 .com 호스트만을 사용합니다. 산출물은 자체 완결형이며 원격 실행 JS, GM 의존성, 자체 업데이트 로직이 없습니다. Raw 업데이트 링크는 관리자 확인/설정을 위한 것이며 즉시 교체하지 않습니다. iOS 백그라운드 정지나 권한에 따라 확인이 늦을 수 있으므로 실행 중인 판에서 교체하지 않습니다.
 
 ## 저장소·기능 검토 범위
 
@@ -27,7 +27,7 @@ Native renderer를 보존하고 Proxy context alpha에 smoothstep 거리 감쇠�
 ## 호환성·안전 경계
 
 - 공식 .com 최상위 페이지 전용이며 .org, 인증 페이지, iframe은 제외합니다.
-- 통합판 사용 전 기존 패치 스크립트와 사용자 Chrome 확장을 끕니다. 아이폰 기본 권장 자동 로더 0.1.2는 DOM 전용입니다. Chrome/browser 수동판 0.1.10, Store 0.1.3, APK 앱 버전은 별도 대안으로 유지합니다. 저장/계정 또는 APK를 삭제하지 않습니다.
+- 통합판 사용 전 기존 패치 스크립트와 사용자 Chrome 확장을 끕니다. 아이폰 기본 권장 자동 로더 0.1.2는 DOM 전용입니다. Chrome/browser 수동판 0.1.11, Store 0.1.3, APK 앱 버전은 별도 대안으로 유지합니다. 저장/계정 또는 APK를 삭제하지 않습니다.
 - Canvas/dialog 래핑은 활성 게임 경로에서만 실행하며 원래 호출과 반환을 보존합니다. 페이지 컨텍스트 실행만으로 게임 Canvas 접근을 입증하지 않습니다.
 - 게임 데이터·서버 요청·계정 저장·랭킹·세이브를 변경하지 않습니다. iOS 15 호환성을 위해 RegExp lookbehind를 피합니다.
 
@@ -56,3 +56,8 @@ Native renderer를 보존하고 Proxy context alpha에 smoothstep 거리 감쇠�
 기능 소스 커밋 `2b3f39f8a614be31eff3d27f06b4573aafb6d513`, 생성물 커밋 `8083da97bd819b6e1b59a9bbcbe1b24738907ab3`. [Build and publish 성공](https://github.com/GuenohPark/pokesurvivor/actions/runs/39585521322), [설치 페이지 배포 성공](https://github.com/GuenohPark/pokesurvivor/actions/runs/39585580333)을 확인했습니다. 공통0.5.2·browser/Chrome0.1.10·아이폰 로더0.1.2입니다.
 
 페이드 Node31그룹, 로컬 Chromium 원본 렌더러/합성 좌표29검사, 기존 전체 회귀·Chrome58검사를 통과했습니다. 가까운 대상4종 영역만 바뀌고 비대상 영역은 원본과 픽셀 동일했습니다. [전용 범위와 검사 보고서](PICKUP-FADE.md). 실제 게임 플레이·설치 관리자·물리 기기·로그인·클라우드 저장 검증은 하지 않았습니다. 아이폰 무료 Userscripts의 Canvas 제약은 그대로입니다.
+
+
+## 제단 돌 받침 이름 · 0.5.3
+
+`src/altar-label-ui.js` 하나를 공통 번들과 기존 확장 MAIN 경로에 연결합니다. 원본 `World.drawProp`을 한 번 호출한 뒤 제단의 돌 받침 영역에만 이름을 그립니다. 분노·질주·자석·신속함이며 이미 사용한 제단은 사용함으로 표시합니다. 이름은 효과 종류 인덱스로 고정하여 이동속도 버프 Rayo를 기술 10만볼트로 오인하지 않습니다. 픽업 페이드와 별개이며 제단/플레이어/계정/획득 처리를 바꾸지 않습니다. 아이폰 무료 Userscripts는 같은 Canvas 제약으로 비활성화됩니다. [전용 범위와 검증](ALTAR-LABELS.md).
