@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name PokéSurvivor 한국어 메뉴 시험판
 // @namespace pokesurvivor-ko-local-test
-// @version 0.5.0
+// @version 0.5.1
 // @description 포켓몬·기술·아이템·능력치·설명·UI 한국어 번역. Userscripts는 DOM 전용, Canvas는 별도 확장 필요.
 // @match https://pokesurvivor.com/*
 // @match https://www.pokesurvivor.com/*
