@@ -45,13 +45,14 @@ assert.equal(newer.versions.chromeExtensionVersion, '0.1.13');
 assert.equal(plan(['README.md'], previous, newerRelease).versions.version, '0.5.2');
 assert.deepEqual(plan(['src/runtime-core.js'], requested), plan(['src/runtime-core.js'], requested), 'Planning must be deterministic');
 const files = generatedFiles(requested);
-for (const required of ['package.json', 'dist/pokesurvivor.user.js', 'dist/pokesurvivor.meta.js', 'dist/pokesurvivor-build.json', 'site/index.html', 'chrome-extension/manifest.json', 'dist/pokesurvivor-ko-chrome-extension-0.1.8-test.zip']) assert.ok(files.includes(required), required);
+for (const required of ['package.json', 'dist/pokesurvivor.user.js', 'dist/pokesurvivor.meta.js', 'dist/pokesurvivor-build.json', 'site/index.html', 'tests/fixtures/tier-player-reference.json', 'chrome-extension/manifest.json', 'dist/pokesurvivor-ko-chrome-extension-0.1.8-test.zip']) assert.ok(files.includes(required), required);
 for (const forbidden of ['android/keystore.jks', 'README.md', 'src/runtime-core.js', 'tests/test.cjs', 'dist/pokesurvivor-ko-android-test.apk', 'dist/pokesurvivor-ko-android-source.zip', 'dist/pokesurvivor-ko-chrome-extension-0.1.7-test.zip', 'dist/pokesurvivor-ko-chrome-web-store-0.1.3.zip']) assert.ok(!files.includes(forbidden), forbidden);
 assert.equal(new Set(files).size, files.length);
 for (const file of ['android/app/release.keystore', 'dist/pokesurvivor-ko-android-source.zip', 'dist/pokesurvivor-ko-android-test.apk', 'dist/pokesurvivor-ko-chrome-web-store-0.1.3.zip', 'dist/pokesurvivor-ko-chrome-extension-0.1.7-test.sha256']) assert.equal(isProtectedArtifact(file), true, file);
 for (const file of ['dist/pokesurvivor-ko-desktop-extension.zip', 'dist/pokesurvivor-ko-chrome-extension.zip', 'dist/pokesurvivor.meta.js']) assert.equal(isProtectedArtifact(file), false, file);
 assert.equal(isGeneratedPath('dist/pokesurvivor.meta.js'), true);
 assert.equal(isGeneratedPath('src/runtime-core.js'), false);
+assert.equal(isGeneratedPath('tests/fixtures/tier-player-reference.json'), true, 'Generated reference must publish with its manifest fingerprint');
 assert.equal(isGeneratedPath('site/index.html'), true);
 assert.equal(isGeneratedPath('site/index.template.html'), false);
 // Generated status is never a reason to skip validation of human edits.

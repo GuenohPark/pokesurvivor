@@ -64,6 +64,7 @@ const GENERATED = [
   'extension/manifest.json', 'extension/LICENSE', 'extension/THIRD-PARTY-NOTICES.md',
   'extension/licenses/GAME-LICENSE-NONCOMMERCIAL.md', 'extension/licenses/Galmuri-LICENSE.txt', 'extension/licenses/PokeAPI-LICENSE.md',
   'chrome-extension/content-main.js', 'chrome-extension/manifest.json', 'chrome-extension/LICENSE', 'chrome-extension/TEST-REPORT.json',
+  'tests/fixtures/tier-player-reference.json',
   'data/tier-model.json', 'data/tier-ui.json', 'data/move-ui.json', 'dist/pokesurvivor-full-upgrade-stats.csv',
   'dist/pokesurvivor-ko-desktop-extension.zip', 'dist/pokesurvivor-ko-chrome-extension.zip'
 ];
