@@ -29,7 +29,7 @@
     "scripts/build-chrome-extension.cjs": "93f9d2820418720d4a7bc82d12c8c7b0dd9a53976e2593a38fcccbb4985926b5",
     "scripts/build-chrome-store.cjs": "47430f832334126e58c5d0dbd6200b3e906fa7fd5a04f37a6c39722f7b2cc2b9",
     "scripts/build-move-data.cjs": "0c560c22e342f5d0b38d0ef41d64402e3a33d0f61f87f2e6bad6152fba6db06a",
-    "scripts/build-site.cjs": "4f737e17e4fd7d8ac53f5622b24331c81b09e083b28ed16a5404c5e68eef3aa4",
+    "scripts/build-site.cjs": "c45ecc3ef683c8d98b3d3efe37e96b1674c0e82fdfdee3e1b62e8171e7b03a4d",
     "scripts/build-tier-data.cjs": "92d3ee57d74a63a17cae82cacb8648df06fa7e8b1d72ce77f38f684041c2830f",
     "scripts/build-unified.cjs": "49e9f78a88f696b4212204850ab3fda237cfb059677e664193b5606438f28839",
     "scripts/build.cjs": "2551fd270f0ff1548d23139c7c4cab3d65df1d9b66bdc8504f44df6193bb5890",
