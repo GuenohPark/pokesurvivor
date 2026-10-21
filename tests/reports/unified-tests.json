@@ -39,6 +39,6 @@
     "A Canvas prototype marker only proves current-realm registration; it does not establish page-world injection or actual game Canvas translation.",
     "No real sign-in, cloud save or manager update cycle is executed by these tests."
   ],
-  "version": "0.5.0",
+  "version": "0.5.2",
   "metadataUpdate": "Canonical URL/version static checks only, no manager time-to-update guarantee."
 }

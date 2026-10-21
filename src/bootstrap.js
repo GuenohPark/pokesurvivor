@@ -1,4 +1,4 @@
-// One document-lifetime entry for every distribution. No game/account globals or history patches.
+// One document-lifetime entry for every distribution. No account/progression access or history patches.
 (function(){
 'use strict';
 function allowedLocation(loc, win) {

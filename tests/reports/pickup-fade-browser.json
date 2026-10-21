@@ -1,0 +1,259 @@
+{
+  "scope": "offline original pickup/icons renderer, synthetic coordinates only",
+  "createdAt": "2026-10-21T10:29:08.820Z",
+  "errors": [],
+  "checks": {
+    "firstNativeDrawProbeMatchesBaseline": true,
+    "adapterActive": true,
+    "cameraFunctionRestored": true,
+    "globalAlphaEndsAtOne": true,
+    "syntheticPickupJsonUnchanged": true,
+    "changedPixelsExist": true,
+    "onlyTargetRoisChanged": true,
+    "roi near xp": true,
+    "roi near xpBig": true,
+    "roi near coin": true,
+    "roi near heal": true,
+    "roi far xp": true,
+    "roi far xpBig": true,
+    "roi far coin": true,
+    "roi far heal": true,
+    "roi stationary xp": true,
+    "roi stationary xpBig": true,
+    "roi stationary coin": true,
+    "roi stationary heal": true,
+    "roi ticket": true,
+    "roi gear/item": true,
+    "roi bomb": true,
+    "roi magnet": true,
+    "roi ticket10": true,
+    "realCanvasNativeMethods": true,
+    "nativeContextBrand": true,
+    "realIconDrawImageProducesPixels": true,
+    "moduleIsolatedNoAutomaticGlobalController": true,
+    "noBrowserErrors": true
+  },
+  "rois": [
+    {
+      "label": "near xp",
+      "kind": "xp",
+      "x": 240,
+      "y": 180,
+      "pulled": true,
+      "opacity": 0.25925925925925924,
+      "changedPixels": 276
+    },
+    {
+      "label": "near xpBig",
+      "kind": "xpBig",
+      "x": 280,
+      "y": 140,
+      "pulled": true,
+      "opacity": 0.25925925925925924,
+      "changedPixels": 660
+    },
+    {
+      "label": "near coin",
+      "kind": "coin",
+      "x": 320,
+      "y": 180,
+      "pulled": true,
+      "opacity": 0.25925925925925924,
+      "changedPixels": 416
+    },
+    {
+      "label": "near heal",
+      "kind": "heal",
+      "x": 280,
+      "y": 220,
+      "pulled": true,
+      "opacity": 0.25925925925925924,
+      "changedPixels": 568
+    },
+    {
+      "label": "far xp",
+      "kind": "xp",
+      "x": 100,
+      "y": 180,
+      "pulled": true,
+      "opacity": 1,
+      "changedPixels": 0
+    },
+    {
+      "label": "far xpBig",
+      "kind": "xpBig",
+      "x": 280,
+      "y": 20,
+      "pulled": true,
+      "opacity": 1,
+      "changedPixels": 0
+    },
+    {
+      "label": "far coin",
+      "kind": "coin",
+      "x": 460,
+      "y": 180,
+      "pulled": true,
+      "opacity": 1,
+      "changedPixels": 0
+    },
+    {
+      "label": "far heal",
+      "kind": "heal",
+      "x": 280,
+      "y": 350,
+      "pulled": true,
+      "opacity": 1,
+      "changedPixels": 0
+    },
+    {
+      "label": "stationary xp",
+      "kind": "xp",
+      "x": 80,
+      "y": 400,
+      "pulled": false,
+      "opacity": 1,
+      "changedPixels": 0
+    },
+    {
+      "label": "stationary xpBig",
+      "kind": "xpBig",
+      "x": 170,
+      "y": 400,
+      "pulled": false,
+      "opacity": 1,
+      "changedPixels": 0
+    },
+    {
+      "label": "stationary coin",
+      "kind": "coin",
+      "x": 260,
+      "y": 400,
+      "pulled": false,
+      "opacity": 1,
+      "changedPixels": 0
+    },
+    {
+      "label": "stationary heal",
+      "kind": "heal",
+      "x": 350,
+      "y": 400,
+      "pulled": false,
+      "opacity": 1,
+      "changedPixels": 0
+    },
+    {
+      "label": "ticket",
+      "kind": "ticket",
+      "x": 80,
+      "y": 465,
+      "pulled": true,
+      "opacity": 1,
+      "changedPixels": 0
+    },
+    {
+      "label": "gear/item",
+      "kind": "item",
+      "x": 170,
+      "y": 465,
+      "pulled": true,
+      "opacity": 1,
+      "changedPixels": 0
+    },
+    {
+      "label": "bomb",
+      "kind": "bomb",
+      "x": 260,
+      "y": 465,
+      "pulled": true,
+      "opacity": 1,
+      "changedPixels": 0
+    },
+    {
+      "label": "magnet",
+      "kind": "magnet",
+      "x": 350,
+      "y": 465,
+      "pulled": true,
+      "opacity": 1,
+      "changedPixels": 0
+    },
+    {
+      "label": "ticket10",
+      "kind": "ticket10",
+      "x": 440,
+      "y": 465,
+      "pulled": true,
+      "opacity": 1,
+      "changedPixels": 0
+    }
+  ],
+  "syntheticBefore": "[{\"kind\":\"xp\",\"x\":240,\"y\":180,\"value\":1,\"vx\":-18.637216894323153,\"vy\":-20.896271113142546,\"t\":0,\"pulled\":true,\"id\":1},{\"kind\":\"xpBig\",\"x\":280,\"y\":140,\"value\":25,\"vx\":27.93452511798398,\"vy\":-1.9137153478827766,\"t\":0,\"pulled\":true,\"id\":2},{\"kind\":\"coin\",\"x\":320,\"y\":180,\"value\":1,\"vx\":-20.757874482550363,\"vy\":18.791238569255736,\"t\":0,\"pulled\":true,\"id\":3},{\"kind\":\"heal\",\"x\":280,\"y\":220,\"value\":0,\"vx\":23.86859662548337,\"vy\":14.638650727781027,\"t\":0,\"pulled\":true,\"id\":4},{\"kind\":\"xp\",\"x\":100,\"y\":180,\"value\":1,\"vx\":27.864996130409224,\"vy\":-2.7462684960285517,\"t\":0,\"pulled\":true,\"id\":5},{\"kind\":\"xpBig\",\"x\":280,\"y\":20,\"value\":25,\"vx\":15.59801510955383,\"vy\":23.252998186086252,\"t\":0,\"pulled\":true,\"id\":6},{\"kind\":\"coin\",\"x\":460,\"y\":180,\"value\":1,\"vx\":-0.3548240479094687,\"vy\":-27.99775169357399,\"t\":0,\"pulled\":true,\"id\":7},{\"kind\":\"heal\",\"x\":280,\"y\":350,\"value\":0,\"vx\":-15.751826472867382,\"vy\":23.14908125107073,\"t\":0,\"pulled\":true,\"id\":8},{\"kind\":\"xp\",\"x\":80,\"y\":400,\"value\":1,\"vx\":-8.98977816950467,\"vy\":-26.517614682755635,\"t\":0,\"pulled\":false,\"id\":9},{\"kind\":\"xpBig\",\"x\":170,\"y\":400,\"value\":25,\"vx\":20.93198303766279,\"vy\":-18.597098862752688,\"t\":0,\"pulled\":false,\"id\":10},{\"kind\":\"coin\",\"x\":260,\"y\":400,\"value\":1,\"vx\":23.023465271932817,\"vy\":15.934868900373909,\"t\":0,\"pulled\":false,\"id\":11},{\"kind\":\"heal\",\"x\":350,\"y\":400,\"value\":0,\"vx\":-13.721151672780175,\"vy\":-24.407580723467078,\"t\":0,\"pulled\":false,\"id\":12},{\"kind\":\"ticket\",\"x\":80,\"y\":465,\"value\":1,\"vx\":0.96823725030233,\"vy\":27.983254217962696,\"t\":0,\"pulled\":true,\"id\":13},{\"kind\":\"item\",\"x\":170,\"y\":465,\"value\":\"gear\",\"vx\":6.53302536160272,\"vy\":27.227184570290326,\"t\":0,\"pulled\":true,\"id\":14},{\"kind\":\"bomb\",\"x\":260,\"y\":465,\"value\":0,\"vx\":-27.73640516624851,\"vy\":-3.832992101961995,\"t\":0,\"pulled\":true,\"id\":15},{\"kind\":\"magnet\",\"x\":350,\"y\":465,\"value\":0,\"vx\":-10.392053429251245,\"vy\":-26.000100490644023,\"t\":0,\"pulled\":true,\"id\":16},{\"kind\":\"ticket10\",\"x\":440,\"y\":465,\"value\":1,\"vx\":-22.19391512505044,\"vy\":-17.071324829141325,\"t\":0,\"pulled\":true,\"id\":17}]",
+  "afterRefresh": {
+    "status": "registered-awaiting-render",
+    "enabled": true,
+    "contractVerified": false
+  },
+  "afterFirstDraw": {
+    "status": "active",
+    "enabled": true,
+    "contractVerified": true
+  },
+  "afterSecondDraw": {
+    "status": "active",
+    "enabled": true,
+    "contractVerified": true
+  },
+  "syntheticAfter": "[{\"kind\":\"xp\",\"x\":240,\"y\":180,\"value\":1,\"vx\":-18.637216894323153,\"vy\":-20.896271113142546,\"t\":0,\"pulled\":true,\"id\":1},{\"kind\":\"xpBig\",\"x\":280,\"y\":140,\"value\":25,\"vx\":27.93452511798398,\"vy\":-1.9137153478827766,\"t\":0,\"pulled\":true,\"id\":2},{\"kind\":\"coin\",\"x\":320,\"y\":180,\"value\":1,\"vx\":-20.757874482550363,\"vy\":18.791238569255736,\"t\":0,\"pulled\":true,\"id\":3},{\"kind\":\"heal\",\"x\":280,\"y\":220,\"value\":0,\"vx\":23.86859662548337,\"vy\":14.638650727781027,\"t\":0,\"pulled\":true,\"id\":4},{\"kind\":\"xp\",\"x\":100,\"y\":180,\"value\":1,\"vx\":27.864996130409224,\"vy\":-2.7462684960285517,\"t\":0,\"pulled\":true,\"id\":5},{\"kind\":\"xpBig\",\"x\":280,\"y\":20,\"value\":25,\"vx\":15.59801510955383,\"vy\":23.252998186086252,\"t\":0,\"pulled\":true,\"id\":6},{\"kind\":\"coin\",\"x\":460,\"y\":180,\"value\":1,\"vx\":-0.3548240479094687,\"vy\":-27.99775169357399,\"t\":0,\"pulled\":true,\"id\":7},{\"kind\":\"heal\",\"x\":280,\"y\":350,\"value\":0,\"vx\":-15.751826472867382,\"vy\":23.14908125107073,\"t\":0,\"pulled\":true,\"id\":8},{\"kind\":\"xp\",\"x\":80,\"y\":400,\"value\":1,\"vx\":-8.98977816950467,\"vy\":-26.517614682755635,\"t\":0,\"pulled\":false,\"id\":9},{\"kind\":\"xpBig\",\"x\":170,\"y\":400,\"value\":25,\"vx\":20.93198303766279,\"vy\":-18.597098862752688,\"t\":0,\"pulled\":false,\"id\":10},{\"kind\":\"coin\",\"x\":260,\"y\":400,\"value\":1,\"vx\":23.023465271932817,\"vy\":15.934868900373909,\"t\":0,\"pulled\":false,\"id\":11},{\"kind\":\"heal\",\"x\":350,\"y\":400,\"value\":0,\"vx\":-13.721151672780175,\"vy\":-24.407580723467078,\"t\":0,\"pulled\":false,\"id\":12},{\"kind\":\"ticket\",\"x\":80,\"y\":465,\"value\":1,\"vx\":0.96823725030233,\"vy\":27.983254217962696,\"t\":0,\"pulled\":true,\"id\":13},{\"kind\":\"item\",\"x\":170,\"y\":465,\"value\":\"gear\",\"vx\":6.53302536160272,\"vy\":27.227184570290326,\"t\":0,\"pulled\":true,\"id\":14},{\"kind\":\"bomb\",\"x\":260,\"y\":465,\"value\":0,\"vx\":-27.73640516624851,\"vy\":-3.832992101961995,\"t\":0,\"pulled\":true,\"id\":15},{\"kind\":\"magnet\",\"x\":350,\"y\":465,\"value\":0,\"vx\":-10.392053429251245,\"vy\":-26.000100490644023,\"t\":0,\"pulled\":true,\"id\":16},{\"kind\":\"ticket10\",\"x\":440,\"y\":465,\"value\":1,\"vx\":-22.19391512505044,\"vy\":-17.071324829141325,\"t\":0,\"pulled\":true,\"id\":17}]",
+  "changedPixels": 1920,
+  "changedPixelsOutsideTargetRois": 0,
+  "nativeMethods": {
+    "beginPath": "function beginPath() { [native code] }",
+    "ellipse": "function ellipse() { [native code] }",
+    "arc": "function arc() { [native code] }",
+    "fill": "function fill() { [native code] }",
+    "moveTo": "function moveTo() { [native code] }",
+    "lineTo": "function lineTo() { [native code] }",
+    "closePath": "function closePath() { [native code] }",
+    "drawImage": "function drawImage() { [native code] }",
+    "getImageData": "function getImageData() { [native code] }"
+  },
+  "sources": {
+    "pickup": {
+      "path": "/Users/groro/.aside/u/0/sessions/2026-10-15_ly4A1XbhXobVZEbu/tmp/gacha-audit/repo/js/entities/pickup.js",
+      "sha256": "9b481659231b30d3c4127655635a94317c53ffcbacc077ad41f87e1e71dacf93"
+    },
+    "icons": {
+      "path": "/Users/groro/.aside/u/0/sessions/2026-10-15_ly4A1XbhXobVZEbu/tmp/unified/patch/tests/fixtures/move-context-current/js/ui/icons.js",
+      "sha256": "e52ecda71acd1f5bc4988c47956b36f9ebcf8f55560e5f44e584194910f2c0ec"
+    },
+    "fade": {
+      "path": "/Users/groro/.aside/u/0/sessions/2026-10-15_ly4A1XbhXobVZEbu/tmp/unified/patch/src/pickup-fade-ui.js",
+      "sha256": "f2ad0f9467570f398ec32f271929c99deebe8e3b4a8d4975d8ceb52098953ecb"
+    }
+  },
+  "pass": true,
+  "finalSourceVerification": {
+    "pickup": {
+      "copySha256": "9b481659231b30d3c4127655635a94317c53ffcbacc077ad41f87e1e71dacf93",
+      "currentSourceSha256": "9b481659231b30d3c4127655635a94317c53ffcbacc077ad41f87e1e71dacf93",
+      "matchesRunHash": true
+    },
+    "icons": {
+      "copySha256": "e52ecda71acd1f5bc4988c47956b36f9ebcf8f55560e5f44e584194910f2c0ec",
+      "currentSourceSha256": "e52ecda71acd1f5bc4988c47956b36f9ebcf8f55560e5f44e584194910f2c0ec",
+      "matchesRunHash": true
+    },
+    "fade": {
+      "copySha256": "f2ad0f9467570f398ec32f271929c99deebe8e3b4a8d4975d8ceb52098953ecb",
+      "currentSourceSha256": "f2ad0f9467570f398ec32f271929c99deebe8e3b4a8d4975d8ceb52098953ecb",
+      "matchesRunHash": true
+    }
+  },
+  "proofScreenshot": "/Users/groro/.aside/u/0/sessions/2026-10-15_ly4A1XbhXobVZEbu/tmp/pickup-fade-preview/browser-proof-full.png",
+  "confirmedPort": 59843,
+  "tabClosedAtCompletion": false,
+  "serverStoppedAtCompletion": true,
+  "previewTabTarget": "A5303105BAE1080DAC3942D9032BA1B7",
+  "cleanupNote": "closeTab invoked twice and REPL detached, but listBrowserTabs still reports preview target. Server terminated. GitHub tab untouched."
+}

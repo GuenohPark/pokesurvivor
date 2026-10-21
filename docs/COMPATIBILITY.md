@@ -4,7 +4,7 @@
 
 **아이폰은 Safari + 무료 [Userscripts](https://apps.apple.com/app/userscripts/id1463298887) + [자동 로더](https://raw.githubusercontent.com/GuenohPark/pokesurvivor/main/dist/pokesurvivor-ko-auto.user.js)가 기본 권장입니다.** 유료 iPhone Tampermonkey는 필요하지 않습니다. Userscripts는 DOM 번역용이며 전투 Canvas HUD는 지원하지 않습니다. PC·Android Firefox는 Tampermonkey 통합판을 사용합니다.
 
-## PC·Android 통합 Tampermonkey판 0.5.1
+## PC·Android 통합 Tampermonkey판 0.5.2
 
 [설치 파일](https://raw.githubusercontent.com/GuenohPark/pokesurvivor/main/dist/pokesurvivor.user.js) · [설치 안내](INSTALL.md) · [감사 기록](UNIFIED-AUDIT.md)
 
@@ -12,12 +12,18 @@
 
 대상은 pokesurvivor.com 및 www.pokesurvivor.com의 최상위 페이지뿐입니다. .org, 인증 화면, iframe/subframe은 제외합니다. 관리자 감지는 iOS에서 신뢰성 있게 할 수 없으므로 안내는 사용자 에이전트 기반 권고일 뿐입니다. Canvas/dialog 훅은 활성 게임 경로에서만 작동하며 원래 호출/반환을 보존하도록 설계했지만, page context에서 실행된다는 사실만으로 실제 게임 Canvas에 도달했다고 입증되지는 않습니다.
 
-통합판을 켜기 전에 이전 패치 스크립트와 사용자 Chrome 확장을 끄세요. 기존 Chrome 수동판 0.1.9, 스토어판 0.1.3, APK 버전은 별도 대안으로 유지하며 기존 저장·계정·APK 삭제는 필요하지 않습니다. 실제 iPhone/Android와 각 Tampermonkey 조합, 로그인 및 클라우드 저장 흐름은 미검증입니다. [유지보수](MAINTENANCE.md)
+통합판을 켜기 전에 이전 패치 스크립트와 사용자 Chrome 확장을 끄세요. 기존 Chrome 수동판 0.1.10, 스토어판 0.1.3, APK 버전은 별도 대안으로 유지하며 기존 저장·계정·APK 삭제는 필요하지 않습니다. 실제 iPhone/Android와 각 Tampermonkey 조합, 로그인 및 클라우드 저장 흐름은 미검증입니다. [유지보수](MAINTENANCE.md)
 
 
 [설치 안내](INSTALL.md) · [홈 화면 PWA 안내](PWA.md)
 
 **아이폰의 독립 홈 화면 PWA는 현재 지원하지 않습니다. Safari 탭에서 사용하거나, iOS 26 이상의 ‘웹앱으로 열기’를 끈 Safari 바로가기를 사용하세요.** 이 제한은 Canvas 번역 제한과 별개의 실행 환경 문제입니다.
+
+## 픽업 페이드 (공통판 0.5.2)
+
+지원 realm에서 G.Pickups.draw/all, Camera.sees, G.Game.player의 x/y가 모두 보이면 기본 활성화됩니다. 최초 native draw에서 shape/order를 점검하고 지원되지 않으면 fail-closed이며 설치된 manager에서 기능이 검증됐다는 주장은 하지 않습니다. 네이티브 renderer는 유지하고 Proxy context의 alpha만 smoothstep 거리 감쇠합니다: 거리 140에서 1, 거리 20에서 0.2. 대상은 pulled===true인 xp, xpBig, coin, heal뿐입니다. stationary/tickets/gear/bombs/magnets/avatars/enemies/projectiles는 변경하지 않습니다. 읽기는 transient render coordinates/kind/pulled 및 공개 player x/y뿐이며 HP·stats·account/save를 읽지 않고 position/velocity/collect/value를 수정하지 않습니다. Camera.sees는 원래 receiver/results를 보존하도록 일시적으로 감싸고 finally에서 복원합니다.
+
+아이폰 무료 Userscripts content 실행은 네이티브 renderer에 접근하지 못하므로 미지원이며 기존 기본 경로를 유지합니다.
 
 ## iPhone Safari + App Store Userscripts
 
@@ -46,9 +52,11 @@
 
 폰트 비율·일반/굵게·미디어 전환·재주입과 폰트 바이트 보존은 자동 테스트로 확인하며, 물리적 iPhone 검증은 아직 하지 않았습니다.
 
+[픽업 페이드 상세](PICKUP-FADE.md)
+
 ## 별도 WebExtension 소스
 
-저장소의 extension/manifest.json과 extension/extension-*.js는 별도 브라우저 확장 소스입니다. 백그라운드에서 **browser.scripting.executeScript({world:'MAIN', func, args})**를 사용합니다. 문자열 eval이나 동적 script 태그를 이용하지 않으며 사이트 CSP를 해제하지 않습니다. 숨겨진 게임 G 객체에도 접근하지 않습니다.
+저장소의 extension/manifest.json과 extension/extension-*.js는 별도 브라우저 확장 소스입니다. 백그라운드에서 **browser.scripting.executeScript({world:'MAIN', func, args})**를 사용합니다. 문자열 eval이나 동적 script 태그를 이용하지 않으며 사이트 CSP를 해제하지 않습니다. 숨겨진 게임 G 객체는 일반 번역·게임 데이터 기능에서 사용하지 않습니다. 렌더 전용 픽업 페이드(별도 설명)는 지원되는 realm에서 공개된 렌더링 표면인 G.Pickups.draw, Camera.sees, G.Game.player의 x/y만 읽는 제한적 예외입니다.
 
 MAIN 쪽은 fillText·strokeText·measureText를 함께 감싸고, alert/confirm 문구도 번역합니다. 기존 게임 i18n과 이어서 작동합니다. HUD의 Psychic 기술명은 사이코키네시스로, DOM의 에스퍼 타입 표시는 에스퍼로 분리합니다. Canvas에는 DOM의 사용자명 보호 마커가 없으므로, 닉네임이 사전의 포켓몬 이름과 정확히 같은 경우 화면에서 번역될 수 있습니다. 서버에 저장된 닉네임은 바뀌지 않습니다.
 
@@ -79,6 +87,6 @@ MAIN 쪽은 fillText·strokeText·measureText를 함께 감싸고, alert/confirm
 
 자동 로더는 content 컨텍스트에서 GM.getValue·GM.setValue·GM.xmlHttpRequest를 사용합니다. 공개 GitHub 주소의 코드만 받아 버전·식별자·문법을 확인하고 실행합니다. 앱의 업데이트 버튼과 별개로 동작하며 페이지 입력 이후 새 버전을 hot-swap하지 않습니다.
 
-Userscripts v4.8.6/iOS1.8.6의 content 주입 코드 자체가 Function을 사용하는 것을 확인했습니다: https://github.com/quoid/userscripts/blob/06900223459036d2a238d93ab1af4d9f26cadbc7/src/ext/content-scripts/entry-userscripts.js#L79-L89 . 이는 페이지 world의 CSP 차단과 구분됩니다. 자동 로더 역시 이 content 실행 경로를 사용하며 Canvas 권한이 생기는 것은 아닙니다. 물리적 iPhone에서 새 로더를 실행한 검증은 아직 하지 않았습니다. 현재 배포는 공통 번역팩 0.5.1 / 아이폰 자동 로더 0.1.2이며 새 주소는 dist/입니다. 기존 루트 업데이트 주소 4개는 같은 파일로 유지합니다.
+Userscripts v4.8.6/iOS1.8.6의 content 주입 코드 자체가 Function을 사용하는 것을 확인했습니다: https://github.com/quoid/userscripts/blob/06900223459036d2a238d93ab1af4d9f26cadbc7/src/ext/content-scripts/entry-userscripts.js#L79-L89 . 이는 페이지 world의 CSP 차단과 구분됩니다. 자동 로더 역시 이 content 실행 경로를 사용하며 Canvas 권한이 생기는 것은 아닙니다. 물리적 iPhone에서 새 로더를 실행한 검증은 아직 하지 않았습니다. 현재 배포는 공통 번역팩 0.5.2 / 아이폰 자동 로더 0.1.2이며 새 주소는 dist/입니다. 기존 루트 업데이트 주소 4개는 같은 파일로 유지합니다.
 
 캐시가 없을 때 확인 중 사용자가 게임을 먼저 시작하면 받은 코드는 저장만 하고 다음 새로고침 때 적용합니다. 동일 버전 재접속·오프라인·잘못된 응답·버전 불일치·사용자 입력 시점 등 13개 분기와 GM이 전역이 아닌 주입 매개변수인 경우를 Node에서 검증했습니다.

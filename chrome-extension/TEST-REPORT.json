@@ -1,10 +1,10 @@
 {
-  "extensionVersion": "0.1.8-test",
-  "patchVersion": "0.5.0",
+  "extensionVersion": "0.1.10-test",
+  "patchVersion": "0.5.2",
   "manifestVersion": 3,
   "sourceIdentity": "Current generated source byte-compared with dist/pokesurvivor-ko-browser.user.js and dist/pokesurvivor-build.json, no hardcoded stale digest.",
   "staticChromeBoundaryChecks": 58,
-  "sharedRuntime": "src/bootstrap.js + scripts/bundle-common.cjs + src/runtime-core.js",
+  "sharedRuntime": "src/bootstrap.js + scripts/bundle-common.cjs + src/runtime-core.js + src/pickup-fade-ui.js",
   "dataRegression": "Existing translation, tier math/geometry, move fit, hidden/name/input and font suites retained.",
   "physicalDevices": {
     "windows": false,
@@ -14,5 +14,12 @@
   },
   "authenticationAndSave": "No credential, storage, cookie, game-save or authentication APIs in common Userscript; real account/cloud-save E2E not performed.",
   "canvas": "Hook installed in current realm does not prove actual game page-world execution.",
-  "storeSubmissionChanged": false
+  "storeSubmissionChanged": false,
+  "pickupFade": {
+    "nodeChecks": 31,
+    "browser": "Offline native renderer + synthetic fixtures only; not installed manager or physical devices.",
+    "dataBoundary": "Transient render x/y, kind, pulled; local avatar x/y only. No account, progression, save or collection mutation.",
+    "browserChecks": 29,
+    "sourceSha256": "f2ad0f9467570f398ec32f271929c99deebe8e3b4a8d4975d8ceb52098953ecb"
+  }
 }

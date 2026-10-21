@@ -4,15 +4,21 @@
 
 사용자 요청에 따라 아이폰은 **Safari + 무료 Userscripts + 자동 로더 0.1.2**를 기본 권장합니다. PC·Android는 Tampermonkey 통합판을 유지합니다. 설치 페이지는 아이폰 선택 시 앱 안내와 주 설치 링크를 Userscripts용으로 전환하며, JavaScript가 꺼져 있어도 아이폰 전용 다운로드 링크를 제공합니다. Userscripts는 DOM 전용이며 전투 Canvas·독립 PWA·실기기 전체 흐름 제한은 그대로입니다. 아래 공통 Tampermonkey 구현 기록이 아이폰 유료 앱 설치 권장을 뜻하지 않습니다.
 
-## 게임 중 기술 배지 추가 · 0.5.1
+## 게임 중 기술 배지 추가 · 0.5.2
 
 레벨업·진화·유대 선택 및 최신 일시정지 기술명 DOM을 지원합니다. 다수전은 게임의 포켓볼 묶음, 보스전은 왕관 아이콘으로 나눕니다. 런중 포켓몬 능력치나 저장값을 읽지 않고 중립 기술 추천만 표시하며, 모호한 진화는 미평가로 남깁니다. 원본 진화 함수는 Node의 격리된 고정 fixture 복사본에서만 실행하며 실전 게임 객체는 호출하지 않습니다. [범위와 검증](MOVE-BADGES.md). 아래 기존 CI 기록은 해당 시점 버전의 기록이며 새 버전의 실기기 검증을 뜻하지 않습니다.
+
+## 픽업 페이드 · render-only (0.5.2)
+
+공통 `src/pickup-fade-ui.js`는 모든 `buildBody` 출력에 포함되며 레거시 extension MAIN injection도 같은 소스를 재사용합니다. 지원 realm에서만, 기본 활성화 상태로, `G.Pickups.draw/all`, `Camera.sees`, `G.Game.player` x/y가 모두 보일 때 작동합니다. 첫 native draw에서 shape/order를 probe하고 불일치 시 fail-closed합니다. 설치된 manager 검증 완료라고 주장하지 않습니다.
+
+Native renderer를 보존하고 Proxy context alpha에 smoothstep 거리 감쇠를 적용합니다(거리 140→alpha 1, 거리 20→0.2). 범위는 `pulled===true`인 `xp`, `xpBig`, `coin`, `heal`만입니다. Stationary/tickets/gear/bombs/magnets/avatars/enemies/projectiles는 그대로 둡니다. 읽기 입력은 transient render coordinates/kind/pulled와 public player x/y뿐입니다. HP/stat/account/save를 읽지 않고 position/velocity/collect/value를 수정하지 않습니다. `Camera.sees` 임시 래핑은 receiver/results를 보존하고 `finally`에서 복원합니다. iPhone 무료 Userscripts content 경로는 native renderer를 볼 수 없어 미지원이며 기존 default 경로를 유지합니다. 공통 소스·업데이트가 모든 플랫폼에 동일 capability를 제공한다는 뜻은 아닙니다.
 
 ## 범위와 구조
 
 공통 Tampermonkey userscript는 PC Chrome/Edge/Firefox, Android Firefox, iPhone Safari를 대상으로 합니다. document-start 부트스트랩이 한 번 초기화하며 공통 DOM 마커와 기능 등록부를 사용합니다. URL 1초 polling, popstate/hashchange/pageshow, body/root observer로 화면 변경을 감지하고 history API는 monkeypatch하지 않습니다. 기존 번역/핵심, 글꼴, 검색, 팁, 포켓몬 티어, 기술 티어 기능을 재사용합니다.
 
-메타데이터는 package 기반 버전(0.5.1), `@grant none`, `@sandbox raw`, `@run-at document-start`, 최상위 프레임 전용, 공식 .com 호스트만을 사용합니다. 산출물은 자체 완결형이며 원격 실행 JS, GM 의존성, 자체 업데이트 로직이 없습니다. Raw 업데이트 링크는 관리자 확인/설정을 위한 것이며 즉시 교체하지 않습니다. iOS 백그라운드 정지나 권한에 따라 확인이 늦을 수 있으므로 실행 중인 판에서 교체하지 않습니다.
+메타데이터는 package 기반 버전(0.5.2), `@grant none`, `@sandbox raw`, `@run-at document-start`, 최상위 프레임 전용, 공식 .com 호스트만을 사용합니다. 산출물은 자체 완결형이며 원격 실행 JS, GM 의존성, 자체 업데이트 로직이 없습니다. Raw 업데이트 링크는 관리자 확인/설정을 위한 것이며 즉시 교체하지 않습니다. iOS 백그라운드 정지나 권한에 따라 확인이 늦을 수 있으므로 실행 중인 판에서 교체하지 않습니다.
 
 ## 저장소·기능 검토 범위
 
@@ -21,13 +27,13 @@
 ## 호환성·안전 경계
 
 - 공식 .com 최상위 페이지 전용이며 .org, 인증 페이지, iframe은 제외합니다.
-- 통합판 사용 전 기존 패치 스크립트와 사용자 Chrome 확장을 끕니다. 아이폰 기본 권장 자동 로더 0.1.2는 DOM 전용입니다. Chrome/browser 수동판 0.1.9, Store 0.1.3, APK 앱 버전은 별도 대안으로 유지합니다. 저장/계정 또는 APK를 삭제하지 않습니다.
+- 통합판 사용 전 기존 패치 스크립트와 사용자 Chrome 확장을 끕니다. 아이폰 기본 권장 자동 로더 0.1.2는 DOM 전용입니다. Chrome/browser 수동판 0.1.10, Store 0.1.3, APK 앱 버전은 별도 대안으로 유지합니다. 저장/계정 또는 APK를 삭제하지 않습니다.
 - Canvas/dialog 래핑은 활성 게임 경로에서만 실행하며 원래 호출과 반환을 보존합니다. 페이지 컨텍스트 실행만으로 게임 Canvas 접근을 입증하지 않습니다.
 - 게임 데이터·서버 요청·계정 저장·랭킹·세이브를 변경하지 않습니다. iOS 15 호환성을 위해 RegExp lookbehind를 피합니다.
 
 ## 검증 상태
 
-자동 테스트는 실기기 검증과 다릅니다. 데스크톱 Chrome MV3 MAIN-world 확인은 코드 수준이며 설치 확장 종단간 시험이 아닙니다. 직접 Aside Chrome에서 하는 smoke test도 Tampermonkey 관리자 검증을 대신하지 않습니다. 물리 iOS/Android, Windows/macOS 및 기타 브라우저의 실제 Tampermonkey, 로그인과 cloud-save 흐름은 별도 기록이 없으면 미검증입니다. iOS에서 관리자 설치 여부를 신뢰성 있게 감지할 수 없으므로 사이트 안내는 사용자 에이전트 기반 권고에 그칩니다. 로컬 자동 검사와 직접 Chromium smoke test는 통과했습니다. 실제 GitHub CI와 Pages 배포도 아래 실행 기록으로 확인했습니다. 이는 Tampermonkey 설치나 실기기 성공을 뜻하지 않습니다.
+자동 테스트는 실기기 검증과 다릅니다. 0.5.2 기능의 automated/offline checks는 별도 기록 대상으로 두며, 이 문서는 아직 결과를 성공으로 선언하지 않습니다. live install, physical-device/browser test, CI는 이 릴리스에서 통과했다고 표시하지 않습니다. 데스크톱 Chrome MV3 MAIN-world 확인은 코드 수준이며 설치 확장 종단간 시험이 아닙니다. 직접 Aside Chrome에서 하는 smoke test도 Tampermonkey 관리자 검증을 대신하지 않습니다. 물리 iOS/Android, Windows/macOS 및 기타 브라우저의 실제 Tampermonkey, 로그인과 cloud-save 흐름은 별도 기록이 없으면 미검증입니다. iOS에서 관리자 설치 여부를 신뢰성 있게 감지할 수 없으므로 사이트 안내는 사용자 에이전트 기반 권고에 그칩니다. 로컬 자동 검사와 직접 Chromium smoke test는 통과했습니다. 실제 GitHub CI와 Pages 배포도 아래 실행 기록으로 확인했습니다. 이는 Tampermonkey 설치나 실기기 성공을 뜻하지 않습니다.
 
 참고: [Tampermonkey Safari 안내](https://www.tampermonkey.net/index.php?browser=safari&locale=en) (공식 안내: iOS 15+), [App Store](https://apps.apple.com/app/tampermonkey/id6738342400), [sandbox 문서](https://www.tampermonkey.net/documentation.php?locale=en&q=sandbox). CSP에 따라 Raw sandbox가 otherrealm으로 fallback될 수 있으며 이것이 Canvas 접근 증거는 아닙니다.
 

@@ -4,7 +4,7 @@ const read=n=>fs.readFileSync(path.join(root,n),'utf8');const json=n=>JSON.parse
 const {buildBody,locationPolicySource}=require('./bundle-common.cjs');
 const version=json('package.json').version;const locale=json('data/dictionary.ko.json');const names=json('data/official-names.ko.json');
 const data={version,capturedAt:locale.capturedAt||'2026-10-19',entries:locale.entries,names:names.names,types:names.types};
-const factory=read('src/runtime-core.js');const notice='// Translation data: PokéSurvivor by JPTER78, PolyForm Noncommercial 1.0.0.\n// Official-name data: PokéAPI contributors, BSD-3-Clause.\n/*\n'+read('licenses/GAME-LICENSE-NONCOMMERCIAL.md').replace(/\*\//g,'* /')+'\n'+read('licenses/PokeAPI-LICENSE.md').replace(/\*\//g,'* /')+'\n*/\n';
+const factory=read('src/runtime-core.js'),pickupFade=read('src/pickup-fade-ui.js');const notice='// Translation data: PokéSurvivor by JPTER78, PolyForm Noncommercial 1.0.0.\n// Official-name data: PokéAPI contributors, BSD-3-Clause.\n/*\n'+read('licenses/GAME-LICENSE-NONCOMMERCIAL.md').replace(/\*\//g,'* /')+'\n'+read('licenses/PokeAPI-LICENSE.md').replace(/\*\//g,'* /')+'\n*/\n';
 const header=`// ==UserScript==
 // @name PokéSurvivor 한국어 메뉴 시험판
 // @namespace pokesurvivor-ko-local-test
@@ -25,7 +25,7 @@ const header=`// ==UserScript==
 const serialized=JSON.stringify(data);
 const policy=locationPolicySource();
 const main=header+buildBody({channel:'legacy-dom',canvas:false});
-const page=notice+'(function(){\n'+policy+'\nif(!allowedLocation(location,typeof window===\'undefined\'?null:window))return;\n'+factory+'\nconst api=createPokesurvivorKorean('+serialized+',{isActive:()=>allowedLocation(location,typeof window===\'undefined\'?null:window)});globalThis.__PSKO_PAGE=api;api.installCanvas();\n})();\n';
+const page=notice+'(function(){\n'+policy+'\nif(!allowedLocation(location,typeof window===\'undefined\'?null:window))return;\n'+factory+'\nconst api=createPokesurvivorKorean('+serialized+',{isActive:()=>allowedLocation(location,typeof window===\'undefined\'?null:window)});globalThis.__PSKO_PAGE=api;api.installCanvas();\n'+pickupFade+'\n})();\n';
 const background=notice+String.raw`'use strict';
 const ext=globalThis.browser||globalThis.chrome;
 const DATA=${serialized};
@@ -33,7 +33,9 @@ const installNative=function(data){
 ${policy}
 if(!allowedLocation(location,typeof window==='undefined'?null:window))return {ok:false,reason:'excluded'};
 ${factory}
-const api=createPokesurvivorKorean(data,{isActive:()=>allowedLocation(location,typeof window==='undefined'?null:window)});globalThis.__PSKO_PAGE=api;return api.installCanvas();
+const api=createPokesurvivorKorean(data,{isActive:()=>allowedLocation(location,typeof window==='undefined'?null:window)});globalThis.__PSKO_PAGE=api;const canvasResult=api.installCanvas();
+${pickupFade}
+return canvasResult;
 };
 ext.runtime.onMessage.addListener((message,sender,respond)=>{
  if((sender.frameId||0)!==0 || message?.type!=='PSKO_INSTALL_MAIN'||!sender.tab?.id||!/^https:\/\/(www\.)?pokesurvivor\.com\//i.test(sender.url||''))return false;

@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "checks": 31,
+  "passedCount": 31,
+  "failedCount": 0,
+  "scope": "Offline genuine pinned pickup.js/icons.js; synthetic game/focus/canvas only. No browser, account, save, live game, installation or deployment.",
+  "sourceCommit": "3c9641c9e782cf74afbde490f39cd60adf59e32b",
+  "failures": []
+}

@@ -1,0 +1,24 @@
+{
+  "repository": "https://github.com/JPTER78/pokesurvivor",
+  "commit": "3c9641c9e782cf74afbde490f39cd60adf59e32b",
+  "license": "PolyForm Noncommercial 1.0.0",
+  "licenseUrl": "https://polyformproject.org/licenses/noncommercial/1.0.0/",
+  "licenseNotice": "Copyright 2026 JPTER78",
+  "localLicense": "../../../licenses/GAME-LICENSE-NONCOMMERCIAL.md",
+  "provenance": {
+    "pickup.js": "Copied byte-for-byte from gacha-audit/repo/js/entities/pickup.js (latest audited source).",
+    "icons.js": "Copied byte-for-byte from tests/fixtures/move-context-current/js/ui/icons.js (same pinned latest commit)."
+  },
+  "files": {
+    "pickup.js": {
+      "upstream": "js/entities/pickup.js",
+      "sha256": "9b481659231b30d3c4127655635a94317c53ffcbacc077ad41f87e1e71dacf93",
+      "url": "https://github.com/JPTER78/pokesurvivor/blob/3c9641c9e782cf74afbde490f39cd60adf59e32b/js/entities/pickup.js"
+    },
+    "icons.js": {
+      "upstream": "js/ui/icons.js",
+      "sha256": "e52ecda71acd1f5bc4988c47956b36f9ebcf8f55560e5f44e584194910f2c0ec",
+      "url": "https://github.com/JPTER78/pokesurvivor/blob/3c9641c9e782cf74afbde490f39cd60adf59e32b/js/ui/icons.js"
+    }
+  }
+}
