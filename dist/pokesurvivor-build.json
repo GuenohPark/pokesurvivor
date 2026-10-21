@@ -36,7 +36,7 @@
     "scripts/bundle-common.cjs": "1b8a7411c01e450c3850698bb83e89638c534adaf029194fb3aa37be9156d87b",
     "scripts/import-tier-model.cjs": "144b0525d94cc374140bb8aa03dc588a63954fd0ab350b8f74bb4064981b25f2",
     "scripts/package-extension.cjs": "40461284342c481323776a16ecd223a8518940dd80154412b66f2c8e909769c8",
-    "scripts/prepare-release.cjs": "17c0107c88f3757d74f6913675392e4dd9826ea1d68c4b9c20f6183cc92e5515",
+    "scripts/prepare-release.cjs": "68b2e9e8f505525286654d7a9fca748a3c4de9010b144fdea3a59a991e0827bd",
     "licenses/Galmuri-LICENSE.txt": "86a3ee9495f942f0243f18c103da9faca27adb88142613edb8bb852e56c892c1",
     "licenses/GAME-LICENSE-NONCOMMERCIAL.md": "cbaaee20ba6a89a4ef1e850e09b45097d3e00ea5399c8915af8626bc59274527",
     "licenses/PokeAPI-LICENSE.md": "1c04595dc662981c20956ae4251dfa7b62b475c345eddf98bc9b904cb2373f2c",
