@@ -1,71 +1,18 @@
 {
-  "extensionVersion": "0.1.7-test",
-  "patchVersion": "0.4.10",
+  "extensionVersion": "0.1.8-test",
+  "patchVersion": "0.5.0",
   "manifestVersion": 3,
-  "minimumChrome": "111",
-  "sourceBundleSHA256": "6bfc47cc33c56dd7562f8d7187562f181602f1b10a515be05a7464e9f70d1b14",
-  "tierModel": "fullmax-hitbox-v2",
-  "tierSourceCommit": "018e986f4c12f414dfa84193ee35b2959b1e325c",
-  "species": 966,
-  "assessedCandidates": 14,
-  "tierCalculationChecks": 34815,
-  "uiAutomatedTests": "Executable fake DOM: trusted name whitelist, main partner rerenders, neutral unassessed, hidden/locked exclusions, nickname protection, native text/icons/values/options preserved, scoped observer. Not installed-extension E2E.",
-  "chromeBoundaryChecks": 58,
-  "userConfirmation": {
-    "version": "0.1.0-test",
-    "statement": "Prior version only. User did not confirm this new version."
+  "sourceIdentity": "Current generated source byte-compared with dist/pokesurvivor-ko-browser.user.js and dist/pokesurvivor-build.json, no hardcoded stale digest.",
+  "staticChromeBoundaryChecks": 58,
+  "sharedRuntime": "src/bootstrap.js + scripts/bundle-common.cjs + src/runtime-core.js",
+  "dataRegression": "Existing translation, tier math/geometry, move fit, hidden/name/input and font suites retained.",
+  "physicalDevices": {
+    "windows": false,
+    "macOSInstalledChrome": false,
+    "androidFirefox": false,
+    "iPhoneSafari": false
   },
-  "browserUIVerification": {
-    "passed": true,
-    "patchVersion": "0.4.10",
-    "method": "Compiled DOM payload plus final same-version translator factory/data preview on official dev.html in Aside/Chrome. Not physical Safari or installed extension E2E.",
-    "observed": [
-      "New Hyper Beam/Extrasensory/Mist Ball/Rapid Spin translated in native move list",
-      "Psychic keybinding option is 사이코키네시스, not type 에스퍼",
-      "Original90 niveles selector is 강화90단계; original value150 and S option label preserved"
-    ],
-    "actions": "Opened menus only; no move toggle, binding change, purchase, upgrade, partner change, save or login buttons clicked."
-  },
-  "windowsRuntime": "Not independently tested on Windows",
-  "chromeWebStore": "Last submitted0.1.3 / patch0.4.6; this manual0.1.7 build was not submitted and the previous review was not cancelled.",
-  "automaticUpdates": "Only store-installed versions after approval; unpacked ZIP does not auto-update",
-  "privacy": "No account/save/current-upgrade API queried or modified. Badge lookup reads only visible Pokemon labels and dedicated option/input identity; player-specific values are not used in assessment.",
-  "tierGeometryChecks": 29965,
-  "gradeCounts": {
-    "S": 3,
-    "A+": 10,
-    "OFFENSE": 1
-  },
-  "sourceExecution": "16 hash-pinned original source files; restricted offline Node VM checks all966 Players and original Combat/Hazards boundaries. Not whole-run simulation.",
-  "translationAudit": {
-    "passed": true,
-    "checks": 3799,
-    "sourceCommit": "018e986f4c12f414dfa84193ee35b2959b1e325c",
-    "englishPairs": 1374,
-    "baseMoves": 103,
-    "evolvedLabels": 97,
-    "moveAndItemDescriptions": 114,
-    "upgradeStages": 412,
-    "knownOriginalLocaleIdentityConflicts": 1,
-    "scope": "Saved current source catalogue and dictionary, not a promise that every dynamically constructed game string or Safari Canvas is translated."
-  },
-  "moveBadgeValidation": {
-    "checks": 397992,
-    "species": 966,
-    "moves": 103,
-    "contextSourceCommit": "3c9641c9e782cf74afbde490f39cd60adf59e32b",
-    "browserPreview": "Current game DOM only: Mewtwo/Ursaluna context switch, role grades retained and option values/selections preserved.",
-    "physicalSafariVerified": false,
-    "installedChromeEndToEndVerified": false,
-    "combatCanvasBadges": false,
-    "storeSubmissionChanged": false
-  },
-  "domainBoundary": {
-    "patch": "0.4.10",
-    "loader": "0.1.2",
-    "orgExcluded": true,
-    "topLevelOnly": true,
-    "boundaryChecks": 79,
-    "physicalSafariVerified": false
-  }
+  "authenticationAndSave": "No credential, storage, cookie, game-save or authentication APIs in common Userscript; real account/cloud-save E2E not performed.",
+  "canvas": "Hook installed in current realm does not prove actual game page-world execution.",
+  "storeSubmissionChanged": false
 }

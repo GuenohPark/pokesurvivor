@@ -1,0 +1,49 @@
+{
+  "version": "0.5.0",
+  "method": "Aside Chromium actual official dev.html, directly evaluated self-contained script. Not a Tampermonkey manager install.",
+  "observations": {
+    "previousPatchBlocked": true,
+    "freshBootstrapActive": true,
+    "features": [
+      "font",
+      "tips",
+      "search",
+      "tiers",
+      "move-tiers"
+    ],
+    "featureRefreshAllPassed": true,
+    "repeatExecutionSameRuntime": true,
+    "repeatExecutionSameCanvasHook": true,
+    "fontStyleCount": 1,
+    "tipPanelCount": 1,
+    "searchInputCount": 1,
+    "koreanSearchTranslatedToOriginalSearch": true,
+    "moveStartBadge": true,
+    "moveIconsBadgeCount": 17,
+    "nonMoveDamageLabelBadges": 0,
+    "currentRealmCanvasMeasurementTranslation": true,
+    "preExistingSessionUIStillVisible": true,
+    "gameplayRunStarted": false,
+    "accountLoginPerformed": false,
+    "cloudSaveWritePerformed": false
+  },
+  "responsive": {
+    "method": "Actual Chromium same-origin iframe CSS viewport, not emulated device or Safari engine",
+    "widths": [
+      360,
+      768,
+      1440
+    ],
+    "horizontalOverflow": false,
+    "manualPlatformTabPassed": true
+  },
+  "unverified": [
+    "Installed Tampermonkey injection on Chrome/Edge/Firefox",
+    "Windows/macOS installed browser matrix",
+    "Android Firefox physical device",
+    "iPhone Safari physical device and CSP fallback",
+    "New login and cloud-save roundtrip",
+    "Manager background update timing"
+  ],
+  "privacy": "No player identity, tokens, save payloads, ownership lists, or account counters captured in this report."
+}

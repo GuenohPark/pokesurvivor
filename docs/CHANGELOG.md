@@ -1,5 +1,12 @@
 # 변경 이력
 
+## 0.5.0 · 공통 Tampermonkey 배포
+
+- dist/pokesurvivor.user.js 한 파일 추가. 기존 Chrome/Android/Userscripts 배포 보존.
+- 단일 진입/문서 소유권, SPA·BFCache 재마운트, 검색 전역 리스너 단일화, iOS15용 lookbehind 제거.
+- Tampermonkey 표준 Raw 메타데이터 업데이트, 외부 런타임 로더/GM 권한 없음.
+- GitHub Actions 자동 버전·빌드·검증·생성물 커밋 및 Pages 설치 안내. 실기기/설치 관리자/로그인·클라우드저장은 미검증으로 구분.
+
 ## 0.4.10 · com 전용
 
 - .org/www.org의 매치·확장 권한 제거. 전체팩은 폰트/DOM보다 먼저 차단하고 로더도 다운로드/캐시 전 차단. iframe 미지원.

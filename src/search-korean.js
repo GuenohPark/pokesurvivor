@@ -2,14 +2,18 @@
 // It touches only #dex-q, never account/password fields or game stats.
 (function(){
   'use strict';
+if(globalThis.__PSKO_FEATURE_search)return;globalThis.__PSKO_FEATURE_search=true;
   const list=SEARCH_SPECIES;
   let pending=false;
   const states=new WeakMap();
+  let current=null;
   function install(){
+ if(globalThis.__PSKO_BOOT?.isAllowed&&!globalThis.__PSKO_BOOT.isAllowed())return;
     pending=false;
-    const original=document.getElementById('dex-q');if(!original)return;
+    const original=document.getElementById('dex-q');if(!original){current=null;return;}
     let state=states.get(original);
     if(state){
+      current=state;
       if(original.value!==state.gameValue){state.gameValue=original.value;state.input.value=list.find(p=>p.en.toLowerCase()===original.value.toLowerCase())?.ko||original.value;state.results.replaceChildren();}
       return;
     }
@@ -33,8 +37,11 @@
       }
     });
     input.addEventListener('keydown',e=>{if(e.key==='Escape'){close();input.blur();}if(e.key==='Enter'&&results.style.display!=='none'){e.preventDefault();results.querySelector('button')?.click();}});
-    document.addEventListener('pointerdown',e=>{if(!wrapper.contains(e.target))close();});
+    state.wrapper=wrapper;state.close=close;current=state;
   }
   const queue=()=>{if(pending)return;pending=true;queueMicrotask(install);};
-  install();new MutationObserver(queue).observe(document.documentElement,{childList:true,subtree:true});
+  document.addEventListener('pointerdown',e=>{if(globalThis.__PSKO_BOOT?.isAllowed&&!globalThis.__PSKO_BOOT.isAllowed())return;if(current&&!current.wrapper.contains(e.target))current.close();});
+  const observer=new MutationObserver(queue),options={childList:true,subtree:true};
+  install();observer.observe(document.documentElement,options);
+  globalThis.__PSKO_BOOT?.registerFeature('search',()=>{observer.disconnect();observer.observe(document.documentElement,options);install();});
 })();

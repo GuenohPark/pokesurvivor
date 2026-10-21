@@ -1,5 +1,6 @@
-function createPokesurvivorKorean(data) {
+function createPokesurvivorKorean(data, options) {
   'use strict';
+  options=options||{};
   const normalize = s => String(s).replace(/\s+/g, ' ').trim();
   const escape = s => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
   const exact = new Map(), lower = new Map(), patterns = [], fragments = new Map();
@@ -25,7 +26,7 @@ function createPokesurvivorKorean(data) {
   put('Psíquico','에스퍼'); put('Psychic','에스퍼');
   patterns.sort((a,b)=>b.score-a.score);
   const fragmentKeys=[...fragments.keys()].sort((a,b)=>b.length-a.length);
-  const fragRE=fragmentKeys.length ? new RegExp('(?<![\\p{L}\\p{N}])('+fragmentKeys.map(escape).join('|')+')(?![\\p{L}\\p{N}])','giu') : null;
+  const fragRE=fragmentKeys.length ? new RegExp('(^|[^\\p{L}\\p{N}])('+fragmentKeys.map(escape).join('|')+')(?![\\p{L}\\p{N}])','giu') : null;
   const cache=new Map();
   function translate(input, kind='general', depth=0) {
     if (typeof input!=='string' || !input || depth>5) return input;
@@ -51,7 +52,7 @@ function createPokesurvivorKorean(data) {
         let i=1; out=p.value.replace(/\{x\}/g,()=>{const index=i++;const slotKind=['general','move','type','form','save-data'].includes(p.argKinds?.[index-1])?p.argKinds[index-1]:kind;return translate(m[index] || '',slotKind,depth+1);}); break;
       }
     }
-    if (out===undefined && fragRE) out=normalized.replace(fragRE,key=>kind==='type' && /^normal$/i.test(key) ? '노말' : (fragments.get(key.toLocaleLowerCase())||key));
+    if (out===undefined && fragRE) out=normalized.replace(fragRE,(match,left,key)=>left+(kind==='type' && /^normal$/i.test(key) ? '노말' : (fragments.get(key.toLocaleLowerCase())||key)));
     if (out===undefined) out=normalized;
     out=around[1]+out+around[3];
     if(cache.size>12000)cache.clear();cache.set(cacheKey,out);return out;
@@ -102,12 +103,13 @@ function createPokesurvivorKorean(data) {
     let node;while((node=walker.nextNode())){if(node.nodeType===3)text(node);else element(node);}
   }
   function installDOM() {
+    if(options.isActive&&!options.isActive())return;
     if(document.documentElement.dataset.pskoDom===data.version)return;
     if(globalThis.__PSKO_DOM_OBSERVER)globalThis.__PSKO_DOM_OBSERVER.disconnect();
     document.documentElement.dataset.pskoDom=data.version;
     if(/(^|\.)pokesurvivor\.com$/i.test(location.hostname))document.documentElement.lang='ko';
     if(document.body)walk(document.body);
-    const observer=new MutationObserver(ms=>{for(const m of ms){if(m.type==='characterData')text(m.target);else if(m.type==='attributes')element(m.target);else for(const node of m.addedNodes)walk(node);}});
+    const observer=new MutationObserver(ms=>{if(options.isActive&&!options.isActive())return;for(const m of ms){if(m.type==='characterData')text(m.target);else if(m.type==='attributes')element(m.target);else for(const node of m.addedNodes)walk(node);}});
     observer.observe(document.documentElement,{childList:true,subtree:true,characterData:true,attributes:true,attributeFilter:attrs});
     globalThis.__PSKO_DOM_OBSERVER=observer;
     document.title=translate(document.title);
@@ -119,13 +121,13 @@ function createPokesurvivorKorean(data) {
     const base=proto.__pskoCanvasOriginals || Object.fromEntries(['fillText','strokeText','measureText'].map(k=>[k,proto[k]]));
     Object.defineProperty(proto,'__pskoCanvasOriginals',{value:base,configurable:true});
     for(const key of ['fillText','strokeText','measureText']){
-      proto[key]=function(value,...args){return base[key].call(this,typeof value==='string'?translate(value,'move'):value,...args);};
+      proto[key]=function(value,...args){return base[key].call(this,(!options.isActive||options.isActive())&&typeof value==='string'?translate(value,'move'):value,...args);};
     }
     Object.defineProperty(proto,'__pskoCanvasVersion',{value:data.version,configurable:true});
     if(!globalThis.__PSKO_NATIVE_DIALOGS){
       const oc=globalThis.confirm,oa=globalThis.alert;
-      globalThis.confirm=s=>oc.call(globalThis,translate(s));
-      globalThis.alert=s=>oa.call(globalThis,translate(s));
+      globalThis.confirm=s=>oc.call(globalThis,(!options.isActive||options.isActive())?translate(s):s);
+      globalThis.alert=s=>oa.call(globalThis,(!options.isActive||options.isActive())?translate(s):s);
       globalThis.__PSKO_NATIVE_DIALOGS=true;
     }
     document.documentElement.dataset.pskoCanvas='native-main';

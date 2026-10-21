@@ -1,8 +1,8 @@
 // ==UserScript==
 // @name PokéSurvivor 한국어 · Firefox 브라우저 시험판
 // @namespace pokesurvivor-ko-browser
-// @version 0.1.7
-// @description 실제 브라우저 페이지에서 DOM·Canvas 한국어 번역. Firefox Android + Tampermonkey용 실기기 미검증 시험판.
+// @version 0.1.8
+// @description 기존 브라우저 설치 호환용. 공통 엔진 DOM·Canvas, 실기기 실행 영역 확인 필요.
 // @match https://pokesurvivor.com/*
 // @match https://www.pokesurvivor.com/*
 // @homepageURL https://github.com/GuenohPark/pokesurvivor

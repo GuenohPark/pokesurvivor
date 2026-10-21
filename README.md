@@ -1,5 +1,11 @@
 # PokéSurvivor 한국어 패치
 
+## 통합 Tampermonkey 설치판 · 0.5.0
+
+**[통합 설치 파일](https://raw.githubusercontent.com/GuenohPark/pokesurvivor/main/dist/pokesurvivor.user.js)** · [설치 안내](docs/INSTALL.md) · [호환성·검증 범위](docs/COMPATIBILITY.md) · [통합 감사](docs/UNIFIED-AUDIT.md)
+
+PC Chrome/Edge/Firefox, Android Firefox, iPhone Safari의 Tampermonkey 공통 userscript입니다. 기존 번역·검색·폰트·팁·포켓몬/기술 추천 기능을 재사용합니다. 공식 .com 최상위 페이지 전용이며 .org, 로그인/인증 페이지, iframe은 지원하지 않습니다. 설치 전 기존 패치 스크립트와 사용자 Chrome 확장을 끄세요. Chrome 확장·스토어판·Android APK는 별도 대안으로 보존됩니다. 기존 저장/계정 또는 APK를 삭제하지 마세요. iOS의 업데이트 확인은 지연될 수 있고 현재 판에 즉시 적용되지 않습니다. 실제 물리 iPhone/Android 및 Tampermonkey 실기기 전체 흐름은 아직 검증되지 않았습니다.
+
 ## 포켓몬별 기술 추천 배지 · Safari 0.4.10
 
 **[기술 배지·적합도 기준](docs/MOVE-BADGES.md)** · **[최신 기술 번역 감사](docs/TRANSLATION-AUDIT.md)** · **[도감 표시·평가 기준](docs/TIERS.md)** · **[966종 풀강화 계산표](dist/pokesurvivor-full-upgrade-stats.csv)**
@@ -10,11 +16,11 @@
 
 ## Chrome 확장 · Windows / Mac
 
-**[Chrome 확장 ZIP 다운로드](https://raw.githubusercontent.com/GuenohPark/pokesurvivor/main/dist/pokesurvivor-ko-chrome-extension-0.1.7.zip)** · **[Windows/Mac 설치 안내](docs/CHROME-EXTENSION.md)** · [확장 소스](chrome-extension/)
+**[Chrome 확장 ZIP 다운로드](https://raw.githubusercontent.com/GuenohPark/pokesurvivor/main/dist/pokesurvivor-ko-chrome-extension-0.1.8-test.zip)** · **[Windows/Mac 설치 안내](docs/CHROME-EXTENSION.md)** · [확장 소스](chrome-extension/)
 
 - Windows 10/11 및 macOS의 Chrome 111 이상용 **Manifest V3** 확장입니다. ZIP을 풀고 `chrome://extensions` → 개발자 모드 → 압축해제된 확장 프로그램 로드에서 `manifest.json`이 있는 폴더를 선택하세요.
 - 설치 후 **[공식 게임 .com 직접 열기](https://pokesurvivor.com/)** 또는 기존 게임 새로고침. `.org/play/`의 iframe이나 Google/Firebase 인증 페이지에는 적용하지 않습니다. 진행 중인 판에서 새로고침하지 마세요.
-- GitHub 수동 설치판 0.1.7 / 한국어 패치 0.4.10. DOM·Canvas 번역과 한국어 글꼴을 포함하며, 기존 Userscript와 중복 사용하지 마세요.
+- GitHub 수동 설치판 0.1.7 / 공통 DOM·메뉴 런타임 0.5.0. DOM·Canvas 번역과 한국어 글꼴을 포함하며, 기존 Userscript와 중복 사용하지 마세요.
 - 이전 0.1.0은 사용자가 직접 확인했다고 보고했습니다. **새 0.1.7의 이름 배지·수치 검사는 별도 기록**하며 Windows 실기기와 Google 로그인 성공을 보장하지 않습니다.
 - **스토어 제출본은 0.1.3 / 패치 0.4.6입니다.** 최신 Safari 패치 0.4.10·GitHub 수동 설치판 0.1.7와 구분하세요. 기존 스토어 심사는 이번에 취소하지 않았습니다. 승인 후 자동 게시를 설정했습니다. [스토어 자동 업데이트 안내](docs/CHROME-WEB-STORE.md). 기존 압축해제 설치판은 자동 업데이트되지 않으며, 게시된 스토어판으로 한 번 전환해야 합니다. 브라우저/계정/키보드를 별도로 재구현하지 않으며 인증 정보·쿠키·토큰을 복사하지 않습니다.
 
@@ -40,7 +46,7 @@ Safari에서 코드만 보이면 링크를 길게 눌러 **링크된 파일 다�
 
 **[Firefox + Tampermonkey 시험 설치 안내](docs/FIREFOX-ANDROID.md)** · **[브라우저용 패치 파일](https://raw.githubusercontent.com/GuenohPark/pokesurvivor/main/dist/pokesurvivor-ko-browser.user.js)**
 
-실제 Firefox에서 Google 로그인과 플레이를 진행하고 확장으로 번역하는 대안입니다. Mozilla는 Firefox Android의 홈 화면 웹앱에서도 확장 사용을 안내합니다. **이 조합은 실기기 미검증이며, 기존 APK의 Google 로그인을 고친 버전은 아닙니다.** 브라우저 파일 0.1.7 / 한국어 패치 0.4.10. 기존 패치와 중복 사용하지 마세요.
+실제 Firefox에서 Google 로그인과 플레이를 진행하고 확장으로 번역하는 대안입니다. Mozilla는 Firefox Android의 홈 화면 웹앱에서도 확장 사용을 안내합니다. **이 조합은 실기기 미검증이며, 기존 APK의 Google 로그인을 고친 버전은 아닙니다.** 브라우저 파일 0.1.7 / 공통 DOM·메뉴 런타임 0.5.0. 기존 패치와 중복 사용하지 마세요.
 
 ## Android 단독 APK 테스트 앱
 
@@ -66,7 +72,7 @@ Safari에서 코드만 보이면 링크를 길게 눌러 **링크된 파일 다�
 - 한글 갈무리11 도트 폰트, 한국어 도감 검색, 생존 팁 15개
 - ‘Psychic’의 타입 **에스퍼**와 기술 **사이코키네시스** 등 문맥 구분
 
-번역팩 **0.4.10** · 자동 로더 **0.1.2**. 이번 버전은 기존 포켓몬 재평가·번역 결과를 유지하고 메뉴의 기술 추천·종별 적합도 배지를 추가하며, 0.4.3의 터치 기기 한글 글리프 10% 축소를 유지합니다. 영문·숫자와 데스크톱 크기는 유지합니다. 아이폰 Safari Userscripts의 Canvas 진행 화면 번역을 해결한 버전은 아닙니다. 물리적 iPhone에서 새 로더·전체 흐름을 직접 검증한 상태는 아닙니다.
+공통 DOM·메뉴 런타임 **0.5.0** · 기존 자동 로더 **1.2** (레거시 전용). 이번 버전은 기존 포켓몬 재평가·번역 결과를 유지하고 메뉴의 기술 추천·종별 적합도 배지를 추가하며, 0.4.3의 터치 기기 한글 글리프 10% 축소를 유지합니다. 영문·숫자와 데스크톱 크기는 유지합니다. 아이폰 Safari Userscripts의 Canvas 진행 화면 번역을 해결한 버전은 아닙니다. 물리적 iPhone에서 새 로더·전체 흐름을 직접 검증한 상태는 아닙니다.
 
 ## 저장소 구조
 

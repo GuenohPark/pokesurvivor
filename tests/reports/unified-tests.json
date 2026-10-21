@@ -1,0 +1,44 @@
+{
+  "passed": true,
+  "groups": [
+    "canonical metadata, least permissions, no remote runtime",
+    "source inputs and distributables match reproducible fingerprint",
+    "all existing features present, old channels share bootstrap and payload",
+    "pending startup and duplicate execution add one set only",
+    "existing legacy patch and other realm marker are not double-installed",
+    "SPA and BFCache remount, batching, no history replacement",
+    "SPA auth and excluded routes suspend all refresh and resume safely",
+    "full compiled payload rejects other origins/auth/iframes before touching DOM",
+    "Canvas and dialogs preserve calls/results and stop on auth routes",
+    "fragment matching without lookbehind preserves boundaries"
+  ],
+  "platforms": {
+    "Chrome/Edge desktop": {
+      "bootstrapVM": "passed",
+      "realManagerRuntime": "not-verified",
+      "realLoginAndCloudSave": "not-verified"
+    },
+    "Firefox desktop": {
+      "bootstrapVM": "passed",
+      "realManagerRuntime": "not-verified",
+      "realLoginAndCloudSave": "not-verified"
+    },
+    "Android Firefox": {
+      "bootstrapVM": "passed",
+      "realManagerRuntime": "not-verified",
+      "realLoginAndCloudSave": "not-verified"
+    },
+    "iPhone/iPad Safari": {
+      "bootstrapVM": "passed",
+      "realManagerRuntime": "not-verified",
+      "realLoginAndCloudSave": "not-verified"
+    }
+  },
+  "limits": [
+    "VM/static profiles are not real Windows/macOS Firefox, Android Firefox or iPhone Safari Tampermonkey execution.",
+    "A Canvas prototype marker only proves current-realm registration; it does not establish page-world injection or actual game Canvas translation.",
+    "No real sign-in, cloud save or manager update cycle is executed by these tests."
+  ],
+  "version": "0.5.0",
+  "metadataUpdate": "Canonical URL/version static checks only, no manager time-to-update guarantee."
+}

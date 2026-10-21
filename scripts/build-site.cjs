@@ -1,0 +1,2 @@
+'use strict';
+const fs=require('fs'),path=require('path');const root=path.resolve(__dirname,'..'),version=JSON.parse(fs.readFileSync(path.join(root,'package.json'),'utf8')).version;const template=fs.readFileSync(path.join(root,'site/index.template.html'),'utf8');if(!template.includes('{{PSKO_VERSION}}'))throw Error('Site version template missing');fs.writeFileSync(path.join(root,'site/index.html'),template.replaceAll('{{PSKO_VERSION}}',version));console.log({siteVersion:version});

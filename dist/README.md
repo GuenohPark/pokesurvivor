@@ -1,20 +1,6 @@
-# 설치 파일만 모아둔 폴더
+# 설치 파일
 
-**[아이폰 권장: 자동 업데이트 로더 한 개 받기](https://raw.githubusercontent.com/GuenohPark/pokesurvivor/main/dist/pokesurvivor-ko-auto.user.js)**
-
-[상세 설치](../docs/INSTALL.md) · [PWA 안내](../docs/PWA.md) · [처음 화면](../README.md)
-
-- pokesurvivor-ko-auto.user.js: 권장 설치 파일. Safari + Userscripts에서 사용합니다.
-- pokesurvivor-ko-menu.user.js: 자동 업데이트 없는 수동 설치용 전체 번역팩. 로더와 동시에 켜지 마세요.
-- pokesurvivor-ko-desktop-extension.zip: 데스크톱 확장 소스 패키지. iPhone에 ZIP으로 설치할 수 없으며 실제 확장 종단간 시험은 미완료입니다.
-- *.meta.js: 자동 버전 확인용 파일입니다. 직접 설치하지 않습니다.
-
-아이폰 독립 홈 화면 PWA는 지원하지 않습니다. Userscripts는 DOM 화면용이며 Canvas HUD·게임 내 글자까지 완전 번역되는 배포가 아닙니다.
-
-Safari에 코드가 표시되면 링크를 길게 눌러 ‘링크된 파일 다운로드’로 저장하고 Userscripts 폴더로 옮기세요.
-
-## Android 앱
-
-- [pokesurvivor-ko-android-test.apk](https://raw.githubusercontent.com/GuenohPark/pokesurvivor/main/dist/pokesurvivor-ko-android-test.apk): 비공식 Android 테스트 앱. [제약과 업데이트](../docs/ANDROID.md)
-- pokesurvivor-ko-android-source.zip: 개발용 소스입니다. 설치하지 않습니다.
-- pokesurvivor-ko-android.meta.properties: 앱 버전 확인용입니다. 설치하지 않습니다.
+- 권장 공통 Tampermonkey: [pokesurvivor.user.js](pokesurvivor.user.js), [메타데이터](pokesurvivor.meta.js), [빌드 지문](pokesurvivor-build.json). 실제 버전은 메타데이터를 확인하세요.
+- [기기별 설치 페이지](https://guenohpark.github.io/pokesurvivor/). PC/Android Firefox/iPhone Safari용 동일 파일이며 실제 각 기기 전체 흐름은 미검증 항목이 있습니다.
+- 기존 Userscripts DOM 자동로더: [pokesurvivor-ko-auto.user.js](pokesurvivor-ko-auto.user.js). 통합판과 중복 실행하지 마세요.
+- 기존 Chrome ZIP·Android APK·과거 버전 파일은 보존합니다. [전체 설치 안내](../README.md)에서 방법과 한계를 확인하세요.

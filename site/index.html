@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="PokéSurvivor 한국어 패치 0.5.0. PC, Android, iPhone에서 같은 통합 스크립트로 시작하세요.">
+  <meta name="theme-color" content="#f7f8f4">
+  <title>PokéSurvivor 한국어 패치 · 설치</title>
+  <link rel="canonical" href="https://guenohpark.github.io/pokesurvivor/">
+  <link rel="stylesheet" href="./style.css">
+  <script src="./install.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#install">설치 안내로 건너뛰기</a>
+  <header class="site-header wrap">
+    <a class="wordmark" href="./" aria-label="PokéSurvivor 한국어 패치 홈">PokéSurvivor <span>한국어 패치</span></a>
+    <a class="quiet-link" href="https://github.com/GuenohPark/pokesurvivor" target="_blank" rel="noopener noreferrer">GitHub 저장소 →</a>
+  </header>
+
+  <main class="wrap">
+    <section class="hero" aria-labelledby="page-title">
+      <p class="eyebrow">비공식 팬 패치 <span class="version">v0.5.0</span></p>
+      <h1 id="page-title">익숙한 한국어로,<br>다음 생존을 시작하세요.</h1>
+      <p class="lead">PC도, 휴대폰도 같은 파일 하나.<br class="mobile-break"> Tampermonkey에 통합 스크립트를 설치하세요.</p>
+      <div class="hero-actions">
+        <a class="button primary" href="https://raw.githubusercontent.com/GuenohPark/pokesurvivor/main/dist/pokesurvivor.user.js" target="_blank" rel="noopener noreferrer">통합 스크립트 설치 <span aria-hidden="true">→</span></a>
+        <a class="button secondary" href="#install">기기별 설치 안내 <span aria-hidden="true">↓</span></a>
+      </div>
+      <p class="small hero-note">먼저 스크립트 관리자를 설치한 뒤 위 링크를 여세요. 확장 앱은 구매가 필요할 수 있습니다.</p>
+      <div class="summary" aria-label="적용 범위 요약">
+        <span>하나의 통합 번들</span><span>공식 .com 직접 접속</span><span>로그인·저장 방식 변경 없음</span>
+      </div>
+    </section>
+
+    <section id="install" class="install-card" aria-labelledby="install-title">
+      <div class="section-heading"><div><p class="eyebrow">QUICK START</p><h2 id="install-title">내 기기에 설치하기</h2></div><span class="step-count" aria-hidden="true">01 / 03</span></div>
+      <p id="device-advisory" class="advisory" role="status" aria-live="polite">아래에서 사용할 기기의 안내를 확인하세요. 모든 기기에서 설치 파일은 같습니다.</p>
+      <div class="platform-tabs" role="tablist" aria-label="설치할 기기" hidden>
+        <button id="tab-pc" type="button" role="tab" aria-controls="panel-pc" aria-selected="true" tabindex="0" data-platform-tab="pc">PC</button>
+        <button id="tab-android" type="button" role="tab" aria-controls="panel-android" aria-selected="false" tabindex="-1" data-platform-tab="android">Android</button>
+        <button id="tab-iphone" type="button" role="tab" aria-controls="panel-iphone" aria-selected="false" tabindex="-1" data-platform-tab="iphone">iPhone / iPad</button>
+      </div>
+      <noscript><p class="notice">JavaScript가 꺼져 있어 모든 기기 안내를 표시합니다. 설치 링크는 그대로 사용할 수 있습니다.</p></noscript>
+      <section id="panel-pc" class="platform-panel" data-platform-panel="pc" aria-labelledby="heading-pc">
+        <h3 id="heading-pc">PC · Chrome / Edge / Firefox</h3>
+        <ol class="steps">
+          <li><div><strong>Tampermonkey를 설치하세요.</strong><p><a href="https://www.tampermonkey.net/" target="_blank" rel="noopener noreferrer">공식 Tampermonkey 사이트 →</a>에서 현재 브라우저에 맞는 확장을 선택하세요. 브라우저나 확장 설정에 따라 ‘사용자 스크립트 허용’ 등의 별도 설정이 필요할 수 있습니다.</p></div></li>
+          <li><div><strong>통합 스크립트 하나만 추가하세요.</strong><p>위의 ‘통합 스크립트 설치’를 누르고 Tampermonkey 설치 화면에서 내용을 확인한 뒤 설치하세요.</p></div></li>
+          <li><div><strong>공식 게임을 직접 여세요.</strong><p><a href="https://pokesurvivor.com/" target="_blank" rel="noopener noreferrer">pokesurvivor.com 열기 →</a>. 기존 게임 탭은 진행 중인 판을 마친 뒤 새로고침하세요.</p></div></li>
+        </ol>
+      </section>
+      <section id="panel-android" class="platform-panel" data-platform-panel="android" aria-labelledby="heading-android">
+        <h3 id="heading-android">Android · Firefox + Tampermonkey</h3>
+        <ol class="steps">
+          <li><div><strong>Firefox와 Tampermonkey를 준비하세요.</strong><p><a href="https://play.google.com/store/apps/details?id=org.mozilla.firefox" target="_blank" rel="noopener noreferrer">공식 Firefox 설치 →</a> 후 Firefox에서 <a href="https://addons.mozilla.org/en-US/firefox/addon/tampermonkey/" target="_blank" rel="noopener noreferrer">Tampermonkey 확장 →</a>을 추가하세요. 모바일 설치 경로가 보이지 않으면 <a href="https://www.tampermonkey.net/?browser=firefox" target="_blank" rel="noopener noreferrer">공식 Firefox용 안내 →</a>를 확인하세요.</p></div></li>
+          <li><div><strong>Firefox에서 통합 스크립트를 설치하세요.</strong><p>이 페이지를 Firefox로 열고 위 설치 링크를 누르세요. Tampermonkey의 설치 확인과 필요한 권한 설정을 완료하세요.</p></div></li>
+          <li><div><strong>같은 Firefox에서 게임을 여세요.</strong><p><a href="https://pokesurvivor.com/" target="_blank" rel="noopener noreferrer">공식 .com 게임 열기 →</a>. 다른 브라우저나 기존 APK에 설치되는 방식은 아닙니다. 실기기별 작동과 로그인 성공을 보장하지 않습니다.</p></div></li>
+        </ol>
+      </section>
+      <section id="panel-iphone" class="platform-panel" data-platform-panel="iphone" aria-labelledby="heading-iphone">
+        <h3 id="heading-iphone">iPhone / iPad · 일반 Safari 탭</h3>
+        <ol class="steps">
+          <li><div><strong>Safari용 Tampermonkey를 설치하세요.</strong><p><a href="https://apps.apple.com/app/tampermonkey/id6738342400" target="_blank" rel="noopener noreferrer">공식 App Store 앱 →</a>은 iOS 15 이상 Safari를 지원합니다. 구매가 필요할 수 있으며 현재 가격과 기기 호환성을 스토어에서 확인하세요.</p></div></li>
+          <li><div><strong>확장과 사이트 접근 권한을 켜세요.</strong><p>iPhone / iPad 설정의 Safari → 확장 프로그램에서 Tampermonkey를 활성화하세요. <code>pokesurvivor.com</code> 사이트 접근을 허용하고, Safari에서 위 통합 스크립트 설치를 확인하세요. 설정 경로는 OS 버전에 따라 다를 수 있습니다.</p></div></li>
+          <li><div><strong>홈 화면 웹앱 대신 Safari 탭을 사용하세요.</strong><p><a href="https://pokesurvivor.com/" target="_blank" rel="noopener noreferrer">공식 .com 게임 열기 →</a>를 일반 Safari 탭에서 여세요. 독립 PWA에서의 확장 작동은 보장하지 않습니다. 실제 iOS 기기에서 통합 번들 전체 흐름은 아직 미검증입니다.</p></div></li>
+        </ol>
+      </section>
+      <p class="notice"><strong>기존 패치는 먼저 꺼주세요.</strong> 이전 패치, 자동 로더, 커스텀 확장과 함께 사용하면 중복 실행될 수 있습니다. 새 통합 스크립트 하나만 켜세요.</p>
+    </section>
+
+    <section class="details-grid" aria-label="설치 전 알아둘 내용">
+      <article class="detail-card"><p class="eyebrow">UPDATES</p><h2>설치 후에는 관리자에서 갱신</h2><p>처음에는 관리자와 스크립트를 각각 설치해야 합니다. 이후 업데이트는 Tampermonkey의 업데이트 확인 주기와 설정을 따르며 즉시 적용되지 않습니다.</p><p>iOS의 백그라운드 중단, 추가 승인이나 권한 설정 때문에 지연될 수 있습니다. 필요하면 관리자의 업데이트 확인을 사용하고, 진행 중인 판을 마친 뒤 새로고침하세요.</p></article>
+      <article class="detail-card"><p class="eyebrow">SCOPE &amp; LIMITS</p><h2>번역 범위는 솔직하게</h2><p>DOM 번역과 함께 Canvas 번역을 페이지 실행 영역(page world)에서 시도합니다. CSP, 대체 실행 경로(fallback), 격리된 실행 영역 때문에 Canvas 적용은 보장되지 않으며, 특히 실제 iOS는 미검증입니다.</p><p>공식 <code>pokesurvivor.com</code>의 최상위 페이지 전용입니다. <code>.org</code>, iframe, 인증 페이지는 제외하며 로그인·저장 로직은 수정하지 않습니다.</p></article>
+    </section>
+
+    <section class="faq" aria-labelledby="faq-title">
+      <h2 id="faq-title">막혔을 때 확인하기</h2>
+      <details><summary>설치 링크를 눌렀는데 코드만 보여요.</summary><p>관리자가 해당 브라우저에 설치되고 활성화되어 있는지 확인하세요. 파일을 저장했다면 Tampermonkey의 가져오기 기능으로 <code>.user.js</code> 파일을 추가할 수 있습니다. 이 페이지는 Tampermonkey 설치 여부를 감지하지 않습니다.</p></details>
+      <details><summary>기기 추천이 맞지 않아요.</summary><p>기기 표시는 브라우저가 제공한 UA·플랫폼·터치 정보에 따른 참고용입니다. UA를 변경하거나 위장하지 않습니다. 위 PC / Android / iPhone 탭에서 직접 바꿀 수 있으며, 설치 파일은 동일합니다.</p></details>
+      <details><summary>다른 설치 방식도 남아 있나요?</summary><p>기존 배포물은 삭제하지 않습니다. <a href="https://github.com/GuenohPark/pokesurvivor/blob/main/README.md#chrome-확장--windows--mac" target="_blank" rel="noopener noreferrer">Chrome ZIP·수동 설치 안내 →</a>와 <a href="https://github.com/GuenohPark/pokesurvivor/blob/main/README.md#android-단독-apk-테스트-앱" target="_blank" rel="noopener noreferrer">Android APK·제약 안내 →</a>를 확인하세요. 이들은 별도 배포물이며 통합 스크립트와 동시에 켜지 마세요.</p></details>
+    </section>
+    <p class="technical small">통합 번들 0.5.0 · <code>@grant none</code> · <code>@sandbox raw</code> · <code>document-start</code> · .com 최상위 페이지 전용</p>
+  </main>
+  <footer class="wrap site-footer"><p>비공식 팬 프로젝트. Nintendo, GAME FREAK 및 게임 개발팀과 무관합니다.</p><p>이 안내 페이지는 외부 JavaScript·폰트·분석 도구·쿠키를 사용하지 않으며, fetch로 코드를 주입하지 않습니다.</p><a href="https://github.com/GuenohPark/pokesurvivor/blob/main/README.md" target="_blank" rel="noopener noreferrer">전체 README →</a></footer>
+</body>
+</html>

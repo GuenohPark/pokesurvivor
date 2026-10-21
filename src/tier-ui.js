@@ -149,6 +149,7 @@ function decorateOption(option) {
   saved.last = label; optionLabels.set(option, saved);
 }
 function render() {
+  if(globalThis.__PSKO_BOOT?.isAllowed&&!globalThis.__PSKO_BOOT.isAllowed())return;
   // Remove stale badges when a once-safe host is moved out of its whitelist.
   for (const host of Array.from(hosts)) {
     if (!document.documentElement.contains(host) || (!host.matches(nameSelector) && !host.matches('#rk-poke'))) decorate(host, null, adjacentBadges.has(host));
@@ -192,4 +193,5 @@ const observer = new MutationObserver(records => {
 });
 observer.observe(document.documentElement, { childList: true, subtree: true, characterData: true, attributes: true, attributeFilter: ['class', 'id', 'value', 'data-psko-dex'] });
 render();
+globalThis.__PSKO_BOOT?.registerFeature('tiers',()=>{observer.disconnect();observer.observe(document.documentElement,{ childList: true, subtree: true, characterData: true, attributes: true, attributeFilter: ['class', 'id', 'value', 'data-psko-dex'] });if(!document.getElementById(style.id))(document.head||document.documentElement).appendChild(style);render();});
 })();

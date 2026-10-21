@@ -1,0 +1,87 @@
+name: Build and publish
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+# No write token on pull requests. This workflow never checks out PR code.
+permissions:
+  contents: read
+
+concurrency:
+  group: build-and-publish-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  build:
+    if: github.ref == 'refs/heads/main' && github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Plan versions against the complete pushed range
+        id: release
+        run: node scripts/prepare-release.cjs
+      - name: Build every current distribution (never Android or Store)
+        if: steps.release.outputs.should_build == 'true'
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p release-reports
+          npm run build 2>&1 | tee release-reports/build.log
+      - name: Test all distributions
+        if: steps.release.outputs.should_build == 'true'
+        shell: bash
+        run: |
+          set -euo pipefail
+          npm test 2>&1 | tee release-reports/tests.log
+          npm run test:chrome 2>&1 | tee release-reports/chrome.log
+      - name: Commit only current generated files after successful tests
+        if: steps.release.outputs.should_build == 'true'
+        env:
+          RELEASE_VERSION: ${{ steps.release.outputs.version }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          node scripts/prepare-release.cjs --stage-generated
+          if git diff --cached --quiet; then
+            echo 'Generated files are already current.'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m "chore(release): v${RELEASE_VERSION} generated artifacts [skip ci]"
+          # No force push. A concurrent human commit must not be overwritten.
+          git push origin HEAD:main
+      - name: Upload current outputs and diagnostic logs
+        if: always() && steps.release.outputs.should_build == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: current-build-${{ github.run_id }}-${{ github.run_attempt }}
+          if-no-files-found: warn
+          retention-days: 14
+          path: |
+            release-reports/
+            tests/reports/
+            dist/pokesurvivor.user.js
+            dist/pokesurvivor.meta.js
+            dist/pokesurvivor-build.json
+            dist/pokesurvivor-ko-auto.user.js
+            dist/pokesurvivor-ko-auto.meta.js
+            dist/pokesurvivor-ko-menu.user.js
+            dist/pokesurvivor-ko-menu.meta.js
+            dist/pokesurvivor-ko-browser.user.js
+            dist/pokesurvivor-ko-browser.meta.js
+            dist/pokesurvivor-ko-desktop-extension.zip
+            dist/pokesurvivor-ko-chrome-extension.zip
+            dist/pokesurvivor-ko-chrome-extension-${{ steps.release.outputs.chrome_version }}-test.zip
+            dist/pokesurvivor-ko-chrome-extension-${{ steps.release.outputs.chrome_version }}-test.sha256
+            chrome-extension/TEST-REPORT.json

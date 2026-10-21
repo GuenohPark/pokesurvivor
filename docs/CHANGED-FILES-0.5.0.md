@@ -1,0 +1,75 @@
+# 0.5.0 변경 파일
+
+초기 사용자 커밋에서 아래 파일을 반영합니다. 현재 버전 Chrome1.8 ZIP/SHA는 서버 CI가 생성·게시해 자동 배포 흐름도 검증합니다. 이전 ZIP/APK/키와 기존 스토어 제출은 보존합니다.
+
+- `.github/workflows/build.yml`
+- `.github/workflows/pages.yml`
+- `README.md`
+- `assets/font-install.js`
+- `chrome-extension/README-KO.md`
+- `chrome-extension/README.md`
+- `chrome-extension/TEST-REPORT.json`
+- `chrome-extension/content-main.js`
+- `chrome-extension/manifest.json`
+- `chrome-extension/popup.html`
+- `chrome-extension/tests.cjs`
+- `dist/README.md`
+- `dist/pokesurvivor-build.json`
+- `dist/pokesurvivor-ko-browser.meta.js`
+- `dist/pokesurvivor-ko-browser.user.js`
+- `dist/pokesurvivor-ko-chrome-extension.zip`
+- `dist/pokesurvivor-ko-desktop-extension.zip`
+- `dist/pokesurvivor-ko-menu.meta.js`
+- `dist/pokesurvivor-ko-menu.user.js`
+- `dist/pokesurvivor.meta.js`
+- `dist/pokesurvivor.user.js`
+- `docs/CHANGED-FILES-0.5.0.md`
+- `docs/CHANGELOG.md`
+- `docs/CHROME-EXTENSION.md`
+- `docs/CHROME-WEB-STORE.md`
+- `docs/COMPATIBILITY.md`
+- `docs/FIREFOX-ANDROID.md`
+- `docs/INSTALL.md`
+- `docs/MAINTENANCE.md`
+- `docs/TEST-RESULTS.md`
+- `docs/UNIFIED-AUDIT.md`
+- `extension/extension-background.js`
+- `extension/extension-main.js`
+- `extension/manifest.json`
+- `extension/pokesurvivor-ko-menu.user.js`
+- `package.json`
+- `pokesurvivor-ko-menu.meta.js`
+- `pokesurvivor-ko-menu.user.js`
+- `scripts/build-browser.cjs`
+- `scripts/build-chrome-extension.cjs`
+- `scripts/build-site.cjs`
+- `scripts/build-unified.cjs`
+- `scripts/build.cjs`
+- `scripts/bundle-common.cjs`
+- `scripts/prepare-release.cjs`
+- `site/.nojekyll`
+- `site/index.html`
+- `site/index.template.html`
+- `site/install.js`
+- `site/style.css`
+- `src/bootstrap.js`
+- `src/move-tier-ui.js`
+- `src/runtime-core.js`
+- `src/search-korean.js`
+- `src/tier-ui.js`
+- `src/tips-ui.js`
+- `tests/reports/auto-loader-tests.json`
+- `tests/reports/browser-smoke.json`
+- `tests/reports/browser-tests.json`
+- `tests/reports/translation-tests.json`
+- `tests/reports/unified-tests.json`
+- `tests/test-browser.cjs`
+- `tests/test-release.cjs`
+- `tests/test-site.cjs`
+- `tests/test-unified.cjs`
+
+## 주요 변경
+
+- 공통 엔진·단일 진입점·SPA/중복 보호와 기존 기능 재사용.
+- 통합 Tampermonkey 메타데이터와 소스/산출물 SHA-256.
+- CI 버전·불변 과거 자산 보호·Pages 설치·플랫폼 테스트 결과·유지보수 문서.

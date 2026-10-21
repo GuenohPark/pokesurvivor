@@ -155,6 +155,7 @@ function isDexStart(host) {
   return false;
 }
 function render() {
+  if(globalThis.__PSKO_BOOT?.isAllowed&&!globalThis.__PSKO_BOOT.isAllowed())return;
   const upg = upgradeMon(), dex = dexMon();
   for (const host of Array.from(hosts)) if (!document.documentElement.contains(host) || !host.matches(hostSelector)) decorate(host, null);
   document.querySelectorAll(hostSelector).forEach(host => {
@@ -193,4 +194,5 @@ const observer = new MutationObserver(records => {
 });
 observer.observe(document.documentElement, {childList: true, subtree: true, characterData: true, attributes: true, attributeFilter: ['class', 'id', 'value', 'title', 'label', 'hidden', 'aria-hidden', 'style', 'data-id', 'data-start', 'data-slot']});
 render();
+globalThis.__PSKO_BOOT?.registerFeature('move-tiers',()=>{observer.disconnect();observer.observe(document.documentElement,{childList: true, subtree: true, characterData: true, attributes: true, attributeFilter: ['class', 'id', 'value', 'title', 'label', 'hidden', 'aria-hidden', 'style', 'data-id', 'data-start', 'data-slot']});if(!document.getElementById(style.id))(document.head||document.documentElement).appendChild(style);render();});
 })();

@@ -96,6 +96,7 @@ OTHER DEALINGS IN THE FONT SOFTWARE.
 
 */
 (function(){
+ function installFont(){
  const cleanupKey='__PSKO_FONT_MEDIA_CLEANUP';
  if(typeof globalThis[cleanupKey]==='function') globalThis[cleanupKey]();
  delete globalThis[cleanupKey];
@@ -118,4 +119,7 @@ OTHER DEALINGS IN THE FONT SOFTWARE.
   media.addListener(apply);
   globalThis[cleanupKey]=()=>media.removeListener(apply);
  }
+ }
+ globalThis.__PSKO_FONT_INSTALL=installFont;installFont();
+ globalThis.__PSKO_BOOT?.registerFeature('font',()=>{if(!document.getElementById('ps-ko-pixel-font'))installFont();});
 })();
