@@ -57,7 +57,8 @@ function badgeInfo(mon, move, data = {}, options = {}) {
   if (!move) return {text: '미평가', title: '미평가 · 기술 이름이나 진화 경로를 유일하게 확인하지 못했습니다. 낮은 등급을 뜻하지 않습니다.'};
   const label = fitLabel(mon, move), parts = [
     (move.ko || move.en || move.es || move.id) + ' · ' + roleLabel(move),
-    'Lv5·영구강화 완료 가정의 비공식 잠정 중립 역할 추천 (다: 다수전, 보: 보스). 현재 플레이어 강화 상태가 아니며 실측 승률이 아닙니다.'
+    'Lv5·영구강화 완료 가정의 비공식 잠정 중립 역할 추천 (다: 다수전, 보: 보스). 현재 플레이어 강화 상태가 아니며 실측 승률이 아닙니다.',
+    '성격·선택/숨겨진 특성·배운 TM 및 실제 상점·가방 상태를 반영하지 않은 기본 종 데이터 참고값입니다.'
   ];
   if (label) parts.push(label);
   if (directDamage(move) && ['physical', 'special'].includes(move.cat)) {
@@ -118,7 +119,7 @@ if (document.getElementById('psko-move-badge-style')) return;
 const speciesNames = lookup(DATA.species, mon => [mon.name, mon.ko]);
 const moveNames = lookup(DATA.moves, move => move.aliases || [move.es, move.en, move.ko]);
 const badgeSelector = '.psko-move-badge';
-const hostSelector = '#upg-list .ban-moves button[data-id], #upg-list button[data-start], #dex-detail p b.gold, #dex-detail .move-icons > span';
+const hostSelector = '#upg-list .ban-moves button[data-id], #upg-list button[data-start], #upg-list button[data-start2], #dex-detail p b.gold, #dex-detail .move-icons > span';
 const optionSelector = '#upg-list .bind-slot select[data-slot] option';
 const runHostSelector = '#scr-levelup #cards > .card .nm, #scr-bond #bond-cards > .card .nm, #scr-pause #pause-sum .sum-moves tr > td';
 const allHostSelector = hostSelector + ', ' + runHostSelector;
@@ -153,7 +154,7 @@ function dexMon() {
 function namedMove(text) { const id = known(text) && moveNames.get(normalize(text)); return id ? DATA.moves[id] : null; }
 function resolveMove(host) {
   if (host.matches('#upg-list .ban-moves button[data-id]')) return DATA.moves[host.getAttribute('data-id')] || null;
-  if (host.matches('#upg-list button[data-start]')) {
+  if (host.matches('#upg-list button[data-start], #upg-list button[data-start2]')) {
     // Only source-established translated Choose prefixes; never infer from a nickname.
     const match = nativeText(host).trim().match(/^(?:선택:|Choose:|Elegir:)\s*(.+)$/);
     return match ? namedMove(match[1]) : null;
@@ -237,6 +238,9 @@ function render() {
   const upg = upgradeMon(), dex = dexMon();
   for (const host of Array.from(hosts)) if (!document.documentElement.contains(host) || !host.matches(allHostSelector)) clearBadge(host);
   document.querySelectorAll(hostSelector).forEach(host => {
+    // Native second-start Random is an action, not an unknown move.
+    if(host.matches('#upg-list .ban-moves button[data-id]')&&host.getAttribute('data-id')===''){clearBadge(host);return;}
+    if(host.matches('#upg-list button[data-start2]')&&/^(?:선택:|Choose:|Elegir:)\s*(?:무작위|Random|Al azar)\s*$/i.test(nativeText(host).trim())){clearBadge(host);return;}
     const mon = host.closest('#upg-list') ? upg : host.matches('#dex-detail p b.gold') && !isDexStart(host) ? null : dex;
     decorate(host, mon);
   });
@@ -271,7 +275,7 @@ const observer = new MutationObserver(records => {
     return inScope(record.target, record.type === 'attributes');
   })) schedule();
 });
-observer.observe(document.documentElement, {childList: true, subtree: true, characterData: true, attributes: true, attributeFilter: ['class', 'id', 'value', 'title', 'label', 'hidden', 'aria-hidden', 'style', 'data-id', 'data-start', 'data-slot']});
+observer.observe(document.documentElement, {childList: true, subtree: true, characterData: true, attributes: true, attributeFilter: ['class', 'id', 'value', 'title', 'label', 'hidden', 'aria-hidden', 'style', 'data-id', 'data-start', 'data-start2', 'data-slot']});
 render();
-globalThis.__PSKO_BOOT?.registerFeature('move-tiers',()=>{observer.disconnect();observer.observe(document.documentElement,{childList: true, subtree: true, characterData: true, attributes: true, attributeFilter: ['class', 'id', 'value', 'title', 'label', 'hidden', 'aria-hidden', 'style', 'data-id', 'data-start', 'data-slot']});if(!document.getElementById(style.id))(document.head||document.documentElement).appendChild(style);render();});
+globalThis.__PSKO_BOOT?.registerFeature('move-tiers',()=>{observer.disconnect();observer.observe(document.documentElement,{childList: true, subtree: true, characterData: true, attributes: true, attributeFilter: ['class', 'id', 'value', 'title', 'label', 'hidden', 'aria-hidden', 'style', 'data-id', 'data-start', 'data-start2', 'data-slot']});if(!document.getElementById(style.id))(document.head||document.documentElement).appendChild(style);render();});
 })();

@@ -1,0 +1,13 @@
+{
+  "commit": "ce5785313b0205af8b9477423f64b0a7b7039dcd",
+  "scope": "public source data/markup only, never Game/db boot; no real account, storage or network",
+  "files": {
+    "js/data/abilities.js": "f42826f395ec544e8b87918f9f1356930e2a40225275082548b9005bad05c6ed",
+    "js/data/natures.js": "a93452298db292b66837ce34ce430667046a821abfac9c5d844f08a5f59fc691",
+    "js/data/ability-fx.js": "6ede86b7841cfad6096b380fea3f045e2ce61097d6f30456e7517a4dd3d50112",
+    "js/data/lang-en.js": "24382affdf2209bcfefdafa4e0b2bde08ac3c24ba765fc7439a40ce6dd4281f7",
+    "js/ui/shop-ui.js": "a6f4d1d3de4d2f9668c5f1f427397e5a1dc5ec5b7c1154b961e00632e58f240c",
+    "js/ui/menu.js": "9ee23f8b70221eb9ed1785b5ebd81dc87da698d1c12825e31f8ba099fe445748",
+    "js/data/shop.js": "742cea16fd046a059e607540fa86804d211a86c0fa90d3e8c840e5a6c47c06ff"
+  }
+}

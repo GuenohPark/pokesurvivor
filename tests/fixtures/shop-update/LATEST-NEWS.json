@@ -1,0 +1,25 @@
+{
+  "sourceCommit": "4bd9283c9a29414f1091bb134c931506c5ce7802",
+  "sourcePath": "js/data/changelog.js",
+  "sourceSha256": "231924946d29c030a49441f4572b75404f5a6c10fab084668521d8c64eb67dfe",
+  "entries": [
+    {
+      "id": "compat-20261022-shop-title",
+      "es": "La gran actualización: Tienda Kecleon",
+      "en": "The big update: Kecleon Shop",
+      "ko": "대규모 업데이트: 켈리몬 상점"
+    },
+    {
+      "id": "compat-20261022-coop-news-title",
+      "es": "Cooperativo sin salas que se cierran solas",
+      "en": "Co-op without rooms closing on their own",
+      "ko": "협동 플레이 중 방이 저절로 닫히는 문제 수정"
+    },
+    {
+      "id": "compat-20261022-coop-news-body",
+      "es": "Cooperativo: a los invitados ya no les sale «La sala se ha cerrado» a mitad de partida (a veces a los pocos minutos o al entrar en una grieta) mientras los demás seguían jugando. Pasaba cuando su conexión con el servidor de las salas se cortaba un momento; ahora la partida sigue y la sala se recupera sola.",
+      "en": "Co-op: guests no longer get \"The room has been closed\" in the middle of a run (sometimes after a few minutes or when entering a rift) while the others kept playing. It happened when their connection to the rooms server dropped for a moment; now the run goes on and the room recovers on its own.",
+      "ko": "협동 플레이 중 다른 플레이어는 계속 진행하고 있는데도 참가자에게 ‘방이 닫혔습니다’가 표시되던 문제를 수정했습니다. 시작 후 몇 분이 지나거나 균열에 들어갈 때 발생하기도 했습니다. 방 서버와의 연결이 잠시 끊기면 생기던 문제로, 이제 게임은 계속되고 방도 자동으로 복구됩니다."
+    }
+  ]
+}

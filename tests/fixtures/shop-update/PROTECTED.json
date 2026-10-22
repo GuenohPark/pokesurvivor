@@ -1,0 +1,293 @@
+{
+  "baselinePatchCommit": "ae480b1028be0b7e527166f1691e1172573b5e02",
+  "files": {
+    "android/.gitignore": {
+      "bytes": 113,
+      "sha256": "7ca361efb3caa2143c53bda87906d2de79660f511fe49da190e0976549fec7c0"
+    },
+    "android/LICENSE": {
+      "bytes": 1392,
+      "sha256": "c379c2d262187446ef21a4093d43c65994c76aef288f93fc4978aa108cda42f8"
+    },
+    "android/README.md": {
+      "bytes": 6033,
+      "sha256": "ef2105fd13f8a4f94c21d5b85d7c613a42c676860f33894a2259fb5abd52a4f9"
+    },
+    "android/app/README.md": {
+      "bytes": 5823,
+      "sha256": "e6228ad596713b5bdbd4c718c897e020d7e6f51e004171ba750757fb473d7268"
+    },
+    "android/app/src/main/AndroidManifest.xml": {
+      "bytes": 1244,
+      "sha256": "1bc7380753fea81df44fbaa4f34978b6b15cf468225fc6fb9502055a2bc46ba1"
+    },
+    "android/app/src/main/assets/ABOUT.txt": {
+      "bytes": 1144,
+      "sha256": "565def25347a36526221f6df2c396d84b380b6dddf3ab1575bc26ee998a36b2b"
+    },
+    "android/app/src/main/assets/LICENSE": {
+      "bytes": 1384,
+      "sha256": "c61b966362b14939c55d2d70f10ed1c93e874bb6f953462ac11d3dc04c568726"
+    },
+    "android/app/src/main/assets/THIRD-PARTY-NOTICES.md": {
+      "bytes": 3039,
+      "sha256": "463ec037b6c82172b3e2cc2561e8d230dd38f85046fe568b872515998542f9e6"
+    },
+    "android/app/src/main/assets/licenses/GAME-LICENSE-NONCOMMERCIAL.md": {
+      "bytes": 4646,
+      "sha256": "cbaaee20ba6a89a4ef1e850e09b45097d3e00ea5399c8915af8626bc59274527"
+    },
+    "android/app/src/main/assets/licenses/Galmuri-LICENSE.txt": {
+      "bytes": 4360,
+      "sha256": "86a3ee9495f942f0243f18c103da9faca27adb88142613edb8bb852e56c892c1"
+    },
+    "android/app/src/main/assets/licenses/PokeAPI-LICENSE.md": {
+      "bytes": 1621,
+      "sha256": "1c04595dc662981c20956ae4251dfa7b62b475c345eddf98bc9b904cb2373f2c"
+    },
+    "android/app/src/main/assets/patch.js": {
+      "bytes": 1216978,
+      "sha256": "8b4c1d729cbd6a898a3dc172941d5d4eadc9946d786fffc47dffaf7b24342de9"
+    },
+    "android/app/src/main/java/io/github/guenohpark/pokesurvivorko/AppUpdateChecker.java": {
+      "bytes": 3749,
+      "sha256": "16a88921053bd8726f05e0a07b6e29b5dae46fb4708571d7e8961333db48c253"
+    },
+    "android/app/src/main/java/io/github/guenohpark/pokesurvivorko/MainActivity.java": {
+      "bytes": 41820,
+      "sha256": "b316d79cb60c81cb82b9c0e8ab1d48eff9de5cb01e0dba94c34a927ec95ff906"
+    },
+    "android/app/src/main/java/io/github/guenohpark/pokesurvivorko/PatchUpdater.java": {
+      "bytes": 14999,
+      "sha256": "0cc0f66508784bf2a555bacd3d7266af21b9529d9ecb1194afc9281ddb10a0df"
+    },
+    "android/app/src/main/res/drawable/ic_launcher.xml": {
+      "bytes": 478,
+      "sha256": "c5c3d3219c7dfc1c82d7a25e3768e107b53f71821cceb56ab3cff5d82ce6bf8a"
+    },
+    "android/app/src/main/res/values/strings.xml": {
+      "bytes": 140,
+      "sha256": "c87f6bd10015498951e37fb4ab101293f5607c633811cb9bc66191723f311eaf"
+    },
+    "android/app/src/main/res/values/styles.xml": {
+      "bytes": 653,
+      "sha256": "374da45aadae8d48b98d2098ed436cccd9718a84455396b337543ee2124faa0f"
+    },
+    "android/app/src/main/res/xml/data_extraction_rules.xml": {
+      "bytes": 1019,
+      "sha256": "d456b3bd06339838e3e83a744adbc9f583db12c4430f3f775beb97132ae70b9b"
+    },
+    "android/app/src/main/res/xml/network_security_config.xml": {
+      "bytes": 232,
+      "sha256": "eb5f5c57a88fc656cb97ee142694b996b286064ba973e51e0158bcdff08b34f2"
+    },
+    "android/build.cjs": {
+      "bytes": 5858,
+      "sha256": "c45f1de7a6fe9dff9d4c70227dc1628cc97c30d5a8b4ddc7d6c03d7b5395d6ad"
+    },
+    "android/download-tools.cjs": {
+      "bytes": 1490,
+      "sha256": "ac29eedf7ca3534a9101483e8a1e95939935a0edde4f18fff53175cbc05a7ac9"
+    },
+    "android/tests/AppUpdateCheckerTest.java": {
+      "bytes": 2120,
+      "sha256": "78aa1ba87e3f2b1dd1278f04d909c79ce9ecc8e066465b21965d01b1892ddd74"
+    },
+    "android/tests/OriginPolicyTest.java": {
+      "bytes": 1356,
+      "sha256": "714251c818466ced90a13640bb1e398627015dc4078b3ab777fc8c3e72b8c422"
+    },
+    "android/tests/PatchUpdaterTest.java": {
+      "bytes": 10763,
+      "sha256": "340fa91a5ee0e7586f4c5886efbf46b9772630abb7411abc8be8cdd60ac77444"
+    },
+    "android/toolchain/jdk-metadata.json": {
+      "bytes": 2129,
+      "sha256": "21866b65f452ee1f09dd8f86336d2fd324830178693912703adbdcfba749f845"
+    },
+    "android/toolchain/sdk-downloads.json": {
+      "bytes": 660,
+      "sha256": "e5a3e23799e77e6b0566273b7174d298126900e724f63304241b7f4e5f9806fc"
+    },
+    "android/verification/build-report.json": {
+      "bytes": 2399,
+      "sha256": "a23c8287c002904c8dfdc3fe564c1b583947bc8b952a1badbf918523a0366b74"
+    },
+    "android/verification/bundled-script-browser-test.json": {
+      "bytes": 213,
+      "sha256": "9fee07c97d4550bfca7f96551d20500e40b40c08e5b7d4f3cfba259026878dd0"
+    },
+    "android/verification/downloaded-patch-browser-test.json": {
+      "bytes": 305,
+      "sha256": "487a118828ab02304d976994ab3f4de912d05eb5bffdbb8b279ca4b2bd536e45"
+    },
+    "data/move-ratings.json": {
+      "bytes": 41601,
+      "sha256": "b5560b5a321741160804727a3c795286fa547114d7e8da96f4e14804414e4f43"
+    },
+    "data/move-ui.json": {
+      "bytes": 259128,
+      "sha256": "a92dad8fd4227dcde119bb2195bb69532c720c4b38ac70aa74f47483850f30f7"
+    },
+    "data/tier-model.json": {
+      "bytes": 1049258,
+      "sha256": "2cd81531d9c98dc7404d3e80896b6ae0fc4e2d6ed204f2292b32656fb55164f9"
+    },
+    "data/tier-ratings.json": {
+      "bytes": 4410,
+      "sha256": "73812b32e7d1710d7f5fcec09e054acae16ceb6a1ccd8b72ef420f2a368595a2"
+    },
+    "data/tier-ui.json": {
+      "bytes": 652028,
+      "sha256": "3c7b578c7ab4dbbf57c5762ba94e6bb254bff0fb85e9473c919cb69ffd88be3a"
+    },
+    "dist/pokesurvivor-ko-android-source.zip": {
+      "bytes": 821244,
+      "sha256": "1f9091977989689b000976c697375588f0b32f8306e88d85c45ba5735655e24a"
+    },
+    "dist/pokesurvivor-ko-android-test.apk": {
+      "bytes": 824447,
+      "sha256": "e6092718a4197fb2215612f08f53462c28e42f14e5019b59c11314e98e3464d9"
+    },
+    "dist/pokesurvivor-ko-auto.meta.js": {
+      "bytes": 807,
+      "sha256": "814d0f1c089ee840fbc173644fd84f4d46faaac709a25db5fdbe1d44907888de"
+    },
+    "dist/pokesurvivor-ko-auto.user.js": {
+      "bytes": 9170,
+      "sha256": "779d311db5a5e5283e050c20861228997a7c87fe70148ddf0624917fd9efae5c"
+    },
+    "dist/pokesurvivor-ko-chrome-extension-0.1.0-test.sha256": {
+      "bytes": 114,
+      "sha256": "9d5f0dd068019dd786c8a965953fb475588ad57a122b5b301efa5b0325ada372"
+    },
+    "dist/pokesurvivor-ko-chrome-extension-0.1.0-test.zip": {
+      "bytes": 786480,
+      "sha256": "a26214c9a471c83bc12f579056c8478f3aff656f061de84ecafbcf931dc19cb2"
+    },
+    "dist/pokesurvivor-ko-chrome-extension-0.1.1-test.sha256": {
+      "bytes": 114,
+      "sha256": "71c5c9fb8c6dd52b7a837af5171a4c721e5400f2332c2b7829a0b15b570117e9"
+    },
+    "dist/pokesurvivor-ko-chrome-extension-0.1.1-test.zip": {
+      "bytes": 809676,
+      "sha256": "963d3e43779a9329d1ea70535de84c376f8f1cbc45e3448ca83d1980feb1635e"
+    },
+    "dist/pokesurvivor-ko-chrome-extension-0.1.10-test.sha256": {
+      "bytes": 115,
+      "sha256": "a4cb94abbd53ce9cf9f673a3a2f9c071671f434d07731f73aeeba78ab7d94482"
+    },
+    "dist/pokesurvivor-ko-chrome-extension-0.1.10-test.zip": {
+      "bytes": 947024,
+      "sha256": "27875033c254cf0db9f004b2afc10122860b4fdb60508b571773d39badd43ffc"
+    },
+    "dist/pokesurvivor-ko-chrome-extension-0.1.11-test.sha256": {
+      "bytes": 115,
+      "sha256": "946b94ee2a5c7b0ba48e6853ea66c332da3f27535114eda19694ab54c4a55905"
+    },
+    "dist/pokesurvivor-ko-chrome-extension-0.1.11-test.zip": {
+      "bytes": 948195,
+      "sha256": "fbe83aaecebf2b963379b2c68acd63efed8ff62ffdb53b6022ae085bac82de45"
+    },
+    "dist/pokesurvivor-ko-chrome-extension-0.1.12-test.sha256": {
+      "bytes": 115,
+      "sha256": "d6a0f6a713c1917816c9cb413fe879bfd1ad467b246863bb2294b5ee6c5a12a9"
+    },
+    "dist/pokesurvivor-ko-chrome-extension-0.1.12-test.zip": {
+      "bytes": 948203,
+      "sha256": "bc80b1cd72b63e8050fe51bb8f1e0252b6708370ca7e98ad9df5cd84e96cfdd9"
+    },
+    "dist/pokesurvivor-ko-chrome-extension-0.1.2-test.sha256": {
+      "bytes": 114,
+      "sha256": "6387aacbb11162e30128c6a1e803ea6e53fb3387f127c88fc77767d45e657b5d"
+    },
+    "dist/pokesurvivor-ko-chrome-extension-0.1.2-test.zip": {
+      "bytes": 812101,
+      "sha256": "8e55ed524ad8fc63175675115bdc5ac8c417e46a546a1dd660883be9582cb9d8"
+    },
+    "dist/pokesurvivor-ko-chrome-extension-0.1.3-test.sha256": {
+      "bytes": 114,
+      "sha256": "f4f2ec9ad3d93b837a68f6afac102b1a911b8ccee92cccdeaa057f15d1b845d7"
+    },
+    "dist/pokesurvivor-ko-chrome-extension-0.1.3-test.zip": {
+      "bytes": 871534,
+      "sha256": "3a2bd431c504bf9bb3da999d4a0f51aaad528acc5f43061e243efc79dc7e5efb"
+    },
+    "dist/pokesurvivor-ko-chrome-extension-0.1.4-test.sha256": {
+      "bytes": 114,
+      "sha256": "db5653d5bf597348d98720de401555478afad9257a175ea59e0159f5cdf37436"
+    },
+    "dist/pokesurvivor-ko-chrome-extension-0.1.4-test.zip": {
+      "bytes": 882666,
+      "sha256": "56840fecf199c981365588638aacbee26f1fec86743a6cc79e4fb93bb5321bc5"
+    },
+    "dist/pokesurvivor-ko-chrome-extension-0.1.5-test.sha256": {
+      "bytes": 114,
+      "sha256": "e88ff0b0974d402baae014ebb773a15b2a3cc30b268ddfc1702ee9c4819c334b"
+    },
+    "dist/pokesurvivor-ko-chrome-extension-0.1.5-test.zip": {
+      "bytes": 888717,
+      "sha256": "c66304dc35f7177b71c395b0fd95e0e7a052917f286315b23729d0deb8b64d2c"
+    },
+    "dist/pokesurvivor-ko-chrome-extension-0.1.6-test.sha256": {
+      "bytes": 114,
+      "sha256": "bf68ba4aba506d519a87d4b981a10eb0d1d38643e50e2d57dfe7bf2bee4062ba"
+    },
+    "dist/pokesurvivor-ko-chrome-extension-0.1.6-test.zip": {
+      "bytes": 928327,
+      "sha256": "9163abbefac36f2e4d68c68547d75ec82595221f787ca8797113ec9f51bfa1f9"
+    },
+    "dist/pokesurvivor-ko-chrome-extension-0.1.7-test.sha256": {
+      "bytes": 114,
+      "sha256": "51c5eea45a27d7470c4873826652c27d37d5859482769252e2e23eeed2c9a0a7"
+    },
+    "dist/pokesurvivor-ko-chrome-extension-0.1.7-test.zip": {
+      "bytes": 928512,
+      "sha256": "a92cfda94d4a427925de52d79abf2db020856b816d9f05c90ee1d212b4b37982"
+    },
+    "dist/pokesurvivor-ko-chrome-extension-0.1.8-test.sha256": {
+      "bytes": 114,
+      "sha256": "541b7477266c958bb880815a5251f83b9c06df1dcb08eac8da001030787dcbed"
+    },
+    "dist/pokesurvivor-ko-chrome-extension-0.1.8-test.zip": {
+      "bytes": 929379,
+      "sha256": "5807aab97d522bcf0b3bc60585d9dc35077b818c71b678b6be82539da87d0b10"
+    },
+    "dist/pokesurvivor-ko-chrome-extension-0.1.9-test.sha256": {
+      "bytes": 114,
+      "sha256": "75949dc69dc30933b1d883f55fe657755a52365fcaf6dc081530768b732d4666"
+    },
+    "dist/pokesurvivor-ko-chrome-extension-0.1.9-test.zip": {
+      "bytes": 943719,
+      "sha256": "7ca08fa93e548960d7ae8387179bfbc9de585dc8ffcf798e0a8f10d2d8d265e1"
+    },
+    "dist/pokesurvivor-ko-chrome-web-store-0.1.1.zip": {
+      "bytes": 805053,
+      "sha256": "a97ec1fc7ce138b23099277cf4b23fcc16fb4349b245a586e37fde0594cf2a83"
+    },
+    "dist/pokesurvivor-ko-chrome-web-store-0.1.2.sha256": {
+      "bytes": 109,
+      "sha256": "e99b94594aae6a9fa64a7bf6e88a88c5c592a7be772af95401ea82abc30da236"
+    },
+    "dist/pokesurvivor-ko-chrome-web-store-0.1.2.zip": {
+      "bytes": 804974,
+      "sha256": "f88daa40915158093102cbbb2dcac0a2de6aba5a0f4531aec83803c6b98e7a14"
+    },
+    "dist/pokesurvivor-ko-chrome-web-store-0.1.3.sha256": {
+      "bytes": 109,
+      "sha256": "c3143e1c6ef88de92fe3a21c1eed44edbe4cdba9bdd20bb0db14baabf39cbdd1"
+    },
+    "dist/pokesurvivor-ko-chrome-web-store-0.1.3.zip": {
+      "bytes": 862716,
+      "sha256": "acd451093012836f5e80cb1dbbe3e2bd83ed31f15a820c309b916fcfa6a0b580"
+    },
+    "pokesurvivor-ko-auto.meta.js": {
+      "bytes": 807,
+      "sha256": "814d0f1c089ee840fbc173644fd84f4d46faaac709a25db5fdbe1d44907888de"
+    },
+    "pokesurvivor-ko-auto.user.js": {
+      "bytes": 9170,
+      "sha256": "779d311db5a5e5283e050c20861228997a7c87fe70148ddf0624917fd9efae5c"
+    }
+  }
+}

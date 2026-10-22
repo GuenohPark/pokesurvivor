@@ -1,0 +1,29 @@
+{
+  "sourceGameCommit": "ce5785313b0205af8b9477423f64b0a7b7039dcd",
+  "terminologyRepository": "https://github.com/PokeAPI/pokeapi",
+  "terminologyCommit": "6fd69dfe90465ba96534f6816fc817737d1f97f6",
+  "koreanLanguageId": 3,
+  "authority": "Community-maintained official localized terminology, not a publisher endpoint",
+  "method": "Match native ability/nature identifiers to pinned PokeAPI ID and Korean name; retain native six-language aliases. Context-only maps; never global fragments or nickname replacement.",
+  "abilities": 271,
+  "natures": 25,
+  "unmatched": [],
+  "files": {
+    "ability_names.csv": {
+      "url": "https://raw.githubusercontent.com/PokeAPI/pokeapi/6fd69dfe90465ba96534f6816fc817737d1f97f6/data/v2/csv/ability_names.csv",
+      "sha256": "8acb80c42210f86ae747dc3347b060d69cd2574a9dbfaf74774ae632ca6348da"
+    },
+    "abilities.csv": {
+      "url": "https://raw.githubusercontent.com/PokeAPI/pokeapi/6fd69dfe90465ba96534f6816fc817737d1f97f6/data/v2/csv/abilities.csv",
+      "sha256": "74c3588ad48e08e54ff01f432899a4028c3e91508bbd53201df85e1f6b9e9ef3"
+    },
+    "nature_names.csv": {
+      "url": "https://raw.githubusercontent.com/PokeAPI/pokeapi/6fd69dfe90465ba96534f6816fc817737d1f97f6/data/v2/csv/nature_names.csv",
+      "sha256": "a6bf8bedb9822d0e966a3036885e33e1306172b3a6566edc22d02ff2e7155031"
+    },
+    "natures.csv": {
+      "url": "https://raw.githubusercontent.com/PokeAPI/pokeapi/6fd69dfe90465ba96534f6816fc817737d1f97f6/data/v2/csv/natures.csv",
+      "sha256": "3536990f6adeaa1735551a6afe798649d22426e161c937da09d3ae9a5381309c"
+    }
+  }
+}

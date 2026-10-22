@@ -9298,7 +9298,1152 @@
       "id": 1330,
       "es": "{x} (compañero)",
       "ko": "{x} (파트너)"
+    },
+    {
+      "id": "compat-20261022-shop-0",
+      "es": "Tienda Kecleon",
+      "en": "Kecleon Shop",
+      "ko": "켈리몬 상점"
+    },
+    {
+      "id": "compat-20261022-shop-1",
+      "es": "Mentas, Cápsulas y MT",
+      "en": "Mints, Capsules and TMs",
+      "ko": "민트·특성 캡슐·기술머신"
+    },
+    {
+      "id": "compat-20261022-shop-2",
+      "es": "¡Bienvenido! Mentas, Cápsulas y MT. Lo que compres va a tu Mochila (en el menú principal); úsalo desde la ficha de cada Pokémon en la colección.",
+      "en": "Welcome! Mints, Capsules and TMs. What you buy goes to your Bag (in the main menu); use it from each Pokémon’s page in your collection.",
+      "ko": "어서 오세요! 민트·특성 캡슐·기술머신을 판매합니다. 구매한 도구는 메인 메뉴의 가방에 들어갑니다. 도감에서 포켓몬을 선택해 사용하세요."
+    },
+    {
+      "id": "compat-20261022-shop-3",
+      "es": "Comprar",
+      "en": "Buy",
+      "ko": "구매"
+    },
+    {
+      "id": "compat-20261022-shop-4",
+      "es": "Mochila",
+      "en": "Bag",
+      "ko": "가방"
+    },
+    {
+      "id": "compat-20261022-shop-5",
+      "es": "Objetos",
+      "en": "Items",
+      "ko": "도구"
+    },
+    {
+      "id": "compat-20261022-shop-6",
+      "es": "MT de hoy",
+      "en": "Today’s TMs",
+      "ko": "오늘의 기술머신"
+    },
+    {
+      "id": "compat-20261022-shop-7",
+      "es": "Cada día hay otras 8. Una MT enseña su ataque a un Pokémon que lo aprenda en los juegos, para siempre (se gasta al usarla).",
+      "en": "There are 8 new ones every day. A TM teaches its move forever to a Pokémon that learns it in the games (it is used up).",
+      "ko": "매일 8종의 기술머신이 새로 판매됩니다. 원작에서 해당 기술을 배울 수 있는 포켓몬에게 영구적으로 가르칩니다. 사용한 기술머신은 소모됩니다."
+    },
+    {
+      "id": "compat-20261022-shop-8",
+      "es": "MT",
+      "en": "TM",
+      "ko": "기술머신"
+    },
+    {
+      "id": "compat-20261022-shop-9",
+      "es": "Para usarlo, abre la colección, elige un Pokémon y pulsa Menta, Cápsula o Enseñar MT en su ficha.",
+      "en": "To use it, open your collection, pick a Pokémon and press Mint, Capsule or Teach TM on its page.",
+      "ko": "도감에서 포켓몬을 선택한 뒤 민트·특성 캡슐·기술머신 가르치기를 눌러 사용하세요."
+    },
+    {
+      "id": "compat-20261022-shop-10",
+      "es": "Ir a la colección",
+      "en": "Go to the collection",
+      "ko": "도감으로"
+    },
+    {
+      "id": "compat-20261022-shop-11",
+      "es": "Ninguno de tus Pokémon la puede aprender",
+      "en": "None of your Pokémon can learn it",
+      "ko": "보유 포켓몬 중 이 기술을 배울 수 있는 포켓몬이 없습니다."
+    },
+    {
+      "id": "compat-20261022-shop-12",
+      "es": "Esa MT ya no está a la venta.",
+      "en": "That TM is no longer for sale.",
+      "ko": "이 기술머신은 더 이상 판매하지 않습니다."
+    },
+    {
+      "id": "compat-20261022-shop-13",
+      "es": "No tienes Pokémonedas suficientes.",
+      "en": "You do not have enough PokéCoins.",
+      "ko": "포켓코인이 부족합니다."
+    },
+    {
+      "id": "compat-20261022-shop-14",
+      "es": "Menta",
+      "en": "Mint",
+      "ko": "민트"
+    },
+    {
+      "id": "compat-20261022-shop-15",
+      "es": "Cápsula Habilidad",
+      "en": "Ability Capsule",
+      "ko": "특성 캡슐"
+    },
+    {
+      "id": "compat-20261022-shop-16",
+      "es": "Cápsula Habilidad Oculta",
+      "en": "Hidden Ability Capsule",
+      "ko": "숨겨진 특성 캡슐"
+    },
+    {
+      "id": "compat-20261022-shop-17",
+      "es": "Cambia la naturaleza de un Pokémon por la que tú elijas.",
+      "en": "Changes a Pokémon’s nature to the one you choose.",
+      "ko": "포켓몬의 성격을 원하는 성격으로 바꿉니다."
+    },
+    {
+      "id": "compat-20261022-shop-18",
+      "es": "Cambia la habilidad de un Pokémon por otra de las suyas (no la oculta).",
+      "en": "Changes a Pokémon’s ability to another of its own (not the hidden one).",
+      "ko": "포켓몬의 특성을 해당 포켓몬의 다른 일반 특성으로 바꿉니다. 숨겨진 특성은 선택할 수 없습니다."
+    },
+    {
+      "id": "compat-20261022-shop-19",
+      "es": "Cambia la habilidad de un Pokémon por cualquiera de las suyas, también la oculta.",
+      "en": "Changes a Pokémon’s ability to any of its own, including the hidden one.",
+      "ko": "포켓몬의 특성을 해당 포켓몬이 가질 수 있는 특성 중에서 선택해 바꿉니다. 숨겨진 특성도 선택할 수 있습니다."
+    },
+    {
+      "id": "compat-20261022-shop-20",
+      "es": "Naturaleza",
+      "en": "Nature",
+      "ko": "성격"
+    },
+    {
+      "id": "compat-20261022-shop-21",
+      "es": "Habilidad",
+      "en": "Ability",
+      "ko": "특성"
+    },
+    {
+      "id": "compat-20261022-shop-22",
+      "es": "neutra",
+      "en": "neutral",
+      "ko": "능력치 변화 없음"
+    },
+    {
+      "id": "compat-20261022-shop-23",
+      "es": "oculta",
+      "en": "hidden",
+      "ko": "숨겨진 특성"
+    },
+    {
+      "id": "compat-20261022-shop-24",
+      "es": "Aún no ha aprendido ninguna",
+      "en": "It has not learned any yet",
+      "ko": "아직 배운 기술머신 기술이 없습니다."
+    },
+    {
+      "id": "compat-20261022-shop-25",
+      "es": "Cápsula",
+      "en": "Capsule",
+      "ko": "특성 캡슐"
+    },
+    {
+      "id": "compat-20261022-shop-26",
+      "es": "Cápsula Oculta",
+      "en": "Hidden Capsule",
+      "ko": "숨겨진 특성 캡슐"
+    },
+    {
+      "id": "compat-20261022-shop-27",
+      "es": "Enseñar MT",
+      "en": "Teach TM",
+      "ko": "기술머신 가르치기"
+    },
+    {
+      "id": "compat-20261022-shop-28",
+      "es": "¡Bienvenido a la Tienda Kecleon!",
+      "en": "Welcome to the Kecleon Shop!",
+      "ko": "켈리몬 상점에 오신 것을 환영합니다!"
+    },
+    {
+      "id": "compat-20261022-shop-29",
+      "es": "¡Hola! Echa un vistazo, ¿eh?",
+      "en": "Hello! Have a look around, OK?",
+      "ko": "어서 오세요! 천천히 둘러보세요."
+    },
+    {
+      "id": "compat-20261022-shop-30",
+      "es": "¡Muchas gracias!",
+      "en": "Thank you very much!",
+      "ko": "정말 감사합니다!"
+    },
+    {
+      "id": "compat-20261022-shop-31",
+      "es": "¡Gracias, vuelve pronto!",
+      "en": "Thanks, come back soon!",
+      "ko": "감사합니다! 또 오세요!"
+    },
+    {
+      "id": "compat-20261022-shop-32",
+      "es": "Vacía",
+      "en": "Empty",
+      "ko": "비어 있음"
+    },
+    {
+      "id": "compat-20261022-shop-33",
+      "es": "Tu Mochila está vacía.",
+      "en": "Your Bag is empty.",
+      "ko": "가방이 비어 있습니다."
+    },
+    {
+      "id": "compat-20261022-shop-34",
+      "es": "Ir a la Tienda Kecleon",
+      "en": "Go to the Kecleon Shop",
+      "ko": "켈리몬 상점으로"
+    },
+    {
+      "id": "compat-20261022-shop-35",
+      "es": "¡Esquiva!",
+      "en": "Dodge!",
+      "ko": "회피!"
+    },
+    {
+      "id": "compat-20261022-shop-36",
+      "es": "¡Robustez!",
+      "en": "Sturdy!",
+      "ko": "옹골참!"
+    },
+    {
+      "id": "compat-20261022-shop-37",
+      "es": "¡Irascible!",
+      "en": "Anger Point!",
+      "ko": "분노의경혈!"
+    },
+    {
+      "id": "compat-20261022-shop-38",
+      "es": "tienes {x}",
+      "en": "you have {x}",
+      "ko": "{x}개 보유",
+      "argKinds": [
+        "general"
+      ]
+    },
+    {
+      "id": "compat-20261022-shop-39",
+      "es": "{x} la puede aprender",
+      "en": "{x} can learn it",
+      "ko": "{x}: 배울 수 있음",
+      "argKinds": [
+        "general"
+      ]
+    },
+    {
+      "id": "compat-20261022-shop-40",
+      "es": "{x} ya la sabe",
+      "en": "{x} already knows it",
+      "ko": "{x}: 이미 배운 기술",
+      "argKinds": [
+        "general"
+      ]
+    },
+    {
+      "id": "compat-20261022-shop-41",
+      "es": "La pueden aprender {x} de tus Pokémon",
+      "en": "{x} of your Pokémon can learn it",
+      "ko": "보유 포켓몬 중 {x}마리가 배울 수 있습니다.",
+      "argKinds": [
+        "general"
+      ]
+    },
+    {
+      "id": "compat-20261022-shop-42",
+      "es": "Objetos: {x} · MT: {x}",
+      "en": "Items: {x} · TMs: {x}",
+      "ko": "도구: {x}개 · 기술머신: {x}개",
+      "argKinds": [
+        "general",
+        "general"
+      ]
+    },
+    {
+      "id": "compat-20261022-shop-43",
+      "es": "{x} ahora tiene naturaleza {x}",
+      "en": "{x} now has a {x} nature",
+      "ko": "{x}의 성격이 변경되었습니다: {x}",
+      "argKinds": [
+        "general",
+        "nature"
+      ]
+    },
+    {
+      "id": "compat-20261022-shop-44",
+      "es": "{x} ahora tiene la habilidad {x}",
+      "en": "{x} now has the ability {x}",
+      "ko": "{x}의 특성이 변경되었습니다: {x}",
+      "argKinds": [
+        "general",
+        "ability"
+      ]
+    },
+    {
+      "id": "compat-20261022-shop-45",
+      "es": "¡{x} ha aprendido {x}!",
+      "en": "{x} learned {x}!",
+      "ko": "{x}: {x} 습득!",
+      "argKinds": [
+        "general",
+        "move"
+      ]
+    },
+    {
+      "id": "compat-20261022-tm-name",
+      "es": "MT {x}",
+      "en": "TM {x}",
+      "ko": "기술머신 {x}",
+      "argKinds": [
+        "move"
+      ]
+    },
+    {
+      "id": "compat-20261022-second-0",
+      "es": "Segundo movimiento inicial",
+      "en": "Second starting move",
+      "ko": "두 번째 시작 기술"
+    },
+    {
+      "id": "compat-20261022-second-1",
+      "es": "Eliges el segundo ataque con el que empiezas (necesita Repertorio)",
+      "en": "Choose the second move you start with (needs Repertoire)",
+      "ko": "시작할 때 사용할 두 번째 기술을 선택합니다. 기술폭 강화가 필요합니다."
+    },
+    {
+      "id": "compat-20261022-second-2",
+      "es": "Elige el segundo ataque con el que empieza. Lo puedes cambiar cuando quieras, gratis.",
+      "en": "Choose the second move it starts with. You can change it any time, for free.",
+      "ko": "두 번째 시작 기술을 선택하세요. 언제든 무료로 바꿀 수 있습니다."
+    },
+    {
+      "id": "compat-20261022-second-3",
+      "es": "{x} empezará también con {x}",
+      "en": "{x} will also start with {x}",
+      "ko": "{x}의 두 번째 시작 기술: {x}",
+      "argKinds": [
+        "general",
+        "move"
+      ]
+    },
+    {
+      "id": "compat-20261022-second-4",
+      "es": "El segundo ataque saldrá al azar",
+      "en": "The second move will be random",
+      "ko": "두 번째 시작 기술을 무작위로 선택합니다."
+    },
+    {
+      "id": "compat-20261022-second-5",
+      "es": "Al azar",
+      "en": "Random",
+      "ko": "무작위"
+    },
+    {
+      "id": "compat-20261022-second-6",
+      "es": "Necesita Repertorio",
+      "en": "Needs Repertoire",
+      "ko": "기술폭 필요"
+    },
+    {
+      "id": "compat-20261022-second-7",
+      "es": "Primero compra Repertorio",
+      "en": "Buy Repertoire first",
+      "ko": "먼저 기술폭 강화를 구매하세요."
+    },
+    {
+      "id": "shop-ability-effect-unique-adaptability",
+      "es": "+25 % de daño con los movimientos de sus tipos.",
+      "en": "+25% damage with moves of its own types.",
+      "ko": "자신과 같은 타입의 기술 피해량 +25%."
+    },
+    {
+      "id": "shop-ability-effect-unique-aftermath",
+      "es": "Una vez por partida, al quedar con poca vida, explota y daña a los de alrededor.",
+      "en": "Once per run, when low on HP, it explodes and hurts everything around.",
+      "ko": "한 판에 한 번, 체력이 낮아지면 폭발하여 주변에 피해를 줍니다."
+    },
+    {
+      "id": "shop-ability-effect-unique-generic-type",
+      "es": "+8 % de daño con movimientos de tipo {x}.",
+      "en": "+8% damage with {x}-type moves.",
+      "ko": "{x}타입 기술의 피해량 +8%.",
+      "argKinds": [
+        "type"
+      ]
+    },
+    {
+      "id": "shop-ability-effect-unique-analytic",
+      "es": "+15 % de daño a enemigos con menos de la mitad de vida.",
+      "en": "+15% damage to enemies below half HP.",
+      "ko": "체력이 절반 미만인 적에게 주는 피해량 +15%."
+    },
+    {
+      "id": "shop-ability-effect-unique-anger-point",
+      "es": "La primera vez que baja de la mitad de vida se enfurece: +25 % de daño el resto de la partida.",
+      "en": "The first time it drops below half HP it gets angry: +25% damage for the rest of the run.",
+      "ko": "처음으로 체력이 절반 미만이 되면 분노하여 해당 판이 끝날 때까지 피해량이 25% 증가합니다."
+    },
+    {
+      "id": "shop-ability-effect-unique-anticipation",
+      "es": "Presiente el peligro: esquiva el 6 % de los golpes.",
+      "en": "Senses danger: dodges 6% of hits.",
+      "ko": "위험을 감지하여 공격의 6%를 회피합니다."
+    },
+    {
+      "id": "shop-ability-effect-unique-battle-armor",
+      "es": "Recibe un 8 % menos de daño.",
+      "en": "Takes 8% less damage.",
+      "ko": "받는 피해량이 8% 감소합니다."
+    },
+    {
+      "id": "shop-ability-effect-unique-beast-boost",
+      "es": "Cada enemigo derrotado le da +0,5 % de daño (hasta +15 %).",
+      "en": "Each enemy defeated gives +0.5% damage (up to +15%).",
+      "ko": "적을 쓰러뜨릴 때마다 피해량 +0.5% (최대 +15%)."
+    },
+    {
+      "id": "shop-ability-effect-unique-big-pecks",
+      "es": "Recibe un 8 % menos de daño físico.",
+      "en": "Takes 8% less physical damage.",
+      "ko": "받는 물리 피해량이 8% 감소합니다."
+    },
+    {
+      "id": "shop-ability-effect-unique-blaze",
+      "es": "+35 % de daño de tipo {x} con poca vida (menos de 1/3).",
+      "en": "+35% {x}-type damage at low HP (under 1/3).",
+      "ko": "체력이 낮을 때(1/3 미만) {x}타입 피해량 +35%.",
+      "argKinds": [
+        "type"
+      ]
+    },
+    {
+      "id": "shop-ability-effect-unique-bulletproof",
+      "es": "Recibe un 15 % menos de daño especial.",
+      "en": "Takes 15% less special damage.",
+      "ko": "받는 특수 피해량이 15% 감소합니다."
+    },
+    {
+      "id": "shop-ability-effect-unique-chlorophyll",
+      "es": "+50 % de velocidad con sol.",
+      "en": "+50% speed in sun.",
+      "ko": "맑은 날씨에 이동 속도 +50%."
+    },
+    {
+      "id": "shop-ability-effect-unique-clear-body",
+      "es": "No le frenan las trampas pegajosas ni el terreno.",
+      "en": "Sticky traps and terrain do not slow it down.",
+      "ko": "끈끈한 함정이나 지형 때문에 느려지지 않습니다."
+    },
+    {
+      "id": "shop-ability-effect-unique-competitive",
+      "es": "Si le frenan, se pica: +20 % de daño especial mientras dure.",
+      "en": "If it is slowed it fights back: +20% special damage while it lasts.",
+      "ko": "느려지면 분발하여 그동안 특수 피해량이 20% 증가합니다."
+    },
+    {
+      "id": "shop-ability-effect-unique-compound-eyes",
+      "es": "+6 % de probabilidad de golpe crítico.",
+      "en": "+6% critical hit chance.",
+      "ko": "급소 확률 +6%."
+    },
+    {
+      "id": "shop-ability-effect-unique-contrary",
+      "es": "Al revés: frenado, va más rápido.",
+      "en": "The other way round: when slowed, it goes faster.",
+      "ko": "반대로 작용하여, 느려진 상태에서 더 빠르게 움직입니다."
+    },
+    {
+      "id": "shop-ability-effect-unique-cursed-body",
+      "es": "A veces frena a quien le golpea cuerpo a cuerpo.",
+      "en": "Sometimes slows whoever hits it in melee.",
+      "ko": "자신을 근접 공격한 적을 때때로 느려지게 합니다."
+    },
+    {
+      "id": "shop-ability-effect-unique-cute-charm",
+      "es": "Quien le golpea cuerpo a cuerpo se queda embobado (frenado).",
+      "en": "Whoever hits it in melee is smitten (slowed).",
+      "ko": "자신을 근접 공격한 적이 매료되어 느려집니다."
+    },
+    {
+      "id": "shop-ability-effect-unique-damp",
+      "es": "Las explosiones de los Pokémon kamikaze no le dañan.",
+      "en": "Explosions from kamikaze Pokémon do not hurt it.",
+      "ko": "자폭하는 포켓몬의 폭발로 피해를 받지 않습니다."
+    },
+    {
+      "id": "shop-ability-effect-unique-defeatist",
+      "es": "Cañón de cristal: +15 % de daño con más de la mitad de vida; con menos, −25 %.",
+      "en": "Glass cannon: +15% damage above half HP; below it, −25%.",
+      "ko": "유리 대포: 체력이 절반을 넘으면 피해량 +15%, 절반 미만이면 −25%."
+    },
+    {
+      "id": "shop-ability-effect-unique-defiant",
+      "es": "Si le frenan, se pica: +20 % de daño físico mientras dure.",
+      "en": "If it is slowed it fights back: +20% physical damage while it lasts.",
+      "ko": "느려지면 분발하여 그동안 물리 피해량이 20% 증가합니다."
+    },
+    {
+      "id": "shop-ability-effect-unique-dragons-maw",
+      "es": "+20 % de daño con movimientos de tipo {x}.",
+      "en": "+20% damage with {x}-type moves.",
+      "ko": "{x}타입 기술의 피해량 +20%.",
+      "argKinds": [
+        "type"
+      ]
+    },
+    {
+      "id": "shop-ability-effect-unique-drizzle",
+      "es": "Pone lluvia al empezar la partida y cada 3 minutos.",
+      "en": "Brings rain at the start of the run and every 3 minutes.",
+      "ko": "시작할 때와 이후 3분마다 비를 내립니다."
+    },
+    {
+      "id": "shop-ability-effect-unique-drought",
+      "es": "Pone sol al empezar la partida y cada 3 minutos.",
+      "en": "Brings sun at the start of the run and every 3 minutes.",
+      "ko": "시작할 때와 이후 3분마다 날씨를 맑게 합니다."
+    },
+    {
+      "id": "shop-ability-effect-unique-dry-skin",
+      "es": "El Agua le cura y con lluvia recupera vida, pero el Fuego le hace un 25 % más.",
+      "en": "Water heals it and rain restores HP, but Fire deals 25% more.",
+      "ko": "물타입 공격을 받으면 회복하고 비가 오면 체력을 회복하지만, 불꽃타입에는 피해를 25% 더 받습니다."
+    },
+    {
+      "id": "shop-ability-effect-unique-earth-eater",
+      "es": "Los ataques de tipo {x} no le hacen daño: le curan un poco.",
+      "en": "{x}-type attacks deal no damage: they heal it a little.",
+      "ko": "{x}타입 공격에 피해를 받지 않고 체력을 조금 회복합니다.",
+      "argKinds": [
+        "type"
+      ]
+    },
+    {
+      "id": "shop-ability-effect-unique-effect-spore",
+      "es": "Quien le golpea cuerpo a cuerpo se frena o se envenena.",
+      "en": "Whoever hits it in melee is slowed or poisoned.",
+      "ko": "자신을 근접 공격한 적이 느려지거나 중독됩니다."
+    },
+    {
+      "id": "shop-ability-effect-unique-filter",
+      "es": "Los ataques muy eficaces le hacen un 25 % menos.",
+      "en": "Super effective attacks deal 25% less.",
+      "ko": "효과가 굉장한 공격에 받는 피해량이 25% 감소합니다."
+    },
+    {
+      "id": "shop-ability-effect-unique-flame-body",
+      "es": "Quien le golpea cuerpo a cuerpo se quema.",
+      "en": "Whoever hits it in melee gets burned.",
+      "ko": "자신을 근접 공격한 적이 화상을 입습니다."
+    },
+    {
+      "id": "shop-ability-effect-unique-fluffy",
+      "es": "Recibe un 30 % menos de daño físico.",
+      "en": "Takes 30% less physical damage.",
+      "ko": "받는 물리 피해량이 30% 감소합니다."
+    },
+    {
+      "id": "shop-ability-effect-unique-friend-guard",
+      "es": "Recibe un 6 % menos de daño.",
+      "en": "Takes 6% less damage.",
+      "ko": "받는 피해량이 6% 감소합니다."
+    },
+    {
+      "id": "shop-ability-effect-unique-frisk",
+      "es": "Atrae los objetos desde más lejos (+20 % de imán).",
+      "en": "Pulls items from farther away (+20% magnet).",
+      "ko": "더 멀리 있는 아이템을 끌어당깁니다 (자석 범위 +20%)."
+    },
+    {
+      "id": "shop-ability-effect-unique-fur-coat",
+      "es": "Recibe un 40 % menos de daño físico.",
+      "en": "Takes 40% less physical damage.",
+      "ko": "받는 물리 피해량이 40% 감소합니다."
+    },
+    {
+      "id": "shop-ability-effect-unique-gluttony",
+      "es": "Las curas le curan un 40 % más.",
+      "en": "Healing heals it 40% more.",
+      "ko": "회복 효과로 회복하는 체력이 40% 증가합니다."
+    },
+    {
+      "id": "shop-ability-effect-unique-guts",
+      "es": "+30 % de daño físico con menos de la mitad de vida.",
+      "en": "+30% physical damage under half HP.",
+      "ko": "체력이 절반 미만일 때 물리 피해량 +30%."
+    },
+    {
+      "id": "shop-ability-effect-unique-harvest",
+      "es": "Las curas le curan un 30 % más.",
+      "en": "Healing heals it 30% more.",
+      "ko": "회복 효과로 회복하는 체력이 30% 증가합니다."
+    },
+    {
+      "id": "shop-ability-effect-unique-healer",
+      "es": "Recupera un 0,3 % de su vida por segundo.",
+      "en": "Recovers 0.3% of its HP per second.",
+      "ko": "매초 체력의 0.3%를 회복합니다."
+    },
+    {
+      "id": "shop-ability-effect-unique-heatproof",
+      "es": "Recibe la mitad de daño de Fuego.",
+      "en": "Takes half damage from Fire.",
+      "ko": "불꽃타입에 받는 피해량이 절반이 됩니다."
+    },
+    {
+      "id": "shop-ability-effect-unique-honey-gather",
+      "es": "+15 % de Pokémonedas en la partida.",
+      "en": "+15% PokéCoins in the run.",
+      "ko": "해당 판에서 얻는 포켓코인 +15%."
+    },
+    {
+      "id": "shop-ability-effect-unique-huge-power",
+      "es": "+50 % de daño con movimientos físicos.",
+      "en": "+50% damage with physical moves.",
+      "ko": "물리 기술의 피해량 +50%."
+    },
+    {
+      "id": "shop-ability-effect-unique-hustle",
+      "es": "+25 % de daño con movimientos físicos, pero 1 de cada 6 golpes físicos sale flojo.",
+      "en": "+25% damage with physical moves, but 1 in 6 physical hits comes out weak.",
+      "ko": "물리 기술의 피해량 +25%. 단, 물리 공격 6번 중 1번은 약하게 적중합니다."
+    },
+    {
+      "id": "shop-ability-effect-unique-hydration",
+      "es": "Con lluvia recupera un 1 % de vida por segundo y nada le frena.",
+      "en": "In rain it recovers 1% HP per second and nothing slows it.",
+      "ko": "비가 오면 매초 체력의 1%를 회복하며 어떤 효과에도 느려지지 않습니다."
+    },
+    {
+      "id": "shop-ability-effect-unique-hyper-cutter",
+      "es": "+6 % de daño con movimientos físicos.",
+      "en": "+6% damage with physical moves.",
+      "ko": "물리 기술의 피해량 +6%."
+    },
+    {
+      "id": "shop-ability-effect-unique-ice-body",
+      "es": "Con nieve recupera un 1,5 % de vida por segundo.",
+      "en": "Recovers 1.5% HP per second in snow.",
+      "ko": "눈이 오면 매초 체력의 1.5%를 회복합니다."
+    },
+    {
+      "id": "shop-ability-effect-unique-ice-scales",
+      "es": "Recibe un 40 % menos de daño especial.",
+      "en": "Takes 40% less special damage.",
+      "ko": "받는 특수 피해량이 40% 감소합니다."
+    },
+    {
+      "id": "shop-ability-effect-unique-illuminate",
+      "es": "Atrae los objetos desde más lejos (+10 % de imán).",
+      "en": "Pulls items from farther away (+10% magnet).",
+      "ko": "더 멀리 있는 아이템을 끌어당깁니다 (자석 범위 +10%)."
+    },
+    {
+      "id": "shop-ability-effect-unique-imposter",
+      "es": "Se transforma: pega y aguanta como un Pokémon equilibrado.",
+      "en": "Transforms: hits and endures like a balanced Pokémon.",
+      "ko": "변신하여 균형 잡힌 포켓몬처럼 공격하고 버팁니다."
+    },
+    {
+      "id": "shop-ability-effect-unique-infiltrator",
+      "es": "Sus golpes rompen los escudos de los enemigos.",
+      "en": "Its hits break enemy shields.",
+      "ko": "공격이 적의 보호막을 부숩니다."
+    },
+    {
+      "id": "shop-ability-effect-unique-intimidate",
+      "es": "Los enemigos le hacen un 12 % menos de daño físico.",
+      "en": "Enemies deal 12% less physical damage to it.",
+      "ko": "적에게 받는 물리 피해량이 12% 감소합니다."
+    },
+    {
+      "id": "shop-ability-effect-unique-iron-barbs",
+      "es": "Quien le golpea cuerpo a cuerpo recibe daño.",
+      "en": "Whoever hits it in melee takes damage.",
+      "ko": "자신을 근접 공격한 적이 피해를 받습니다."
+    },
+    {
+      "id": "shop-ability-effect-unique-iron-fist",
+      "es": "+25 % de daño con los puñetazos.",
+      "en": "+25% damage with punches.",
+      "ko": "펀치 기술의 피해량 +25%."
+    },
+    {
+      "id": "shop-ability-effect-unique-justified",
+      "es": "+15 % de daño a los Pokémon de tipo {x}.",
+      "en": "+15% damage to {x}-type Pokémon.",
+      "ko": "{x}타입 포켓몬에게 주는 피해량 +15%.",
+      "argKinds": [
+        "type"
+      ]
+    },
+    {
+      "id": "shop-ability-effect-unique-keen-eye",
+      "es": "+5 % de probabilidad de golpe crítico.",
+      "en": "+5% critical hit chance.",
+      "ko": "급소 확률 +5%."
+    },
+    {
+      "id": "shop-ability-effect-unique-klutz",
+      "es": "Sin objeto, +12 % de daño.",
+      "en": "Without an item, +12% damage.",
+      "ko": "도구가 없으면 피해량 +12%."
+    },
+    {
+      "id": "shop-ability-effect-unique-leaf-guard",
+      "es": "Con sol no le frena nada y recibe un 15 % menos de daño.",
+      "en": "In sun nothing slows it and it takes 15% less damage.",
+      "ko": "맑은 날씨에는 어떤 효과에도 느려지지 않으며 받는 피해량이 15% 감소합니다."
+    },
+    {
+      "id": "shop-ability-effect-unique-levitate",
+      "es": "Flota: no le afectan el agua, la lava ni las trampas, y la Tierra le hace muy poco.",
+      "en": "Floats: unaffected by water, lava and traps, and Ground barely hurts it.",
+      "ko": "공중에 떠서 물, 용암, 함정의 영향을 받지 않으며 땅타입에는 아주 적은 피해만 받습니다."
+    },
+    {
+      "id": "shop-ability-effect-unique-libero",
+      "es": "+12 % de daño con todos sus movimientos.",
+      "en": "+12% damage with all its moves.",
+      "ko": "모든 기술의 피해량 +12%."
+    },
+    {
+      "id": "shop-ability-effect-unique-magic-bounce",
+      "es": "Recibe un 15 % menos de daño especial y esquiva el 10 % de esos golpes.",
+      "en": "Takes 15% less special damage and dodges 10% of those hits.",
+      "ko": "받는 특수 피해량이 15% 감소하며 특수 공격의 10%를 회피합니다."
+    },
+    {
+      "id": "shop-ability-effect-unique-magic-guard",
+      "es": "Sólo le hacen daño los ataques: ni la lava ni las trampas.",
+      "en": "Only attacks hurt it: not lava or traps.",
+      "ko": "공격으로만 피해를 받으며 용암이나 함정으로는 피해를 받지 않습니다."
+    },
+    {
+      "id": "shop-ability-effect-unique-mega-launcher",
+      "es": "+30 % de daño con los pulsos y esferas.",
+      "en": "+30% damage with pulses and spheres.",
+      "ko": "파동과 구체 기술의 피해량 +30%."
+    },
+    {
+      "id": "shop-ability-effect-unique-minus",
+      "es": "+10 % de daño con movimientos especiales.",
+      "en": "+10% damage with special moves.",
+      "ko": "특수 기술의 피해량 +10%."
+    },
+    {
+      "id": "shop-ability-effect-unique-mold-breaker",
+      "es": "+12 % de daño a los jefes.",
+      "en": "+12% damage to bosses.",
+      "ko": "보스에게 주는 피해량 +12%."
+    },
+    {
+      "id": "shop-ability-effect-unique-moody",
+      "es": "Cada 10 s, +10 % a algo al azar: ataque, ataque especial, velocidad o defensa.",
+      "en": "Every 10 s, +10% to something at random: attack, special attack, speed or defense.",
+      "ko": "10초마다 공격, 특수공격, 이동 속도, 방어 중 무작위 하나가 10% 증가합니다."
+    },
+    {
+      "id": "shop-ability-effect-unique-multiscale",
+      "es": "Con la vida casi llena recibe la mitad de daño.",
+      "en": "Takes half damage while at (nearly) full HP.",
+      "ko": "체력이 거의 가득 차 있으면 받는 피해량이 절반이 됩니다."
+    },
+    {
+      "id": "shop-ability-effect-unique-no-guard",
+      "es": "Todo acierta: +15 % de daño hecho, pero recibe un 10 % más.",
+      "en": "Everything hits: +15% damage dealt, but takes 10% more.",
+      "ko": "모든 공격이 명중합니다. 주는 피해량 +15%, 받는 피해량 +10%."
+    },
+    {
+      "id": "shop-ability-effect-unique-overcoat",
+      "es": "Recibe un 5 % menos de daño especial.",
+      "en": "Takes 5% less special damage.",
+      "ko": "받는 특수 피해량이 5% 감소합니다."
+    },
+    {
+      "id": "shop-ability-effect-unique-pickpocket",
+      "es": "Al recibir golpes, a veces les quita una moneda.",
+      "en": "When hit, it sometimes snatches a coin.",
+      "ko": "공격을 받으면 때때로 동전 하나를 빼앗습니다."
+    },
+    {
+      "id": "shop-ability-effect-unique-poison-point",
+      "es": "Quien le golpea cuerpo a cuerpo se envenena.",
+      "en": "Whoever hits it in melee gets poisoned.",
+      "ko": "자신을 근접 공격한 적이 중독됩니다."
+    },
+    {
+      "id": "shop-ability-effect-unique-poison-touch",
+      "es": "Sus ataques cuerpo a cuerpo y embestidas envenenan.",
+      "en": "Its melee attacks and dashes poison.",
+      "ko": "근접 공격과 돌진 공격이 적을 중독시킵니다."
+    },
+    {
+      "id": "shop-ability-effect-unique-prankster",
+      "es": "Sus potenciadores se recargan un 30 % antes.",
+      "en": "Its boosting moves recharge 30% faster.",
+      "ko": "강화 기술의 재사용 대기시간이 30% 감소합니다."
+    },
+    {
+      "id": "shop-ability-effect-unique-protosynthesis",
+      "es": "Con sol, +20 % de daño.",
+      "en": "In sun, +20% damage.",
+      "ko": "맑은 날씨에 피해량 +20%."
+    },
+    {
+      "id": "shop-ability-effect-unique-punk-rock",
+      "es": "+30 % de daño con los sonidos.",
+      "en": "+30% damage with sound moves.",
+      "ko": "소리 기술의 피해량 +30%."
+    },
+    {
+      "id": "shop-ability-effect-unique-quick-feet",
+      "es": "Frenado, va más rápido (en vez de más lento).",
+      "en": "When slowed, it goes faster (instead of slower).",
+      "ko": "느려진 상태에서 오히려 더 빠르게 움직입니다."
+    },
+    {
+      "id": "shop-ability-effect-unique-rain-dish",
+      "es": "Con lluvia recupera un 1,5 % de vida por segundo.",
+      "en": "Recovers 1.5% HP per second in rain.",
+      "ko": "비가 오면 매초 체력의 1.5%를 회복합니다."
+    },
+    {
+      "id": "shop-ability-effect-unique-rattled",
+      "es": "Los golpes de Bicho, Fantasma o Siniestro le asustan: +25 % de velocidad un momento.",
+      "en": "Bug, Ghost or Dark hits scare it: +25% speed for a moment.",
+      "ko": "벌레, 고스트, 악타입 공격에 겁을 먹어 잠시 이동 속도가 25% 증가합니다."
+    },
+    {
+      "id": "shop-ability-effect-unique-reckless",
+      "es": "+25 % de daño con las embestidas.",
+      "en": "+25% damage with dashes.",
+      "ko": "돌진 공격의 피해량 +25%."
+    },
+    {
+      "id": "shop-ability-effect-unique-regenerator",
+      "es": "Recupera un 0,6 % de su vida por segundo.",
+      "en": "Recovers 0.6% of its HP per second.",
+      "ko": "매초 체력의 0.6%를 회복합니다."
+    },
+    {
+      "id": "shop-ability-effect-unique-rivalry",
+      "es": "+15 % de daño a los enemigos que comparten un tipo con él.",
+      "en": "+15% damage to enemies that share a type with it.",
+      "ko": "자신과 같은 타입을 하나라도 가진 적에게 주는 피해량 +15%."
+    },
+    {
+      "id": "shop-ability-effect-unique-run-away",
+      "es": "+8 % de velocidad.",
+      "en": "+8% speed.",
+      "ko": "이동 속도 +8%."
+    },
+    {
+      "id": "shop-ability-effect-unique-sand-force",
+      "es": "+30 % de daño Roca, Tierra y Acero con tormenta de arena.",
+      "en": "+30% Rock, Ground and Steel damage in a sandstorm.",
+      "ko": "모래바람이 불면 바위, 땅, 강철타입 피해량 +30%."
+    },
+    {
+      "id": "shop-ability-effect-unique-sand-rush",
+      "es": "+50 % de velocidad con tormenta de arena.",
+      "en": "+50% speed in a sandstorm.",
+      "ko": "모래바람이 불면 이동 속도 +50%."
+    },
+    {
+      "id": "shop-ability-effect-unique-sand-stream",
+      "es": "Pone una tormenta de arena al empezar la partida y cada 3 minutos.",
+      "en": "Brings a sandstorm at the start of the run and every 3 minutes.",
+      "ko": "시작할 때와 이후 3분마다 모래바람을 일으킵니다."
+    },
+    {
+      "id": "shop-ability-effect-unique-sand-veil",
+      "es": "Con tormenta de arena esquiva el 15 % de los golpes.",
+      "en": "In a sandstorm it dodges 15% of hits.",
+      "ko": "모래바람이 불면 공격의 15%를 회피합니다."
+    },
+    {
+      "id": "shop-ability-effect-unique-schooling",
+      "es": "Forma banco: +25 % de vida y, con más de 1/4 de vida, +50 % de daño.",
+      "en": "School form: +25% HP and, above 1/4 HP, +50% damage.",
+      "ko": "군집의 모습: 체력 +25%. 체력이 1/4을 넘으면 피해량 +50%."
+    },
+    {
+      "id": "shop-ability-effect-unique-scrappy",
+      "es": "Sus movimientos Normal y Lucha dañan del todo a los Fantasma.",
+      "en": "Its Normal and Fighting moves fully hit Ghost types.",
+      "ko": "노말과 격투타입 기술로 고스트타입에게 온전한 피해를 줍니다."
+    },
+    {
+      "id": "shop-ability-effect-unique-serene-grace",
+      "es": "Las quemaduras, venenos y frenazos de sus movimientos son el doble de fuertes.",
+      "en": "Burns, poisons and slows from its moves are twice as strong.",
+      "ko": "자신의 기술이 거는 화상, 중독, 감속 효과가 2배 강해집니다."
+    },
+    {
+      "id": "shop-ability-effect-unique-sharpness",
+      "es": "+30 % de daño con los cortes.",
+      "en": "+30% damage with slicing moves.",
+      "ko": "베기 기술의 피해량 +30%."
+    },
+    {
+      "id": "shop-ability-effect-unique-shed-skin",
+      "es": "Cada 5 s muda: se quita los frenazos y recupera un 2 % de vida.",
+      "en": "Every 5 s it sheds: removes slows and recovers 2% HP.",
+      "ko": "5초마다 탈피하여 감속 효과를 없애고 체력의 2%를 회복합니다."
+    },
+    {
+      "id": "shop-ability-effect-unique-sheer-force",
+      "es": "+25 % de daño con movimientos que queman, envenenan, frenan o empujan, pero pierden ese efecto.",
+      "en": "+25% damage with moves that burn, poison, slow or push, but they lose that effect.",
+      "ko": "화상, 중독, 감속, 밀치기 효과가 있는 기술의 피해량 +25%. 단, 해당 효과는 사라집니다."
+    },
+    {
+      "id": "shop-ability-effect-unique-skill-link",
+      "es": "+25 % de daño con los movimientos de varios golpes.",
+      "en": "+25% damage with multi-hit moves.",
+      "ko": "여러 번 공격하는 기술의 피해량 +25%."
+    },
+    {
+      "id": "shop-ability-effect-unique-slow-start",
+      "es": "Arranca lento: el primer minuto hace −40 % de daño y va más despacio; después, a plena potencia.",
+      "en": "Slow start: for the first minute it deals −40% damage and moves slower; after that, full power.",
+      "ko": "느린 출발: 처음 1분 동안 피해량이 40% 감소하고 더 느리게 움직입니다. 이후에는 정상 성능을 냅니다."
+    },
+    {
+      "id": "shop-ability-effect-unique-slush-rush",
+      "es": "+50 % de velocidad con nieve.",
+      "en": "+50% speed in snow.",
+      "ko": "눈이 오면 이동 속도 +50%."
+    },
+    {
+      "id": "shop-ability-effect-unique-sniper",
+      "es": "Sus golpes críticos hacen ×2 de daño (en vez de ×1,5).",
+      "en": "Its critical hits deal ×2 damage (instead of ×1.5).",
+      "ko": "급소에 맞히면 피해량이 ×1.5 대신 ×2가 됩니다."
+    },
+    {
+      "id": "shop-ability-effect-unique-snow-cloak",
+      "es": "Con nieve esquiva el 15 % de los golpes.",
+      "en": "In snow it dodges 15% of hits.",
+      "ko": "눈이 오면 공격의 15%를 회피합니다."
+    },
+    {
+      "id": "shop-ability-effect-unique-snow-warning",
+      "es": "Pone nieve al empezar la partida y cada 3 minutos.",
+      "en": "Brings snow at the start of the run and every 3 minutes.",
+      "ko": "시작할 때와 이후 3분마다 눈을 내립니다."
+    },
+    {
+      "id": "shop-ability-effect-unique-solar-power",
+      "es": "+40 % de daño especial con sol, pero el sol le quita algo de vida.",
+      "en": "+40% special damage in sun, but the sun drains some HP.",
+      "ko": "맑은 날씨에 특수 피해량 +40%. 단, 햇빛 때문에 체력이 조금씩 줄어듭니다."
+    },
+    {
+      "id": "shop-ability-effect-unique-soundproof",
+      "es": "Recibe un 10 % menos de daño especial.",
+      "en": "Takes 10% less special damage.",
+      "ko": "받는 특수 피해량이 10% 감소합니다."
+    },
+    {
+      "id": "shop-ability-effect-unique-speed-boost",
+      "es": "Cada 10 segundos va un 1,5 % más rápido (hasta +30 %).",
+      "en": "Every 10 seconds it gets 1.5% faster (up to +30%).",
+      "ko": "10초마다 이동 속도가 1.5%씩 증가합니다 (최대 +30%)."
+    },
+    {
+      "id": "shop-ability-effect-unique-stamina",
+      "es": "Cada golpe cuerpo a cuerpo que recibe le sube un poco la defensa.",
+      "en": "Each melee hit it takes raises its defense a little.",
+      "ko": "근접 공격을 받을 때마다 방어가 조금 증가합니다."
+    },
+    {
+      "id": "shop-ability-effect-unique-stance-change",
+      "es": "Alterna cada 8 s entre filo (+20 % de daño) y escudo (−20 % de daño recibido).",
+      "en": "Switches every 8 s between blade (+20% damage) and shield (−20% damage taken).",
+      "ko": "8초마다 칼날(피해량 +20%)과 방패(받는 피해량 −20%)를 번갈아 사용합니다."
+    },
+    {
+      "id": "shop-ability-effect-unique-static",
+      "es": "Quien le golpea cuerpo a cuerpo se queda frenado (paralizado).",
+      "en": "Whoever hits it in melee is slowed (paralyzed).",
+      "ko": "자신을 근접 공격한 적이 마비되어 느려집니다."
+    },
+    {
+      "id": "shop-ability-effect-unique-steadfast",
+      "es": "Al recibir un golpe, +10 % de velocidad un momento (se acumula).",
+      "en": "When hit, +10% speed for a moment (stacks).",
+      "ko": "공격을 받으면 잠시 이동 속도가 10% 증가합니다 (중첩 가능)."
+    },
+    {
+      "id": "shop-ability-effect-unique-stench",
+      "es": "Sus golpes a veces frenan (1 de cada 10).",
+      "en": "Its hits sometimes slow (1 in 10).",
+      "ko": "공격이 때때로 적을 느려지게 합니다 (10번 중 1번)."
+    },
+    {
+      "id": "shop-ability-effect-unique-strong-jaw",
+      "es": "+30 % de daño con los mordiscos.",
+      "en": "+30% damage with bites.",
+      "ko": "물기 기술의 피해량 +30%."
+    },
+    {
+      "id": "shop-ability-effect-unique-sturdy",
+      "es": "Un golpe que le dejaría KO le deja con 1 de vida (cada 90 s).",
+      "en": "A hit that would KO it leaves it with 1 HP (every 90 s).",
+      "ko": "기절할 공격을 받아도 체력이 1 남습니다 (90초마다)."
+    },
+    {
+      "id": "shop-ability-effect-unique-super-luck",
+      "es": "+10 % de probabilidad de golpe crítico.",
+      "en": "+10% critical hit chance.",
+      "ko": "급소 확률 +10%."
+    },
+    {
+      "id": "shop-ability-effect-unique-swift-swim",
+      "es": "+50 % de velocidad con lluvia.",
+      "en": "+50% speed in rain.",
+      "ko": "비가 오면 이동 속도 +50%."
+    },
+    {
+      "id": "shop-ability-effect-unique-synchronize",
+      "es": "Quien le golpea cuerpo a cuerpo recibe parte del golpe.",
+      "en": "Whoever hits it in melee takes part of the hit back.",
+      "ko": "자신을 근접 공격한 적에게 받은 피해의 일부를 되돌려 줍니다."
+    },
+    {
+      "id": "shop-ability-effect-unique-tangled-feet",
+      "es": "Frenado, esquiva el 20 % de los golpes.",
+      "en": "When slowed, it dodges 20% of hits.",
+      "ko": "느려진 상태에서 공격의 20%를 회피합니다."
+    },
+    {
+      "id": "shop-ability-effect-unique-technician",
+      "es": "+35 % de daño con los ataques de golpes flojos.",
+      "en": "+35% damage with weak-hitting moves.",
+      "ko": "타격이 약한 기술의 피해량 +35%."
+    },
+    {
+      "id": "shop-ability-effect-unique-telepathy",
+      "es": "Lee las intenciones: esquiva el 8 % de los golpes.",
+      "en": "Reads intentions: dodges 8% of hits.",
+      "ko": "의도를 읽어 공격의 8%를 회피합니다."
+    },
+    {
+      "id": "shop-ability-effect-unique-thick-fat",
+      "es": "Recibe un 40 % menos de daño de Fuego y Hielo.",
+      "en": "Takes 40% less damage from Fire and Ice.",
+      "ko": "불꽃과 얼음타입에 받는 피해량이 40% 감소합니다."
+    },
+    {
+      "id": "shop-ability-effect-unique-tinted-lens",
+      "es": "Sus movimientos poco eficaces hacen daño normal.",
+      "en": "Its not very effective moves deal normal damage.",
+      "ko": "효과가 별로인 기술로도 보통의 피해를 줍니다."
+    },
+    {
+      "id": "shop-ability-effect-unique-tough-claws",
+      "es": "+25 % de daño con ataques cuerpo a cuerpo y embestidas.",
+      "en": "+25% damage with melee attacks and dashes.",
+      "ko": "근접 공격과 돌진 공격의 피해량 +25%."
+    },
+    {
+      "id": "shop-ability-effect-unique-truant",
+      "es": "Golpes sueltos y fuertes: tarda un 60 % más en recargar, pero cada golpe hace +35 %.",
+      "en": "Slow but heavy: recharges take 60% longer, but each hit deals +35%.",
+      "ko": "느리지만 강력한 공격: 재사용 대기시간이 60% 늘어나지만 각 공격의 피해량은 35% 증가합니다."
+    },
+    {
+      "id": "shop-ability-effect-unique-unaware",
+      "es": "No se deja impresionar: recibe un 8 % menos de daño.",
+      "en": "Unimpressed: takes 8% less damage.",
+      "ko": "개의치 않아 받는 피해량이 8% 감소합니다."
+    },
+    {
+      "id": "shop-ability-effect-unique-unburden",
+      "es": "Sin objeto va un 15 % más rápido.",
+      "en": "Without an item it is 15% faster.",
+      "ko": "도구가 없으면 이동 속도가 15% 증가합니다."
+    },
+    {
+      "id": "shop-ability-effect-unique-unnerve",
+      "es": "Pone nerviosos a los enemigos: le hacen un 6 % menos de daño.",
+      "en": "Makes enemies nervous: they deal 6% less damage to it.",
+      "ko": "적을 긴장시켜 받는 피해량이 6% 감소합니다."
+    },
+    {
+      "id": "shop-ability-effect-unique-water-bubble",
+      "es": "+40 % de daño de tipo {x} y recibe la mitad de daño de Fuego.",
+      "en": "+40% {x}-type damage and takes half damage from Fire.",
+      "ko": "{x}타입 피해량 +40%. 불꽃타입에 받는 피해량은 절반이 됩니다.",
+      "argKinds": [
+        "type"
+      ]
+    },
+    {
+      "id": "shop-ability-effect-unique-water-veil",
+      "es": "La lava no le quema y recibe la mitad de daño de Fuego.",
+      "en": "Lava does not burn it and it takes half damage from Fire.",
+      "ko": "용암으로 화상을 입지 않으며 불꽃타입에 받는 피해량이 절반이 됩니다."
+    },
+    {
+      "id": "shop-ability-effect-unique-weak-armor",
+      "es": "Al recibir un golpe físico se aligera: +20 % de velocidad un momento.",
+      "en": "When hit physically it gets lighter: +20% speed for a moment.",
+      "ko": "물리 공격을 받으면 몸이 가벼워져 잠시 이동 속도가 20% 증가합니다."
+    },
+    {
+      "id": "shop-ability-effect-unique-wonder-guard",
+      "es": "Lo que no es muy eficaz apenas le hace daño (35 %); lo muy eficaz, un 50 % más.",
+      "en": "Anything not super effective barely hurts it (35%); super effective hits deal 50% more.",
+      "ko": "효과가 굉장하지 않은 공격에는 피해량의 35%만 받고, 효과가 굉장한 공격에는 피해를 50% 더 받습니다."
+    },
+    {
+      "id": "shop-ability-effect-unique-zen-mode",
+      "es": "Con menos de la mitad de vida entra en Modo Daruma: +30 % de daño especial.",
+      "en": "Below half HP it enters Zen Mode: +30% special damage.",
+      "ko": "체력이 절반 미만이면 달마모드가 되어 특수 피해량이 30% 증가합니다."
+    },
+    {
+      "id": "compat-20261022-shop-news",
+      "es": "Mejora nueva: Tienda Kecleon (botón en el menú) con Mentas, Cápsulas Habilidad y 8 MT nuevas cada día. Cada Pokémon tiene ahora su naturaleza (±10 % a dos stats) y su habilidad, con efecto en la partida; se ven y se cambian en su ficha de la colección. Las MT enseñan para siempre ataques de fuera de sus tipos, pero sólo si los aprende en los juegos (Mewtwo puede aprender Bola Sombra; Psyduck no puede aprender Lanzallamas). Gracias a TheAdro7 por la idea y el trabajo de base.",
+      "en": "New: the Kecleon Shop (button in the menu) with Mints, Ability Capsules and 8 new TMs every day. Every Pokémon now has its own nature (±10% to two stats) and ability, with an effect in the run; you can see and change them on its page in the collection. TMs permanently teach moves outside its types, but only if it learns them in the games (Mewtwo can learn Shadow Ball; Psyduck cannot learn Flamethrower). Thanks to TheAdro7 for the idea and the groundwork.",
+      "ko": "새 기능: 메인 메뉴에 켈리몬 상점이 추가됐습니다. 민트·특성 캡슐과 매일 바뀌는 기술머신 8종을 판매합니다. 각 포켓몬에는 성격(두 능력치에 ±10%)과 전투에 적용되는 특성이 생겼으며, 도감의 개별 화면에서 확인하고 바꿀 수 있습니다. 기술머신으로 자신의 타입이 아닌 기술도 영구적으로 배울 수 있지만, 원작에서 배울 수 있는 기술만 가능합니다. 뮤츠는 섀도볼을 배울 수 있지만, 고라파덕은 화염방사를 배울 수 없습니다. 아이디어와 기초 작업을 제공한 TheAdro7에게 감사드립니다."
+    },
+    {
+      "id": "compat-20261022-shop-title",
+      "es": "La gran actualización: Tienda Kecleon",
+      "en": "The big update: Kecleon Shop",
+      "ko": "대규모 업데이트: 켈리몬 상점"
+    },
+    {
+      "id": "compat-20261022-coop-news-title",
+      "es": "Cooperativo sin salas que se cierran solas",
+      "en": "Co-op without rooms closing on their own",
+      "ko": "협동 플레이 중 방이 저절로 닫히는 문제 수정"
+    },
+    {
+      "id": "compat-20261022-coop-news-body",
+      "es": "Cooperativo: a los invitados ya no les sale «La sala se ha cerrado» a mitad de partida (a veces a los pocos minutos o al entrar en una grieta) mientras los demás seguían jugando. Pasaba cuando su conexión con el servidor de las salas se cortaba un momento; ahora la partida sigue y la sala se recupera sola.",
+      "en": "Co-op: guests no longer get \"The room has been closed\" in the middle of a run (sometimes after a few minutes or when entering a rift) while the others kept playing. It happened when their connection to the rooms server dropped for a moment; now the run goes on and the room recovers on its own.",
+      "ko": "협동 플레이 중 다른 플레이어는 계속 진행하고 있는데도 참가자에게 ‘방이 닫혔습니다’가 표시되던 문제를 수정했습니다. 시작 후 몇 분이 지나거나 균열에 들어갈 때 발생하기도 했습니다. 방 서버와의 연결이 잠시 끊기면 생기던 문제로, 이제 게임은 계속되고 방도 자동으로 복구됩니다."
     }
   ],
-  "capturedAt": "2026-10-20"
+  "capturedAt": "2026-10-22"
 }

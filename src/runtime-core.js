@@ -6,6 +6,10 @@ function createPokesurvivorKorean(data, options) {
   const exact = new Map(), lower = new Map(), patterns = [], fragments = new Map();
   const species = data.names.species, moves = {...data.names.moves, ...data.names.gameSpecificTerms}, items = data.names.items;
   const types = data.types || {};
+  // Native catalog labels are translate=no to avoid collisions (Power/item, Quirky/rarity).
+  // Keep these aliases out of global exact/fragment maps and player-name surfaces.
+  const catalogNames = Object.fromEntries(['nature','ability'].map(kind => [kind, new Map(Object.entries(data.names[kind==='nature'?'natures':'abilities'] || {}).map(([k,v]) => [normalize(k).toLocaleLowerCase(),v]))]));
+  const natureIds = new Set(['hardy','lonely','brave','adamant','naughty','bold','docile','relaxed','impish','lax','timid','hasty','serious','jolly','naive','modest','mild','quiet','bashful','rash','calm','gentle','sassy','careful','quirky']);
   function put(key, value, fragment = true, argKinds = []) {
     if (!key || !value || typeof value !== 'string') return;
     key = normalize(key); if (!key || key === value) return;
@@ -36,6 +40,7 @@ function createPokesurvivorKorean(data, options) {
     const around=/^(\s*)([\s\S]*?)(\s*)$/.exec(input);
     let out;
     if(kind==='type') out=types[normalized];
+    if(kind==='nature'||kind==='ability')out=catalogNames[kind].get(normalized.toLocaleLowerCase());
     if(kind==='form' && /^Normal$/i.test(normalized))out='일반';
     if(kind==='save-data' && /^(Save|Partida)$/i.test(normalized))out='저장 데이터';
     if (kind==='move') {
@@ -49,7 +54,7 @@ function createPokesurvivorKorean(data, options) {
     if (out===undefined) {
       for (const p of patterns) {
         const m=p.re.exec(normalized); if(!m)continue;
-        let i=1; out=p.value.replace(/\{x\}/g,()=>{const index=i++;const slotKind=['general','move','type','form','save-data'].includes(p.argKinds?.[index-1])?p.argKinds[index-1]:kind;return translate(m[index] || '',slotKind,depth+1);}); break;
+        let i=1; out=p.value.replace(/\{x\}/g,()=>{const index=i++;const slotKind=['general','move','type','form','save-data','nature','ability'].includes(p.argKinds?.[index-1])?p.argKinds[index-1]:kind;return translate(m[index] || '',slotKind,depth+1);}); break;
       }
     }
     if (out===undefined && fragRE) out=normalized.replace(fragRE,(match,left,key)=>left+(kind==='type' && /^normal$/i.test(key) ? '노말' : (fragments.get(key.toLocaleLowerCase())||key)));
@@ -58,18 +63,23 @@ function createPokesurvivorKorean(data, options) {
     if(cache.size>12000)cache.clear();cache.set(cacheKey,out);return out;
   }
   const translatedNodes=new WeakMap();
-  const trustedNoTranslate='#news-body,#scr-savenote,#rk-me,#boot,[data-lang]';
+  const trustedNoTranslate='#news-body,#scr-savenote,#rk-me,#boot,[data-lang],#dex-detail .mon-extra > .mx-row:nth-child(1) > b[translate="no"],#dex-detail .mon-extra > .mx-row:nth-child(2) > b[translate="no"],#dex-detail .mon-extra #mx-picker button[data-v] > b[translate="no"]';
   function skip(el) {
     if(!el || el.closest('script,style,code,pre,textarea,input,[contenteditable="true"],[data-psko-own]'))return true;
     const no=el.closest('[translate="no"]'); return !!no && !el.closest(trustedNoTranslate);
   }
   function context(el, attribute) {
     if(el.closest('.type,.tag-chip,#dex-type'))return 'type';
+    if(el.closest('#dex-detail .mon-extra > .mx-row:nth-child(1) > b'))return 'nature';
+    if(el.closest('#dex-detail .mon-extra > .mx-row:nth-child(2) > b'))return 'ability';
+    const pickerChoice=el.closest('#dex-detail .mon-extra #mx-picker button[data-v]');
+    if(pickerChoice){const value=pickerChoice.getAttribute('data-v');if(/^[012]$/.test(value))return 'ability';if(natureIds.has(value))return 'nature';return 'move';}
+    if(el.closest('#shop-body .upg-item > div > b,#bag-body .upg-item > div > b'))return 'move';
     if(el.closest('#dex-detail .seg'))return 'form';
     if(el.closest('#set-body .set-row .grow b'))return 'save-data';
     if(el.closest('.gen-tab'))return 'general';
     if(attribute==='title' && el.closest('.move-icons,.ban-moves'))return 'move';
-    if(el.closest('#cards .nm,#bond-cards .nm,.ban-moves button,#pause-sum td:first-child,#upg-list [data-start],#upg-list .bind-slot option'))return 'move';
+    if(el.closest('#cards .nm,#bond-cards .nm,.ban-moves button,#pause-sum td:first-child,#upg-list [data-start],#upg-list [data-start2],#upg-list .bind-slot option'))return 'move';
     if(el.closest('#dex-detail p b.gold'))return 'move';
     return 'general';
   }

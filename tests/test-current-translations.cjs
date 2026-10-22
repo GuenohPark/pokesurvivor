@@ -5,7 +5,7 @@ const fixture=read('tests/fixtures/current-game-translations.json'),locale=read(
 const create=new Function(fs.readFileSync(path.join(root,'src/runtime-core.js'),'utf8')+';return createPokesurvivorKorean;')();
 const api=create({version:read('package.json').version,entries:locale.entries,...names});
 assert.equal(new Set(locale.entries.map(e=>e.id)).size,locale.entries.length,'unique entry IDs');
-for(const e of locale.entries){assert(e.id!=null);if(e.argKinds){assert.equal(e.argKinds.length,(e.es.match(/\{x\}/g)||[]).length);assert(e.argKinds.every(k=>['general','move','type','form','save-data'].includes(k)));}}
+for(const e of locale.entries){assert(e.id!=null);if(e.argKinds){assert.equal(e.argKinds.length,(e.es.match(/\{x\}/g)||[]).length);assert(e.argKinds.every(k=>['general','move','type','form','save-data','nature','ability'].includes(k)));}}
 let checks=0;const changed=(s,kind='general')=>{assert.equal(typeof s,'string');const result=api.translate(s,kind);assert.notEqual(result,s,'untranslated: '+s);assert(/[가-힣]/.test(result)||result==='PC','no Korean: '+s);checks++;return result;};
 for(const[es,en]of Object.entries(fixture.english))for(const s of [es,en])if(s!=='Google')changed(s);
 assert.equal(api.translate('Google'),'Google','brand remains literal');
