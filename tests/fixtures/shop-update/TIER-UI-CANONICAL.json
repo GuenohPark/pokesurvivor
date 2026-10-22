@@ -1,0 +1,14 @@
+{
+  "sourcePublicCommit": "ae480b1028be0b7e527166f1691e1172573b5e02",
+  "path": "data/tier-ui.json",
+  "publicByteSha256": "6f5b540461c2ce1a41502edc8345dbf88e5ca8ba5fe19d820ce9ed1d3a8a0b39",
+  "canonicalRemainderSha256": "1ee61c4d069fab989dea8ab493b5f718f2c45a8fc54c3bcc6664badf69e65ec1",
+  "numericFields": {
+    "species.797.ehpPhysical": 258.07386756915645,
+    "species.797.exposureEhpPhysical": 217.6078851343127,
+    "species.858.ehpSpecial": 234.12886954727594,
+    "species.858.exposureEhpSpecial": 197.41746280226306
+  },
+  "maxAbsoluteError": 1e-12,
+  "note": "Only four non-grade EHP diagnostic fields differ in last floating-point bits on Node22/Linux versus Node26/macOS. All other data keys/values, every grade and protected binary remain exact. Public post-release byte identity is separately checked."
+}

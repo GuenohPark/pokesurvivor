@@ -137,10 +137,6 @@
       "bytes": 4410,
       "sha256": "73812b32e7d1710d7f5fcec09e054acae16ceb6a1ccd8b72ef420f2a368595a2"
     },
-    "data/tier-ui.json": {
-      "bytes": 652028,
-      "sha256": "3c7b578c7ab4dbbf57c5762ba94e6bb254bff0fb85e9473c919cb69ffd88be3a"
-    },
     "dist/pokesurvivor-ko-android-source.zip": {
       "bytes": 821244,
       "sha256": "1f9091977989689b000976c697375588f0b32f8306e88d85c45ba5735655e24a"
